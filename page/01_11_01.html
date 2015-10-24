@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Asset Standards</title>
+	<title>素材规格</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,70 +10,103 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v06">Asset Standards</h1>
+	  <h1 class="main__title--h1 main__title--h1--v06">素材规格</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li>Documentation</li>
+		  <li>资料集</li>
 		  <li>&gt;</li>
-			<li>Asset Standards</li>
+			<li>素材规格</li>
 	  </ul>
-	  <p>It is possible to use your own original files for all kinds of assets such as images and audio.<br />
-	    By copying the asset file into the appropriate folder you can select the asset from the editor. </p>
+	  <p>
+	  	包括音乐和图像在内，所有的素材都能替换成您自己的素材文件。<br />
+	  	将对应文件复制到游戏工程目录下之后，您便能在编辑器中选择了。</p>
+
 	  <ul class="main__ul">
-	    <li><a href="#p01">Image Assets</a></li>
-	    <li><a href="#p02">Tileset Details</a></li>
-	    <li><a href="#p04">Audio Assets </a></li>
-	    <li><a href="#p05">Movie Assets </a></li>
+	    <li><a href="#p01">图像素材</a></li>
+	    <li><a href="#p02">图块素材</a></li>
+	    <li><a href="#p04">声音素材</a></li>
+	    <li><a href="#p05">视频素材</a></li>
 	  </ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Image Assets</h2>
-		  <p>All images will use the PNG format.</p>
+		  <h2 class="main__title--h2">图像素材</h2>
+		  <p>所有的图像素材都为png格式</p>
 		  <dl class="main__dl">
-			<dt>Animation Patterns (img/animations)</dt>
-				<dd> These are primarily the images used for animations shown as effects in the Battle Screen.<br />
-1 cell contains an image that measures 192x192 in size, and 5 cells lined up horizontally are treated as a block which will be stretched vertically only as necessary, becoming 1 file. A file can contain up to 20 blocks (100 cells).<br />
-* Images used are the same size as in the previous version (VX Ace). </dd>
-				<dt>Battlebacks (img/battlebacks1, img/battlebacks2)</dt>
-				<dd> Images used as the backgrounds for the Battle Screen. <br />
-A battleback measures 1000x740 in size, backgrounds in the battlebacks1 folder are primarily for floors, and those in the battlebacks2 folder are primarily for walls, and you can put these into any combination that you like in order to create your battleback. <br />
-The upper part of images in front-view battles and the lower part of images in side-view battles will be cropped then displayed. </dd>
-				<dt>Characters (img/characters)</dt>
-				<dd> Images shown for the characters on the map. <br />
-The size for a character image can be changed freely (normally 48x48), and consist of 4 directions (down, left, right, up) and 3 patterns for a total of 12 patterns that will be arranged in the provided order. A file for 1 character will be arranged into 2 rows and 4 columns equaling 8 images. The size of the character will be calculated using 1/12 of the width and 1/8 of the height of this file. Moreover, characters will be shown 6 pixels above tile so that they appear more natural when on top of buildings.
-<ul class="main__ul">
-  <li>It is possible treat 1 character as 1 file by including "$" at the beginning of the file name.</li>
-  <li>Including a "!" at the beginning of the file name will prevent the image from being shifted 6 pixels and will no longer appear half transparent by bush elements. This is primarily used for objects found in the map such as doors and treasure chests.</li>
-  <li>It is also possible to use the "$" and "!" special characters together.</li>
-</ul>
+
+				<dt>动画切片 (img/animations)</dt>
+				<dd>
+					这些图片主要用于战斗中动画效果的显示。<br />
+					每个区块包含五张尺寸大小为 192×192 横向排列的切片，在一个图像文件内最多包含20个区块（100个切片）。<br />
+					* 图片大小和前作（VA）相同。
 				</dd>
-				<dt>Front-view Enemies (img/enemies)</dt>
-				<dd> Images for enemies that are displayed in front-view battle. You can choose any size you want for the image. </dd>
-				<dt>Face (img/faces)</dt>
-				<dd> Images which are displayed in the Menu Screen and message windows. <br />
-Face images are 144x144 in size, and arranged into 2 rows and 4 columns equaling 8 images. </dd>
-				<dt>Parallax (img/parallaxes)</dt>
-				<dd> Images shown behind maps. You can choose any size you want for the image. <br />
-Like wallpaper, the top, bottom, left and right sides of the image will be connected when wanting to loop the image. <br />
-Additionally, parallax files will be treated as floors (no parallax) when there is a "!" at the beginning of the file name. </dd>
-				<dt>Pictures (img/pictures)</dt>
-				<dd> Images which are displayed by using event commands during the game. You can choose any size you want for the image. </dd>
-				<dt>Side-view Allies (img/sv_actors)</dt>
-				<dd> Actor images which are displayed in side-view battle.<br />
-Please refer to [<a href="01_11_02.html">Side-view Character Standards</a>].</dd>
-				<dt>Side-view Enemies (img/sv_enemies)</dt>
-				<dd> Images for enemies that are displayed in side-view battle. You can choose any size you want for the image. </dd>
-				<dt>System Images (img/system)</dt>
-				<dd> The various images used in the overall game.
+
+				<dt>战斗背景 (img/Battlebacks1, img/Battlebacks2)</dt>
+				<dd>
+					这些图片主要用于战斗界面中战斗背景图片的显示。<br />
+					图片的尺寸为 1000x740，Battlebacks1主要是地面的图片，Battlebacks2主要是墙壁的图片，这两种图片可以任意地组合成战斗的背景。<br />
+					纵版战斗中上方的图片以及横版战斗中下方的图片将被裁剪掉一部分。、
+				</dd>
+
+				<dt>角色行走图 (img/characters)</dt>
+				<dd>
+					这些图片主要用于在地图上显示的角色图像。 <br />
+					角色大小任意（通常为48x48），一个角色元包含四个方向的行走图（上、下、左、右）和三帧的步行样式，总共12帧，按规定的顺序排列。
+					一个行走图文件包含纵向两个角色元，横向四个角色元，总共八个角色元。该角色单帧图片的尺寸大小为此文件的 1/12 宽度和 1/8 高度。
+					为了让角色与建筑物的重叠看起来更有真实感，角色显示时比地图元件高 6 像素。
+					<ul class="main__ul">
+					  <li>在文件名前面加上半角符号「$」，那么该文件就只能容纳一个角色元。</li>
+					  <li>在文件名前面加上半角符号「!」可以取消角色比地图元件高 6 素的效果以及经过流体属性图块时的半透明效果。大多用于物件类的角色，如门和宝箱。</li>
+	  				<li>“$”和“!”可以同时使用。</li>
+					</ul>
+				</dd>
+
+				<dt>纵版战斗敌人战斗图 (img/enemies)</dt>
+					<dd>
+						这些图片主要用于纵版战斗时敌人显示的图像，	图片尺寸大小不限。
+					</dd>
+
+				<dt>脸图 (img/faces)</dt>
+				<dd>
+					这些图片主要用于菜单和对话框中所使用的角色头像。<br />
+					每张头像的尺寸大小为 144×144 像素，一个文件包含了纵向两个头像，横向四个头像，总共八个头像。
+				</dd>
+
+				<dt>远景图 (img/parallaxes)</dt>
+				<dd>
+					这些图片被显示在了地图的下方。尺寸大小没有限制。<br />
+					如果想要循环显示的话，就制作成如电脑壁纸一样上下左右相连的样式。<br />
+					另外，文件名开头包含「!」的远景图将被视作地面（而非远景）来显示。
+				</dd>
+
+				<dt>图片 (img/pictures)</dt>
+				<dd>
+					这些图片通过事件指令中的显示图片指令显示在游戏中，	图片尺寸大小不限。
+				</dd>
+
+				<dt>横版战斗我方战斗图 (img/sv_actors)</dt>
+				<dd>
+					这些图片用于显示横版战斗模式下我方的角色<br />
+					更多细节请参考 [<a href="01_11_02.html">横版战斗角色规格</a>] 部分。
+				</dd>
+
+				<dt>横版战斗敌人战斗图 (img/sv_enemies)</dt>
+				<dd>
+					这些图片主要用于横版战斗时敌人显示的图像，	图片尺寸大小不限。
+				</dd>
+
+				<dt>系统图片 (img/system)</dt>
+				<dd> 在游戏运行过程中显示的各种图片。
+
 <dl class="main__dl--sub">
 				<dt>Balloon.png</dt>
-				<dd>Asset used for actor chat balloons. The transparent area below the image is defined by the user.</dd>
+				<dd>这些图片主要用于游戏中的显示心情指令，下方的空白部分可以由您自由添加。</dd>
 				<dt>ButtonSet.png</dt>
-				<dd>Buttons used when the game is displayed on devices such as smartphones which support touch controls. <br />
-This can be used for changing things like the number of items when purchasing them.</dd>
+				<dd>
+					这些图片将在游戏运行在触摸设备上时显示。<br />
+					它们主要用于在类似选择物品购买数量等场合下时的数值修改。</dd>
 				<dt>Damage.png</dt>
-				<dd>Asset used for displaying damage pop-ups in the Battle Screen.</dd>
+				<dd>这些图片主要用于在战斗界面显示受到的伤害</dd>
 				<dt>GameOver.png</dt>
 				<dd>Asset displayed on the Game Over Screen.</dd>
 				<dt>Loading.png</dt>
@@ -194,30 +227,30 @@ The size for these images is 816x624. Titles1 contains files for the main backgr
 
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Audio Files (Music, Sound Effects)</h2>
+		  <h2 class="main__title--h2">声音素材 (音乐、音效)</h2>
 			<p class="mb10px">
-				The file formats that are playable depend on the operating environment, so please prepare the below 2 file formats with the same file name.
+				播放声音需要相关设备的支持，因此，请为同一个声音文件准备下面两种格式的素材。
 			</p>
 			<ul class="main__ul">
-				<li>Ogg Vorbis(.ogg)</li>
+				<li>Ogg(.ogg)</li>
 				<li>AAC(.m4a)</li>
 			</ul>
 			<p>
-				* When creating a game that will be played on Windows or Mac, please prepare only the Ogg Vorbis file format. When creating a game that will be released on the web or made for Android/iOS, both file formats are required.
+				* 制作出来的游戏只在 Windows 或 Mac 平台上运行时，只需要准备ogg格式的素材。如果游戏要在网络平台、Android、iOS 上运行的话，您需要同时准备这两种格式的素材。
 			</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Video Files (Movies)</h2>
+		  <h2 class="main__title--h2">视频素材 (视频)</h2>
 			<p class="mb10px">
-				The file formats that are playable depend on the operating environment, so please prepare the below 2 file formats with the same file name.
+				播放视频需要相关设备的支持，因此，请为同一个视频文件准备下面两种格式的素材。
 			</p>
 			<ul class="main__ul">
 				<li>WebM(.webm)</li>
-				<li>MP4 (.mp4 encoded with H.264 codec)</li>
+				<li>MP4 (.mp4 编码的H.264编解码器)</li>
 			</ul>
 			<p>
-				* When creating a game that will be played on Windows or Mac, please prepare only the WebM file format. When creating a game that will be released on the web or made for Android/iOS, both file formats are required.
+				* 制作出来的游戏只在 Windows 或 Mac 平台上运行时，只需要准备WebM格式的素材。如果游戏要在网络平台、Android、iOS 上运行的话，您需要同时准备这两种格式的素材。
 			</p>
 		</div><!-- /main__section -->
 
