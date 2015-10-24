@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>JsonEx Class</title>
+	<title>JsonEx 类</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,25 +11,25 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v07">JsonEx Class</h1>
+		<h1 class="main__title--h1 main__title--h1--v07">JsonEx 类</h1>
 		<ul class="breadcrumb">
-			<li>JS Library</li>
+			<li>JS 库</li>
 			<li>&gt;</li>
-			<li>JsonEx Class</li>
+			<li>JsonEx 类</li>
 		</ul>
-		<p>The static class that handles JSON with object information.</p>
+		<p>处理Json与对象信息的静态类。</p>
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Item Index</h2>
-			<b>Methods</b>
+			<h2 class="main__title--h2">索引</h2>
+			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">makeDeepCopy</a> <span>static</span></li>
 				<li><a href="#m02">parse</a> <span>static</span></li>
 				<li><a href="#m03">stringify</a> <span>static</span></li>
 			</ul>
 
-			<b>Properties</b>
+			<b>属性</b>
 			<ul class="main__ul--inline">
 				<li><a href="#p01">maxDepth</a> <span>static</span></li>
 			</ul>
@@ -44,21 +44,21 @@
 <pre class="main__pre--code">
 makeDeepCopy ( object ) <span class="pre__type">Object</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Makes a deep copy of the specified object.</p>
+				<p class="mb10px">深度复制特定对象。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">object </code>
 							<span class="type">Object</span>
 							<div class="param-description">
-								<p>The object to be copied</p>
+								<p>需要复制的对象。</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值:</h4>
 					<p><span class="pre__type">Object:</span> <br />
-					The copied object</p>
+					对象的副本</p>
 				</div>
 			</div><!-- /div -->
 
@@ -66,21 +66,21 @@ makeDeepCopy ( object ) <span class="pre__type">Object</span> <span class="pre__
 <pre class="main__pre--code">
 parse ( json ) <span class="pre__type">Object</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Parses a JSON string and reconstructs the corresponding object.</p>
+				<p class="mb10px">解析JSON字符串并生成相应对象。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">json</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The JSON string</p>
+								<p>JSON字符串</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Object:</span> <br />
-					The reconstructed object</p>
+					生成的对象</p>
 				</div>
 			</div><!-- /div -->
 
@@ -88,21 +88,21 @@ parse ( json ) <span class="pre__type">Object</span> <span class="pre__static">[
 <pre class="main__pre--code">
 stringify ( object ) <span class="pre__type">String</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Converts an object to a JSON string with object information.</p>
+				<p class="mb10px">将对象转换为JSON字符串。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">object</code>
 							<span class="type">Object</span>
 							<div class="param-description">
-								<p>The object to be converted</p>
+								<p>待转换的对象</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">String:</span> <br />
-					The JSON string</p>
+					JSON字符串</p>
 				</div>
 			</div><!-- /div -->
 
@@ -111,15 +111,15 @@ stringify ( object ) <span class="pre__type">String</span> <span class="pre__sta
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Properties</h2>
+			<h2 class="main__title--h2">属性</h2>
 
 			<div id="p01" class="main__subsection">
 <pre class="main__pre--code">
 maxDepth  <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The maximum depth of objects. <br />
+				<p class="mb10px">对象的最大深度。<br />
 				<br />
-				<b>Default</b>: 100</p>
+				<b>默认值</b>: 100</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
