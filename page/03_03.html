@@ -13,13 +13,13 @@
 
 		<h1 class="main__title--h1 main__title--h1--v07">Html5Audio Class</h1>
 		<ul class="breadcrumb">
-			<li>JS Library</li>
+			<li>JS 库</li>
 			<li>&gt;</li>
 			<li>Html5Audio Class</li>
 		</ul>
-		<p>The static class that handles HTML5 Audio.</p>
+		<p>处理 HTML5 音频的静态类。</p>
 		<div class="main__section">
-			<h2 class="main__title--h2">Constructor</h2>
+			<h2 class="main__title--h2">构造函数</h2>
 <pre class="main__pre--code">
 Html5Audio ()
 </pre>
@@ -27,8 +27,8 @@ Html5Audio ()
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Item Index</h2>
-			<b>Methods</b>
+			<h2 class="main__title--h2">索引</h2>
+			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">addLoadListener</a> <span>static</span></li>
 				<li><a href="#m02">clear</a> <span>static</span></li>
@@ -44,7 +44,7 @@ Html5Audio ()
 				<li><a href="#m12">stop</a> <span>static</span></li>
 			</ul>
 
-			<b>Properties</b>
+			<b>属性</b>
 			<ul class="main__ul--inline">
 				<li><a href="#p01">url</a></li>
 				<li><a href="#p02">volume</a></li>
@@ -53,21 +53,21 @@ Html5Audio ()
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Methods</h2>
+			<h2 class="main__title--h2">方法</h2>
 
 			<div id="m01" class="main__subsection">
 <pre class="main__pre--code">
 addLoadListener ( listner ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Add a callback function that will be called when the audio data is loaded.</p>
+				<p class="mb10px">添加一个音频文件读取成功后执行的回调函数。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">listner</code>
 							<span class="type">Function</span>
 							<div class="param-description">
-								<p>The callback function</p>
+								<p>需要回调的函数</p>
 							</div>
 						</li>
 					</ul>
@@ -78,22 +78,22 @@ addLoadListener ( listner ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 clear () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Clears the audio data.</p>
+				<p class="mb10px">清除音频数据。</p>
 			</div><!-- /div -->
 
 			<div id="m03" class="main__subsection">
 <pre class="main__pre--code">
 fadeIn ( duration ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Performs the audio fade-in.</p>
+				<p class="mb10px">淡入声音。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
-							<code class="param-name">duration </code>
+							<code class="param-name">duration</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>Fade-in time in seconds</p>
+								<p>淡入的秒数。</p>
 							</div>
 						</li>
 					</ul>
@@ -104,15 +104,15 @@ fadeIn ( duration ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 fadeOut ( duration ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Performs the audio fade-out.</p>
+				<p class="mb10px">淡出音频。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
-							<code class="param-name">duration </code>
+							<code class="param-name">duration</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>Fade-out time in seconds</p>
+								<p>淡出的秒数。</p>
 							</div>
 						</li>
 					</ul>
@@ -123,11 +123,11 @@ fadeOut ( duration ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 initialize () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Initializes the audio system.</p>
+				<p class="mb10px">初始化音频系统。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the audio system is available</p>
+					若音频系统可以使用，返回 True 。</p>
 				</div>
 			</div><!-- /div -->
 
@@ -135,11 +135,11 @@ initialize () <span class="pre__type">Boolean</span> <span class="pre__static">[
 <pre class="main__pre--code">
 isError () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether a loading error has occurred.</p>
+				<p class="mb10px">检查载入是否出错。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if a loading error has occurred</p>
+					若载入时出现错误，返回 True 。</p>
 				</div>
 			</div><!-- /div -->
 
@@ -147,11 +147,11 @@ isError () <span class="pre__type">Boolean</span> <span class="pre__static">[sta
 <pre class="main__pre--code">
 isPlaying () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the audio is playing.</p>
+				<p class="mb10px">检查音频是否正在播放。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the audio is playing</p>
+					若音频正在播放，返回 True 。</p>
 				</div>
 			</div><!-- /div -->
 
@@ -159,11 +159,11 @@ isPlaying () <span class="pre__type">Boolean</span> <span class="pre__static">[s
 <pre class="main__pre--code">
 isReady () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the audio data is ready to play.</p>
+				<p class="mb10px">检查音频数据是否已经可以开始播放。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the audio data is ready to play</p>
+					若可以开始播放，返回 True 。</p>
 				</div>
 			</div><!-- /div -->
 
@@ -171,22 +171,22 @@ isReady () <span class="pre__type">Boolean</span> <span class="pre__static">[sta
 <pre class="main__pre--code">
 play ( loop , offset ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Plays the audio.</p>
+				<p class="mb10px">播放音频。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
-							<code class="param-name">loop </code>
+							<code class="param-name">loop</code>
 							<span class="type">Boolean</span>
 							<div class="param-description">
-								<p>Whether the audio data play in a loop</p>
+								<p>是否要循环播放。</p>
 							</div>
 						</li>
 						<li class="param">
-							<code class="param-name">offset </code>
+							<code class="param-name">offset</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The start position to play in seconds</p>
+								<p>播放开始的秒数。</p>
 							</div>
 						</li>
 					</ul>
@@ -197,22 +197,22 @@ play ( loop , offset ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 seek () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Gets the seek position of the audio.</p>
+				<p class="mb10px">获取当前音频播放的位置。</p>
 			</div><!-- /div -->
 
 			<div id="m11" class="main__subsection">
 <pre class="main__pre--code">
 setup ( url ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Sets up the Html5 Audio.</p>
+				<p class="mb10px">设置 Html5 音频。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
-							<code class="param-name">url </code>
+							<code class="param-name">url</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The url of the audio file</p>
+								<p>音频文件的地址。</p>
 							</div>
 						</li>
 					</ul>
@@ -223,26 +223,26 @@ setup ( url ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 stop () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Stops the audio.</p>
+				<p class="mb10px">停止播放音频。</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Properties</h2>
+			<h2 class="main__title--h2">属性</h2>
 			<div id="p01" class="main__subsection">
 <pre class="main__pre--code">
 url <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">[read-only] The url of the audio file.</p>
+				<p class="mb10px">[只读] 音频文件的地址。</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
 <pre class="main__pre--code">
 volume <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">The volume of the audio.</p>
+				<p class="mb10px">声音的音量。</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
