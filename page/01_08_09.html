@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Animation Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">Animation Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>Animation Settings</li>
+		</ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Animations are the data that can be played for visual representations for when enemies attack in the Battle Screen and things on the Map Screen. These are created by placing image patterns (cells) in a "Frame". </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_09_img01.png" width="769" height="631" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> General Settings </h3>
+		  <h3 class="main__title--h3--sub"> Name </h3>
+		  <p>The name of the animation. This property is just used in the editor (does not affect the game).</p>
+		  <h3 class="main__title--h3--sub"> Images </h3>
+		  <p>Image files used for creating animations (up to two images). Specify the file you want to use in the [Select an Image] window that is displayed when you press either button. When doing so, you can change the hue of the image by adjusting the [Hue] slider and use the adjusted image. The pattern image will be displayed in the [Pattern Palette] when you specify a file.</p>
+		  <h3 class="main__title--h3--sub"> Position </h3>
+		  <p>Specify the position where the animation will be displayed. By selecting [Head], [Center] or [Feet], the top, center, and bottom of each character will be used. The animation will be displayed on the entire screen if this is set to [Screen]. Moreover, this animation when set to a skill or item that has an effect that affects multiple characters, it will be displayed for each character when the animation's position is set to [Head], [Center] or [Feet].</p>
+		  <h3 class="main__title--h3--sub"> Max Frames </h3>
+		  <p>The overall frame count (1 to 200) for an animation. Specify this number in the window that appears when pressing the button. The number specified here will appear in the frame list. When you lower the frame count, those frames whose numbers exceed that amount will be deleted.</p>
+		  <h3 class="main__title--h3"> SE and Flash Timing </h3>
+		  <p>Sets the timing of when to play the sound effect and the screen flash during the animation. In the [SE and Flash Timing] window that is displayed when you double-click any row (a blank row when creating a new entry) in the list, you can specify the contents below. <br />
+		    <br />
+		    A menu will appear if you right-click an item in the list where you can perform actions such as [Edit], [Cut], [Copy] and [Delete]. </p>
+		  <dl class="main__dl">
+			<dt>Frames </dt>
+				<dd>Specify the frame number where the sound effect and flash will be played.</dd>
+				<dt>SE </dt>
+				<dd>Specify the sound effect that will play.</dd>
+				<dt>Flash</dt>
+				<dd>Specify details for when the flash is played. Select [Target] to make a character flash, [Screen] to make the entire screen flash. You can specify the color of the flash by adjusting the [Red], [Green] and [Blue] values, and its intensity by increasing and decreasing its [Strength] (between 0 and 255). [Duration] is set to play for the number of frames (1 to 200). [Hide Target] causes the character to disappear temporarily, and you use this when you want to hide the character during the animation.</dd>
+			</dl>
+		  <h3 class="main__title--h3"> Frames </h3>
+		  <h3 class="main__title--h3--sub"> Frame List </h3>
+		  <p>List of frames in the animation. The frame number that you click becomes the frame that you will edit, and its contents will be displayed in the Frame View. By clicking the [Back] and [Next] buttons at the top and bottom of the list, you can change to the previous or next frame to edit. Additionally, using the menu that is displayed when right-clicking the frame number, you can [Copy], [Paste], [Clear], [Insert] and Delete frames.</p>
+		  <h3 class="main__title--h3--sub"> Frame View </h3>
+		  <p>Contents of the frame. Set what is displayed by placing the images in the Pattern Palette as [Cells]. The green rectangle is the area that is displayed in the game window. <br />
+		    <br />
+		    Please view [Controlling the Frame View] mentioned later to learn how to edit. </p>
+		  <h3 class="main__title--h3--sub"> Change Target </h3>
+		  <p>Change the image of the enemy displayed in the Frame View. This property is just used in the editor (does not affect the game).</p>
+			<h3 class="main__title--h3--sub">
+				Paste Last
+			</h3>
+			<p>Changes the currently selected frame to be the same as the previous one.</p>
+		  <h3 class="main__title--h3--sub"> Tween </h3>
+		  <p>Frame cells will be automatically created based on the two frames that were specified. Enter in the range for the frames and cells to be tweened, and check the items to tween using the boxes available and click [OK]. For example, by placing the cell in frame 1 to the left side, and placing it on the right in frame 10 and tweening the position between frames 1 and 10, the cells in frames 2 to 9 will be automatically animated to appear to be moving from left to right.</p>
+		  <h3 class="main__title--h3--sub"> Batch </h3>
+		  <p>Set the cells to be the same in the specified frame range. Specify the frame and cell range in the [Frame] and [Cell] fields, select the items to be set and select the values for each item.</p>
+		  <h3 class="main__title--h3--sub"> Shift </h3>
+		  <p>Shift the position of multiple cells placed in the specified frame.</p>
+		  <h3 class="main__title--h3--sub"> Play </h3>
+		  <p>The animation which you are currently making will be played when pressing the Play button.</p>
+		  <h3 class="main__title--h3--sub"> Pattern Palette </h3>
+		  <p>Displays the pattern images contained the file that was specified in the [Images] section. When clicked, the pattern will be the one to be placed in the frame. Treating the pattern in the upper left of the palette as #1, numbers (pattern number) for the other patterns will be assigned in order from left to right.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Controlling the Frame View</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_09_img02.png" width="466" height="268" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub"> Placing Cells </h3>
+		  <p>Choose the image to be placed in the frame using the [Pattern Palette], and double click an empty spot in the Frame Edit Area. After doing so, that image will be placed in the prepared cell. It is possible to place up to 16 cells in 1 frame.</p>
+		  <h3 class="main__title--h3--sub"> Display </h3>
+		  <p>The frame and number will be displayed in the cell. A white frame means that the cell is currently selected. The number is the priority order of the cell, and larger cells will be displayed towards the front.</p>
+		  <h3 class="main__title--h3--sub"> Selecting a Cell to Edit </h3>
+		  <p>Clicking a cell will cause its frame to become white and will be selected to be edited. Smaller cells with the same number as other cells can be selected by clicking them while holding the [Shift] key.</p>
+		  <h3 class="main__title--h3--sub"> Moving Cells </h3>
+		  <p>Drag cells to move them. The position of cells currently selected will be displayed as coordinates in the bottom right of the Frame Edit Area. Assuming the coordinates in the center of the image are (0,0), X coordinates are displayed using values (-408 to 408) and Y coordinates are displayed using values (-312 to 312).</p>
+		  <h3 class="main__title--h3"> Controls via the Context Menu </h3>
+		  <p>By right-clicking a cell, a menu will be displayed where you can perform the following actions. You can open the [Cell Settings] window by also double-clicking.</p>
+		  <h3 class="main__title--h3--sub"> ▼Context Menu Items </h3>
+		  <dl class="main__dl--sub">
+			<dt>New</dt>
+				<dd>Place a new cell.</dd>
+				<dt>Edit </dt>
+				<dd>Open the Cell Settings window.</dd>
+				<dt>Cut </dt>
+				<dd>Copy the currently selected cell to the clipboard and delete it.</dd>
+				<dt>Copy </dt>
+				<dd>Copy the currently selected cell to the clipboard.</dd>
+				<dt>Paste </dt>
+				<dd>Place the cell currently in the clipboard.</dd>
+				<dt>Delete </dt>
+				<dd>Delete the currently selected cell.</dd>
+				<dt>Undo </dt>
+				<dd>Cancel the most previous action, and return to the previous state prior to performing the action. It is possible to undo up to 20 actions.</dd>
+				<dt>Redo </dt>
+				<dd>Return the state back to what it was before pressing Undo.</dd>
+				<dt>To Upper/To Lower </dt>
+				<dd>Change the priority of displaying the cells (front/back).</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> ▼Cell Setting Window Contents </h3>
+		  <dl class="main__dl--sub">
+		    <dt>Pattern </dt>
+				<dd>The pattern number. Changing the number will change it to the corresponding cell.</dd>
+				<dt>X/Y </dt>
+				<dd>Display position of the cell. X coordinates can be set from -408 to 408, and Y coordinates can be set from -312 to 312.</dd>
+				<dt>Scale </dt>
+				<dd>Changes the display magnification of the cell. The scale of the cell can be changed from 20 to 800% with the original image being 100%.</dd>
+				<dt>Rotation </dt>
+				<dd>The rotation (1 to 360 degrees) of the cell when displayed. Cells will be rotated clockwise using the specified degree of rotation.</dd>
+				<dt>Mirror </dt>
+				<dd>Setting this to [Yes] will flip the display of the cell's pattern.</dd>
+				<dt>Opacity </dt>
+				<dd>The opacity (0 to 255) of the cell. The smaller the value, the more opaque the cell will be, and will not be visible when set to 0.</dd>
+				<dt>Blend </dt>
+				<dd>Allows you to blend the hue of two cells that overlap. [Normal] will have it be displayed normally, and [Additive] will cause it to be whiter.</dd>
+			</dl>
+
+
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

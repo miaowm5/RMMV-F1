@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Utils Class</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v07">Utils Class</h1>
+		<ul class="breadcrumb">
+			<li>JS Library</li>
+			<li>&gt;</li>
+			<li>Utils Class</li>
+		</ul>
+		<p>The static class that defines utility methods.</p>
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Item Index</h2>
+			<b>Methods</b>
+			<ul class="main__ul--inline">
+				<li><a href="#m01">canReadGameFiles</a> <span>static</span></li>
+				<li><a href="#m02">isAndroidChrome</a> <span>static</span></li>
+				<li><a href="#m03">isMobileDevice</a> <span>static</span></li>
+				<li><a href="#m04">isMobileSafari</a> <span>static</span></li>
+				<li><a href="#m05">isNwjs</a> <span>static</span></li>
+				<li><a href="#m06">isOptionValid</a> <span>static</span></li>
+				<li><a href="#m07">rgbToCssColor</a> <span>static</span></li>
+			</ul>
+
+			<b>Properties</b>
+			<ul class="main__ul--inline">
+				<li><a href="#p01">RPGMAKER_NAME</a> <span>static</span></li>
+			</ul>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Methods</h2>
+
+			<div id="m01" class="main__subsection">
+<pre class="main__pre--code">
+canReadGameFiles () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the browser can read files in the game folder.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the browser can read files in the game folder</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m02" class="main__subsection">
+<pre class="main__pre--code">
+isAndroidChrome () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the browser is Android Chrome.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the browser is Android Chrome</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m03" class="main__subsection">
+<pre class="main__pre--code">
+isMobileDevice () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the platform is a mobile device.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the platform is a mobile device</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m04" class="main__subsection">
+<pre class="main__pre--code">
+isMobileSafari () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the browser is Mobile Safari.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the browser is Mobile Safari</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m05" class="main__subsection">
+<pre class="main__pre--code">
+isNwjs () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the platform is NW.js.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the platform is NW.js</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m06" class="main__subsection">
+<pre class="main__pre--code">
+isOptionValid ( name ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the option is in the query string.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">name</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The option name</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the option is in the query string</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m07" class="main__subsection">
+<pre class="main__pre--code">
+rgbToCssColor  ( r , g , b ) <span class="pre__type">String</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Makes a CSS color string from RGB values.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">r</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The red value in the range (0, 255)</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">g</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The green value in the range (0, 255)</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">b</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The blue value in the range (0, 255)</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">String:</span> <br />
+					CSS color string</p>
+				</div>
+			</div><!-- /div -->
+
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Properties</h2>
+
+			<div id="p01" class="main__subsection">
+<pre class="main__pre--code">
+RPGMAKER_NAME <span class="pre__type">String</span> <span class="pre__static">[final]</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">The name of the RPG Maker. 'MV' in the current version.</p>
+			</div><!-- /div -->
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

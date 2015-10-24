@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>JsExtensions Class</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v07">JsExtensions Class</h1>
+		<ul class="breadcrumb">
+			<li>JS Library</li>
+			<li>&gt;</li>
+			<li>JsExtensions Class</li>
+		</ul>
+		<p>This is not a class, but contains some methods that will be added to the standard Javascript objects.</p>
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Item Index</h2>
+			<b>Methods</b>
+			<ul class="main__ul--inline">
+				<li><a href="#m01">Array.prototype.clone</a></li>
+				<li><a href="#m02">Array.prototype.contains</a></li>
+				<li><a href="#m03">Array.prototype.equals</a></li>
+				<li><a href="#m04">Math.randomInt</a> <span>static</span></li>
+				<li><a href="#m05">Number.prototype.clamp</a></li>
+				<li><a href="#m06">Number.prototype.mod</a></li>
+				<li><a href="#m07">Number.prototype.padZero</a></li>
+				<li><a href="#m08">String.prototype.contains</a></li>
+				<li><a href="#m09">String.prototype.format</a></li>
+				<li><a href="#m10">String.prototype.padZero</a></li>
+			</ul>
+		</div><!-- /main__section -->
+
+
+			<div id="m01" class="main__subsection">
+<pre class="main__pre--code">
+Array.prototype.clone () <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">Makes a shallow copy of the array.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Array:</span> <br />
+					A shallow copy of the array</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m02" class="main__subsection">
+<pre class="main__pre--code">
+Array.prototype.contains ( element ) <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">Checks whether the array contains a given element.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">element</code>
+							<span class="type">Any</span>
+							<div class="param-description">
+								<p>The element to search for</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the array contains a given element</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m03" class="main__subsection">
+<pre class="main__pre--code">
+Array.prototype.equals ( array ) <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">Checks whether the two arrays are same.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">array</code>
+							<span class="type">Any</span>
+							<div class="param-description">
+								<p>The array to compare to</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the two arrays are same</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m04" class="main__subsection">
+<pre class="main__pre--code">
+Math.randomInt ( max ) <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Generates a random integer in the range (0, max-1).</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">max</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The upper boundary (excluded)</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Number:</span> <br />
+					A random integer</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m05" class="main__subsection">
+<pre class="main__pre--code">
+Number.prototype.clamp ( min , max ) <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">Returns a number whose value is limited to the given range.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">min</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The lower boundary</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">max</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The upper boundary</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Number:</span> <br />
+					A number in the range (min, max)</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m06" class="main__subsection">
+<pre class="main__pre--code">
+Number.prototype.mod ( n ) <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">Returns a modulo value which is always positive.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">n</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The divisor</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Number:</span> <br />
+					A modulo value</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m07" class="main__subsection">
+<pre class="main__pre--code">
+Number.prototype.padZero ( length ) <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">Makes a number string with leading zeros.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">length</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The length of the output string</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">String:</span> <br />
+					A string with leading zeros</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m08" class="main__subsection">
+<pre class="main__pre--code">
+String.prototype.contains ( string ) <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">Checks whether the string contains a given string.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">string</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The string to search for</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the string contains a given string</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m09" class="main__subsection">
+<pre class="main__pre--code">
+String.prototype.format ( ...args ) <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">Replaces %1, %2 and so on in the string to the arguments.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">...args</code>
+							<span class="type">Any</span>
+							<div class="param-description">
+								<p>The objects to format</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">String:</span> <br />
+					A formatted string</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m10" class="main__subsection">
+<pre class="main__pre--code">
+String.prototype.padZero ( length ) <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">Makes a number string with leading zeros.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">length</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The length of the output string</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">String:</span> <br />
+					A string with leading zeros</p>
+				</div>
+			</div><!-- /div -->
+
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

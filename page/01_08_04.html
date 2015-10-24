@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Item Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">Item Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>Item Settings</li>
+	  </ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Item data are those things which represent goods other than equipment. You can add effects that occur when an actor uses an item. Also, you can create items which are needed to progress the story (event contents) such as keys that open doors. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_04_img01.png" height="631" width="769" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> General Settings </h3>
+		  <h3 class="main__title--h3--sub"> Name </h3>
+		  <p>Name of the item. If the name is long, it may not be completely displayed on the Play Screen.</p>
+		  <h3 class="main__title--h3--sub"> Icon </h3>
+		  <p>Image which appears together with the item name during gameplay. You can select an image in the [Select an Image] window that appears after double-clicking on the icon's image.</p>
+		  <h3 class="main__title--h3--sub"> Description </h3>
+		  <p>The description that appears when an item is selected in the Play Screen.</p>
+		  <h3 class="main__title--h3--sub"> Item Type </h3>
+			<p>The type of item.</p>
+			<dl class="main__dl--sub">
+				<dt>[Key Item]</dt>
+				<dd>Displayed in a different frame from regular items in the item menu during gameplay.</dd>
+				<dt>[Hidden Item A] and [Hidden Item B] </dt>
+				<dd>These are not displayed on the item screen. These are special items that are only displayed when selecting items during events.</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> Price </h3>
+		  <p>This is the price of the item when purchasing it in a shop. The price when selling an item will be half of its original price. You can set it so it cannot be sold by setting this value to zero.</p>
+		  <h3 class="main__title--h3--sub"> Consumable </h3>
+		  <p>This parameter determines whether or not an item disappears after being used. If you set this to [Yes], the quantity of this item will go down by one every time it is used.</p>
+		  <h3 class="main__title--h3--sub"> Scope </h3>
+		  <p>The scope of the item's effect. You must choose one of the following.</p>
+		  <dl class="main__dl--sub">
+			<dt>None </dt>
+				<dd>Those items that have a scope which does not need to be specified</dd>
+				<dt>1 Enemy </dt>
+				<dd>One enemy within a group of enemies</dd>
+				<dt>All enemies </dt>
+				<dd>Entire enemy group</dd>
+				<dt>X Random Enemy </dt>
+				<dd>Randomly select number of enemies in a group (X being the number of targets)</dd>
+				<dt>1 Ally </dt>
+				<dd>One ally within a group of allies</dd>
+				<dt>All Allies </dt>
+				<dd>All allies in a group</dd>
+				<dt>1 Ally (Dead) </dt>
+				<dd>A specified ally in a group which is dead</dd>
+				<dt>All Allies (Dead) </dt>
+				<dd>All dead allies in a group</dd>
+				<dt>The User </dt>
+				<dd>The user of the item</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> Occasion </h3>
+		  <p>The state in which an item can be used. Select one of the following: [Always] (possible to select both in battle and in the Menu Screen), [Battle Screen] (only selectable during battle), [Menu Screen] (only selectable in the Menu Screen), [Never].</p>
+		  <h3 class="main__title--h3"> Invocation </h3>
+		  <h3 class="main__title--h3--sub"> Speed </h3>
+		  <p>The value (between -2000 and 2000) added to an actor's Agility when using an item. Affects the action order during battle, meaning that they can be effects which are small but can be used quickly, big but take time to use.</p>
+		  <h3 class="main__title--h3--sub"> Success </h3>
+		  <p>The rate of success (0 to 100%) when using an item. The effectiveness of the target affects the actual rate of success.</p>
+		  <h3 class="main__title--h3--sub"> Repeat </h3>
+		  <p>The number of times (1 to 9 times) an effect is applied when used once.</p>
+		  <h3 class="main__title--h3--sub"> TP Gain </h3>
+		  <p>The amount of TP gained after applying an effect to a target after used successfully.</p>
+		  <h3 class="main__title--h3--sub"> Hit Type </h3>
+		  <p>Determines the type of hit.</p>
+		  <dl class="main__dl--sub">
+			<dt>Certain Hit </dt>
+				<dd>Treats the successful use of a skill as a hit. Counterattacks, Counter Magic and substitutions are ineffective.</dd>
+				<dt>Physical Attack </dt>
+				<dd>Determines the success based on the user's hit rate and the evasion rate of the target. Counterattacks and substitutions are applicable.</dd>
+				<dt>Magic Attack </dt>
+				<dd>Determines the success based on magic evasion rate of the target. Counter Magic and substitutions are applicable.</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> Animations </h3>
+		  <p>Animations that appear on the target of the item used during battle.</p>
+		  <h3 class="main__title--h3--sub"> Type </h3>
+		  <p>Effect types related to HP and MP. Select one open from 6 different types. [Damage] decreases, [Recover] increases, and [Drain] transfers (removes a small amount from target and gives to user).</p>
+		  <h3 class="main__title--h3--sub"> Element </h3>
+		  <p>The element that is assigned to an effect.</p>
+		  <h3 class="main__title--h3"> Damage </h3>
+		  <p>Specify the formula for the type of effect and the amount of effectiveness if a skill damages a target.</p>
+		  <dl class="main__dl">
+			  <dt>Type </dt>
+				<dd>Effect types related to HP and MP. Select one open from 6 different types. [Damage] decreases, [Recover] increases, and [Drain] transfers (removes a small amount from target and gives to user).</dd>
+				<dt>Element </dt>
+				<dd>The element that is assigned to an effect.</dd>
+				<dt>Formula </dt>
+				<dd> Formula for determining the effectiveness.<br />
+                  <br />
+Determine the referenced parameter using the strings below when entering a formula directly. Change "x" to "a" when referring to a value of the attacker, and "b" when referring to a value of the target. Entering "a.atk" refers to the attack power of the attacker. Additionally, you can reference the "n" variable's value by entering "v[n]". You can use the 4 basic arithmetic operator(+, -, *, /) symbols when writing your formula. <br />
+<br />
+When you enter "a.atk * 4 - b.def * 2", the value for the effectiveness of an item will be calculated as "(Attacker's Attack Power x 4) - (Target's Defense x 2)".<br />
+<br />
+Also, since the effectiveness of an item can change depending on the element and defense actions, these factors will not be included in the formula.
+<table class="main__table--type01 mt10px">
+		  <tr>
+			  <th>x.atk</th>
+			  <td>Attack Power</td>
+	      </tr>
+		  <tr>
+			  <th>x.def</th>
+			  <td>Defense</td>
+	      </tr>
+		  <tr>
+			  <th>x.mat</th>
+			  <td>Magic Attack</td>
+	      </tr>
+		  <tr>
+			  <th>x.mdf</th>
+			  <td>Magic Defense</td>
+	      </tr>
+		  <tr>
+			  <th>x.agi</th>
+			  <td>Agility</td>
+	      </tr>
+		  <tr>
+			  <th>x.luk</th>
+			  <td>Luck</td>
+	      </tr>
+		  <tr>
+			  <th>x.mhp</th>
+			  <td>Max HP</td>
+	      </tr>
+		  <tr>
+			  <th>x.mmp</th>
+			  <td>Max MP</td>
+	      </tr>
+		  <tr>
+			  <th>x.hp</th>
+			  <td>Current HP</td>
+	      </tr>
+		  <tr>
+			  <th>x.mp</th>
+			  <td>Current MP</td>
+	      </tr>
+		  <tr>
+			  <th>x.tp</th>
+			  <td>Current TP</td>
+	      </tr>
+		  <tr>
+			  <th>x.level</th>
+			  <td>Level</td>
+	      </tr>
+		  </table>
+				</dd>
+				<dt>Variance </dt>
+				<dd>How much the effectiveness of an item varies (0 to 100%). Raise or lower the calculated effectiveness within the specified percentage. If the effectiveness is 100 and the variance is 20, the effectiveness will be a value between 80 and 120 (100±20).</dd>
+				<dt>Critical Hits </dt>
+				<dd>Specify whether or not an attack can critical or not by selecting [Yes] or [No]. When selecting [Yes], the chance of landing a critical attack will be determined based on the Critical Chance of the user and the Critical Evasion Rate of the target.</dd>
+			</dl>
+		  <h3 class="main__title--h3"> Effects </h3>
+		  <p>Details of effects aside from damage. These can be set in the [Effects] window that appear when double-clicking in the list. For more information, please refer to the [<a href="01_08_16.html">How to Set Effects</a>] section.</p>
+		  <h3 class="main__title--h3"> Note </h3>
+		  <p>The [Note] section can be used to make notes while making your game.</p>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

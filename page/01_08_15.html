@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>How to Set Traits</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">How to Set Traits</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>How to Set Traits</li>
+	  </ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Settings Overview</h2>
+		  <p> The [Traits] parameter for actors, classes, weapons, armors, enemies and states define the unique properties and functions for each type of data. <br />
+		    <br />
+		    The 24 types of properties that can be given are found below. By giving these properties according to the contents of the data you wish to create, you can give the various types of data complex traits. <br />
+  <br />
+		    Traits for classes, weapons, armors and states will be reflected in a character's traits when that character has that type of data added (equipped).<br />
+  <br />
+		    Furthermore, please be careful when configuring traits that permanently restrict actions. For example, a weapon which is set to [Lock Equip] cannot be removed once an actor equips it. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Setting Traits</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_15_img01.png" height="361" width="364" alt="" />
+			</div>
+		  <p> To set a trait, double-click an empty row in the Traits field. Select the property type in the displayed window, and specify what effects are applied. <br />
+		    <br />
+		    The property details will be displayed in the [Traits] list. You can re-edit the contents of properties by double-clicking the item. Additionally, you can perform actions such as copying the settings and deleting them in the context menu that is displayed when you right-click a trait. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Contents of Each Trait</h2>
+		  <h3 class="main__title--h3">[Rate] Tab </h3>
+		  <dl class="main__dl">
+			<dt>Element Rate </dt>
+				<dd>Change the damage received when an attack contains an element. Specify the desired element and its rate (0 to 1000%). An attack's damage will become larger than normal if the rate is set over 100%, indicating that this character is weak against the specified element.</dd>
+				<dt>Debuff Rate</dt>
+				<dd>Change the success rate of items and skills which have a [Debuff] effect when used. Specify the desired parameter and the change of success (0 to 1000%, 100% means no change).</dd>
+				<dt>State Rate </dt>
+				<dd>Change the success rate of items and skills which have an [Add State] effect when used. Specify the desired state and the change in rate of success (0 to 1000%, 100% means no change).</dd>
+				<dt>State Resist </dt>
+				<dd>Negates the specified state. If [Knockout] is selected, a character will not be knocked out even when their HP reaches 0.</dd>
+			</dl>
+		  <h3 class="main__title--h3">[Param] Tab </h3>
+		  <dl class="main__dl">
+		    <dt>Parameter </dt>
+				<dd>Raises and lowers parameters such as Max HP, and Attack Power at a fixed rate. Specify the desired parameter and the change (0 to 1000%, 100% means no change).</dd>
+				<dt>Ex-Parameter </dt>
+				<dd>Raises and lowers the values of extra parameters such as Hit Rate and Evasion Rate. Specify the desired parameter and the percentage to add (-100 to 100%, starting value is 0%).</dd>
+				<dt>Sp-Parameter </dt>
+				<dd>Raises and lowers the values of special parameters such as Target Rate and Guard Rate. Specify the desired parameter and the change (0 to 1000%, starting value is 100%).</dd>
+			</dl>
+		  <h3 class="main__title--h3">[Attack] Tab </h3>
+		  <dl class="main__dl">
+		    <dt>Attack Element </dt>
+				<dd>Adds the specified element to normal attacks.</dd>
+				<dt>Attack State </dt>
+				<dd>Adds an effect of changing states to normal attacks. Specify the effect and the change in rate of success (0 to 1000%, 100% means no change).</dd>
+				<dt>Attack Speed </dt>
+				<dd>Raises and lowers agility when choosing a normal attack in battle. Specify the raise/lower value (-999 to 999).</dd>
+				<dt>Attack Times </dt>
+				<dd>Increases the number of times (1 time normally) a target is damaged using normal attacks. Specify the amount to increase.</dd>
+			</dl>
+		  <h3 class="main__title--h3">[Skill] Tab </h3>
+		  <dl class="main__dl">
+		    <dt>Add Skill Type </dt>
+				<dd>Allows the player to select the specified skill type command.</dd>
+				<dt>Seal Skill Type </dt>
+				<dd>Prevents the player from selecting the specified skill type.</dd>
+				<dt>Add Skill </dt>
+				<dd>Makes the specified skill usable.</dd>
+				<dt>Seal Skill </dt>
+				<dd>Makes the specified skill unusable.</dd>
+			</dl>
+		  <h3 class="main__title--h3">[Equip] Tab </h3>
+		  <dl class="main__dl">
+		    <dt>Equip Weapon </dt>
+				<dd>Makes the specified weapon type able to be equipped.</dd>
+				<dt>Equip Armor </dt>
+				<dd>Makes the specified armor type able to be equipped.</dd>
+				<dt>Lock Equip </dt>
+				<dd>Makes it so that equipment for the specified slot cannot be changed. Use this when you do not want to change the equipment of an actor that is temporarily in the party.</dd>
+				<dt>Seal Equip </dt>
+				<dd>Prevents equipment from being equipped in the specified slot. This allows you to create things such as "Two-handed Weapons" which seals shield equipment and "Full-body Clothing" that seals head equipment.</dd>
+				<dt>Slot Type </dt>
+				<dd>This can be only set to [Dual Wield]. In exchange for not being able to equip a shield, characters can equip two weapons.</dd>
+			</dl>
+		  <h3 class="main__title--h3">[Other] Tab </h3>
+		  <dl class="main__dl">
+		    <dt>Action Times +</dt>
+				<dd>Sets the chance of raising the number of actions during battle by 1 using the specified probability. If a character has multiple entries for this trait, each instance will be calculated separately on whether to increase the number of actions using the specified probability. For example, if a character has two of these traits with a probability of 50% each, the chance of the number of actions increasing 2 times, and the chance of actions not increasing even 1 time will both be 25% (50% x 50%).</dd>
+				<dt>Special Flag </dt>
+				<dd> Grants special traits related to actions during battle.
+<table class="main__table--type01 mt10px">
+				<tr>
+					<th style="width: 80px;">Auto Battle</th>
+					<td>Characters will perform actions automatically without taking commands from the player.</td>
+			    </tr>
+				<tr>
+					<th>Guard</th>
+					<td>Decreases the amount of damage taken by a fixed rate.</td>
+			    </tr>
+				<tr>
+					<th>Substitute</th>
+					<td>Take damage in place of an ally when they are attacked when their HP is low.</td>
+			    </tr>
+				<tr>
+					<th>Preserve TP </th>
+					<td>Accumulated TP will be preserved for the next battle. By default, TP will be reset each battle, and the amount of TP that each character has at the start of battle will be decided randomly.</td>
+			    </tr>
+			</table>
+				</dd>
+				<dt>Collapse Effect </dt>
+				<dd>This only effective towards enemies. The effect when an enemy is knocked out and collapses will change to the specified effect.</dd>
+				<dt>Party Ability </dt>
+				<dd> Grants special traits related to the party's actions during battle. The various traits of each actor will be reflected as traits for the entire party when even just one of those actors is in the party.
+<table class="main__table--type01 mt10px">
+				<tr>
+					<th style="width: 120px;">Encounter Half</th>
+					<td>The frequency of encounters while moving on the map will be reduced by half.</td>
+			    </tr>
+				<tr>
+					<th>Encounter None</th>
+					<td>No encounters will occur while moving on the map.</td>
+			    </tr>
+				<tr>
+					<th>Cancel Surprise</th>
+					<td>Suprise attacks (when only an enemy troop can perform actions on the first turn) will no longer occur when a battle starts.</td>
+			    </tr>
+				<tr>
+					<th>Raise Preemptive </th>
+					<td>The chance of preemptive attacks (when only the party can perform actions on the first turn) when a battle starts will increase.</td>
+			    </tr>
+				<tr>
+					<th>Gold Double </th>
+					<td>The amount of gold received when the party wins a battle will be twice the normal amount.</td>
+			    </tr>
+				<tr>
+					<th>Drop Item Double</th>
+					<td>The rate of a party getting items from enemies after winning a battle will be twice the normal rate (only when an item has been configured for the enemy that is defeated).</td>
+			    </tr>
+			</table>
+				</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

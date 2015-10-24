@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Common Event Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">Common Event Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>Common Event Settings</li>
+	  </ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Common events are those events that can be run when you want them to be during gameplay. You can define triggers that you run generally for the overall game such as regularly monitoring play conditions and run some kinds of processes when things such as items and skills are used. Common events created can be run by using event command or triggering it through defined switches. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_11_img01.png" width="769" height="631" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> General Settings </h3>
+		  <h3 class="main__title--h3--sub"> Name </h3>
+		  <p>Name of the common event. This property is just used in the editor (does not affect the game).</p>
+		  <h3 class="main__title--h3--sub"> Trigger</h3>
+		  <p>Timing for when these events are run will be specified using the following. Moreover, [Autorun] and [Parallel] can only be enabled when the Map Screen is displayed.</p>
+		  <dl class="main__dl--sub">
+			<dt>None </dt>
+				<dd>Will only be triggered by skills, items, and other explicitly stated events.</dd>
+				<dt>Autorun </dt>
+				<dd>Will run when the specified [Switch] is switched to ON.</dd>
+				<dt>Parallel </dt>
+				<dd>Will run when the specified  [Switch] is set to ON, and will repeat periodically.</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> Switch </h3>
+		  <p>Specify what the switch is that triggers the event when setting the trigger to [Autorun] or [Parallel]. If there are multiple common events with the same switch, the event with the youngest ID (at the top of the list) will be run.</p>
+		  <h3 class="main__title--h3"> Contents </h3>
+		  <p>Events run using common events will be set based on event commands. Editing is done the same way as the [<a href="01_09_03.html#p03">Contents</a>] for map events.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Word of Caution When Using Autorun and Parallel Triggers</h2>
+		  <p>Events which are set to [Autorun] or [Parallel] will have their contents run repeatedly while the [Switch] is set to [ON].<br />
+		    <br />
+		    Measures need to be taken to have the [OFF] value which is used as the condition set in order to stop the event from repeating. If you do not control this, there is a possibility that players will no longer be able to control the game depending on the contents of the event.<br />
+  <br />
+		    If you are no longer able to play while in Playtest, you can forcibly close the game by pressing the [X] button or by hitting [Alt] + [F4].</p>
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>TouchInput Class</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v07">TouchInput Class</h1>
+		<ul class="breadcrumb">
+			<li>JS Library</li>
+			<li>&gt;</li>
+			<li>TouchInput Class</li>
+		</ul>
+		<p>The static class that handles input data from the mouse and touchscreen.</p>
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Item Index</h2>
+			<b>Methods</b>
+			<ul class="main__ul--inline">
+				<li><a href="#m01">clear</a> <span>static</span></li>
+				<li><a href="#m02">initialize</a> <span>static</span></li>
+				<li><a href="#m03">isCancelled</a> <span>static</span></li>
+				<li><a href="#m04">isLongPressed</a> <span>static</span></li>
+				<li><a href="#m05">isMoved</a> <span>static</span></li>
+				<li><a href="#m06">isPressed</a> <span>static</span></li>
+				<li><a href="#m07">isReleased</a> <span>static</span></li>
+				<li><a href="#m08">isRepeated</a> <span>static</span></li>
+				<li><a href="#m09">isTriggered</a> <span>static</span></li>
+				<li><a href="#m10">update</a> <span>static</span></li>
+			</ul>
+
+			<b>Properties</b>
+			<ul class="main__ul--inline">
+				<li><a href="#p01">date</a> <span>static</span></li>
+				<li><a href="#p02">keyRepeatInterval</a> <span>static</span></li>
+				<li><a href="#p03">keyRepeatWait</a> <span>static</span></li>
+				<li><a href="#p04">wheelX</a> <span>static</span></li>
+				<li><a href="#p05">wheelY</a> <span>static</span></li>
+				<li><a href="#p06">x</a> <span>static</span></li>
+				<li><a href="#p07">y</a> <span>static</span></li>
+			</ul>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Methods</h2>
+
+			<div id="m01" class="main__subsection">
+<pre class="main__pre--code">
+clear () <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Clears all the touch data.</p>
+			</div><!-- /div -->
+
+			<div id="m02" class="main__subsection">
+<pre class="main__pre--code">
+initialize () <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Initializes the touch system.</p>
+			</div><!-- /div -->
+
+			<div id="m03" class="main__subsection">
+<pre class="main__pre--code">
+isCancelled () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the right mouse button is just pressed.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if the right mouse button is just pressed</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m04" class="main__subsection">
+<pre class="main__pre--code">
+isLongPressed () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the left mouse button or touchscreen is kept depressed.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if the left mouse button or touchscreen is long-pressed</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m05" class="main__subsection">
+<pre class="main__pre--code">
+isMoved () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the mouse or a finger on the touchscreen is moved.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if the mouse or a finger on the touchscreen is moved</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m06" class="main__subsection">
+<pre class="main__pre--code">
+isPressed () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the mouse button or touchscreen is currently pressed down.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if the mouse button or touchscreen is pressed</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m07" class="main__subsection">
+<pre class="main__pre--code">
+isReleased () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the left mouse button or touchscreen is released.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if the mouse button or touchscreen is released</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m08" class="main__subsection">
+<pre class="main__pre--code">
+isRepeated () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the left mouse button or touchscreen is just pressed or a pseudo key repeat occurred.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if the mouse button or touchscreen is repeated</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m09" class="main__subsection">
+<pre class="main__pre--code">
+isTriggered () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether the left mouse button or touchscreen is just pressed.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if the mouse button or touchscreen is triggered</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m10" class="main__subsection">
+<pre class="main__pre--code">
+update () <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Updates the touch data.</p>
+			</div><!-- /div -->
+
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Properties</h2>
+
+			<div id="p01" class="main__subsection">
+<pre class="main__pre--code">
+date <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">[read-only] The time of the last input in milliseconds.</p>
+			</div><!-- /div -->
+
+			<div id="p02" class="main__subsection">
+<pre class="main__pre--code">
+keyRepeatInterval <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">The interval of the pseudo key repeat in frames.</p>
+			</div><!-- /div -->
+
+			<div id="p03" class="main__subsection">
+<pre class="main__pre--code">
+keyRepeatWait <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">The wait time of the pseudo key repeat in frames.</p>
+			</div><!-- /div -->
+
+			<div id="p04" class="main__subsection">
+<pre class="main__pre--code">
+wheelX <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">[read-only] The horizontal scroll amount.</p>
+			</div><!-- /div -->
+
+			<div id="p05" class="main__subsection">
+<pre class="main__pre--code">
+wheelY <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">[read-only] The vertical scroll amount.</p>
+			</div><!-- /div -->
+
+			<div id="p06" class="main__subsection">
+<pre class="main__pre--code">
+x <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">[read-only] The x coordinate on the canvas area of the latest touch event.</p>
+			</div><!-- /div -->
+
+			<div id="p07" class="main__subsection">
+<pre class="main__pre--code">
+y <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">[read-only] The y coordinate on the canvas area of the latest touch event.</p>
+			</div><!-- /div -->
+
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

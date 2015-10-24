@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Input Class</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v07">Input Class</h1>
+		<ul class="breadcrumb">
+			<li>JS Library</li>
+			<li>&gt;</li>
+			<li>Input Class</li>
+		</ul>
+		<p>The static class that handles input data from the keyboard and gamepads.</p>
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Item Index</h2>
+			<b>Methods</b>
+			<ul class="main__ul--inline">
+				<li><a href="#m01">clear</a> <span>static</span></li>
+				<li><a href="#m02">initialize</a> <span>static</span></li>
+				<li><a href="#m03">isLongPressed</a> <span>static</span></li>
+				<li><a href="#m04">isPressed</a> <span>static</span></li>
+				<li><a href="#m05">isRepeated</a> <span>static</span></li>
+				<li><a href="#m06">isTriggered</a> <span>static</span></li>
+				<li><a href="#m07">update</a> <span>static</span></li>
+			</ul>
+
+			<b>Properties</b>
+			<ul class="main__ul--inline">
+				<li><a href="#p01">date</a> <span>static</span></li>
+				<li><a href="#p02">dir4</a> <span>static</span></li>
+				<li><a href="#p03">dir8</a> <span>static</span></li>
+				<li><a href="#p04">gamepadMapper</a> <span>static</span></li>
+				<li><a href="#p05">keyMapper</a> <span>static</span></li>
+				<li><a href="#p06">keyRepeatInterval</a> <span>static</span></li>
+				<li><a href="#p07">keyRepeatWait</a> <span>static</span></li>
+			</ul>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Methods</h2>
+
+			<div id="m01" class="main__subsection">
+<pre class="main__pre--code">
+clear () <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Clears all the input data.</p>
+			</div><!-- /div -->
+
+			<div id="m02" class="main__subsection">
+<pre class="main__pre--code">
+initialize () <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Initializes the input system.</p>
+			</div><!-- /div -->
+
+			<div id="m03" class="main__subsection">
+<pre class="main__pre--code">
+isLongPressed  ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether a key is kept depressed.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">keyName</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The mapped name of the key</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the key is long-pressed</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m04" class="main__subsection">
+<pre class="main__pre--code">
+isPressed ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether a key is currently pressed down.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">keyName</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The mapped name of the key</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the key is pressed</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m05" class="main__subsection">
+<pre class="main__pre--code">
+isRepeated ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Check if a key is just pressed or a key repeat occurred.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">keyName</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The mapped name of the key</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the key is repeated</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m06" class="main__subsection">
+<pre class="main__pre--code">
+isTriggered ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Checks whether a key is just pressed.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">keyName</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The mapped name of the key</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span> <br />
+					True if the key is triggered</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m07" class="main__subsection">
+<pre class="main__pre--code">
+update () <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Updates the input data.</p>
+			</div><!-- /div -->
+
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Properties</h2>
+
+			<div id="p01" class="main__subsection">
+<pre class="main__pre--code">
+date <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">[read-only] The time of the last input in milliseconds.</p>
+			</div><!-- /div -->
+
+			<div id="p02" class="main__subsection">
+<pre class="main__pre--code">
+dir4 <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">[read-only] The four direction value as a number of the numpad, or 0 for neutral.</p>
+			</div><!-- /div -->
+
+			<div id="p03" class="main__subsection">
+<pre class="main__pre--code">
+dir8 <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">[read-only] The eight direction value as a number of the numpad, or 0 for neutral.</p>
+			</div><!-- /div -->
+
+			<div id="p04" class="main__subsection">
+<pre class="main__pre--code">
+gamepadMapper <span class="pre__type">Object</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">A hash table to convert from a gamepad button to a mapped key name.</p>
+			</div><!-- /div -->
+
+			<div id="p05" class="main__subsection">
+<pre class="main__pre--code">
+keyMapper <span class="pre__type">Object</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">A hash table to convert from a virtual key code to a mapped key name.</p>
+			</div><!-- /div -->
+
+			<div id="p06" class="main__subsection">
+<pre class="main__pre--code">
+keyRepeatInterval <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">The interval of the key repeat in frames.</p>
+			</div><!-- /div -->
+
+			<div id="p07" class="main__subsection">
+<pre class="main__pre--code">
+keyRepeatWait <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">The wait time of the key repeat in frames.</p>
+			</div><!-- /div -->
+
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>The Menu Bar</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v01 mb20px">The Menu Bar</h1>
+		<ul class="breadcrumb">
+		  <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+			<li>The Menu Bar</li>
+		</ul>
+
+		<div class="main__section">
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_04_img01.png" width="650" alt="" />
+			</div>
+		  <p>Details regarding the items found in the Menu Bar in the Main Window are as follows.</p>
+		  <h3 class="main__title--h3--sub">[File] Menu </h3>
+			<dl class="main__dl--sub">
+			  <dt>New Project</dt>
+				<dd> Creates a new project. If a project is already opened, it will be closed upon creating a new project. </dd>
+				<dt>Open Project </dt>
+				<dd> Opens a saved project, allowing you to edit your game. Select your [Game] (or [Game.rpgproject]) file by selecting it inside its project folder using the [Open] window. </dd>
+				<dt>Close Project </dt>
+				<dd> Closes the currently opened project. A confirmation window will appear if there is data which has not been saved. Click [Yes] to close the project after saving and click [No] to close the project without saving. </dd>
+				<dt>Save Project </dt>
+				<dd> Overwrites the contents of the project you are currently editing. </dd>
+				<dt>Deployment </dt>
+				<dd> Builds your project in the platform format selected. For more information, please view [<a href="01_11_04.html">Output Formats</a>]. </dd>
+				<dt>Exit RPG Maker MV</dt>
+				<dd> Closes the program. Just like [Close Project], a confirmation window will appear if there is any unsaved data. </dd>
+			</dl>
+		  <h3 class="main__title--h3--sub">[Edit] Menu</h3>
+			<dl class="main__dl--sub">
+			  <dt>Undo </dt>
+				<dd> Allows you to undo the action that you just performed and return the project to its previous state as it was 1 step prior. You can undo up to 20 actions. </dd>
+				<dt>Cut </dt>
+				<dd> Deletes data which you have selected such as map data and map events and copies it to the clipboard. </dd>
+				<dt>Copy </dt>
+				<dd> Copies data such as map data and map events to the clipboard. </dd>
+				<dt>Paste </dt>
+				<dd> Adds the contents of the clipboard as new map data and map events. </dd>
+				<dt>Delete</dt>
+				<dd> Deletes data such as the map data and map events you have selected. </dd>
+			</dl>
+		  <h3 class="main__title--h3--sub">[Mode] Menu</h3>
+			<dl class="main__dl--sub">
+			  <dt>Map </dt>
+				<dd> Switches to the Map Design Editor Mode. </dd>
+				<dt>Event </dt>
+				<dd> Switches to the mode that allows you to create and edit map events. Lines which are determined by the size of tiles are displayed in the Map View. <br />
+				  *&nbsp;Select the [R] tab in the Tileset to enter the Region Editor Mode where you can define the region where enemy groups will appear (areas where you encounter enemies).<br />
+				</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">[Draw] Menu </h3>
+		  <p>A tool for drawing on tiles is available in the Map Editing Mode. Please refer to [<a href="01_07_01.html">Editing Map Designs</a>]&nbsp;for more information.</p>
+		  <h3 class="main__title--h3--sub">[Scale] Menu </h3>
+			<dl class="main__dl--sub">
+			  <dt>Zoom In </dt>
+				<dd> The Map View will get bigger each time you select Zoom In. </dd>
+				<dt>Zoom Out </dt>
+				<dd> The Map View will get smaller each time you select Zoom Out. </dd>
+				<dt>Actual Size </dt>
+				<dd> Displays map in standard size (displays at same magnification). </dd>
+			</dl>
+		  <h3 class="main__title--h3--sub">[Tool] Menu </h3>
+			<dl class="main__dl--sub">
+			  <dt>Database </dt>
+				<dd> Opens the settings window for the [Database] where you can create/edit elements such as your characters and items. </dd>
+				<dt>Plugin Manager </dt>
+				<dd> You manage your plugins here. For more information, please view [<a href="01_05.html#p01">How to use Aid Tools</a>]. </dd>
+				<dt>Sound Test </dt>
+				<dd> You can play test sounds loaded as asset files in your project. For more information, please view [<a href="01_05.html#p02">How to use Aid Tools</a>]. </dd>
+				<dt>Event Searcher</dt>
+				<dd> You can search for events using various conditions. For more information, please view [<a href="01_05.html#p03">How to use Aid Tools</a>]. </dd>
+				<dt>Character Generator</dt>
+				<dd>
+				Combine pre-made parts to make face graphics, walk characters, and battlers. For more information, please view [<a href="01_05.html#p05">How to Use Aid Tools</a>].
+				</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub">[Game] Menu </h3>
+			<dl class="main__dl--sub">
+				<dt>Playtest </dt>
+				<dd> Starts a Playtest of your game. For more information, please view [<a href="01_05.html#p04">How to use Aid Tools</a>].</dd>
+				<dt>Open Folder </dt>
+				<dd> Opens the folder where your project is saved. Use this when you want to check the location of your project folder or when you want to manually move files in your project folder. </dd>
+			</dl>
+		  <h3 class="main__title--h3--sub">[Help] Menu </h3>
+			<dl class="main__dl--sub">
+			  <dt>Contents </dt>
+				<dd> Displays the Help window (this window). </dd>
+				<dt>About </dt>
+				<dd> Shows version information about this software. </dd>
+			</dl>
+
+		</div><!-- /main__section -->
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

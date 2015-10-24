@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Messages</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v05">Messages</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li>&gt;</li>
+		  <li>Messages</li>
+		</ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Show Text</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_01_img01.png" width="586" height="264" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Opens the Message Window and displays text.</p>
+		  <h3 class="main__title--h3--sub"> Settings </h3>
+		  <dl class="main__dl--sub">
+			<dt>Face</dt>
+				<dd>Specifies the face image to display in the left side of the Message Window. You can select an image in the [Select an Image] Window that appears after double-clicking in the image area.</dd>
+
+				<dt>Text</dt>
+				<dd>Input the text to display. It is possible to display up to 4 lines of text at once in the Message Window. Press the [Enter] key to go to the next line when wanting to display text after the 2nd line.</dd>
+
+				<dt>Background</dt>
+				<dd>Select the Message Window format that will display the text.</dd>
+
+				<dt>Window Position</dt>
+				<dd>Specify either [Bottom], [Middle] or [Top] for the display position of the Message Window.</dd>
+
+				<dt>Preview</dt>
+				<dd>You can check what will actually be displayed by clicking this.</dd>
+
+				<dt>Batch Entry</dt>
+				<dd>When enabled, it allows you to enter more than 4 lines of text. Text which exceeds 4 lines will be set in the contents window after dividing every 4 lines into multiple [Show Text] event commands.</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> Remarks </h3>
+		  <ul class="main__ul">
+		    <li>Pressing [Ctrl] + [Enter] while inputting text is the same as pressing the [OK] button.</li>
+		    <li>The vertical line in the [Text] field is a guide for the amount of characters that are possible to display in the Message Window. To check whether the text is displayed as intended, enter text while checking the [Preview].</li>
+		    <li>You can display values of variables and names of actors by entering control characters into the text. Control characters and what will be displayed is as follows. Be sure to enter all control characters using half-width input.</li>
+		  </ul>
+
+			<table class="main__table--type01">
+				<tr>
+					<th>\V[n]</th>
+					<td>Will be replaced with the value of the nth variable.</td>
+				</tr>
+				<tr>
+					<th>\N[n]</th>
+					<td>Will be replaced with the name of the nth actor.</td>
+				</tr>
+				<tr>
+					<th>\P[n]</th>
+					<td>Will be replaced by the name of the nth (arranged order) party member.</td>
+				</tr>
+				<tr>
+					<th>\G</th>
+					<td>Will be replaced by the currency unit.</td>
+				</tr>
+				<tr>
+					<th>\C[n]</th>
+					<td>Draw the subsequent text in the nth color. Text color conforms to the contents of the [Window.png] system image.</td>
+				</tr>
+				<tr>
+					<th>\I[n]</th>
+					<td>Draws the nth icon.</td>
+				</tr>
+				<tr>
+					<th>\{</th>
+					<td>Increases the text by 1 step.</td>
+				</tr>
+				<tr>
+					<th>\}</th>
+					<td>Decreases the text by 1 step.</td>
+				</tr>
+				<tr>
+					<th>\\</th>
+					<td>Replaced with the backslash character.</td>
+				</tr>
+				<tr>
+					<th>\$</th>
+					<td>Open the gold window.</td>
+				</tr>
+				<tr>
+					<th>\.</th>
+					<td>Wait for 1/4 second.</td>
+				</tr>
+				<tr>
+					<th>\|</th>
+					<td>Wait for 1 second.</td>
+				</tr>
+				<tr>
+					<th>\!</th>
+					<td>Wait for button input.</td>
+				</tr>
+				<tr>
+					<th>\></th>
+					<td>Display remaining text on same line all at once.</td>
+				</tr>
+				<tr>
+					<th>\<</th>
+					<td>Cancel the effect that displays text all at once.</td>
+				</tr>
+				<tr>
+					<th>\^</th>
+					<td>Do not wait for input after displaying the next.</td>
+				</tr>
+			</table>
+			<p class="mb0px">
+				* The control characters \V, \N, \P, \G, \C, \I, \\ may be used in the below places as well.
+			</p>
+
+			<ul class="main__ul">
+				<li>Event Command: [<a href="#p02">Show Choices</a>]</li>
+				<li>Database: [Profile] in [<a href="01_08_01.html">Actor Settings</a>]</li>
+				<li>Database: [Message] in [<a href="01_08_03.html">Skill Settings</a>]</li>
+				<li>Database: [Description] in [<a href="01_08_04.html">Item Settings</a>] and [<a href="01_08_05.html">Weapon/Armor Settings</a>]</li>
+				<li>Database: [Messages] in [<a href="01_08_08.html">State Settings</a>]</li>
+				<li>Database: [Save Message] and [Load Message] fields in [Messages] in [<a href="01_08_14.html">Terms Settings</a>]</li>
+				<li>Database: In [Messages] in [<a href="01_08_14.html">Terms Settings</a>], the messages used during battle from [Party Name] and below (For things displayed in the window,  \$ \. \| \! \> \< \^ may also be used)</li>
+			</ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Show Choices</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_01_img02.png" width="412" height="306" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Displays the Choices Window (up to 6 choices), and handles branches according to the player's choices. You can use control characters similar to how you use them in messages.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <dl class="main__dl--sub">
+			<dt>Choices (1 through 6)</dt>
+				<dd>Specifies the text for the choices. Choices left blank will not be displayed.</dd>
+				<dt>Background</dt>
+				<dd>Specifies the background type for choices.</dd>
+				<dt>Window Position</dt>
+				<dd>Specifies the display position of the choices on the screen.</dd>
+				<dt>Default</dt>
+				<dd>Specifies the initial position of the cursor.</dd>
+				<dt>Cancel</dt>
+				<dd>Handling method for when the cancel button is pressed.</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub">Remarks</h3>
+		  <ul class="main__ul">
+				<li>After confirming your settings, all the branches that handle the choices (including Cancel) will be created in the [Contents] section. What will be run after selecting a choice will be set in these branches.</p>
+	      </ul>
+
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Input Number</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_01_img03.png" width="222" height="189" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Displays the Input Number screen, and assigns the value input by the player to a variable.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <dl class="main__dl--sub">
+			<dt>Variable</dt>
+				<dd>Specify the variable that will store the number specified by the player.</dd>
+
+				<dt>Digits</dt>
+				<dd>Specify the number of digits (1 through 8) that the input will accept.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Select Item</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_01_img04.png" width="222" height="189" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Displays the Item Selection Window. Assigns the ID of the item that the player selects to a variable.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <dl class="main__dl--sub">
+			<dt>Variable</dt>
+				<dd>Specifies the variable that the item number (item ID) selected by the player will be assigned to.</dd>
+				<dt>Item Type</dt>
+				<dd>Specify the types of items to display in the list.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p05">
+		  <h2 class="main__title--h2">Show Scrolling Text</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_01_img05.png" width="472" height="336" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Displays text that scrolls from the bottom to the top. Scrolling will be fast forwarded when the confirm button is pressed.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <dl class="main__dl--sub">
+			<dt>Text</dt>
+				<dd>Input the text to display.</dd>
+
+				<dt>Speed</dt>
+				<dd>Specifies the scroll speed (1 through 8). The higher the number, the faster the scrolling becomes.</dd>
+
+				<dt>No Fast Forward</dt>
+				<dd>Fast forwarding will not be possible when the confirm button is pressed.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

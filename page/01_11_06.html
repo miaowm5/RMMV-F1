@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Converting to an iOS App &lt;Creating an ipa file&gt;</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<!--    type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></scri-->
+	<!--    type="text/javascript" src="../inc/js/common.js"></scri-->
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v06">Converting to an iOS App<br /> &lt;Creating an ipa file&gt;</h1>
+		<ul class="breadcrumb">
+			<li><a href="01.html">RPG Maker MV</a></li>
+			<li>&gt;</li>
+			<li>Documentation</li>
+			<li>&gt;</li>
+			<li>Converting to an iOS App &lt;Creating an ipa file&gt;</li>
+		</ul>
+
+
+		<div class="main__section" id="p01">
+			<h2 class="main__title--h2">1 Overview</h2>
+			<p>
+				From this version, games created using RPG Maker MV will now be played using browsers which support HTML5 technology such as WebGL &amp; 2DCanvas, WebAudio and JavaScript. You can also play games made using RPG Maker on iPhone, and iPad with Safari installed that also has HTML5 support. <br /> <br /> Rather than explaining how to play using Safari, we will explain in this section how to play your game as an iOS application. Running an HTML5 game as an application using an iOS device is similar to running a game as an iOS application using a browser that supports HTML5. This method of development of running a web application as a native application is known by such names as &quot;Hybrid App,&quot; and is popular from the fact that it can be run on cross-platforms. <br /> <br /> Browsers which package games as apps are &quot;Browser Engines&quot; which handle the Web display and sounds, and have iOS built-in (called UIWebView). There are several frameworks that connect with browser engines as applications, but we will be using a framework called <a href="https://cordova.apache.org/" target="_blank">Apache Cordova</a> here.
+			</p>
+			<h3 class="main__title--h3--sub">Operating Systems</h3>
+			<p>It's possible to run a game on several different platforms as a hybrid app, but you will essentially need a Mac PC with OS X installed as your environment for creating iOS apps. Here we will be using OS X 10.10. Additionally, the computer used to do your work will be referred to as &quot;Mac&quot;.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+			<h2 class="main__title--h2">2 Prepare the Packaging Environment</h2>
+			<p>
+				Installing games created using RPG Maker on iOS will require creating an ipa file. An ipa file is the installer for iOS apps and its extension is ipa. This is compressed in a ZIP format, and contains various necessary files for running the application. We will refer to creating the ipa file here as &quot;Packaging&quot;. <br /> Also, an Internet connection is required to download some of the necessary developer tools.
+			</p>
+			<h3 class="main__title--h3">2-1 Installing and Configuring Node.js and Apache Cordova</h3>
+			<p>Put simply, Node.js provides an environment where you can run JavaScript outside of a browser. Cordova is provided as a Node.js package so let's go ahead and install Node.js first.</p>
+
+			<h3 class="main__title--h3--sub">2-1-1 Installing and Checking Node.js</h3>
+			<p>Click [INSTALL] found on <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a> and download the installer.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-1.png" height="622" width="1280" alt="" />
+			</div>
+			<p>Run the installer. When prompted for the administrator password, enter administrator password for your Mac and run the installer. The installation is complete when this finishes.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-2.png" height="438" width="620" alt="" />
+			</div>
+			<p>Confirm the Node.js installation using the terminal. The terminal can be found in Applications → Utilities. After the terminal starts up, enter &quot;node -v&quot; and press the return key. If the version you installed is displayed, there is no problem.</p>
+<pre class="main__pre--code">
+$ node -v
+</pre>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-3.png" height="366" width="585" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">2-1-2 Installing Cordova</h3>
+			<p>Cordova is provided as a Node.js package. The npm command which is a package management tool is provided in Node.js. <br /> Enter "sudo npm install cordova -g" into the terminal and install Cordova. &quot;sudo&quot; is used to run processes and applications as an administrator on Macs. Run the "npm" command here as an administrator. The "-g" option is an option which is used so that you can use Cordova in a global environment, and using this allows you to use the inside of any Mac folder. <br /> You will be asked for the administrator password so enter the password and run the installation.</p>
+<pre class="main__pre--code">
+$ sudo npm install cordova -g
+</pre>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-4.png" height="366" width="585" alt="" />
+			</div>
+			<p>Confirm your version of Cordova. Enter &quot;cordova -v&quot; into the terminal and press the return key. If the version of Cordova is displayed, that means there is no problem.</p>
+<pre class="main__pre--code">
+$ cordova -v
+</pre>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-5.png" height="366" width="585" alt="" />
+			</div>
+
+			<h3 class="main__title--h3">2-2 Xcode Installation and Setup</h3>
+			<p>There are various required files included in the ipa file which are needed to run your application on an iOS device. In order to allocate all those files into one file, there is an application called Xcode for the Mac available. Tools which allow you to do true development are also included with Xcode.</p>
+
+			<h3 class="main__title--h3--sub">2-2-1 Xcode Installation, Setup</h3>
+			<p>You can get Xcode for free from the App Store.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-6.png" height="531" width="958" alt="" />
+			</div>
+			<p>The newest version of Xcode is 6.4 as of August 2015.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-7.png" height="470" width="802" alt="" />
+			</div>
+			<p>
+				Xcode command line tools are a group of commands for development that you can use in the terminal. <br /> Check that command line tools are useable in the [Locations] tab under [Preferences] in [Xcode] found in the menu. If you do not currently have the command line tools you can download them from the [Downloads] tab on the left.
+			</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-8.png" height="466" width="750" alt="" />
+			</div>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/2-1-9.png" height="497" width="750" alt="" />
+			</div>
+
+			<h3 class="main__title--h3">2-3 Installing ios-sim</h3>
+			<p>
+				Here we will install the ios-sim which allows you to easily use the iOS simulator from Cordova. This can be downloaded using Node.js. <br /> Enter &quot;sudo npm install ios-sim -g&quot; into the terminal and install the simulator. <br /> If the version of the simulator is displayed when you enter &quot;ios-sim --version&quot;, that means there is no problem.
+			</p>
+<pre class="main__pre--code">
+$ sudo npm install ios-sim -g
+</pre>
+
+<pre class="main__pre--code">
+$ ios-sim --version
+</pre>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p03">
+			<h2 class="main__title--h2">3 Deploying Games Using RPG Maker</h2>
+			<p>Here we will export the necessary  game data, assets and game engine to a package from RPG Maker. Select [Deployment...] from the File Menu and the deployment dialog will appear. If you select [Android / iOS] and export, all the files needed for iOS packaging will be placed in the selected folder. <br /> In this example, we deployed to the desktop.</p>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p04">
+			<h2 class="main__title--h2">4 Packaging</h2>
+			<p>Packaging refers to creating the ipa file which you allows you to install applications to an iOS device.</p>
+
+			<h3 class="main__title--h3">4-1 Creating an Xcode Project</h3>
+			<p>Let's create an Xcode project using Cordova. In the end, we will be exporting an ipa file using Xcode.</p>
+
+			<h3 class="main__title--h3--sub">4-1-1 Creating a Cordova Template</h3>
+			<p>First, we will create a template using the &quot;create&quot; option which is a Cordova command. Below is an example of a command that you would use in the terminal.</p>
+
+<pre class="main__pre--code">
+$ cordova create ~/Desktop/work com.example.sample Sample
+</pre>
+
+			<p>In the example above, we are creating a folder where you will work from called &quot;work&quot; on the desktop. The folder will be the template, the package name will be set to &quot;com.example.sample&quot; and the app name will be set as &quot;Sample&quot;. <br /> <b>*When actually setting the package name, you cannot use &quot;com.example&quot;.</b></p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-1.png" height="492" width="851" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">4-1-2 Adding iOS Platforms</h3>
+			<p>
+				We will add iOS files that you will use to a template using Cordova. Enter &quot;cd ~/Desktop/work&quot; into the terminal to move to the &quot;work&quot; folder that was created earlier.  After moving to the folder, type &quot;cordova platform add ios&quot; into the terminal and press the return key. Doing this will create the necessary files for running on iOS.
+			</p>
+<pre class="main__pre--code">
+$ cd ~/Desktop/work
+$ cordova platform add ios
+</pre>
+
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-2.png" height="492" width="851" alt="" />
+			</div>
+			<p>
+				Use ios-sim to confirm everything you have done up until now using an iOS simulator. <br /> Enter &quot;cordova emulate ios&quot; into the terminal and press the return key. When the build finishes, the iOS simulator will automatically start up and the template screen will be displayed.
+			</p>
+<pre class="main__pre--code">
+$ cordova emulate ios
+</pre>
+
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-3.png" height="620" width="851" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">4-1-3 Copying a Deployed Game</h3>
+			<p>Here we will copy the deployed game data and other files to the &quot;www&quot; folder found inside the &quot;work&quot; folder. Delete the entire contents of the already existing "work/www" folder, leaving it empty.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-4.png" height="632" width="1186" alt="" />
+			</div>
+			<p>Copy all the files inside the &quot;www&quot; folder found inside the deployed folder to the &quot;work/www&quot; folder.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-5.png" height="632" width="1186" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">4-1-4 Editing the index.html File</h3>
+			<p>Let's make adjustments to the game's HTML for Cordova. <br /> Open the &quot;work/www/index.html&quot; file using your favorite text editor. <br /> You will be adding one row, which is the below tag that will be added below &lt;body style=&quot;background-color: black&quot;&gt; tag.</p>
+<pre class="main__pre--code">
+&lt;script type=&quot;text/javascript&quot; src=&quot;cordova.js&quot;&gt;&lt;/script&gt;
+</pre>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-6.png" height="638" width="1327" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">4-1-5 Editing the config.xml File</h3>
+			<p>
+				We will make some adjustments to the config.xml file that configures the behavior of your game app. RPG Maker is optimized for holding the device sideways, so we will set the screen's orientation to landscape. <br /> Open the &quot;work/config.xml&quot; file using your favorite text editor. <br /> Add the below tag inside the &lt;platform name =&quot;ios&quot;&gt; tag.
+			</p>
+<pre class="main__pre--code">
+&lt;preference name=&quot;orientation&quot; value=&quot;landscape&quot; /&gt;
+</pre>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-7.png" height="617" width="1338" alt="" />
+			</div>
+			<p>Additionally, there is also a row which has the tag &lt;access origin=&quot;*&quot;&gt;, which sets the application allow access to external HTML from the game's HTML. <br /> This is not needed so go ahead and delete this line.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-8.png" height="617" width="1338" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">4-1-6 Build</h3>
+			<p>
+				We've finished up the configuration so let's make a build. <br /> Enter &quot;cordova build&quot; into the terminal and press the return key. After a while, your build will be complete.<br />
+			</p>
+<pre class="main__pre--code">
+$ cordova build
+</pre>
+			<p>
+				At this point, all of the settings necessary for running your game are now complete. Let's see if the app works using an emulator. <br /> Enter &quot;cordova emulate ios&quot; in the terminal just as you did before.
+			</p>
+<pre class="main__pre--code">
+$ cordova emulate ios
+</pre>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-9.png" height="537" width="1001" alt="" />
+			</div>
+			<p>The game has started up.</p>
+
+			<h3 class="main__title--h3--sub">4-1-7 Changing Icons</h3>
+			<p>The app icon can be found in "work/platforms/ios/&lt;App Name&gt;/Resources/icons". <br /> If you are using your own original files, overwrite the same files using files of the same size and with the same name.</p>
+
+			<h3 class="main__title--h3">4-2 Creating a Provisioning Profile</h3>
+			<p>
+				To create an ipa file which can be installed on the actual iOS device, you will need a &quot;provisioning profile&quot; which is a file used for identifying applications. <br /> To get a provisioning profile, you will need to register on Apple's [Apple Developer Program] (paid service). <br /> <br /> Also, we will be calling the series of actions such as the implementation of the provisioning file into a package as &quot;signing&quot;. For signing, you will need files such as a key file and certificate files that certify the key file. <br /> <b>*The Apple Developer Program site is frequently updated so the method of acquiring provisioning files may change. If for some reason you have trouble completing the necessary actions or if there is anything you would like to know, please send an inquiry on <a href="https://developer.apple.com/jp/programs/" target="_blank">Apple Developer Program</a>.</b>
+			</p>
+
+			<h3 class="main__title--h3--sub">4-2-1 Creating a key file and Certificate Request &amp; Registration</h3>
+			<p><b>The certificate registration that you will be doing here is only required if you have not done this yet. </b><br /> First, we will create a key file and request a certificate for that key file. We will use &quot;Keychain Access&quot; for requesting a certificate. <br /> Keychain Access is located in [Applications] → [Utilities]. <br /> Run Keychain Access, and select [Request a Certificate From a Certificate Authority] in [Certification Assistant] found under [Keychain Access] in the menu.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-10.png" height="468" width="853" alt="" />
+			</div>
+			<p>For the user e-mail address, use the e-mail address that you used to register on Apple Developer Program, and choose a name for the common name that is easy to understand. Set the request process to [Saved to disk] and check [Let me specify key pair information]. </p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-11.png" height="554" width="876" alt="" />
+			</div>
+			<p>Save the request file.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-12.png" height="555" width="877" alt="" />
+			</div>
+			<p>Select [Certificates, Identifiers &amp; Profiles] from the Apple Developer Program member center.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-13.png" height="621" width="1280" alt="" />
+			</div>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-14.png" height="585" width="982" alt="" />
+			</div>
+			<p>You will move to the certificate management screen when you select [Certificates]. Select [All] in the left pane, and press the [+] button in the upper right.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-15.png" height="585" width="982" alt="" />
+			</div>
+			<p>Select [App Store and Ad Hoc] for the certificate type.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-16.png" height="585" width="982" alt="" />
+			</div>
+			<p>Proceed to the next screen.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-17.png" height="585" width="982" alt="" />
+			</div>
+			<p>In the request certificate selection screen, select the request file which you made using Keychain Access.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-18.png" height="585" width="982" alt="" />
+			</div>
+			<p>The certificate has now been issued. Download the certificate.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-19.png" height="585" width="982" alt="" />
+			</div>
+			<p>If you double-click the downloaded certificate, it will be loaded into Keychain Access.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-20.png" height="435" width="703" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">4-2-2 Creating an App ID</h3>
+			<p>Next, we will create an App ID which will be used to make the package. <br /> This will be carried out in the [Identifiers] section in the Apple Developer Program site which you used earlier. <br /> Select [App IDs] under [Identifiers] in the left pane, and press the [+] button in the upper right.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-21.png" height="585" width="982" alt="" />
+			</div>
+			<p>Enter a name that is easy to remember in the [Name] section under [App ID Description]. <br /> Enter the [Bundle ID] in the [Explicit App ID] section under [App ID Suffix]. Just like the provided example, the domain name is used in reverse with the top level domain (&quot;com&quot; in the example) and is connected using a &quot;.&quot;. Following at the end is your game's name (&quot;sample&quot; in the example). <br /> <b>*Please keep in mind that you cannot actually use example.com. </b><br /> <br /> Example:<br /> When the domain that you own is [example.com] and your game's name is [sample], you would write:<br />com.example.sample.
+			</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-22.png" height="585" width="982" alt="" />
+			</div>
+			<p>Select the appropriate option from the section below, and click [continue] to proceed to the end.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-23.png" height="585" width="982" alt="" />
+			</div>
+			<p>Your App ID has been created. There will be a prefix attached to the identifier (here it is W96~). You will need this for later so make a note of it somewhere.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-24.png" height="585" width="982" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">4-2-3 Registering a Device</h3>
+			<p>Let's register the UDID so that we can install to the device that you are using. You are able to register on the Apple Developer Program site. <br /> UDID is the unique serial number for each iOS device which can be checked using iTunes. Connect the device to your Mac and open up iTunes. In the device's overview, you can check the [Serial Number]. The UDID will be displayed by clicking this number. Copy the UDID by right-clicking.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-25.png" height="724" width="1246" alt="" />
+			</div>
+			<p>Select [All] under [Devices] in the left pane of Apple Developer Program, and click the [+] button at the top right.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-26.png" height="586" width="982" alt="" />
+			</div>
+			<p>Enter a name that is easy to remember in the [Name] section, paste the [UDID] that was copied earlier. After doing so, click [Continue] then [Register] to register the device.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-27.png" height="586" width="982" alt="" />
+			</div>
+
+			<h3 class="main__title--h3--sub">4-2-4 Creating and Registering a Provisioning Profile</h3>
+			<p>Next, we will take care of some things on the Apple Developer Program site. <br /> Select [All] under [Provisioning Profiles] in the left pane, and click the [+] button in the upper right.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-28.png" height="586" width="982" alt="" />
+			</div>
+			<p>Select [Ad Hoc] under [Distribution] as the type.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-29.png" height="586" width="982" alt="" />
+			</div>
+			<p>Here we will use the [App ID] that we created earlier.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-30.png" height="586" width="982" alt="" />
+			</div>
+			<p>Select the certificate that we made back in 4-2-1.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-31.png" height="586" width="982" alt="" />
+			</div>
+			<p>Similarly, we will set [Device] to the device which we added earlier.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-32.png" height="586" width="982" alt="" />
+			</div>
+			<p>Enter a name that is easy to remember in the [Profile Name] section.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-33.png" height="586" width="982" alt="" />
+			</div>
+			<p>With this, you are good to go. Download the provisioning profile.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-34.png" height="586" width="982" alt="" />
+			</div>
+			<p>Double-clicking the provisioning file that you have downloaded will start the [iPhone Configuration Utility], and the provisioning file will be loaded.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-35.png" height="662" width="1008" alt="" />
+			</div>
+
+			<h3 class="main__title--h3">4-3 Packaging to an ipa File</h3>
+			<p>Let's create the ipa file which can be installed on to your device. Here we will create an ipa File which you can install on your iOS device.</p>
+
+			<h3 class="main__title--h3--sub">4-3-1 Archive and Signing</h3>
+			<p>Open your work folder using the terminal. Enter &quot;cd ~/Desktop/work" into the terminal and press the return key. <br /> Open the xcodeproj file which was generated using Cordova in Xcode. Enter &quot;open platforms/ios/Sample.xcodeproj&quot; in the terminal and press the return key.</p>
+<pre class="main__pre--code">
+$ cd ~/Desktop/work
+$ open platforms/ios/Sample.xcodeproj
+</pre>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-36.png" height="478" width="830" alt="" />
+			</div>
+			<p>Xcode will start up. Select [Sample] in the left pane, and open the project settings. Set the target to &quot;iOS Device&quot; setting it up so that a build can be made for the device.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-37.png" height="652" width="1280" alt="" />
+			</div>
+			<p>Use the same identifier set for the [App ID identifier] configured in 4-2-2 for the [Bundle Identifier].</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-38.png" height="652" width="1280" alt="" />
+			</div>
+			<p>Just in case, let's make sure the project is clean. Select [Product] → [Clean] from the file menu.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-39.png" height="652" width="1280" alt="" />
+			</div>
+			<p>Now let's create an archive to and gather all the files into one. Select [Product] → [Archive].</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-40.png" height="652" width="1280" alt="" />
+			</div>
+			<p>The Organizer window will open once the archive is successfully made, and the archive for this project will be displayed.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-41.png" height="652" width="1280" alt="" />
+			</div>
+			<p>Right-click the archive and when you select [Show in Finder] you can open the location of the archive file in the Finder.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-42.png" height="652" width="1280" alt="" />
+			</div>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-43.png" height="652" width="1280" alt="" />
+			</div>
+			<p>The archive will be located relatively deeply nested in folders at /Users/&lt;User Name&gt;/Library/Developer/Xcode/Archives/Date/ <br /> It's possible to also export the package as is using [Export...] in the right pane of the Organizer, but since we want to explicitly specify the provisioning profile, we will export from the terminal. We will use the &quot;xcodebuild&quot; command to export using the terminal. <br /> Below is an example of a command.</p>
+<pre class="main__pre--code">
+$ xcodebuild -exportArchive -archivePath ~/Library/Developer/Xcode/Archives/2015-07-29/Sample\ 2015-07-29\ 18.32.xcarchive/ -exportProvisioningProfile &quot;sample&quot; -exportPath ~/Desktop/sample.ipa
+</pre>
+			<p>We are having the archive be exported to the ipa file using the &quot;exportArchive&quot; option. <br /> The archivePath option specifies the archive file which we made earlier. <br /> The exportProvisioningProfile option specifies the provisioning profile. This is what was registered in the iPhone Configuration Utility in 4-2-4. Be sure to enclose these in double quotes. <br /> The exportPath option specifies the path of the ipa file. Here we are exporting sample.ipa to the desktop.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-44.png" height="464" width="956" alt="" />
+			</div>
+			<p>The export is successful when you see &quot;EXPORT SUCCEEDED&quot;. The signed ipa file will be exported.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-45.png" height="464" width="956" alt="" />
+			</div>
+
+			<h3 class="main__title--h3">4-4 Installing to the Device</h3>
+			<p>We will use iTunes to install the app to the device. <br /> Connect your iOS device to your Mac and start up iTunes. Drag and drop the ipa file created earlier into the [My Apps] list.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-46.png" height="741" width="1287" alt="" />
+			</div>
+			<p>Open the App settings of your device. Your game will be installed when you drag and drop the app into the top screen on the right and click the [Apply] button.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-47.png" height="566" width="1100" alt="" />
+			</div>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-48.png" height="566" width="1100" alt="" />
+			</div>
+			<p><b>*You cannot install on any other devices other than the ones that were added to the provisioning profile in 4-2-4.</b></p>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p05">
+			<h2 class="main__title--h2">5 Publishing to the App Store</h2>
+			<p>You will need a provisioning profile for the App Store in order to publish to the App Store. <br /> Select [App Store] as the kind of provisioning profile.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/5-1-1.png" height="586" width="982" alt="" />
+			</div>
+			<p>It is convenient to use Xcode for the app review on the App Store. Before you start archiving, let's configure some points such as the provisioning profile for the App Store. There is the [Code Signing] specification in [Build Setting] under the project settings.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/5-1-2.png" height="652" width="1280" alt="" />
+			</div>
+			<p>You can find the [Submit to App Store] button in the right pane of the Organizer so it is possible to submit the package file from here.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_06/4-1-41.png" height="652" width="1280" alt="" />
+			</div>
+			<p><b>*You will need your own original content for the icons, splash screen, preview images, etc. For more information, please refer to specialized books.</b></p>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p06">
+			<h2 class="main__title--h2">A Word of Caution</h2>
+			<ul class="main__ul">
+				<li>We are not responsible for any issues that may occur on your Mac using the environment settings and command controls.</li>
+				<li>We cannot guarantee that all iOS game apps that you can develop using the methods we have introduced here will be published on App Store.</li>
+				<li>This information is current as of August 2015. Some of the images displayed here may differ as all the software used here is constantly being updated.</li>
+				<li>If you have anything you would like to know regarding [Publishing to the App Store], please check out [<a href="https://developer.apple.com/jp/support/appstore/app-review/" target="_blank">App Review</a>] on Apple Developer Support.</li>
+			</ul>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>
+
+

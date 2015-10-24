@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Class Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v03">Class Settings</h1>
+		<ul class="breadcrumb">
+		  <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>Class Settings</li>
+		</ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Class data is the collection of traits related to the abilities of actors. Actors must belong to a class, and things such as the way that an actor levels up, how their ability points increase, and the skills they can acquire are determined based on those parameters. It is also possible to give actors unique class traits. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Parameters</h2>
+			<div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_02_img01.png" width="769" height="631" alt="" />
+			</div>
+
+			<dl class="main--dl">
+				<h3 class="main__title--h3--sub">
+					Name
+				</h3>
+				<p>Name of the Class. The class will be displayed in places such as on the Menu Screen and upper part of the Status List Screen.</p>
+
+				<h3 class="main__title--h3--sub">EXP Curve</h3>
+				<p>Parameters for determining the EXP which is required for leveling up. When an actor acquires the needed amount of EXP for each level, that actor's level will increase 1 level and their Skill Points will increase and they will acquire new skills. <br />
+					<br />
+					The EXP required is set based on the below 4 values in the window that is displayed when you click the [...] in the settings column. The EXP required for each level will be displayed in a list, and a graph will be displayed in the background in the [To Next Level] tab. It's a good idea to refer to this while setting your parameters. The total amount of EXP until reaching each next level can be viewed in the [Total] tab.
+				</p>
+				<div class="al-c mb20px">
+					<img src="../inc/img/01_08_02_img02.png" width="582" height="551" alt="" />
+				</div>
+				<dl class="main__dl--sub">
+					<dt>Base Value </dt>
+					<dd>The standard value for calculating necessary EXP. By lowering this value, the overall necessary EXP will decrease.</dd>
+					<dt>Extra Value </dt>
+					<dd>The designated value added to necessary EXP for each level.</dd>
+					<dt>Acceleration A </dt>
+					<dd>Adjust the rate at which to increase the necessary EXP. By setting this value higher, the amount of necessary EXP will increase proportionately according to the increase in level.</dd>
+					<dt>Acceleration B</dt>
+					<dd>Adjust the rate at which to increase the necessary EXP. By setting this value higher, the rate of increase of necessary EXP will become larger primarily at higher levels.</dd>
+				</dl>
+
+				<h3 class="main__title--h3--sub">
+					Parameter Curves
+				</h3>
+				<p> The parameters for trait values for each level. The Parameter Settings window will open when you double-click a graph. Please refer to the [<a href="#p01">Setting Parameter Curves</a>] mentioned later to learn how to set parameters.</p>
+
+				<h3 class="main__title--h3--sub">
+					Skills
+				</h3>
+				<p> Skills that an actor gets upon leveling up. Set the levels and skills acquired in the window that is displayed when double-clicking in a column.</p>
+
+				<h3 class="main__title--h3--sub">
+					Traits
+				</h3>
+				<p> Traits which you give to actors set to this class. For more information please refer to [<a href="01_08_15.html">How to Set Traits</a>].</p>
+
+				<h3 class="main__title--h3--sub">
+					Note
+				</h3>
+				<p> The [Note] section can be used to make notes while making your game.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+			<h2 class="main__title--h2" id="p01"> Setting Parameter Curves
+</h2>
+			<p>In the [Parameter Curves] window, parameter values for each level are set based on the items below. By clicking the tab with the parameter's name, you can switch to the parameter that you want to edit. The value that you specify will be reflected when you click [OK] after you finish editing (changes will be abandoned when you press [Cancel]).</p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_08_02_img03.png" width="632" height="489" alt="" />
+			</div>
+
+			<dl class="main__dl">
+				<dt>Quick Settings</dt>
+				<dd>The values set previously will be applied to the parameter values for all levels. There are 5 types of patterns listed [A] through [E], and each pattern will be applied by clicking that pattern's button.</dd>
+				<dt>Level/Value </dt>
+				<dd>Directly edit the parameters for each level. After specifying the level (1 to 99) you wish to edit in the [Level] box, specify the value (Max HP and Max MP can be set from 1 to 9999, all others from 1 to 999) for that level in the [Value] box.</dd>
+				<dt>Generate Curve </dt>
+				<dd>The values of levels will be calculated automatically based on the values at level 1 and level 99. <br />
+                  <br />
+Define the values (Max HP and Max MP can be set from 1 to 9999, all others from 1 to 999) at [Level 1] and [Level 99] in the window that appears when the [Generate Curve] button is clicked. <br />
+<br />
+Next, decide the Growth Type using the slider. The rate of growth (the amount at which parameter values increase) when set to the left (Fast) will become lower when leveling up, and will become higher when set to the right (Slow). When you click [OK], parameters will be set based on what was specified.</dd>
+				<dt>Graph</dt>
+				<dd>The parameter values for each level will be displayed in a bar graph. By clicking or dragging within the displayed area, you can get the value for parameters for level in the location clicked.</dd>
+			</dl>
+
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

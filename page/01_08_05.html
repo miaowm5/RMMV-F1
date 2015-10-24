@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Weapon/Armor Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">Weapon/Armor Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>Weapon/Armor Settings</li>
+		</ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Weapons and armor refer to the equipment of an actor. You can do things such as raise or lower specific traits, or give special traits to the actor equipping the item. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_05_img01.png" height="257" alt="" />
+				<img src="../inc/img/01_08_05_img02.png" height="257" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> General Settings </h3>
+		  <h3 class="main__title--h3--sub"> Name </h3>
+		  <p>Name of the weapon/armor. If the name is long, it may not be completely displayed on the Play Screen.</p>
+		  <h3 class="main__title--h3--sub"> Icon </h3>
+		  <p>The image that is displayed together with the weapon or armor during gameplay. You can select an image in the [Select an Image] window that appears after double-clicking on the icon's image.</p>
+		  <h3 class="main__title--h3--sub"> Description </h3>
+		  <p>The description that appears when a weapon or armor is selected in the Play Screen.</p>
+		  <h3 class="main__title--h3--sub"> Weapon Type/Armor Type </h3>
+		  <p>Classification of the weapon or armor. This will be the criterion that determines whether an actor can equip the item using the trait parameters of the actor or class. The weapon/armor classification that you can select can be changed in the [<a href="01_08_14.html">Terms</a>] settings.</p>
+		  <h3 class="main__title--h3--sub"> Price </h3>
+		  <p>This is the price when purchasing it in a shop. The price when selling will be half of its original price. You can set it so it cannot be sold by setting this value to zero.</p>
+		  <h3 class="main__title--h3--sub"> Animations (Weapons only) </h3>
+		  <p>Set the animation when attacking with this weapon.</p>
+		  <h3 class="main__title--h3--sub"> Equipment Type (Armor only) </h3>
+		  <p>The location where the armor will be equipped (Shield/Head/Body/Accessory). You can equip compatible armor for each location on an actor.</p>
+		  <h3 class="main__title--h3"> Parameter Changes </h3>
+		  <p>The value added to each trait of an actor when equipped. [Max HP] and [Max MP] can be set from -5000 to 5000, and all others can be set from -500 to 500. By entering a negative value, that trait's value will be decreased.</p>
+		  <h3 class="main__title--h3"> Traits </h3>
+		  <p>Traits given to the actor when equipping the weapon or armor. You define the details in the window that is displayed when double-clicking each row of the parameter field. For more information please refer to [<a href="01_08_15.html">How to Set Traits</a>].</p>
+		  <h3 class="main__title--h3"> Note </h3>
+		  <p>The [Note] section can be used to make notes while making your game.</p>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Tileset Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">Tileset Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>Tileset Settings</li>
+	  </ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Tilesets are the collection of "Tiles" used to design your map. Create tiles by setting whether a character can walk on the image used for the tile, and also the behavior in the game. <br />
+		    <br />
+		    Original images created for the map can be used as well by creating tilesets which use those images, and assign as map data. <br />
+		    <br />
+		    Moreover, whether or not vehicles (boats/large ships) can go over tiles is determined by the position over the tileset. For more information, please view <a href="01_11_01.html">Asset Standards</a>.<br />
+		    Planes are able to travel over all tiles. However, there are only able to land on tiles which can be walked on.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_10_img01.png" width="769" height="631" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> General Settings </h3>
+		  <h3 class="main__title--h3--sub"> Name </h3>
+		  <p>A tileset's name. This property is just used in the editor (does not affect the game).</p>
+		  <h3 class="main__title--h3--sub"> Mode </h3>
+		  <p>The purpose of the tileset. This primarily influences the treatment of <a href="01_07_01.html#p01">special specifications of lower tiles</a> and <a href="01_07_03.html#p01">battlebacks</a>.<br />
+		    Basically, choose [Field Type] for tiles which represent the overworld like the ocean and land, and [Area Type] for all other situations. </p>
+		  <p>
+		  <h3 class="main__title--h3"> Images </h3>
+		  <p>Settings for images used for tiles. Specify the file you want to use for each type (Sets A through E) in the [Select an Image] window that is displayed when you press the button for each type. An image's contents will be displayed in the [Tile List] on the right.</p>
+		  <h3 class="main__title--h3"> Tile List </h3>
+		  <p>The image used for a tileset in [Images] will be displayed. You can switch the images displayed by clicking tabs [A] through [E] at the bottom. The tiles for the images specified in [A1] through [A5] in the [Images] section will be displayed in order. <br />
+		    <br />
+		    Marks representing the parameter values in the current settings editing mode will be displayed on top of each tile. You can change these parameter values by clicking the tile. </p>
+		  <h3 class="main__title--h3--sub"> Passage </h3>
+		  <p>Switch to the editing mode where you can set whether a tile can be entered or not. Tiles marked with a [○] can be entered, ones marked with an [×] cannot be entered. Those which have a [☆] can also be entered, however this is for when hiding characters behind buildings (only possible in all other tabs except [A]).</p>
+		  <h3 class="main__title--h3--sub"> Passage (4 dir) </h3>
+		  <p>Switch to the editing mode where you can set the direction from where tile can be entered. Use [Passage: Block] when creating tiles that can be passed only from a defined direction. For example, when you set the edge of a tile that represents a cliff as impassable, characters will be unable to move between that tile and the next tile, creating the sense of height. <br />
+		    <br />
+		    Those tiles with marks displayed as arrows pointing in a specific indicate that it is possible to move from that direction, ones without arrows are not passable. Moreover, by changing the parameters of the [Passage] setting, these settings will change automatically. </p>
+		  <h3 class="main__title--h3--sub"> Ladder </h3>
+		  <p>Switch to the editing mode for ladder settings. When you add this parameter, the direction a character using this tile faces will be fixed to up, giving the appearance of going up and down things like ladders and ropes. <br />
+		    <br />
+		    Click the marks in the Tile List to change tiles to have this parameter or not. A mark (a ladder) will be displayed on tiles which have this setting. </p>
+		  <h3 class="main__title--h3--sub"> Bush </h3>
+		  <p class="mb5px">Switch to the editing mode for bush settings. When a tile has this setting, 12 pixels from the bottom of characters who cross this tile will appear half transparent, as if their feet are being hidden by dense grass. <br />
+		    <br />
+		    However, part of the tile will not become half transparent depending on the image when giving this setting to tiles in [A1] through [A4]. <br />
+  <br />
+		    Click the marks in the Tile List to change tiles to have this parameter or not. A mark (two wavy lines) will be displayed on tiles which have this setting. </p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_08_10_img02.png" height="250" width="250" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub"> Counter </h3>
+		  <p class="mb5px">Switch to the editing mode for counter settings. When a tile is given this setting, it will start events even when a character and event are not right next to each other, just as when talking to a character with a desk between them. <br />
+		    <br />
+		    Also, setting this to the tile in [A2], tiles having this element will be drawn 12 pixels downward. <br />
+  <br />
+		    Click the marks in the Tile List to change tiles to have this parameter or not. Tiles which have this setting have a mark (4-sided diamond) displayed on them. </p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_08_10_img03.png" height="250" width="250" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub"> Damage Floor </h3>
+		  <p>Switch to the editing mode for Damage Floors. When a tile is given this setting, characters will receive damage when crossing this tile. This can be used for representing dangerous terrain like poisonous swamps, trees with thorns. <br />
+		    <br />
+		    Click the marks in the Tile List to change tiles to have this parameter or not. A mark (two triangles) will be displayed on tiles which have this setting. </p>
+		  <h3 class="main__title--h3--sub"> Terrain Tag </h3>
+		  <p>You can assign values between 0 and 7 to each tile. No specific uses are defined. This value can be retrieved by using the [Get Location Info] event command. Those terrain tags retrieved which are located in upper layers other than zero will be prioritized. </p>
+		  <h3 class="main__title--h3"> Note </h3>
+		  <p>The [Note] section can be used to make notes while making your game.</p>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>
