@@ -31,7 +31,7 @@
 
 		<div class="main__section" id="p01">
 		  <h2 class="main__title--h2">图像素材</h2>
-		  <p>所有的图像素材都为png格式</p>
+		  <p>所有的图像素材都为png格式。</p>
 		  <dl class="main__dl">
 
 				<dt>动画切片 (img/animations)</dt>
@@ -45,13 +45,13 @@
 				<dd>
 					这些图片主要用于战斗界面中战斗背景图片的显示。<br />
 					图片的尺寸为 1000x740，Battlebacks1主要是地面的图片，Battlebacks2主要是墙壁的图片，这两种图片可以任意地组合成战斗的背景。<br />
-					纵版战斗中上方的图片以及横版战斗中下方的图片将被裁剪掉一部分。、
+					纵版战斗中上方的图片以及横版战斗中下方的图片将被裁剪掉一部分。
 				</dd>
 
 				<dt>角色行走图 (img/characters)</dt>
 				<dd>
 					这些图片主要用于在地图上显示的角色图像。 <br />
-					角色大小任意（通常为48x48），一个角色元包含四个方向的行走图（上、下、左、右）和三帧的步行样式，总共12帧，按规定的顺序排列。
+					角色图像大小任意（通常为48x48），一个角色元包含四个方向的行走图（上、下、左、右）和三帧的步行样式，总共12帧，按规定的顺序排列。
 					一个行走图文件包含纵向两个角色元，横向四个角色元，总共八个角色元。该角色单帧图片的尺寸大小为此文件的 1/12 宽度和 1/8 高度。
 					为了让角色与建筑物的重叠看起来更有真实感，角色显示时比地图元件高 6 像素。
 					<ul class="main__ul">
@@ -100,97 +100,104 @@
 
 <dl class="main__dl--sub">
 				<dt>Balloon.png</dt>
-				<dd>这些图片主要用于游戏中的显示心情指令，下方的空白部分可以由您自由添加。</dd>
+				<dd>这张图片主要用于游戏中的显示心情指令，下方的空白部分可以由您自由添加。</dd>
 				<dt>ButtonSet.png</dt>
 				<dd>
-					这些图片将在游戏运行在触摸设备上时显示。<br />
+					这张图片将在游戏运行在触摸设备上时显示。<br />
 					它们主要用于在类似选择物品购买数量等场合下时的数值修改。</dd>
 				<dt>Damage.png</dt>
-				<dd>这些图片主要用于在战斗界面显示受到的伤害</dd>
+				<dd>这张图片主要用于显示在战斗界面受到的伤害。</dd>
 				<dt>GameOver.png</dt>
-				<dd>Asset displayed on the Game Over Screen.</dd>
+				<dd>这张图片将显示在 Game Over 界面上。</dd>
 				<dt>Loading.png</dt>
-				<dd>Asset used for the Loading Screen.</dd>
+				<dd>这张图片将显示在 Loading 界面上。</dd>
 				<dt>IconSet.png</dt>
-				<dd>Assets used for the icons for items, weapons, skills, etc.</dd>
+				<dd>这张图片将用于显示物品、装备、技能等条目的图标。</dd>
 				<dt>Shadow1.png</dt>
-				<dd>Asset for the shadow displayed when flying a plane.</dd>
+				<dd>这张图片将用于显示飞船的阴影。</dd>
 				<dt>Shadow2.png</dt>
-				<dd>Asset for the shadows of allies in side-view battle.</dd>
+				<dd>这张图片将用于显示横版战斗中我方角色的阴影。</dd>
 				<dt>States.png</dt>
-				<dd> Asset for the states of allies in side-view battle.<br />
+				<dd>这张图片将用于显示横版战斗中我方角色的状态。<br />
 				</dd>
 				<dt>Weapons1.png, Weapons2.png, Weapons3.png</dt>
-				<dd> The weapon images that are displayed when allies perform normal attacks in side-view battle. <br />
-There are 12 different types of images for Weapons1 and Weapons2. Weapons3 has 6 different types of images. Weapons3 is defined by the user. </dd>
+				<dd>
+					这些图片将用于显示横版战斗中我方角色的普通攻击动作。<br />
+					Weapons1 和 Weapons2 中包含了12种不同的动作，Weapons3 中包含了6种不同的动作。Weapons3 中的动作可以由您自行定义。</dd>
 				<dt>Window.png</dt>
-				<dd> Collection of image assets that compose the windows. </dd>
+				<dd> 这张图片将被用于组成游戏的窗口。 </dd>
 			</dl>
 				</dd>
-				<dt>Tilesets (img/tilesets)</dt>
-				<dd> Images which consist of the tiles (also known as map chips) that make up a map. </dd>
-				<dt>Title Screen (img/titles1, img/titles2)</dt>
-				<dd> Images displayed on the Title Screen.<br />
-The size for these images is 816x624. Titles1 contains files for the main background, and titles2 contains images for frames, etc. Use these in any combination to create the Title Screen. </dd>
+				<dt>地图图块 (img/tilesets)</dt>
+				<dd>
+					这些图片将被分割成一个个地图元件用于组成游戏的地图。</dd>
+
+				<dt>标题图片 (img/titles1, img/titles2)</dt>
+				<dd> 这些图片将在标题画面上显示。<br />
+					图片的大小为 816x624 ，Titles1 包含标题画面的背景，titles2 则主要是边框，使用它们可以组成标题画面。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Tileset Details</h2>
-		  <p>1 tile is 48x48 in size, and tiles need to be grouped in the 5 types of sets, A through E, below. <br />
+		  <h2 class="main__title--h2">图块素材详细说明</h2>
+		  <p>地图元件尺寸为 48×48，分成五组，从A ～ E，遵守下面的规则。<br />
+		    此外，根据数据库中 [图块] → [模式] 的设置，图块的行为可能会发生变化。</p>
+		  <h3 class="main__title--h3"> A 组元件 </h3>
+		  <p>在显示地图时作为底层显示，分成五个部分，大部分部分为“自动元件”——会自动形成边界的特殊地图元件。<br />
 		    <br />
-		    Additionally, the specifications for some tiles can change according to the contents set under [Mode] found in [Tilesets] in the database. </p>
-		  <h3 class="main__title--h3"> Set A </h3>
-		  <p>This set will be used as the lower layer when drawing the map. This set is divided further into 5 parts, with most of them being called [Autotiles], which are composed of special tiles that have their boundary lines automatically created. <br />
-		    <br />
-		    Autotiles are, as a rule, arranged in a pattern composed of 6 tiles as seen in the illustration below, making up the basic structure of the tiles. </p>
+		    自动元件原则上会分成下图所看到的六个部分图块。</p>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_11_01_img01.png" height="144" width="96" alt="" />
 			</div>
 			<dl class="main__dl--sub">
 				<dt>a</dt>
-				<dd>Representative Pattern (for displaying in the tile palette)</dd>
+				<dd>样式标识图，显示在地图元件选择面板中。</dd>
 				<dt>b</dt>
-				<dd>Pattern with boundaries at each corner</dd>
+				<dd>四个角都有内角边缘的样式。</dd>
 				<dt>c</dt>
-				<dd>Group Pattern (refers to group of tiles with one in the center and 1 in each of the 8 directions)</dd>
+				<dd>主样式，整合了八个边角样式和一个中央样式。</dd>
 			</dl>
 			<div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_11_01_img02.png" height="48" width="472" alt="" />
 			</div>
-		  <p>If the autotile located in the (8,8) position from the bottom-right is transparent, that autotile will be evaluated as a "forest type". If a forest tile has the bush element assigned to it, character images will not appear as half transparent in the 8 types of tiles below which includes the bottom right and bottom left boundaries. </p>
-			<h3 class="main__title--h3--sub">Part 1 </h3>
+		  <p>自动元件的图像上，如果右下角（8, 8）的位置是透明的话，该自动元件会被判定为森林类元件。森林类元件拥有流体属性时，在图中包含右下角和左下角边界线的八种图块上，行走图不会有半透明处理。</p>
+			<h3 class="main__title--h3--sub"> 样式 1 </h3>
 			<div class="al-c mt0px mb20px">
 				<img src="../inc/img/01_11_01_img03.png" height="576" width="768" alt="" />
 			</div>
-		  <p>These are 768x576 in size and made up of the 5-pattern blocks as in the illustration above. Basically, tiles in this part will not have a boundary created even if they touch. <br />
-			  Boats and ships can only travel through the tiles in this part. However, tiles in this tileset will no longer be able to be entered using boats and ships if the tileset is configured to allow players to walk on the tiles. </p>
+		  <p>尺寸大小限制为 768×576，如上图分成五个部分。一般来说，这类的自动元件彼此相邻时并不会自动形成边界。<br />
+				只有此类的地图元件允许大/小型船通行，不过如果通行度被设置为允许步行时，大/小型船将会无法通行。</p>
 			<dl class="main__dl--sub">
-			  <dt>Block A</dt>
-				<dd>Autotiles used as ocean tiles. By placing 3 autotile basic patterns horizontally in a row, it is possible to animate them.</dd>
-				<dt>Block B</dt>
-				<dd>Autotiles used as deep ocean tiles. Boundaries for ocean tiles will be created only when tiles in this block touch tiles in part 1. Tiles in Block A will automatically complete the transparent color of this block. Just like Block A, by placing 3 autotile basic patterns horizontally in a row, it is possible to animate them. Moreover, boats cannot travel through tiles in this block.</dd>
-				<dt>Block C</dt>
-				<dd>Autotiles which decorate ocean tiles in Block A. Tiles in Block A will automatically complete the transparent color of this block. Additionally, boats and ships cannot travel through tiles in this block.</dd>
-				<dt>Block D</dt>
-				<dd>Autotiles used as water tiles. By placing 3 autotile basic patterns horizontally in a row, it is possible to animate them.</dd>
-				<dt>Block E</dt>
-				<dd>Used for waterfall tiles. You can create a group pattern by placing two tiles horizontally, and animate them by placing 3 vertically in a row. Additionally, boats and ships cannot travel through tiles in this block.</dd>
+			  <dt>区块 A</dt>
+				<dd>这是作为海洋的地图元件，三组基本自动元件横向排列在一起会形成动画。</dd>
+				<dt>区块 B</dt>
+				<dd>
+					这是作为海洋的地图元件，作为深海的地图元件。只有这一块的元件，在与样式 1 的元件相邻时，会形成海的边界线，而区块 A 元件会自动填满透明部分。与区块 A 一样，三组基本自动元件横向排列在一起会形成动画。小型船不允许通过此区块。</dd>
+				<dt>区块 C</dt>
+				<dd>
+					用来装饰区块 A 的自动元件，区块 A 元件会自动填满透明部分。
+					大/小型船皆不可以从本区块元件上通行。
+				</dd>
+				<dt>区块 D</dt>
+				<dd>作为河流的地图元件。三组基本自动元件横向排列在一起会形成动画。</dd>
+				<dt>区块 E</dt>
+				<dd> 作为瀑布的地图元件。两块横向排列的元件形成一组，三组原件纵向排列在一起会形成动画。小舟、大船皆不可以从本区块元件上通行。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Part 2</h3>
+			<h3 class="main__title--h3--sub">样式 2</h3>
 			<div class="al-c mt0px mb20px">
 				<img src="../inc/img/01_11_01_img04.png" height="144" width="768" alt="" />
 			</div>
-			<p>These are 768x576 in size and composed of 4 2-pattern blocks placed vertically in a row as in the illustration above. Specifications for this part only can change according to the contents set under [Mode] found in [Tilesets] in the database. <br />
-			  <br />
-			  If the tiles in this part have the counter element, they will be used as autotiles to create tables, and the bottom of the pattern will be displayed as shifted 12 pixels down when placed. </p>
+			<p>
+				尺寸大小为 768×576。如上图所示，分成四排组二区块元件。这是唯一会因为数据库的 [图块] → [模式] 设置不同而使用不同规格的样式。<br /><br />
+				当被设置成柜台属性时，可以作为桌子的自动图块使用。绘制时，底部的12像素会有向下的偏移。</p>
 			<div class="al-c mt0px mb20px">
 				<img src="../inc/img/01_11_01_img05.png" height="145" width="240" alt="" />
 			</div>
 			<dl class="main__dl--sub">
-			<dt>Block A (Field Type)</dt>
-			<dd>Composed using 4-pattern autotiles, and will be handled as 1 only, 1 and 2 overlapping, 3 only, 3 and 4 overlapping in the actual tileset.
+			<dt>区块 A（世界地图类型）</dt>
+			<dd>
+				这个区块由四个部分的自动图块组成，在实际的使用过程中将被处理成四种情况：只有第一部分，第二部分覆盖在第一部分上、只有第三部分、第四部分覆盖在第三部分上。
 <div class="al-c mt0px mb20px">
 				<img src="../inc/img/01_11_01_img06.png" height="144" width="384" alt="" /><br />
 				<b>↓</b><br />
@@ -198,30 +205,32 @@ The size for these images is 816x624. Titles1 contains files for the main backgr
 			</div>
 			</dd>
 
-			<dt>Block B (Field Type)</dt>
-			<dd>It is possible to store 4 patterns, and are special tiles that can be placed over tiles in Block A in the actual tileset. </dd>
+			<dt>区块 B（世界地图类型）</dt>
+			<dd>这个区块由四个部分组成，在实际的使用过程中将覆盖在区块A上。</dd>
 
-			<dt>Block A (Area Type)</dt>
-			<dd>It is possible to store 4 patterns, and are tiles that can be placed over tiles in Block B in the actual tileset. </dd>
+			<dt>区块 A（区域地图类型）</dt>
+			<dd>这个区块由四个部分的自动图块组成，在实际的使用过程中将覆盖在区块B上。</dd>
 
-			<dt>Block B (Area Type)</dt>
-			<dd>It is possible to store 4 patterns, and are tiles that can be placed over tiles in Block A in the actual tileset. </dd>
+			<dt>区块 B（区域地图类型）</dt>
+			<dd>这个区块由四个部分的自动图块组成，在实际的使用过程中将覆盖在区块A上。</dd>
 		</dl>
-		  <h3 class="main__title--h3--sub">Part 3</h3>
-		  <p>Autotiles which will be primarily used for the appearance of buildings. These are 768x384 in size, and are composed by placing 8 tiles horizontally and 4 tiles vertically, formed using only the autotile group pattern. <br />
+		  <h3 class="main__title--h3--sub">样式 3</h3>
+		  <p>主要作为建筑物外观的自动元件，尺寸为 768×384，横向八组、纵向四组元件，完全以自动元件的主样式组成。<br /><br />
+				当两块以上的此类元件纵向绘制在一起时，就会在右方的图块上自动产生阴影。
+				不过，若相邻元件不属于样式 2（区块 C 除外）或样式 5 时将不会自动生成阴影。</p>
+		  <h3 class="main__title--h3--sub">样式 4</h3>
+		  <p>主要用作生成墙壁的自动元件，同时也被用来作为生成迷宫的墙壁元件。规格固定为 768×720，横向八组、纵向四组元件，完全以自动元件的主样式组成。<br />
 		    <br />
-		    By placing two or more tiles in this part together vertically when designing your map, shadows will automatically be created on the adjacent touching tile on the right side. However, shadows will not be automatically generated if the adjacent tile belongs to a part other than Part 2 (excluding Block C) or Part 5.</p>
-		  <h3 class="main__title--h3--sub">Part 4</h3>
-		  <p>Autotiles which will be primarily used for walls. These are also used for walls for dungeon instances. These are 768x720 in size. Composed by placing 8 tiles horizontally and 3 tiles vertically using autotile basic structures and those tiles placed vertically in a row using only the autotile group pattern. <br />
-		    <br />
-		    By placing two or more tiles in this part together vertically when designing your map, shadows will automatically be created on the adjacent touching tile on the right side. However, shadows will not be automatically generated if the adjacent tile belongs to a part other than Part 2 (excluding Block C) or Part 5.</p>
-		  <h3 class="main__title--h3--sub">Part 5</h3>
-		  <p>These are 384x768 in size and please be sure to place the tiles here in an 8x16 arrangement. Tiles contained in this file will all be treated as normal tiles. The 3rd, 5th and 7th tiles from the top are used also for the floors of dungeon instances.</p>
-		  <h3 class="main__title--h3"> Set B through Set E </h3>
-		  <p>These sets will be used as the upper layers when drawing the map. <br />
-		    These are 768x768 in size and be sure to place the tiles here in a 16x16 arrangement.</p>
+		    当两块以上的此类元件纵向绘制在一起时，就会在右方的图块上自动产生阴影。
+				不过，若相邻元件不属于样式 2（区块 C 除外）或样式 5 时将不会自动生成阴影。</p>
+		  <h3 class="main__title--h3--sub">样式 5</h3>
+		  <p>文件尺寸为 384×768，容纳 8×16 块地图元件。本文件里面的元件全部视为普通元件。第三、五、七行可以在自动生成迷宫的时候也被用作地板元件。</p>
+
+		  <h3 class="main__title--h3"> B～E 组元件 </h3>
+		  <p>这些元件组中的元件在绘制地图时作为高层元件使用。<br />
+				文件尺寸为 768×768，以横向纵向 16×16 个图块组成。</p>
 		  <ul class="main__ul">
-		    <li>Leave the tile located in the top left of Set B blank as this represents nothing being placed in the upper layer.</li>
+		    <li>B 组元件最左上角的一格代表高层没有元件的状态，因此请务必设为空白。</li>
 	      </ul>
 		</div><!-- /main__section -->
 
@@ -232,7 +241,7 @@ The size for these images is 816x624. Titles1 contains files for the main backgr
 				播放声音需要相关设备的支持，因此，请为同一个声音文件准备下面两种格式的素材。
 			</p>
 			<ul class="main__ul">
-				<li>Ogg Ogg Vorbis(.ogg)</li>
+				<li>Ogg Vorbis(.ogg)</li>
 				<li>AAC (.m4a)</li>
 			</ul>
 			<p>
