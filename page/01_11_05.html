@@ -85,28 +85,28 @@ C:\Program Files\Java\jdk1.8.0_51
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-16.png" height="493" width="997" alt="" /></div>
 
-			<h3 class="main__title--h3">2-3 Installing and Configuring Apache Ant </h3>
-			<p>Ant is known as a build tool that is run using Java. It is utilized internally using a packaging script. You need to install Ant on both Windows and OS X.</p>
+			<h3 class="main__title--h3">2-3 安装并设置 Apache Ant </h3>
+			<p>Apache Ant,是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境中的软件开发。 它采用的是内部封装脚本，无论你是Windows操作系统还是OS X系统，都需要安装它。</p>
 
-			<h3 class="main__title--h3--sub">2-3-1 Downloading &amp; Installing Ant</h3>
-			<p>Download the Ant binaries from <a href="http://ant.apache.org/bindownload.cgi" target="_blank">http://ant.apache.org/bindownload.cgi</a>.<br />Download the [.zip archive:] found under the [Current Release of Ant] section. The newest version of Ant is 1.9.6 as of August 2015.</p>
+			<h3 class="main__title--h3--sub">2-3-1 下载和安装 Ant</h3>
+			<p>老规矩，你可以从这里下载ANT <a href="http://ant.apache.org/bindownload.cgi" target="_blank">http://ant.apache.org/bindownload.cgi</a>.<br />在[Current Release of Ant]板块下面下载[.zip archive:]文件。 最新的版本是2015年8月份发布的1.9.6版。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-1.png" height="673" width="1024" alt="" /></div>
-			<p>The file you downloaded is a compressed ZIP file so extract it in a location of your choosing. In this example, Ant was extracted directly to the C drive.</p>
+			<p>解压你下载的安装包，在这里我们直接把它解压在C盘。（你也可以选你喜欢的地方解压）</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-2.png" height="602" width="876" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">2-3-2 Configuring and Checking Environment Variables &amp; Path</h3>
-			<p>Here we will set up the path and environment variables for Ant. Just as when we set up the path to Python in 2-1-2, open the Environment Variables window.<br />First, we will configure the ANT_HOME environment variable. Click the New button under System Environment Variables, and enter [ANT_HOME] as the variable name and the path where Ant was extracted as the variable value.</p>
+			<h3 class="main__title--h3--sub">2-3-2 设置并检测环境变量</h3>
+			<p>和2-1-2章里设置Python环境变量的步骤差不多, 右键我的电脑，点击高级设置，点击环境变量。<br /> 新建一个名为ANT_HOME的变量，并在下面一行输入你解压ANT文件夹的路径，例如这里我们解压的路径就是C:\apache-ant-1.9.6</p>
 <pre class="main__pre--code">
 ANT_HOME
 C:\apache-ant-1.9.6
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-3.png" height="611" width="874" alt="" /></div>
-			<p>This creates the path. Select [Path]  under [System Variables] and click the Edit button. Enter ";%ANT_HOME%\bin\" following the value already entered.</p>
+			<p>同样，继续选择PATH变量，编辑，在路径最末尾输入[;%ANT_HOME%\bin\](不包括方括号)，点击确定。</p>
 <pre class="main__pre--code">
 ;%ANT_HOME%\bin\
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-4.png" height="611" width="874" alt="" /></div>
-			<p>To check to make sure that the path is set up, use Command Prompt to check the version just as you have up until now. Enter &quot;ant --version&quot; command and press the Enter key.</p>
+			<p>用同样的方法确认你是否搭建成功,打开CMD，输入ant --version，回车，出现版本信息则表示你搭建成功。</p>
 <pre class="main__pre--code">
 &gt; ant -version
 </pre>
