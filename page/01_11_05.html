@@ -23,34 +23,34 @@
 			<p>从这个版本开始，使用RPG Maker MV做的游戏可以在那些支持HTML5(包括例如WebGL &amp; 2DCanvas, WebAudio and JavaScript)的浏览器上直接运行。 同时也可以进一步支持那些最近基于HTML5为Android平台开发的浏览器，大家可以在这些浏览器上直接运行由RPG Maker制作的游戏。<br />
 				<br />不过与其向大家解释如何在浏览器上玩RM游戏，不如直接让我们向大家说明一下如何将你的游戏制作成Android平台的App. 本质上来说，在Android本地运行一个利用HTML5开发的游戏，与在Android平台上用一个支持HTML5的浏览器上跑一个使用RM做的游戏性质是一样的. 我们称这种能够在手机网页上运行的程序为 &quot;Hybrid App&quot;，并且从事实上看，这种跨平台的技术确实已经越来越流行了.<br />
 				<br />在浏览器内，可以处理显示与声音的内置Android引擎（WebView）会将游戏打包成应用。然而，浏览器内置的网络视图引擎（Android WebView）加载HTML5的效率并不高。为此，我们将介绍一个名为Crosswalk Project的技术，这项技术使用在给予它使用在Chrome的浏览器上，并且对HTML5有着高效率的支持。如果想对Crosswalk Project这项技术有更进一步的了解，你可以尝试查看这个网站。 ([<a href="https://crosswalk-project.org/documentation/android.html" target="_blank">Crosswalk Project on Android</a>]).</p>
-			<h3 class="main__title--h3--sub">Operating Systems</h3>
-			<p>The work environments used for this explanation will be Windows 8.1 and OS X 10.10. Additionally, the computer used to do your work will be referred to as the &quot;Host PC&quot;.</p>
+			<h3 class="main__title--h3--sub">操作系统 </h3>
+			<p>推荐在window8.1或者mac系统 OS X 10.10以上的操作环境下运行。此外，执行程序的计算机将充当主机的功能。</p>
 		</div><!-- /main__section --><div class="main__section" id="p02">
-			<h2 class="main__title--h2">2 Prepare the Packaging Environment</h2>
-			<p>Installing games created using RPG Maker on Android will require creating an apk file. An apk file is the installer for Android apps and its extension is apk. This is compressed in a ZIP format, and contains various necessary files for running the application. We will refer to creating the apk file here as &quot;Packaging&quot;.<br />Also, an Internet connection is required to download some of the necessary developer tools.</p>
+			<h2 class="main__title--h2">2 准备开发环境</h2>
+			<p>在安卓平台上安装RM制作的游戏需要用apk文件，apk文件是用在Android平台安装的程序的文件。安装程序被压缩在ZIP格式的包里，其中还包含了各种运行时所需要的文件，所以我们要是想把程序安装在安卓平台，就必须将这些文件封装为一个apk安装文件。（这不是废话吗！）不过在那之前，确保你能够连接上互联网，因为有些开发工具需要你先下载准备好。</p>
 
-			<h3 class="main__title--h3">2-1 Python Installation and Setup</h3>
-			<p>A packaging script is provided in Crosswalk Project so that you can easily package your game. This is made using a scripting language called &quot;Python&quot; so we will set up an environment where Python can be run. This section explains how to install Python on Windows but <b>Python is already installed with OS X so there is no need to install it. Please proceed to 2-2.</b></p>
+			<h3 class="main__title--h3">2-1 Python的安装和设置</h3>
+			<p>还记得那个叫Crosswalk Project的玩意吗？对，就是它，它是一个封装脚本，用它封装你的游戏会非常方便。不过你先别着急，这里你需要一个名字叫做Python的脚本语言，所以我们得先搭个Python的运行环境。待会这个章节讲解的是如何在windows系统下安装Python环境，如果你是Mac的用户，请移步2-2章节。</b></p>
 
-			<h3 class="main__title--h3--sub">2-1-1 Downloading &amp; Installing Python</h3>
-			<p>Start downloading the installer which can be found on <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. It is not particularly necessary to change any of the items during installation if they are not necessary, but it is a good idea to check where you are installing Python.</p>
+			<h3 class="main__title--h3--sub">2-1-1 下载和安装 Python</h3>
+			<p>你可以在https://www.python.org/downloads/找到python的安装程序。在安装的过程中，没什么特别必要的话，设定不需要做什么改变，并且随便你想装在本地的哪里都可以。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-1.png" height="673" width="1024" alt="" /></div>
-			<p>Python has been installed to C:\Python34.</p>
+			<p>Python h安装到了C盘Python34文件夹.</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-6.png" height="602" width="876" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">2-1-2 Path Setup &amp; Check</h3>
-			<p>The path will be set to C:\Python34 where Python was installed so that Python commands will be easier to use.<br />Right-click &quot;This PC&quot; and open up [Advanced system settings] from [Properties].</p>
+			<h3 class="main__title--h3--sub">2-1-2 Path 的设定与检测</h3>
+			<p>将Python的安装路径添加到环境设置里的路径里，这样能使Python命令更容易被调用。<br />右键点击我的电脑，选择高级系统设置</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-8.png" height="613" width="874" alt="" /></div>
-			<p>Click [Environment Variables] in [System Properties]. Select [Path]  under [System Variables] and click the Edit button.</p>
+			<p>点击环境变量. 选择[Path]变量，对就是图中Variables下面那个(在你电脑下并不一定是Variables下面那个)，然后点击编辑按钮。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-9.png" height="613" width="874" alt="" /></div>
-			<p>Edit the variables. Adding ";C:\Python34\" to the end of the original string will allow the path to be used (the semicolon is a break character).</p>
+			<p>修改变量.在最末尾的地方添加";C:\Python34\"(不带双引号)，点确定。</p>
 <pre class="main__pre--code">
 ;C:\Python34\
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-10.png" height="613" width="874" alt="" /></div>
-			<p>Confirm using command prompt. When using Windows 8.1, open the C drive in the explorer, and select [Open command prompt].</p>
+			<p>确定你设置路径无误之后，你可以点击开始菜单，搜索cmd，运行，弹出控制台。(如果你用的win8系统，你可以打开c盘的浏览器，并且选择打开cmd)</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-11.png" height="627" width="832" alt="" /></div>
-			<p>Enter &quot;python --version&quot; command and press the Enter key. If the version of Python is displayed, that means there is no problem.</p>
+			<p>在控制台里输入python --version并回车。如果你看到你的控制台显示出来的画面和我们下面的图片是一样的话，就表示你python环境已经搭建完成啦。</p>
 <pre class="main__pre--code">
 &gt; python --version
 </pre>
