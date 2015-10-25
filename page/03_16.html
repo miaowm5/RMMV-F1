@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>TouchInput Class</title>
+	<title>TouchInput 类</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,17 +11,17 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v07">TouchInput Class</h1>
+		<h1 class="main__title--h1 main__title--h1--v07">TouchInput 类</h1>
 		<ul class="breadcrumb">
-			<li>JS Library</li>
+			<li>JS 库</li>
 			<li>&gt;</li>
-			<li>TouchInput Class</li>
+			<li>TouchInput 类</li>
 		</ul>
-		<p>The static class that handles input data from the mouse and touchscreen.</p>
+		<p>处理来自鼠标和触屏输入的静态类。</p>
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Item Index</h2>
-			<b>Methods</b>
+			<h2 class="main__title--h2">索引</h2>
+			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">clear</a> <span>static</span></li>
 				<li><a href="#m02">initialize</a> <span>static</span></li>
@@ -35,7 +35,7 @@
 				<li><a href="#m10">update</a> <span>static</span></li>
 			</ul>
 
-			<b>Properties</b>
+			<b>属性</b>
 			<ul class="main__ul--inline">
 				<li><a href="#p01">date</a> <span>static</span></li>
 				<li><a href="#p02">keyRepeatInterval</a> <span>static</span></li>
@@ -49,31 +49,31 @@
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Methods</h2>
+			<h2 class="main__title--h2">方法</h2>
 
 			<div id="m01" class="main__subsection">
 <pre class="main__pre--code">
 clear () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Clears all the touch data.</p>
+				<p class="mb10px">清除所有触屏输入数据。</p>
 			</div><!-- /div -->
 
 			<div id="m02" class="main__subsection">
 <pre class="main__pre--code">
 initialize () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Initializes the touch system.</p>
+				<p class="mb10px">初始化触屏输入系统。</p>
 			</div><!-- /div -->
 
 			<div id="m03" class="main__subsection">
 <pre class="main__pre--code">
 isCancelled () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the right mouse button is just pressed.</p>
+				<p class="mb10px">检查鼠标右键是否刚刚被按下。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the right mouse button is just pressed</p>
+					如果鼠标右键刚刚被按下，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -81,11 +81,11 @@ isCancelled () <span class="pre__type">Boolean</span> <span class="pre__static">
 <pre class="main__pre--code">
 isLongPressed () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the left mouse button or touchscreen is kept depressed.</p>
+				<p class="mb10px">检查鼠标左键或者触屏是否长时间被按住。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the left mouse button or touchscreen is long-pressed</p>
+					如果鼠标左键或者触屏长时间被按住，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -93,11 +93,11 @@ isLongPressed () <span class="pre__type">Boolean</span> <span class="pre__static
 <pre class="main__pre--code">
 isMoved () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the mouse or a finger on the touchscreen is moved.</p>
+				<p class="mb10px">检查鼠标或手指在触屏上是否移动。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the mouse or a finger on the touchscreen is moved</p>
+					如果鼠标或手指在触屏上移动，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -105,11 +105,11 @@ isMoved () <span class="pre__type">Boolean</span> <span class="pre__static">[sta
 <pre class="main__pre--code">
 isPressed () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the mouse button or touchscreen is currently pressed down.</p>
+				<p class="mb10px">检查鼠标或者触屏是否在当前被按下。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the mouse button or touchscreen is pressed</p>
+					如果鼠标或触屏在当前被按下，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -117,11 +117,11 @@ isPressed () <span class="pre__type">Boolean</span> <span class="pre__static">[s
 <pre class="main__pre--code">
 isReleased () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the left mouse button or touchscreen is released.</p>
+				<p class="mb10px">检查鼠标左键是否弹起或者手指是否离开触屏。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the mouse button or touchscreen is released</p>
+					如果鼠标左键弹起或者手指离开触屏，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -129,11 +129,11 @@ isReleased () <span class="pre__type">Boolean</span> <span class="pre__static">[
 <pre class="main__pre--code">
 isRepeated () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the left mouse button or touchscreen is just pressed or a pseudo key repeat occurred.</p>
+				<p class="mb10px">检查鼠标左键或者触屏是否刚刚被按下，或者是伪重复按键是否发生。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the mouse button or touchscreen is repeated</p>
+					如果鼠标左键或者触屏被重复按下，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -141,11 +141,11 @@ isRepeated () <span class="pre__type">Boolean</span> <span class="pre__static">[
 <pre class="main__pre--code">
 isTriggered () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the left mouse button or touchscreen is just pressed.</p>
+				<p class="mb10px">检查鼠标左键或者触屏是否刚刚被按下。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the mouse button or touchscreen is triggered</p>
+					如果鼠标左键或者触屏刚刚被按下，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -153,62 +153,62 @@ isTriggered () <span class="pre__type">Boolean</span> <span class="pre__static">
 <pre class="main__pre--code">
 update () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Updates the touch data.</p>
+				<p class="mb10px">更新触屏输入数据。</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Properties</h2>
+			<h2 class="main__title--h2">属性</h2>
 
 			<div id="p01" class="main__subsection">
 <pre class="main__pre--code">
 date <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">[read-only] The time of the last input in milliseconds.</p>
+				<p class="mb10px">[只读]最近一次输入的时间，单位为毫秒。</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
 <pre class="main__pre--code">
 keyRepeatInterval <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The interval of the pseudo key repeat in frames.</p>
+				<p class="mb10px">连续两次伪按键重复之间的间隔时间，单位为帧。</p>
 			</div><!-- /div -->
 
 			<div id="p03" class="main__subsection">
 <pre class="main__pre--code">
 keyRepeatWait <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The wait time of the pseudo key repeat in frames.</p>
+				<p class="mb10px">第一次按下按键后，距离伪按键重复发生所等待的时间，单位为帧。</p>
 			</div><!-- /div -->
 
 			<div id="p04" class="main__subsection">
 <pre class="main__pre--code">
 wheelX <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">[read-only] The horizontal scroll amount.</p>
+				<p class="mb10px">[只读]水平滚动量。</p>
 			</div><!-- /div -->
 
 			<div id="p05" class="main__subsection">
 <pre class="main__pre--code">
 wheelY <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">[read-only] The vertical scroll amount.</p>
+				<p class="mb10px">[只读]垂直滚动量。</p>
 			</div><!-- /div -->
 
 			<div id="p06" class="main__subsection">
 <pre class="main__pre--code">
 x <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">[read-only] The x coordinate on the canvas area of the latest touch event.</p>
+				<p class="mb10px">[只读]最近一次画布区域中触屏事件的 x 坐标。</p>
 			</div><!-- /div -->
 
 			<div id="p07" class="main__subsection">
 <pre class="main__pre--code">
 y <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">[read-only] The y coordinate on the canvas area of the latest touch event.</p>
+				<p class="mb10px">[只读]最近一次画布区域中触屏事件的 y 坐标。</p>
 			</div><!-- /div -->
 
 
