@@ -43,7 +43,7 @@
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-8.png" height="613" width="874" alt="" /></div>
 			<p>点击环境变量. 选择[Path]变量，对就是图中Variables下面那个(在你电脑下并不一定是Variables下面那个)，然后点击编辑按钮。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-9.png" height="613" width="874" alt="" /></div>
-			<p>修改变量.在最末尾的地方添加";C:\Python34\"(不带双引号)，点确定。</p>
+			<p>修改变量.在最末尾的地方添加[;C:\Python34\](不包括方括号)，点确定。</p>
 <pre class="main__pre--code">
 ;C:\Python34\
 </pre>
@@ -56,30 +56,30 @@
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-12.png" height="493" width="997" alt="" /></div>
 
-			<h3 class="main__title--h3">2-2 Installing &amp; Setting Up Oracle JDK </h3>
-			<p>In order to run Android SDK tools and a tool known as &quot;Ant,&quot; you will need JDK (Java Development Kit). This is current provided by Oracle. Since JDK has stopped being included in OS X from 10.6 and on,  you will need to install it.</p>
+			<h3 class="main__title--h3">2-2 安装与设置 Oracle JDK </h3>
+			<p>为了使用由Oracle公司提供的Android SDK开发工具和ANT打包工具，你需要安装JDK。而且Mac的操作系统从OS X 10.6版本开始已经不再自带JDK了，如果你没有的话，请安装它 :)</p>
 
-			<h3 class="main__title--h3--sub">2-2-1 Downloading &amp; Installing JDK</h3>
-			<p>Download JDK from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>. The newest version of JDK is Java SE 8u51 as of August 2015.</p>
+			<h3 class="main__title--h3--sub">2-2-1 下载并安装 JDK</h3>
+			<p>你可以从这里下载JDK安装包 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>. 最新的版本是2015年9月发布的Java SE 8u51。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-13.png" height="673" width="1024" alt="" /></div>
-			<p>Download the version which is appropriate for your system. There are two versions for Windows, 32-bit (Windows x86) and 64-bit (Windows x64), so be sure to choose the correct one. <br />Select &quot;Accept License Agreement&quot; using the above radio button.</p>
+			<p>注意，JDK有64位和32位两个版本，分别对应你当前的操作系统[64-bit (Windows x64) and 32-bit (Windows x86)]，请务必确保你下载的JDK与你的操作系统相对应。 <br />在顶部选择"Accept License Agreement"(接受许可协议)按钮。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-14.png" height="673" width="1024" alt="" /></div>
-			<p>Run the downloaded installer to install Java SE Development Kit. You do not need to change any of the options.</p>
+			<p>直接运行下载下来的安装文件，不需要做任何选择。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-15.png" height="393" width="514" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">2-2-2 Configuring and Checking Environment Variables &amp; Path</h3>
-			<p>We will set up the JAVA_HOME Environment Variable. Just as you set up the path for Python in 2-1-2, open [System Properties] and click the [New] button in [Environment Variables].<br />Enter &quot;JAVA_HOME&quot; for the variable name and input the installation location for JDK for the variable value. The variable here was set to C:\Program Files\Java\jdk1.8.0_51.</p>
+			<h3 class="main__title--h3--sub">2-2-2 设置并检查JDK的环境变量</h3>
+			<p>现在，我们将要设置一个名为JAVA_HOME的环境变量. 就跟章节2-1-2里为Python设置path的步骤差不多，首先你右键我的电脑，打开高级设置，点击环境变量，然后选择[新建]按钮。<br />将变量名命名为JAVA_HOME，然后把你安装JDK的文件夹路径拷贝在下面一行。比如我们这里输入的路径就是C:\Program Files\Java\jdk1.8.0_51.</p>
 <pre class="main__pre--code">
 JAVA_HOME
 C:\Program Files\Java\jdk1.8.0_51
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-17.png" height="611" width="874" alt="" /></div>
-			<p>This creates the path. Select [Path]  under [System Variables] and click the Edit button. Enter ;%JAVA_HOME%\bin\ following the value already entered.</p>
+			<p>同样，点击确定之后，继续选择PATH路径，在PATH的末尾加入[;%JAVA_HOME%\bin\](不包括方括号) ，点击确定。</p>
 <pre class="main__pre--code">
 ;%JAVA_HOME%\bin\
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-18.png" height="611" width="873" alt="" /></div>
-			<p>Check the version using Command Prompt just as you did with Python.<br />Enter &quot;java --version&quot; command and press the Enter key. If the version is displayed, that means there is no problem.</p>
+			<p>检测环境是否搭建成功和之前检测Python的方法大致一样。<br />打开CMD，输入java --version，如果画面上显示出你JDK的版本，那么表示你的环境已经搭建成功啦。</p>
 <pre class="main__pre--code">
 &gt; java -version
 </pre>
