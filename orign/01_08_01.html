@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Actor Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v03">Actor Settings</h1>
+		<ul class="breadcrumb">
+		  <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+			<li>Actor Settings</li>
+		</ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Data which represents the character that the player controls is the actor data. <br />
+		    You can give each actor unique characteristics. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Property Details</h2>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_08_01_img01.png" width="769" height="631" alt="" />
+			</div>
+
+			<dl class="main__dl">
+				<dt>Name </dt>
+				<dd>[Name] is the name that is displayed during gameplay. There are occasions when the player name will not be fully visible during gameplay and in battle if the name is long.</dd>
+				<dt>Nickname </dt>
+				<dd>The nickname of the actor. This will be displayed on the status screen in the upper right.</dd>
+				<dt>Class </dt>
+				<dd>The class which the actor belongs to. This will affect which skills can be used, which weapons can be equipped, which items can be used, etc. Specific details are edited in the [<a href="01_08_02.html">Class</a>]&nbsp;tab.</dd>
+				<dt>Initial Level/ Max Level </dt>
+				<dd>[Initial Level] is the level of the actor at the start of game, and [Max Level] is the maximum level an actor can be. An actor will never level up beyond its [Max Level]. Either can be set from 1 to 99.</dd>
+				<dt>Profile </dt>
+				<dd>Introduction of the actor. This will be displayed on the lower portion of the Status Screen.</dd>
+				<dt>Images </dt>
+				<dd>
+					<dl class="main__dl--sub">
+						<dt>Face</dt>
+						<dd>Image displayed in the menu.</dd>
+						<dt>Character</dt>
+						<dd>Image displayed on the Map Screen.</dd>
+						<dt>[SV] Battler</dt>
+						<dd>Image displayed in the Battle Screen when in Side-view mode.</dd>
+					</dl>
+				</dd>
+				<dt>Initial Equipment </dt>
+				<dd>The equipment that an actor starts with at the start of the game. Select the equipment position for each piece from the pull-down list. Equipment which can be selected is limited to what their class is able to equip. Setting this to [None] will cause nothing to be equipped in that location.</dd>
+				<dt>Traits </dt>
+				<dd>The actor's unique traits. Define the details in the window that is displayed when double-clicking each row of the settings field. For more information please refer to [<a href="01_08_15.html">How to Set Traits</a>].</dd>
+			</dl>
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

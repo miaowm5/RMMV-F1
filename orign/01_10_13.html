@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>System Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v05">System Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li>&gt;</li>
+		  <li>System Settings</li>
+	  </ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Change Battle BGM</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img01.png" height="491" width="362" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the settings of the BGM that plays during battle. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>File List</dt>
+				<dd>Specify the BGM file that will be used. Select [(None)] if you do not want to play a file.</dd>
+				<dt>Play/Stop</dt>
+				<dd>By clicking [Play], BGM will start playing using the current settings. Click [Stop] to stop the BGM.</dd>
+				<dt>Volume</dt>
+				<dd>Specify the volume.</dd>
+				<dt>Pitch</dt>
+				<dd>Specify the pitch (50 to 150%). When this is set to over 100%, the playback speed becomes faster and the scale gets higher.</dd>
+				<dt>Pan</dt>
+				<dd>Set the pan (-100 to 100). The majority of the sound comes out of the left speaker when this is a negative value, and more on the right when set to a positive value.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>If this is changed during battle, the settings will take effect from the next battle.</li>
+			  <li>When the map and battle BGM is identical, the music will not stop when switching between screens.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Change Victory ME</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img02.png" width="362" height="491" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the settings for the ME that plays when winning a battle. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>File List</dt>
+				<dd>Specify the ME file that will be used. Select [(None)] if you do not want to play a file.</dd>
+				<dt>Play/Stop</dt>
+				<dd>By clicking [Play], ME will start playing using the current settings. Click [Stop] to stop the ME.</dd>
+				<dt>Volume</dt>
+				<dd>Specify the volume.</dd>
+				<dt>Pitch</dt>
+				<dd>Specify the pitch (50 to 150%). When this is set to over 100%, the playback speed becomes faster and the scale gets higher.</dd>
+				<dt>Pan</dt>
+				<dd>Sets the pan (-100 to 100). The majority of the sound comes out of the left speaker when this is a negative value, and more on the right when set to a positive value.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Change Defeat ME</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img03.png" width="362" height="491" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the settings for the ME that plays when losing a battle. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>File List</dt>
+				<dd>Specify the ME file that will be used. Select [(None)] if you do not want to play a file.</dd>
+				<dt>Play/Stop</dt>
+				<dd>By clicking [Play], ME will start playing using the current settings. Click [Stop] to stop the ME.</dd>
+				<dt>Volume</dt>
+				<dd>Specify the volume.</dd>
+				<dt>Pitch</dt>
+				<dd>Specify the pitch (50 to 150%). When this is set to over 100%, the playback speed becomes faster and the sound scale gets higher.</dd>
+				<dt>Pan</dt>
+				<dd>Set the pan (-100 to 100). The majority of the sound comes out of the left speaker when this is a negative value, and more on the right when set to a positive value.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Change Vehicle BGM</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img04.png" height="189" width="222" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the settings for the BGM music that plays when riding a vehicle.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Vehicle</dt>
+				<dd>Specify the vehicle for the BGM.</dd>
+				<dt>BGM</dt>
+				<dd>Specify the BGM that will be played.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p05">
+		  <h2 class="main__title--h2">Change Save Access</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img05.png" height="141" width="262" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes whether or not the game can be saved by the player. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Save</dt>
+				<dd>Set this to [Disable] to prevent the player from saving, and [Enable] to allow the player to save.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p06">
+		  <h2 class="main__title--h2">Change Menu Access</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img06.png" height="141" width="262" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes whether or not the Menu Screen can be called by the player. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Menu</dt>
+				<dd>Set this to [Disable] to prevent the player from opening the Menu Screen, and [Enable] to allow the player to open the Menu Screen.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p07">
+		  <h2 class="main__title--h2">Change Encounter</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img07.png" height="141" width="262" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Controls whether or not encounters (process that randomly causes a battle against a troop) occur. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Encounter</dt>
+				<dd>Set this to [Disable] to stop encounters, and [Enable] to allow encounters.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p08">
+		  <h2 class="main__title--h2">Change Formation Access</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img08.png" height="141" width="262" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Controls whether or not a player can change the formation of his or her party members. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Formation</dt>
+				<dd>Set this to [Disable] to prevent the player from changing the party, and [Enable] to allow the player to change the party.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p09">
+		  <h2 class="main__title--h2">Change Window Color</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img09.png" height="212" width="472" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the window color settings. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Window Color</dt>
+				<dd>Specifies the color after it is changed based on each of the [Red], [Green] and [Blue] component values (-255 to 255). The specified color can be checked in the preview area on the right.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p10">
+		  <h2 class="main__title--h2">Change Actor Images</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img10.png" height="300" width="384" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the image of an actor. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Actor</dt>
+				<dd>Select the target actor.</dd>
+				<dt>Images</dt>
+				<dd>You can set images for the [Face], [Character], and [ [SV] Battler] in the window that opens when you double-click their images. Setting this to [(None)] will have an image not be displayed.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p11">
+		  <h2 class="main__title--h2">Change Vehicle Image</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_13_img11.png" height="250" width="222" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the image for vehicles. These settings will be left unchanged until changed using this event command again.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Vehicle</dt>
+				<dd>Specify the target vehicle.</dd>
+				<dt>Image</dt>
+				<dd>Double-click the image to specify the image that will display after the change. Setting this to [(None)] will have an image not be displayed.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+</body>
+</html>

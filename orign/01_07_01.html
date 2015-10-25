@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Editing Map Designs</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v02">Editing Map Designs</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_07.html">Maps</a></li>
+		  <li>&gt;</li>
+		  <li>Editing Map Designs</li>
+		</ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Basic Editing Methods</h2>
+		  <h3 class="main__title--h3--sub"> Switch to Editing Mode </h3>
+		  <p>To edit the design of your map, click the [Map] button on the toolbar (or [Mode] → [Map] in the menu) to switch to Editing Mode.</p>
+		  <h3 class="main__title--h3--sub"> Selecting Map Data </h3>
+		  <p>Click to select the map data you wish to edit in the Map List found at the bottom left of the window. The design of the map will be displayed in the Map View on the left side.</p>
+		  <h3 class="main__title--h3--sub"> Selecting Tiles </h3>
+		  <p>Click to select a tile that you will draw from the Tile Palette. The tile that is currently selected will have a white frame around it. Tiles displayed in the Tile Palette will be switched when you click one of the A through E tabs at the bottom. <br />
+		    <br />
+		    You can select multiple tiles at once to draw on by drag-selecting them on the Tile Palette.</p>
+		  <h3 class="main__title--h3--sub"> Selecting the Drawing Tool and Drawing </h3>
+		  <p>You can select tools (the below 5 types) which can be used for drawing tiles by clicking them on the toolbar. Also, tiles will be drawn when you click or drag on the map display area (Map View) on the right side of the window. Each tool can also be selected from the [Draw] Menu.<br />
+		    <br />
+		    You can erase tiles that you have drawn by drawing transparent tiles. You can find the transparent tile in the upper left of the upper layer B tab.</p>
+		  <dl class="main__dl--sub">
+			<dt><img src="../inc/img/01_07_01_img01.png" width="32" height="32" /> Pencil </dt>
+				<dd>Draws the selected tile in the spot that you have clicked.</dd>
+				<dt><img src="../inc/img/01_07_01_img02.png" width="32" height="32" /> Rectangle </dt>
+				<dd>The selected tile will be drawn in a rectangular area produced by clicking and dragging the cursor diagonally with the beginning of the drag being the starting point and the end of the drag being the ending point.</dd>
+				<dt><img src="../inc/img/01_07_01_img03.png" width="32" height="32" /> Ellipse</dt>
+				<dd>The selected tile will be drawn in a ellipse within a square area produced by clicking and dragging the cursor diagonally with the beginning of the drag being the starting point and the end of the drag being the ending point.</dd>
+				<dt><img src="../inc/img/01_07_01_img04.png" width="32" height="32" /> Flood Fill </dt>
+				<dd>Tiles will be drawn from the location of the tile you click and on all surrounding tiles of the same type that are connected. </dd>
+				<dt><img src="../inc/img/01_07_01_img05.png" width="32" height="32" /> Shadow Pen </dt>
+				<dd>Add or delete shadows for things such as walls in the location you click.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Other Editing Functions</h2>
+		  <dl class="main__dl--sub">
+			<dt>Autotile </dt>
+				<dd>A feature called [Autotile] is included in the tiles displayed in the A tab of the Tile Palette. With autotiles, one type of tile contains several patterns, and the border of the tile will be adjusted automatically depending on how the tiles are placed. Tiles which have the autotile function are assigned to [A1] through [A4] in the database [<a href="01_08_10.html">Tilesets</a>].<br />
+                  <br />
+Moreover, you can temporarily disable the autotile function by holding [Shift] and drawing tiles or using the eyedropper. </dd>
+				<dt>Autoshadows </dt>
+				<dd>Within autotiles, by placing two or more tiles vertically, a shadow will automatically be drawn to the bottom right of that tile. However, specified tiles will not have shadows drawn on them.</dd>
+				<dt>Shadow Pen </dt>
+				<dd>The Shadow Pen is a tool that allows you to draw shadows for walls and buildings. You can darken the hue by 1/4th of the size of a tile.<br />
+                  <br />
+Click the [Shadow Pen] button on the toolbar (or go to [Draw] → [Shadow Pen] in the menu), and click on the Map View. A shadow is drawn by clicking on a part which has no shadow, and by clicking a part which already has a shadow, that shadow will be removed.
+<div class="al-c mt10px mb20px">
+		  <img src="../inc/img/01_07_01_img06.png" width="240" height="210" alt="" />
+		  </div>
+				</dd>
+				<dt id="p02">Upper Layer Tile Special Specifications </dt>
+				<dd>
+					<ul class="main__ul">
+						<li>You can layer 2 different types on the upper maps B-E.<br />
+							* When layering a 3rd tile, the 1st upper tile will disappear.<br />
+							* When the 3rd tile layered is the same as the 2nd tile, the first tile will not disappear.<br />
+							* Only the upper left B tile can erase all upper tiles.
+						</li>
+						<li>When a passable tile and an impassable tile are layered, the effect of the tile layered last takes priority.<br />
+							* Even when a passable ☆ tile is on the bottom, the tile with the ☆ will be displayed on top.<br />
+							* When a passable ☆ tile is layered, the impassable tile's effect will take priority.
+						</li>
+					</ul>
+				</dd>
+				<dt id="p01">Lower Layer Tile Special Specifications </dt>
+				<dd>Amongst the tiles that are displayed in the [A] tab of the Tile Palette, those items found in [A2] in the tileset properties are divided into [Base] (tiles 1 to 4 from the left, or the left half) and [Decoration] tiles (tiles 5 to 8 from the left, or the right half). Decoration tiles can be placed on top of base tiles.<br />
+                  <br />
+However, for those [Tilesets] which have their [Mode] set to [World Type] in the tileset properties, when placing a decoration tile that is stacked on a 2nd or 4th base tile, the base tile will change either the 1st or 3rd base tile. </dd>
+			</dl>
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

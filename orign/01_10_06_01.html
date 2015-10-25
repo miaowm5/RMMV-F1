@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Set Movement Route</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v05">Set Movement Route</h1>
+		<ul class="breadcrumb">
+		  <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li>&gt;</li>
+			<li><a href="01_10_06.html">Movement</a></li>
+			<li>&gt;</li>
+			<li>Set Movement Route</li>
+		</ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">What is a Movement Route?</h2>
+		  <p>A movement route determines how a player or event will move. This is set if [Custom] is selected in the event's [Autonomous Movement] settings, as well as when using [Set Movement Route].<br />
+		    <br />
+		    Either setting will be carried out in the [Set Movement Route] window. Routes can be edited when used with [Movement Commands] that control the movement, direction, etc. of the player. For example, entering in the [Move Right], [Move Down], [Move Left] and [Move Up] movement commands will cause the player, etc. to move in a loop going clockwise from their current location. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_06_01_img01.png" height="498" width="898" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Player</h3>
+		  <p>Specify the target actor/event for the movement route. This will be set only when configuring the [Set Movement Route] event command.</p>
+		  <h3 class="main__title--h3--sub">Command List</h3>
+		  <p>List of movement commands that have been entered. Movement commands are entered in the order of the route that will be set here. <br />
+		    <br />
+		    Movement commands clicked in the movement command list will be added at the position of the item clicked in the list. Additionally, you can perform actions such as reediting settings and copying them using the context menu that is displayed when you right-click an item.</p>
+		  <h3 class="main__title--h3--sub">Movement Commands</h3>
+		  <p>Group of commands to control the movement and direction of characters (players/events). A command will be added (inserted) at the location which is currently selected in the command list by clicking a command's button. The movement for each command is as follows. The movement distance for 1 step is equal to one tile.</p>
+		  <dl class="main__dl--sub">
+			<dt>Move Down/Move Left/Move Right/Move Up/Move Lower Left/Move Lower Right/Move Upper Left/Move Upper Right</dt>
+					<dd>Move 1 step in the direction indicated in the command's name.</dd>
+					<dt>Move at Random</dt>
+					<dd>Move 1 step in a randomly selected direction between up, down, left and right.</dd>
+					<dt>Move toward Player</dt>
+					<dd>Move 1 step towards the direction of the player.</dd>
+					<dt>Move away from Player</dt>
+					<dd>Move 1 step in the direction away from the player.</dd>
+					<dt>1 Step Forward</dt>
+					<dd>Move 1 step in the direction currently faced.</dd>
+					<dt>1 Step Backward</dt>
+					<dd>Move 1 step away from the direction currently faced.</dd>
+					<dt>Jump</dt>
+					<dd>Move using a jump. Specify the distance to jump by setting the [X coordinate] and [Y coordinate] (each can be between -100 and 100, with a positive value being in the right/down direction). Players will move through obstacles during a jump. Moreover, members from the 2nd party member and on will remain in that location for parties which have [Show Player Followers] set to ON when jumping.</dd>
+					<dt>Wait</dt>
+					<dd>Specify the time to stop the process in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
+					<dt>Turn Down/Turn Left/Turn Right/Turn Up</dt>
+					<dd>Change the direction faced using the direction in the name.</dd>
+					<dt>Turn 90° Right/Turn 90° Left</dt>
+					<dd>Change the direction faced by 90° using the direction in the name.</dd>
+					<dt>Turn 180°</dt>
+					<dd>Face the opposite of the direction currently faced.</dd>
+					<dt>Turn 90° Right or Left</dt>
+					<dd>Change the direction randomly by 90°.</dd>
+					<dt>Turn at Random</dt>
+					<dd>Face up, down, left or right randomly.</dd>
+					<dt>Turn toward Player</dt>
+					<dd>Face toward where the player is.</dd>
+					<dt>Turn away from Player</dt>
+					<dd>Face the opposite direction of where the player is.</dd>
+					<dt>Switch ON/Switch OFF</dt>
+					<dd>Change the specified switch to the value in the name of the command.</dd>
+					<dt>Change Speed</dt>
+					<dd>Change the [Speed] setting under [Autonomous Movement] of the target map event. This change will continue even after movement has finished.</dd>
+					<dt>Change Frequency</dt>
+					<dd>Change the [Frequency] setting under [Autonomous Movement] of the target map event. This change will continue even after movement has finished.</dd>
+					<dt>Walking Animation ON/Walking Animation OFF</dt>
+					<dd>Change the value of the [Walking] setting under [Options] of the target map event. This change will continue even after movement has finished.</dd>
+					<dt>Stepping Animation ON/Stepping Animation OFF</dt>
+					<dd>Change the value of the [Stepping] setting under [Options] of the target map event.</dd>
+					<dt>Direction Fix ON/Direction Fix OFF</dt>
+					<dd>Change the value of the [Direction Fix] setting under [Options] of the target map event. This change will continue even after movement has finished.</dd>
+					<dt>Through ON/Through OFF</dt>
+					<dd>Change the value of the [Through] setting under [Options] of the target map event. This change will continue even after movement has finished.</dd>
+					<dt>Transparent ON/Transparent OFF</dt>
+					<dd>Change the image of the character to be displayed/hidden. The character will not be displayed when this is set to ON. This change will continue even after movement has finished.</dd>
+					<dt>Change Image</dt>
+					<dd>Change the character's image to the specified image. This change will continue even after movement has finished.</dd>
+					<dt>Change Opacity</dt>
+					<dd>Change the opacity (0 to 255) of the image of the character. The image will be invisible when this is set to 0. This change will continue even after movement has finished.</dd>
+					<dt>Change Blend Mode</dt>
+					<dd>Change the blending method of the colors displayed for the characters and map. Setting this to [Additive] will make it whitish. This change will continue even after movement has finished.</dd>
+					<dt>Play SE</dt>
+					<dd>Play the specified SE.</dd>
+					<dt>Script</dt>
+					<dd>Run the loaded script.</dd>
+				</dl>
+		  <h3 class="main__title--h3--sub">Options</h3>
+		  <p>This is a way to processes all movement commands entered into the command list. Enable the processes to apply as necessary.</p>
+		  <dl class="main__dl--sub">
+			<dt>Repeat Movements</dt>
+					<dd>When enabled, the contents of the command list will be run repeatedly.</dd>
+					<dt>Skip If Cannot Move</dt>
+					<dd>When enabled, the processes will be skipped when it is not possible to move via movement commands due to things like obstacles.</dd>
+					<dt>Wait for Completion</dt>
+					<dd>When enabled, all other processes will be temporarily stopped until all vent commands are finished being processed. This will be set only when configuring the [Set movement Route] event command.</dd>
+				</dl>
+
+			</div><!-- /main__section -->
+
+
+		</div><!-- /main -->
+
+	</body>
+	</html>
+
+

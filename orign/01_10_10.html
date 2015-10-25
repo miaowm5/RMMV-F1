@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Screen</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v05">Screen</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li>&gt;</li>
+		  <li>Screen</li>
+	  </ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Fadeout Screen</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Fades out the screen (slowly fades the screen into black). There are no parameters to set.</p>
+		  <h3 class="main__title--h3--sub">Remarks</h3>
+		  <ul class="main__ul">
+		    <li>The screen will remain faded out until the [Fadein Screen] event command is run.</li>
+		    <li>Elements such as the menu, message windows and battle command window will still be visible even while faded out.</li>
+		    <li>If run during a battle event, everything except the command window and messages will appear black, and enemies, etc. will not be visible.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Fadein Screen</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Returns the screen back to normal after using [Fadeout Screen]. There are no parameters to set.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Tint Screen</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_10_img03.png" height="353" width="472" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+		  <p>Changes the color tone of the entire screen. The color tone of pictures and message windows will not change.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Color Tone</dt>
+				<dd>Specify the amount of each [Red], [Green] and [Blue] to add (-255 to 255). Set the strength of the gray scale filter (0 to 255) by changing the [Gray] value. The higher the value, the stronger the overall color tone will be. By clicking the [Normal], [Dark], [Sepia], [Sunset] and [Night] buttons below, values representing each color tone will be applied ([Normal] will return the color tone back to its original setting). Check the color tone using the preview area on the right.</dd>
+				<dt>Duration</dt>
+				<dd>Specify the amount of time changing the tint of the picture will take in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
+				<dt>Wait for Completion</dt>
+				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>This color tone will remain in effect, including during battle, until using this event command is used again to change the settings.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Flash Screen</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_10_img04.png" height="314" width="472" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Causes the entire screen to change to the specified color for just an instant, and will slowly return back to normal. You can use this to express things like lightning.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Flash Color</dt>
+				<dd>Specify the color to display based on each of the [Red], [Green] and [Blue] component values (0 to 255). The specified color can be checked in the preview area on the right. [Intensity] sets the opacity (0 to 255) of the color. Putting this to 0 will cause it to be completely transparent, and will not affect what appears on the screen.</dd>
+				<dt>Duration</dt>
+				<dd>Specify the amount of time the flash will last in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
+				<dt>Wait for Completion</dt>
+				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p05">
+		  <h2 class="main__title--h2">Shake Screen</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_10_img05.png" height="252" width="414" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Shakes the entire screen left to right.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Shake</dt>
+				<dd>Set the size (1 to 9) of the shaking range using the [Power] parameter, and the speed (1 to 9) of the shaking using the [Speed] parameter.</dd>
+				<dt>Duration</dt>
+				<dd>Specify the amount of time the shaking will last in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
+				<dt>Wait for Completion</dt>
+				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p06">
+		  <h2 class="main__title--h2">Set Weather Effect</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_10_img06.png" height="258" width="414" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Controls the display of effects which represent weather (rain/storm/snow).</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Type</dt>
+				<dd>Specify the type of image to display. Set to [None] to stop displaying an image.</dd>
+				<dt>Power</dt>
+				<dd>Specify the amount of images to display (1 to 9).</dd>
+				<dt>Duration</dt>
+				<dd>Specify the amount of time changing the weather will take in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
+				<dt>Wait for Completion</dt>
+				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>This cannot be used in battle events.</li>
+		  </ul>
+		</div><!-- /main__section -->
+	</div><!-- /main -->
+
+</body>
+</html>

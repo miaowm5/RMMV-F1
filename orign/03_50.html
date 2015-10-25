@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>~ System Class</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v07">~ System Class</h1>
+		<ul class="breadcrumb">
+			<li>JS Library</li>
+			<li>&gt;</li>
+			<li>~ System Class</li>
+		</ul>
+		<p>The JSON data structure of the system.</p>
+
+		<div class="main__section">
+			<b>Properties</b>
+			<ul class="main__ul--inline"></a></li>
+				<li><a href="#p01">airship</a></li>
+				<li><a href="#p02">armorTypes</a></li>
+				<li><a href="#p03">attackMotions</a></li>
+				<li><a href="#p04">battleback1Name</a></li>
+				<li><a href="#p05">battleback2Name</a></li>
+				<li><a href="#p06">battleBgm</a></li>
+				<li><a href="#p07">battlerHue</a></li>
+				<li><a href="#p08">battlerName</a></li>
+				<li><a href="#p09">boat</a></li>
+				<li><a href="#p10">currencyUnit</a></li>
+				<li><a href="#p11">defeatMe</a></li>
+				<li><a href="#p12">editMapId</a></li>
+				<li><a href="#p13">elements</a></li>
+				<li><a href="#p14">equipTypes</a></li>
+				<li><a href="#p15">gameoverMe</a></li>
+				<li><a href="#p16">gameTitle</a></li>
+				<li><a href="#p17">locale</a></li>
+				<li><a href="#p18">magicSkills</a></li>
+				<li><a href="#p19">menuCommands</a></li>
+				<li><a href="#p20">optDisplayTp</a></li>
+				<li><a href="#p21">optDrawTitle</a></li>
+				<li><a href="#p22">optExtraExp</a></li>
+				<li><a href="#p23">optFloorDeath</a></li>
+				<li><a href="#p24">optFollowers</a></li>
+				<li><a href="#p25">optSideView</a></li>
+				<li><a href="#p26">optSlipDeath</a></li>
+				<li><a href="#p27">optTransparent</a></li>
+				<li><a href="#p28">partyMembers</a></li>
+				<li><a href="#p29">ship</a></li>
+				<li><a href="#p30">skillTypes</a></li>
+				<li><a href="#p31">sounds</a></li>
+				<li><a href="#p32">startMapId</a></li>
+				<li><a href="#p33">startX</a></li>
+				<li><a href="#p34">startY</a></li>
+				<li><a href="#p35">switches</a></li>
+				<li><a href="#p36">terms</a></li>
+				<li><a href="#p37">testBattlers</a></li>
+				<li><a href="#p38">testTroopId</a></li>
+				<li><a href="#p39">title1Name</a></li>
+				<li><a href="#p40">title2Name</a></li>
+				<li><a href="#p41">titleBgm</a></li>
+				<li><a href="#p42">variables</a></li>
+				<li><a href="#p43">versionId</a></li>
+				<li><a href="#p44">victoryMe</a></li>
+				<li><a href="#p45">weaponTypes</a></li>
+				<li><a href="#p46">windowTone</a></li>
+			</ul>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Properties</h2>
+
+			<div id="p01" class="main__subsection">
+<pre class="main__pre--code">
+airship <span class="pre__type"><a href="03_54.html">~ System::Vehicle</a></span>
+</pre>
+				<p class="mb10px">The airship settings.</p>
+			</div><!-- /div -->
+
+			<div id="p02" class="main__subsection">
+<pre class="main__pre--code">
+armorTypes <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The list of the armor types.</p>
+			</div><!-- /div -->
+
+			<div id="p03" class="main__subsection">
+<pre class="main__pre--code">
+attackMotions <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The array of <a href="03_51.html">AttackMotion</a> data.</p>
+			</div><!-- /div -->
+
+			<div id="p04" class="main__subsection">
+<pre class="main__pre--code">
+battleback1Name <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The file name of the battle background floor image for battle tests.</p>
+			</div><!-- /div -->
+
+			<div id="p05" class="main__subsection">
+<pre class="main__pre--code">
+battleback2Name <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The file name of the battle background wall image for battle tests.</p>
+			</div><!-- /div -->
+
+			<div id="p06" class="main__subsection">
+<pre class="main__pre--code">
+battleBgm <span class="pre__type"><a href="03_26.html">~ AudioFile</a></span>
+</pre>
+				<p class="mb10px">The battle BGM.</p>
+			</div><!-- /div -->
+
+			<div id="p07" class="main__subsection">
+<pre class="main__pre--code">
+battlerHue <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The hue rotation value of the enemy image for use in editing animations.</p>
+			</div><!-- /div -->
+
+			<div id="p08" class="main__subsection">
+<pre class="main__pre--code">
+battlerName <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The file name of the enemy image for use in editing animations.</p>
+			</div><!-- /div -->
+
+			<div id="p09" class="main__subsection">
+<pre class="main__pre--code">
+boat <span class="pre__type"><a href="03_54.html">~ System::Vehicle</a></span>
+</pre>
+				<p class="mb10px">The boat settings.</p>
+			</div><!-- /div -->
+
+			<div id="p10" class="main__subsection">
+<pre class="main__pre--code">
+currencyUnit <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The currency unit.</p>
+			</div><!-- /div -->
+
+			<div id="p11" class="main__subsection">
+<pre class="main__pre--code">
+defeatMe <span class="pre__type"><a href="03_26.html">~ AudioFile</a></span>
+</pre>
+				<p class="mb10px">The defeat ME.</p>
+			</div><!-- /div -->
+
+			<div id="p12" class="main__subsection">
+<pre class="main__pre--code">
+editMapId <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The ID of the map currently being edited.</p>
+			</div><!-- /div -->
+
+			<div id="p13" class="main__subsection">
+<pre class="main__pre--code">
+elements <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The list of the elements.</p>
+			</div><!-- /div -->
+
+			<div id="p14" class="main__subsection">
+<pre class="main__pre--code">
+equipTypes <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The list of the equipment types.</p>
+			</div><!-- /div -->
+
+			<div id="p15" class="main__subsection">
+<pre class="main__pre--code">
+gameoverMe <span class="pre__type"><a href="03_26.html">~ AudioFile</a></span>
+</pre>
+				<p class="mb10px">The game over ME.</p>
+			</div><!-- /div -->
+
+			<div id="p16" class="main__subsection">
+<pre class="main__pre--code">
+gameTitle <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The game title.</p>
+			</div><!-- /div -->
+
+			<div id="p17" class="main__subsection">
+<pre class="main__pre--code">
+locale <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The locale string such as "ja_JP" and "en_US".</p>
+			</div><!-- /div -->
+
+			<div id="p18" class="main__subsection">
+<pre class="main__pre--code">
+magicSkills <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The array of skill type IDs for magic skills.</p>
+			</div><!-- /div -->
+
+			<div id="p19" class="main__subsection">
+<pre class="main__pre--code">
+menuCommands <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The menu commands.</p>
+			</div><!-- /div -->
+
+			<div id="p20" class="main__subsection">
+<pre class="main__pre--code">
+optDisplayTp <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">The "display TP in battle" option.</p>
+			</div><!-- /div -->
+
+			<div id="p21" class="main__subsection">
+<pre class="main__pre--code">
+optDrawTitle <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">The "draw game title" option.</p>
+			</div><!-- /div -->
+
+			<div id="p22" class="main__subsection">
+<pre class="main__pre--code">
+optExtraExp <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">The "EXP for reserve members" option.</p>
+			</div><!-- /div -->
+
+			<div id="p23" class="main__subsection">
+<pre class="main__pre--code">
+optFloorDeath <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">The "knockout by floor damage" option.</p>
+			</div><!-- /div -->
+
+			<div id="p24" class="main__subsection">
+<pre class="main__pre--code">
+optFollowers <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">The "show player followers" option.</p>
+			</div><!-- /div -->
+
+			<div id="p25" class="main__subsection">
+<pre class="main__pre--code">
+optSideView <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">The "use side-view battle" option.</p>
+			</div><!-- /div -->
+
+			<div id="p26" class="main__subsection">
+<pre class="main__pre--code">
+optSlipDeath <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">The "knockout by slip damage" option.</p>
+			</div><!-- /div -->
+
+			<div id="p27" class="main__subsection">
+<pre class="main__pre--code">
+optTransparent <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">The "start transparent" option.</p>
+			</div><!-- /div -->
+
+			<div id="p28" class="main__subsection">
+<pre class="main__pre--code">
+partyMembers <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The array of actor IDs in the starting party.</p>
+			</div><!-- /div -->
+
+			<div id="p29" class="main__subsection">
+<pre class="main__pre--code">
+ship <span class="pre__type"><a href="03_54.html">~ System::Vehicle</a></span>
+</pre>
+				<p class="mb10px">The array of actor IDs in the starting party.</p>
+			</div><!-- /div -->
+
+			<div id="p30" class="main__subsection">
+<pre class="main__pre--code">
+skillTypes <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The list of the skill types.</p>
+			</div><!-- /div -->
+
+			<div id="p31" class="main__subsection">
+<pre class="main__pre--code">
+sounds <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The array of <a href="03_26.html">AudioFile</a> data for sound effects.</p>
+			</div><!-- /div -->
+
+			<div id="p32" class="main__subsection">
+<pre class="main__pre--code">
+startMapId <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The map ID of the player's starting position.</p>
+			</div><!-- /div -->
+
+			<div id="p33" class="main__subsection">
+<pre class="main__pre--code">
+startX <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The x coordinate of the player's starting position.</p>
+			</div><!-- /div -->
+
+			<div id="p34" class="main__subsection">
+<pre class="main__pre--code">
+startY <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The y coordinate of the player's starting position.</p>
+			</div><!-- /div -->
+
+			<div id="p35" class="main__subsection">
+<pre class="main__pre--code">
+switches <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The list of the switch names.</p>
+			</div><!-- /div -->
+
+			<div id="p36" class="main__subsection">
+<pre class="main__pre--code">
+terms <span class="pre__type"><a href="03_52.html">~ System::Terms</a></span>
+</pre>
+				<p class="mb10px">The terms.</p>
+			</div><!-- /div -->
+
+			<div id="p37" class="main__subsection">
+<pre class="main__pre--code">
+testBattlers <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The array of <a href="03_53.html">TestBattler</a> data.</p>
+			</div><!-- /div -->
+
+			<div id="p38" class="main__subsection">
+<pre class="main__pre--code">
+testTroopId <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The troop ID for battle tests.</p>
+			</div><!-- /div -->
+
+			<div id="p39" class="main__subsection">
+<pre class="main__pre--code">
+title1Name <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The file name of the background image in the title screen.</p>
+			</div><!-- /div -->
+
+			<div id="p40" class="main__subsection">
+<pre class="main__pre--code">
+title2Name <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The file name of the frame image in the title screen.</p>
+			</div><!-- /div -->
+
+			<div id="p41" class="main__subsection">
+<pre class="main__pre--code">
+titleBgm <span class="pre__type"><a href="03_26.html">~ AudioFile</a></span>
+</pre>
+				<p class="mb10px">The title BGM.</p>
+			</div><!-- /div -->
+
+			<div id="p42" class="main__subsection">
+<pre class="main__pre--code">
+variables <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The list of the variable names.</p>
+			</div><!-- /div -->
+
+			<div id="p43" class="main__subsection">
+<pre class="main__pre--code">
+versionId <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The random number used for update check.</p>
+			</div><!-- /div -->
+
+			<div id="p44" class="main__subsection">
+<pre class="main__pre--code">
+victoryMe <span class="pre__type"><a href="03_26.html">~ AudioFile</a></span>
+</pre>
+				<p class="mb10px">The victory ME.</p>
+			</div><!-- /div -->
+
+			<div id="p45" class="main__subsection">
+<pre class="main__pre--code">
+weaponTypes <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The list of the weapon types.</p>
+			</div><!-- /div -->
+
+			<div id="p46" class="main__subsection">
+<pre class="main__pre--code">
+windowTone <span class="pre__type">Array</span>
+</pre>
+				<p class="mb10px">The window color.</p>
+			</div><!-- /div -->
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

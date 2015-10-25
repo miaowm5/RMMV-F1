@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>State Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">State Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>State Settings</li>
+		</ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> States are things like "Poison" and "Confusion", those abnormal states which affect the condition and actions of a character. Configure the specific effects in the data when a state is added. You can prepare not only states with negative effects such as [Poison], [HP decreased], but also states with positive effects such as [Enraged], [Attack Power Increased]. <br />
+		    <br />
+		    Moreover, State #1, named [Knockout], is a special state that is automatically applied to characters and enemies when their HP reaches zero. If all members of a party are in this state, it will result in a game over. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_08_img01.png" width="769" height="631" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> General Settings </h3>
+		  <h3 class="main__title--h3--sub"> Name </h3>
+		  <p>The name of the state. States are displayed using icons so the name will never be used during gameplay.</p>
+		  <h3 class="main__title--h3--sub"> Icon </h3>
+		  <p>This icon is the image displayed next to an actor's name or above an enemy's head when in that state. You can select an image in the [Select an Image] window that appears after double-clicking on the icon's image. Try choosing an icon that makes the details of the state clear.</p>
+		  <h3 class="main__title--h3--sub"> Restriction </h3>
+		  <p>Restricts the actions of characters in a state. The details of a restriction will be set based on the 5 items below. If there are multiple restrictions configured for a state, the restriction at the bottom will be prioritized.</p>
+		  <dl class="main__dl--sub">
+			<dt>None </dt>
+				<dd>Actions will not be restricted.</dd>
+				<dt>Attack an Enemy</dt>
+				<dd>Will definitely attack an enemy.</dd>
+				<dt>Attack Anyone </dt>
+				<dd>Will definitely attack either an enemy or ally.</dd>
+				<dt>Attack an Ally </dt>
+				<dd>Will definitely attack an ally.</dd>
+				<dt>Cannot Move </dt>
+				<dd>Cannot move at all.</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> Priority </h3>
+		  <p>Priority (0 to 100) of displaying state icons. The icon with the highest priority will be displayed if a character has multiple states. If the priorities are the same, the state with the youngest ID will be prioritized. </p>
+		  <h3 class="main__title--h3--sub"> [SV] Motion </h3>
+		  <p>Set the motion that will be displayed in Side Menu Mode when a state is active.</p>
+		  <h3 class="main__title--h3--sub"> [SV] Overlay </h3>
+		  <p>Set the overlay image that will be displayed in Side Menu Mode when a state is active.</p>
+		  <h3 class="main__title--h3"> Removal Conditions </h3>
+		  <p>Conditions to remove a state. Conditions will be set based on the items below. If there are multiple conditions configured, the requirements for each will be determined and the condition removed.</p>
+		  <dl class="main__dl">
+			<dt>Remove at Battle End </dt>
+				<dd>When enabled, the condition will be removed when the battle ends.</dd>
+				<dt>Remove by Restriction </dt>
+				<dd>When enabled, the condition will be removed when another state is added that has separate restrictions.</dd>
+				<dt>Auto-removal Timing/Duration in Turns </dt>
+				<dd>Removed after turn. When using [Action End], the condition will be removed after the active character finishes an action, and will be removed after a turn ends and before returning to Action Selection when using [Turn End]. Specify the lower limit and upper limit (0 to 9999) of number of turns until a condition is removed following being given a state using [Duration in Turns].</dd>
+				<dt>Remove by Damage </dt>
+				<dd>A condition will have a specified chance (0 to 100%) of being removed when receiving any sort of damage.</dd>
+				<dt>Remove by Walking </dt>
+				<dd>A condition will be removed when the player moves on the map after walking over the number of tiles specified (0 to 9999).</dd>
+			</dl>
+		  <h3 class="main__title--h3"> Message </h3>
+		  <p>Message that gets displayed during battle when this state is given or removed. For each of the following 4 states, a message will be displayed following the target's name: "If an actor is inflicted with the state","If an enemy is inflicted with the state","If the state persists", and "If the state is removed".</p>
+		  <h3 class="main__title--h3"> Traits </h3>
+		  <p>Traits given to the target when given a state. For more information please refer to [<a href="01_08_15.html">How to Set Traits</a>].</p>
+		  <h3 class="main__title--h3"> Note </h3>
+		  <p>The [Note] section can be used to make notes while making your game.</p>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

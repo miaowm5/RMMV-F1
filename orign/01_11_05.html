@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Converting to an Android App &lt;Creating an apk file&gt;</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" /><!--    type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></scri--><!--    type="text/javascript" src="../inc/js/common.js"></scri--></head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v06">Converting to an Android App<br />&lt;Creating an apk file&gt;</h1>
+		<ul class="breadcrumb">
+			<li><a href="01.html">RPG Maker MV</a></li>
+			<li>&gt;</li>
+			<li>Documentation</li>
+			<li>&gt;</li>
+			<li>Converting to an Android App &lt;Creating an apk file&gt;</li>
+		</ul>
+
+
+		<div class="main__section" id="p01">
+			<h2 class="main__title--h2">1 Overview</h2>
+			<p>From this version, games created using RPG Maker MV will now be played using browsers which support HTML5 technology such as WebGL &amp; 2DCanvas, WebAudio and JavaScript. There is also continued support for HTML5 in recent browsers for Android,  allowing users to enjoy playing games made using RPG Maker.<br />
+				<br />Rather than explaining how to play using a browser, we will explain in this section how to play your game as an Android application. Running an HTML5 game as an application using an Android device is similar to running a game as an Android application using a browser that supports HTML5. This method of development of running a web application as a native application is known by such names as &quot;Hybrid App&quot;, and is popular from the fact that it can be run on cross-platforms.<br />
+				<br />Browsers which package games as apps are &quot;Browser Engines&quot; which handle the Web display and sounds, and have Android built-in (called WebView). However, browser engines with Android built-in seem to be lagging behind a little when it comes to supporting HTML5. Because of this reason, we will be giving instructions which use a technology called &quot;Crosswalk Project&quot; that uses the Chrome browser which has a high level of support for HTML5.<br />A similar explanation to the explanation found on this page can be viewed on the Crosswalk Project website so please check it out. ([<a href="https://crosswalk-project.org/documentation/android.html" target="_blank">Crosswalk Project on Android</a>]).</p>
+			<h3 class="main__title--h3--sub">Operating Systems</h3>
+			<p>The work environments used for this explanation will be Windows 8.1 and OS X 10.10. Additionally, the computer used to do your work will be referred to as the &quot;Host PC&quot;.</p>
+		</div><!-- /main__section --><div class="main__section" id="p02">
+			<h2 class="main__title--h2">2 Prepare the Packaging Environment</h2>
+			<p>Installing games created using RPG Maker on Android will require creating an apk file. An apk file is the installer for Android apps and its extension is apk. This is compressed in a ZIP format, and contains various necessary files for running the application. We will refer to creating the apk file here as &quot;Packaging&quot;.<br />Also, an Internet connection is required to download some of the necessary developer tools.</p>
+
+			<h3 class="main__title--h3">2-1 Python Installation and Setup</h3>
+			<p>A packaging script is provided in Crosswalk Project so that you can easily package your game. This is made using a scripting language called &quot;Python&quot; so we will set up an environment where Python can be run. This section explains how to install Python on Windows but <b>Python is already installed with OS X so there is no need to install it. Please proceed to 2-2.</b></p>
+
+			<h3 class="main__title--h3--sub">2-1-1 Downloading &amp; Installing Python</h3>
+			<p>Start downloading the installer which can be found on <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. It is not particularly necessary to change any of the items during installation if they are not necessary, but it is a good idea to check where you are installing Python.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-1.png" height="673" width="1024" alt="" /></div>
+			<p>Python has been installed to C:\Python34.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-6.png" height="602" width="876" alt="" /></div>
+
+			<h3 class="main__title--h3--sub">2-1-2 Path Setup &amp; Check</h3>
+			<p>The path will be set to C:\Python34 where Python was installed so that Python commands will be easier to use.<br />Right-click &quot;This PC&quot; and open up [Advanced system settings] from [Properties].</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-8.png" height="613" width="874" alt="" /></div>
+			<p>Click [Environment Variables] in [System Properties]. Select [Path]  under [System Variables] and click the Edit button.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-9.png" height="613" width="874" alt="" /></div>
+			<p>Edit the variables. Adding ";C:\Python34\" to the end of the original string will allow the path to be used (the semicolon is a break character).</p>
+<pre class="main__pre--code">
+;C:\Python34\
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-10.png" height="613" width="874" alt="" /></div>
+			<p>Confirm using command prompt. When using Windows 8.1, open the C drive in the explorer, and select [Open command prompt].</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-11.png" height="627" width="832" alt="" /></div>
+			<p>Enter &quot;python --version&quot; command and press the Enter key. If the version of Python is displayed, that means there is no problem.</p>
+<pre class="main__pre--code">
+&gt; python --version
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-12.png" height="493" width="997" alt="" /></div>
+
+			<h3 class="main__title--h3">2-2 Installing &amp; Setting Up Oracle JDK </h3>
+			<p>In order to run Android SDK tools and a tool known as &quot;Ant,&quot; you will need JDK (Java Development Kit). This is current provided by Oracle. Since JDK has stopped being included in OS X from 10.6 and on,  you will need to install it.</p>
+
+			<h3 class="main__title--h3--sub">2-2-1 Downloading &amp; Installing JDK</h3>
+			<p>Download JDK from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>. The newest version of JDK is Java SE 8u51 as of August 2015.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-13.png" height="673" width="1024" alt="" /></div>
+			<p>Download the version which is appropriate for your system. There are two versions for Windows, 32-bit (Windows x86) and 64-bit (Windows x64), so be sure to choose the correct one. <br />Select &quot;Accept License Agreement&quot; using the above radio button.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-14.png" height="673" width="1024" alt="" /></div>
+			<p>Run the downloaded installer to install Java SE Development Kit. You do not need to change any of the options.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-15.png" height="393" width="514" alt="" /></div>
+
+			<h3 class="main__title--h3--sub">2-2-2 Configuring and Checking Environment Variables &amp; Path</h3>
+			<p>We will set up the JAVA_HOME Environment Variable. Just as you set up the path for Python in 2-1-2, open [System Properties] and click the [New] button in [Environment Variables].<br />Enter &quot;JAVA_HOME&quot; for the variable name and input the installation location for JDK for the variable value. The variable here was set to C:\Program Files\Java\jdk1.8.0_51.</p>
+<pre class="main__pre--code">
+JAVA_HOME
+C:\Program Files\Java\jdk1.8.0_51
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-17.png" height="611" width="874" alt="" /></div>
+			<p>This creates the path. Select [Path]  under [System Variables] and click the Edit button. Enter ;%JAVA_HOME%\bin\ following the value already entered.</p>
+<pre class="main__pre--code">
+;%JAVA_HOME%\bin\
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-18.png" height="611" width="873" alt="" /></div>
+			<p>Check the version using Command Prompt just as you did with Python.<br />Enter &quot;java --version&quot; command and press the Enter key. If the version is displayed, that means there is no problem.</p>
+<pre class="main__pre--code">
+&gt; java -version
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-16.png" height="493" width="997" alt="" /></div>
+
+			<h3 class="main__title--h3">2-3 Installing and Configuring Apache Ant </h3>
+			<p>Ant is known as a build tool that is run using Java. It is utilized internally using a packaging script. You need to install Ant on both Windows and OS X.</p>
+
+			<h3 class="main__title--h3--sub">2-3-1 Downloading &amp; Installing Ant</h3>
+			<p>Download the Ant binaries from <a href="http://ant.apache.org/bindownload.cgi" target="_blank">http://ant.apache.org/bindownload.cgi</a>.<br />Download the [.zip archive:] found under the [Current Release of Ant] section. The newest version of Ant is 1.9.6 as of August 2015.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-1.png" height="673" width="1024" alt="" /></div>
+			<p>The file you downloaded is a compressed ZIP file so extract it in a location of your choosing. In this example, Ant was extracted directly to the C drive.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-2.png" height="602" width="876" alt="" /></div>
+
+			<h3 class="main__title--h3--sub">2-3-2 Configuring and Checking Environment Variables &amp; Path</h3>
+			<p>Here we will set up the path and environment variables for Ant. Just as when we set up the path to Python in 2-1-2, open the Environment Variables window.<br />First, we will configure the ANT_HOME environment variable. Click the New button under System Environment Variables, and enter [ANT_HOME] as the variable name and the path where Ant was extracted as the variable value.</p>
+<pre class="main__pre--code">
+ANT_HOME
+C:\apache-ant-1.9.6
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-3.png" height="611" width="874" alt="" /></div>
+			<p>This creates the path. Select [Path]  under [System Variables] and click the Edit button. Enter ";%ANT_HOME%\bin\" following the value already entered.</p>
+<pre class="main__pre--code">
+;%ANT_HOME%\bin\
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-4.png" height="611" width="874" alt="" /></div>
+			<p>To check to make sure that the path is set up, use Command Prompt to check the version just as you have up until now. Enter &quot;ant --version&quot; command and press the Enter key.</p>
+<pre class="main__pre--code">
+&gt; ant -version
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-5.png" height="493" width="997" alt="" /></div>
+
+			<h3 class="main__title--h3">2-4 Installing and Configuring Android SDK</h3>
+			<p>SDK is short for &quot;Software Development Kit&quot; and just as the name says, this contains a kit for developing software. Necessary files for packaging and convenient tools for testing are included in the kit.</p>
+
+			<h3 class="main__title--h3--sub">2-4-1 Downloading &amp; Installing Android SDK</h3>
+			<p>Download the Android SDK  from <a href="http://developer.android.com/sdk/installing/index.html" target="_blank">http://developer.android.com/sdk/installing/index.html</a>. In the SDK, you can find [ANDROID STUDIO], software for developing Android apps. However, here we will be using the [STAND-ALONE SDK TOOLS].</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-1.png" height="673" width="1024" alt="" /></div>
+			<p>Select [STAND-ALONE SDK TOOLS] and click [Download the SDK now] in the page that is displayed next.  The newest version of the SDK is r24.3.3as of August 2015. Download the installer (exe file) from here.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-2.png" height="673" width="1024" alt="" /></div>
+			<p>Run the downloaded installer to install the SDK.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-3.png" height="400" width="513" alt="" /></div>
+			<p>A screen where you will enter the location to install the SDK will eventually be displayed. Install directly to the C drive so that it is easy to find.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-4.png" height="400" width="513" alt="" /></div>
+
+			<h3 class="main__title--h3--sub">2-4-2 Downloading Additional Components Using Android SDK Manager</h3>
+			<p>Only the bare essentials come with Android SDK right after installation. Here we will download some additional components such as platform-tools using Android SDK Manger. Android SDK Manger can be found in the start menu.<br />
+				<br />You can download necessary drivers for connecting devices to the host PC with USB through Android SDK Manager. If you&apos;re not sure which thing to download, you will get by with what is selected right after you run Android SDK Manager. However, be sure to select [Android SDK platform-tools], [Android SDK Build-tools] and the API (the newest version here is [Android 5.1.1 (API 22)]).<br />Also, it is probably a good idea to add [Google USB Driver] (mentioned later) in the [Extras] folder which makes it possible to install on to the device using USB.<br />
+			</p>
+			<ul class="main__ul">
+				<li>Android SDK platform-tools</li>
+				<li>Android SDK Build-tools</li>
+				<li>Android5.1.1 (API 22)</li>
+				<li>Google USB Driver</li>
+			</ul>
+			<p>*It is possible that the above tools are already selected on start up.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-5.png" height="500" width="700" alt="" /></div>
+
+			<h3 class="main__title--h3--sub">2-4-3 Path Setup &amp; Check</h3>
+			<p>Edit the System Environment Variable Path and add the location of Android SDK and the 3 locations for each tool.</p>
+
+<pre class="main__pre--code">
+;C:\android-sdk\
+;C:\android-sdk\tools\
+;C:\android-sdk\platform-tools\
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-6.png" height="611" width="874" alt="" /></div>
+			<p>Check the Path. Let&apos;s try using the adb command here. Enter &quot;adb version&quot; into the command prompt and press the Enter key.</p>
+<pre class="main__pre--code">
+&gt; adb version
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-7.png" height="493" width="996" alt="" /></div>
+
+			<h3 class="main__title--h3">2-5 Downloading the Android App Template for Crosswalk Project</h3>
+			<p>You do not need to install Crosswalk Project. Extract the downloaded ZIP file wherever you like. Things such as the browser engine and packaging script are included inside the downloaded file.<br />Download the stable version of the Android app template from <a href="https://download.01.org/crosswalk/releases/crosswalk/android/stable/" target="_blank">https://download.01.org/crosswalk/releases/crosswalk/android/stable/</a>. Versions go all the way up to 14 but 10.39.235.16 is stable.<br />Click the folder and download [crosswalk-10.39.235.16.zip].</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-5-1.png" height="673" width="1024" alt="" /></div>
+			<p>In this example, the file was extracted directly to the C drive.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-5-2.png" height="602" width="876" alt="" /></div>
+			<p>With this, the packaging environment is now complete.</p>
+
+		</div><!-- /main__section --><div class="main__section" id="p03">
+			<h2 class="main__title--h2">3 Deploying Games Using RPG Maker</h2>
+			<p>Here we will export the necessary  game data, assets and game engine to a package from RPG Maker. Select [Deployment...] from the File Menu and the deployment dialog will appear. If you select [Android / iOS] and export, all the files needed for Android packaging will be placed in the selected folder. <br />In this example, we deployed to the desktop.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/3-1-1.png" height="627" width="832" alt="" /></div>
+		</div><!-- /main__section --><div class="main__section" id="p04">
+			<h2 class="main__title--h2">4 Packaging</h2>
+			<p>Packaging refers to creating the apk file which you allow you to install applications to an Android device.</p>
+
+			<h3 class="main__title--h3">4-1 Creating manifest.json</h3>
+			<p>Let&apos;s create the manifest.json file using your preferred text editor which determines the actions in your game.<br />Below is an example of a manifest.json file.</p><b>manifest.json</b><pre class="main__pre--code">
+{
+  &quot;name&quot;: &quot;Sample&quot;,
+  &quot;xwalk_version&quot;: &quot;0.0.1&quot;,
+  &quot;start_url&quot;: &quot;index.html&quot;,
+  &quot;display&quot;: &quot;fullscreen&quot;,
+  &quot;orientation&quot;: &quot;landscape&quot;,
+  &quot;icons&quot;: [
+    {
+      &quot;src&quot;: &quot;icon/icon48.png&quot;,
+      &quot;sizes&quot;: &quot;48x48&quot;,
+      &quot;type&quot;: &quot;image/png&quot;,
+      &quot;density&quot;: &quot;4.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;icon/icon72.png&quot;,
+      &quot;sizes&quot;: &quot;72x72&quot;,
+      &quot;type&quot;: &quot;image/png&quot;,
+      &quot;density&quot;: &quot;4.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;icon/icon96.png&quot;,
+      &quot;sizes&quot;: &quot;96x96&quot;,
+      &quot;type&quot;: &quot;image/png&quot;,
+      &quot;density&quot;: &quot;4.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;icon/icon144.png&quot;,
+      &quot;sizes&quot;: &quot;144x144&quot;,
+      &quot;type&quot;: &quot;image/png&quot;,
+      &quot;density&quot;: &quot;4.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;icon/icon192.png&quot;,
+      &quot;sizes&quot;: &quot;192x192&quot;,
+      &quot;type&quot;: &quot;image/png&quot;,
+      &quot;density&quot;: &quot;4.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;icon/icon512.png&quot;,
+      &quot;sizes&quot;: &quot;512x512&quot;,
+      &quot;type&quot;: &quot;image/png&quot;,
+      &quot;density&quot;: &quot;4.0&quot;
+    }
+  ]
+}
+</pre>
+			<p>Aside from the name and version number, everything else can be left as is.<br />Save the manifest.json file in the "/www" folder which you deployed earlier.<br />The purpose of property names and values inside the file are as follows.</p>
+			<table class="main__table--type01">
+				<tr>
+					<th>Property name</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td>name</td>
+					<td>The game&apos;s name.</td>
+				</tr>
+				<tr>
+					<td>xwalk_version</td>
+					<td>Version number. Increase the number if there is an update. Be sure to follow the X.X.X version format.</td>
+				</tr>
+				<tr>
+					<td>start_url</td>
+					<td>The game&apos;s URL. This will be set to index.html.</td>
+				</tr>
+				<tr>
+					<td>display</td>
+					<td>Specifies the full screen setting. This will be set to fullscreen.</td>
+				</tr>
+				<tr>
+					<td>orientation</td>
+					<td>The orientation of the screen. This will be set to landscape.</td>
+				</tr>
+				<tr>
+					<td>icons</td>
+					<td>Icons</td>
+				</tr>
+			</table>
+			<p>Reference URL: Manifest for a web application: <a href="http://w3c.github.io/manifest" target="_blank">http://w3c.github.io/manifest/</a></p>
+
+			<h3 class="main__title--h3">4-2 Running the Packaging Script</h3>
+			<p>Inside the Android app template that you downloaded in 2-5 is a file called &quot;make_apk.py&quot; which is a script that runs the packaging process. This is used through the command prompt.<br />Open the command prompt and move to the inside of the "/Game Name/www" folder (the below game folder) found in the folder where you deployed the game. It is more convenient if you open the game folder using explorer and open the command prompt from the file menu.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-1.png" height="493" width="987" alt="" /></div>
+			<p>Below is an example of running the command on the environment we have just prepared.</p>
+<pre class="main__pre--code">
+python C:\crosswalk-10.39.235.16\make_apk.py --package=com.example.sample --manifest=manifest.json
+</pre>
+			<p>The packaging script is written using Python. Using Python commands, we can specify the script.</p>
+			<dl class="main__dl--sub">
+				<dt>--package</dt>
+				<dd>Specifies the package name. If you have a domain of your own, feel free to use it for your game. Just like the provided example, the domain name is used in reverse with the top level domain (&quot;com&quot; in the example) and is connected using a &quot;.&quot;. Following at the end is your game&apos;s name (&quot;sample&quot; in the example&quot;). You will use the package name used here forever for this game&apos;s package so please be careful.<br /><b>* example.com is a domain that can be used temporarily. This cannot be published in the Play Store which will be explained later.</b><br />
+				<br />Domain example:<br />If the domain that you own is [example.com] and your game&apos;s name is [sample], you would write:<br />com.example.sample</dd>
+				<dt>--manifest</dt>
+				<dd>This specifies this package&apos;s manifest file. It is possible to specify things such as the game&apos;s version, icon and behavior related to the running of the game with the manifest file.</dd>
+			</dl>
+			<p>If you run the command and the packaging finishes without an issue, a [BUILD SUCCESSFUL] message will appear.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-2.png" height="673" width="917" alt="" /></div>
+			<p>You can check that the two files, &quot;Sample_0.0.1_arm.apk&quot; and &quot;Sample_0.0.1_x86.apk&quot; have been created in the game folder. The file that contains [arm] is a package meant for the ARM architecture CPU which is a CPU widely used for implementation. This is used in the majority of Android smart phones and tablets currently in the market. The file containing [x86] is the package meant for the x86 architecture which is mainly used in computers.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-3.png" height="627" width="832" alt="" /></div>
+			<p>If you run the packaging script again, these two apk files will be included in the package so be sure to place the files outside of the folder.</p>
+
+
+			<h3 class="main__title--h3">4-3 Installing to the Device</h3>
+
+			<h3 class="main__title--h3--sub">4-3-1 Preparing an Android Device</h3>
+			<p>In order to be able to install a package using an USB connection, you need to enable [Developer Options] on your device.<br />In order to enable [Developer Options] go to [Settings] → [About] → [Software Information] → [More], and tap the [Build Number] text 7 times.<br /><b>*The location of the [Build Number] may vary depending on the device you are using.<br />　Ex.) [Settings] → [About Device]</b></p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-15-49-26.png" width="720" height="1280" alt="" /></div>
+
+			<h3 class="main__title--h3--sub">4-3-2 Installing Using an USB Connection</h3>
+			<p>Here we will install the package using an USB connection. If you do not have the necessary USB drivers for your Android device on your computer, you can get them using the Android SDK Manager which was introduced in 2-4-3.<br />Connect the Android device to your PC using the USB cable. Be sure to use an USB cable that can be used for transferring data, not for recharging your device.<br />When successfully connect your device to your PC, a dialog will appear on your Android device asking you if you want to enable USB debugging so be sure to enable this.<br />
+				<br />Enter &quot;adb devices&quot; into the command prompt and press the Enter key. If you have managed to connect the device, the device&apos;s name will appear.</p>
+<pre class="main__pre--code">
+&gt; adb devices
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-2-1.png" width="997" height="493" alt="" /></div>
+			<p>We will use the &quot;install&quot; option from the adb commands to install the package. Enter &quot;adb install -r Sample_0.0.1_arm.apk&quot; and press the Enter key. The &quot;-r&quot; option is an option used for reinstalling but if the name of the package is the same, you can update the game.<br />[Success] will be displayed once you&apos;ve successfully installed the package. You will be able to run the game located in the list of applications on your device.</p>
+<pre class="main__pre--code">
+&gt; adb install -r Sample_0.0.1_arm.apk
+</pre>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-16-31-26.png" width="1920" height="1080" alt="" /></div>
+
+			<h3 class="main__title--h3--sub">4-3-3 Installing via Internet</h3>
+			<p>To use a cloud service such as Google Drive and installing via an Internet connection, you will need to upload the apk file to a cloud service of your choice and download and install using an Android device.<br />In order to do so you will need to set permissions to allow installations from unknown sources on the Android device. Do this by navigating to [Settings] → [Security] → [Unknown sources] and set it this on.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-16-54-27.png" width="720" height="1280" alt="" /></div>
+
+		</div><!-- /main__section --><div class="main__section" id="p05">
+			<h2 class="main__title--h2">5 Publishing to Google Play</h2>
+			<p>If you want to publish your game on Google Play, you will need to register on <a href="https://play.google.com/apps/publish/signup/" target="_blank">Google Play Developer</a>.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-1.png" width="1024" height="673" alt="" /></div>
+			<p><b>We unfortunately cannot explain here all there is to know about app development for Google Play. It is our recommendation that you refer to reference books and other sources of information in the market.</b><br />Here we have written especially important information.</p>
+
+			<h3 class="main__title--h3">5-1 Signing an App</h3>
+			<p>&quot;Signing&quot; an app refers to including proof in a package that the [Source], or in other words, you are the one that developed the game. This is similar to adding your signature to a piece of art which you have painted. Unsigned apps cannot be published on Google Play.<br />There are several ways to sign an app, but on this page we will introduce a way to sign your app using the make_apk.py script.</p>
+
+			<h3 class="mian__title--h3--sub">5-1-1 Creating a Keystore File</h3>
+			<p>A keystore file is a type of file which contains your passworded information and prevents a third party from freely using your app. Through doing this, you can guarantee that you were the one that developed your game.<br />You can manage multiple keys on the [Store] but one is enough for an Android package.<br />Furthermore, you can use the keystore file created here on the signatures of your other apps as well.<br />We will use the keytool command included in the JDK which installed when setting up your environment to create the keystore file. Below is an example of a command.</p>
+<pre class="main__pre--code">
+keytool -genkey -v -keystore sample.keystore -storepass password -alias release -keypass password -keyalg RSA -validity 10000
+</pre>
+
+			<dl class="main__dl--sub">
+				<dt>-genkey -v</dt>
+				<dd>Specifies to create a new key file.</dd>
+				<dt>-keystore</dt>
+				<dd>Specifies the name of the keystore file.</dd>
+				<dt>-storepass</dt>
+				<dd>Specifies the password for the store. In the example, we&apos;ve used [password] but when actually creating a password, please set it to something that would be hard for a third party to figure out.</dd>
+				<dt>-alias</dt>
+				<dd>Specifies the alias of the key.</dd>
+				<dt>-keypass</dt>
+				<dd>Specifies the password of the key. In the example, we&apos;ve used [password] but when actually creating a password, please set it to something that would be hard for a third party to figure out.</dd>
+				<dt>-keyalg</dt>
+				<dd>Specifies a passworded algorithm (here it is RSA).</dd>
+				<dt>-validity</dt>
+				<dd>Specifies the duration (in days) that the key file can be used. Set this to a long enough duration since the key file will continue to be used for things like updates.</dd>
+			</dl>
+			<p>After entering in a command and pressing the Enter key, you will be prompted to input the key information.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-2.png" width="917" height="709" alt="" /></div>
+			<p>Please enter your own information that you have decided such as the name and organization name. Country code 81 refers to Japan.<br />If you are working in a &lt;Japanese&gt; environment, please enter  &lt;Yes&gt; when asked &lt;Are you sure?&gt;.<br />A keystore file with the name &quot;sample.keystore&quot; will be created in the folder you opened using the command prompt.</p>
+
+
+			<h3 class="mian__title--h3--sub">5-1-2 Packaging Using a Keystore File</h3>
+			<p>We&apos;ll use an additional option when running the packaging script mentioned in 4-1 to specify a keystore file for signing the package. Below is an example of using that additional option.</p>
+<pre class="main__pre--code">
+python C:\crosswalk-10.39.235.16\make_apk.py --package=com.example.sample --manifest=manifest.json --keystore-path=C:\Users\IEUser\Desktop\sample.keystore --keystore-alias=release --keystore-passcode=password --keystore-alias-passcode=password
+</pre>
+			<p>The keystore-path, keystore-alias, keystore-passcode and keystore-alias-passcode options have increased.</p>
+			<dl class="main__dl--sub">
+				<dt>--keystore-path</dt>
+				<dd>Using keystore-path specifies the location of the keystore file with a file name.</dd>
+				<dt>--keystore-alias</dt>
+				<dd>Specifies the alias of the keystore file when it was created.</dd>
+				<dt>--keystore-passcode</dt>
+				<dd>Specifies the password of the keystore file when it was created.</dd>
+				<dt>--keystore-alias-passcode</dt>
+				<dd>Specifies the key password of the keystore file when it was created.</dd>
+			</dl>
+
+			<p>Upload the apk file that you created to the Google Play Developer Console to apply. Please be sure to follow the instructions on the Google Play Developer Console for other necessary images, etc.</p>
+			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-3.png" width="1024" height="673" alt="" /></div>
+
+		</div><!-- /main__section --><div class="main__section" id="p06">
+			<h2 class="main__title--h2">A Word of Caution</h2>
+			<ul class="main__ul">
+				<li>We are not responsible for any issues that may occur on your PC using the environment settings and command controls.</li>
+				<li>We cannot guarantee that all Android game apps that you can develop using the methods we have introduced here will be published on Google Play.</li>
+				<li>This information is current as of August 2015. Some of the images displayed here may differ as all the software used here is constantly being updated.</li>
+				<li>If you have any questions regarding [App Submission to Google Play], please refer to <a href="https://support.google.com/googleplay/android-developer" target="_blank">Google Play Developer Help </a>.</li>
+			</ul>
+		</div><!-- /main__section --></div><!-- /main --></body>
+</html>

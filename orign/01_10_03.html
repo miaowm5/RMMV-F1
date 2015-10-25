@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Flow Control</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v05">Flow Control</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li>&gt;</li>
+		  <li>Flow Control</li>
+	  </ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Conditional Branch</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_03_img01.png" width="492" height="417" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Specifies event commands which branch processes so that it is possible to run special processes only when specified conditions are met. When [Create Else Branch] is enabled, it is possible to branch conditions when the specified conditions are not met.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <p>Specifies the conditions from the below options along with the evaluation criteria.</p>
+		  <dl class="main__dl--sub">
+			<dt>Switch</dt>
+				<dd>Use the value of the specified switch as a criterion. Set the target switch and its value to (ON/OFF).</dd>
+
+				<dt>Variable</dt>
+				<dd>Use the value of the specified variable as a criterion. Set the variable used to evaluate conditions, the value to compare, and the method for comparison. When using a variable for the value to compare, select [Variable], and specify the value to reference.</dd>
+
+				<dt>Self Switch</dt>
+				<dd>Use the state of the specified self switch as a criterion. Set the target self switch and its value to (ON/OFF).</dd>
+
+				<dt>Timer</dt>
+				<dd>Use the remaining time on the timer as a criterion. Specify the remaining time and criterion (greater than/less than).</dd>
+
+				<dt>Actor</dt>
+				<dd>Use the specified actor as a criterion. Select the target actor, the content to reference (in party/name/class/skill/weapon/armor/state) and the evaluation criteria (specific item).</dd>
+
+				<dt>Enemy</dt>
+				<dd>Use the specified enemy during battle as a criterion. Select the target enemy and the evaluation criteria (appeared/state). This is only effective in battle events.</dd>
+
+				<dt>Character</dt>
+				<dd>Uses the direction of the player or map event as a criterion. Specify the target character and direction. This is only effective in map events.</dd>
+
+				<dt>Vehicle</dt>
+				<dd>Use whether the player is riding the specified vehicle (boat/ship/plane) as a criterion.</dd>
+
+				<dt>Gold</dt>
+				<dd>Use Gold possessed by the party as a criterion. Specify the amount and method for comparison (greater than/less than).</dd>
+
+				<dt>Item</dt>
+				<dd>Use whether the party possesses the specified item as a criterion.</dd>
+
+				<dt>Weapon</dt>
+				<dd>Use whether the party possesses the specified weapon as a criterion. When [Include Equipment] is enabled, the equipment that the actors are wearing will also be evaluated.</dd>
+
+				<dt>Armor</dt>
+				<dd>Use whether the party possesses the specified armor as a criterion. When [Include Equipment] is enabled, the equipment that the actors are wearing will also be evaluated.</dd>
+
+				<dt>Button</dt>
+				<dd>Use whether the specified button is pressed as a criterion.</dd>
+
+				<dt>Script</dt>
+				<dd>For advanced users: use the evaluation result of the script as a criterion.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Loop</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Adds the event commands [Loop] and [Repeat Above] which carry out repeated processes used for control. You can repeatedly run the event commands set in the rows found between these two commands. It is also possible to use a "multiloop" which runs additional loops inside other loops.</p>
+		  <h3 class="main__title--h3--sub">Remarks</h3>
+		  <ul class="main__ul">
+		    <li>Event commands between [Loop] and [Repeat Above] will be repeated indefinitely. Use the event commands such as [Break Loop] to end repeated processes.</li>
+	      </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Break Loop</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Stops the process being repeated using the [Loop] event command. When this is run, the process will skip to the event command specified in the row after [Repeat Above]. There are no parameters to set.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Exit Event Processing</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Stops processing of the contents. Event commands after this will not be processed. There are no parameters to set.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p05">
+		  <h2 class="main__title--h2">Common Event</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_03_img02.png" width="222" height="134" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Invokes common events. After the common event that was invoked is finished processing, the game will move to the next event command.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <dl class="main__dl--sub">
+			<dt>Common Event</dt>
+				<dd>Specify the common event to run.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p06">
+		  <h2 class="main__title--h2">Label</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_03_img03.png" width="222" height="134" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Creates a jump location for processes via the [Jump to Label] event command.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <dl class="main__dl--sub">
+			<dt>Label Name</dt>
+				<dd>Specify the name of the label.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p07">
+		  <h2 class="main__title--h2">Jump to Label</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_03_img04.png" width="222" height="134" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>The line to be processed moves to the location of the specified label. The event command of the row following the label that the process moved to will be processed.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <dl class="main__dl--sub">
+			<dt>Label Name</dt>
+				<dd>Specify the label name of the jump location. Only labels belonging to the same event page can be specified. </dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p08">
+		  <h2 class="main__title--h2">Comment</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_03_img05.png" width="432" height="225" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Sets comments displayed in the contents list. Has no effect on the game.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <dl class="main__dl--sub">
+			  <dt>Comment</dt>
+				<dd>Set the text to be displayed as comments.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

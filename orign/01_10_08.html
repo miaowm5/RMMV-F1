@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Picture</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v05">Picture</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li>&gt;</li>
+		  <li>Picture</li>
+	  </ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Show Picture</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_08_img01.png" height="444" width="452" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Displays a picture (static image) on the screen.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Picture: Number</dt>
+				<dd>Specify a control number (1 to 100) to link to the picture.</dd>
+				<dt>Picture: Image</dt>
+				<dd>Specify the picture to display.</dd>
+				<dt>Position</dt>
+				<dd>Specify the display position of the picture. First, select the [Origin Point] of the picture which can be the [Upper Left] or [Center] of the screen. After doing so, specify the position using coordinates which will use (0, 0) as the origin. When using [Direct designation], enter in coordinates (-9999 to 9999) for [X] which will be the horizontal position, and [Y] which will be the vertical position. To specify the location using variables to specify coordinates, select [Designation with variables], and specify the variables for [X], and [Y].</dd>
+				<dt>Scale</dt>
+				<dd>Specify the percentage to scale the image (between 0 and 2000% with 100% being the original size) using the [Width] and [Height] fields.</dd>
+				<dt>Blend</dt>
+				<dd>Specify the opacity (0 to 255) of the picture under [Opacity]. The smaller the value, the more transparent the picture will be (will not be displayed if 0). Specify how to blend the image colors when changing the opacity of the image under [Blending Mode]. The image will be blended normally when [Normal] is selected, and will appear whiter when [Additive] is selected.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>100 pictures can be displayed at one time. The higher the control number, the higher it will be prioritized when displayed.</li>
+			  <li>If there are multiple of the same control number, only the picture that was displayed last will be displayed (all earlier pictures will be erased).</li>
+			</ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Move Picture</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_08_img02.png" height="515" width="452" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Moves the currently displayed picture.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Picture: Number</dt>
+				<dd>Specify the control number (1 to 100) for the target picture.</dd>
+				<dt>Position</dt>
+				<dd>Specifies the position of the picture after it has been moved. First, select the [Origin Point] of the picture which can be the [Upper Left] or [Center] of the screen. Next, specify the position using coordinates which will use (0, 0) as the origin. When using [Direct designation], enter in coordinates (-9999 to 9999) for [X] which will be the horizontal position, and [Y] which will be the vertical position. To specify the location using variables to specify coordinates, select [Designation with variables], and specify the variables for [X], and [Y].</dd>
+				<dt>Scale</dt>
+				<dd>Specify the percentage (0 to 2000%) by which to scale the [Width] and [Height] of the picture after it has been moved.</dd>
+				<dt>Blend</dt>
+				<dd>Specify the opacity (0 to 255) of the picture after it has been moved under [Opacity]. The smaller the value, the more transparent the picture will be (will not be displayed if 0). Specify how to blend the image colors when changing the opacity of the image under [Blending Mode]. The image will be blended normally when [Normal] is selected, and will appear whiter when [Additive] is selected.</dd>
+				<dt>Time</dt>
+				<dd>Specify the amount of time moving the picture will take in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
+				<dt>Wait for Completion</dt>
+				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Rotate Picture</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_08_img03.png" height="168" width="242" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Rotates the displayed picture.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Picture: Number</dt>
+				<dd>Specify the control number (1 to 100) for the target picture.</dd>
+				<dt>Rotation: Speed</dt>
+				<dd>Specify how fast the picture is rotated (-90 to 90). It will be rotated counterclockwise when this number is positive, and clockwise when negative. Set this value to 0 to stop rotating the picture.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>The rotation axis (center point) will be set to the origin that was specified for the target picture when it's last displayed/moved.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Tint Picture</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_08_img04.png" height="442" width="472" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the color tone of the picture that is displayed.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Picture: Number</dt>
+				<dd>Specify the control number (1 to 100) for the target picture.</dd>
+				<dt>Color Tone</dt>
+				<dd>Specifies the amount of each [Red], [Green] and [Blue] to add (-255 to 255). Set the strength of the gray scale filter (0 to 255) by changing the [Gray] value. The higher the value, the stronger the overall color tone will be. Check the color tone using the preview area on the right.</dd>
+				<dt>Time</dt>
+				<dd>Specify the amount of time changing the tint of the picture will take in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
+				<dt>Wait for Completion</dt>
+				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>The changed color tone will be effective until updated again by this event command.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p05">
+		  <h2 class="main__title--h2">Erase Picture</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_08_img05.png" height="168" width="220" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Erases the picture displayed.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Picture: Number</dt>
+				<dd>Specify the control number (1 to 100) for picture to be deleted.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

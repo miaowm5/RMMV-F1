@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>System Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">System Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>System Settings</li>
+	  </ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p>
+				System data is the collection of things such as the initial settings for the game. You can specify things such as the formation and positions of party members at the start of the game, and the music that places in various situations during gameplay.
+			</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_12_img01.png" width="1019" height="650" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> Starting Party </h3>
+		  <p>The members that form the party at the start of the game. <br />
+		    <br />
+		    There is no limit to how many actors you can place into a party, however only the first 4 can participate in battle.<br />
+  <br />
+		    To change or add new actors, double-click items (a blank row when adding) in the list, and specify the new actors. To remove actors, right-click the one you wish to remove and select [Delete] in the menu that is displayed. </p>
+		  <h3 class="main__title--h3"> Game Title </h3>
+		  <p>The name of your game. This will be set when you enter the name into the [Game Title] field when creating a new project. This name will be displayed in the Game Screen title and the window's title bar.</p>
+		  <h3 class="main__title--h3"> Vehicle Images </h3>
+		  <p>Images for the vehicles (boats/ships/planes) displayed on the map. You can select an image in the [Select an Image] window that appears after double-clicking on each vehicle's section. Select [(None)] if you do not want to display an image.</p>
+		  <h3 class="main__title--h3"> Currency </h3>
+		  <p>The name for the unit of money used in the game. This is used for things such as displaying how much gold the player has in the Menu Screen.</p>
+		  <h3 class="main__title--h3"> Window Color </h3>
+		  <p>Background color of the windows used in the game. This is specified using the composition of the [Red], [Green] and [Blue] values (-255 to 255) in the window that appears when you double-click inside the field.</p>
+		  <h3 class="main__title--h3"> Options </h3>
+		  <p>Specify special processes and rules related to the game's behavior.</p>
+		  <dl class="main__dl">
+			<dt>Use Side-view Battle </dt>
+				<dd>Displays the Battle Screen in a side point of view. Front-view Mode will be used if this is not checked.</dd>
+				<dt>Start Transparent </dt>
+				<dd>When enabled, the game will start with the character transparent (hidden). Use the [Change Transparency] event command to switch this off.</dd>
+				<dt>Show Player Followers </dt>
+				<dd>When enabled, the game will start with actors, starting from the 2nd, following the main actor while moving on the map. Only 4 actors starting from the first will be displayed even when there are 5 members in a party.</dd>
+				<dt>Knockout by Slip Damage </dt>
+				<dd>When enabled, this allows the HP to reach 0 by when damaged by states such as "Poison". HP will only go down to 1 when this is disabled.</dd>
+				<dt>Knockout by Floor Damage </dt>
+				<dd>When enabled, this allows the HP to reach 0 when damaged by tiles (Damage Floors) on the map. HP will only go down to 1 when this is disabled.</dd>
+				<dt>Display TP in Battle </dt>
+				<dd>When enabled, TP values will be displayed in the party members' Status Window in the Battle Screen.</dd>
+				<dt>EXP for Reserve Members </dt>
+				<dd>When enabled, actors who did not participate in battle will also receive EXP when a battle is won.</dd>
+			</dl>
+		  <h3 class="main__title--h3"> Music </h3>
+		  <p>Music that plays while playing. Specify the BGM or ME that plays in the parameters for each scene. The parameters for each scene are as follows. Also, the music that plays when the player moves on the map will be set in the map data.</p>
+		  <table class="main__table--type01">
+				<tr>
+					<th>Title</th>
+					<td>The BGM that plays in the Title Screen.</td>
+				</tr>
+				<tr>
+					<th>Battle</th>
+					<td>The BGM that plays in the Battle Screen.</td>
+				</tr>
+				<tr>
+					<th>Victory</th>
+					<td>The ME that plays after battle when a party wins.</td>
+				</tr>
+				<tr>
+					<th>Defeat</th>
+					<td>The ME that plays after battle when a party loses.</td>
+				</tr>
+				<tr>
+					<th>Game Over</th>
+					<td>The ME that plays in the Game Over screen.</td>
+				</tr>
+				<tr>
+					<th>Boat</th>
+					<td>The BGM that plays when on a boat.</td>
+				</tr>
+				<tr>
+					<th>Ship</th>
+					<td>The BGM that plays when on a ship.</td>
+				</tr>
+				<tr>
+					<th>Airship</th>
+					<td>The BGM that plays when on a airship.</td>
+				</tr>
+			</table>
+		  <h3 class="main__title--h3"> Sounds </h3>
+		  <p>The sound effects (SE) that play in situations such as when the player moves or performs an action during battle. Set the SE file that will play for each situation. The parameters for each situation are as follows.</p>
+		  <table class="main__table--type01">
+				<tr>
+					<th>Cursor</th>
+					<td>When moving the cursor.</td>
+				</tr>
+				<tr>
+					<th>OK</th>
+					<td>When confirming the command to use.</td>
+				</tr>
+				<tr>
+					<th>Cancel</th>
+					<td>When canceling a command in the Menu Screen, etc.</td>
+				</tr>
+				<tr>
+					<th>Buzzer</th>
+					<td>When selecting a command that cannot be used in the Menu Screen, etc.</td>
+				</tr>
+				<tr>
+					<th>Equip</th>
+					<td>When changing equipment in the Menu Screen.</td>
+				</tr>
+				<tr>
+					<th>Save</th>
+					<td>When saving the game.</td>
+				</tr>
+				<tr>
+					<th>Load</th>
+					<td>When loading the game.</td>
+				</tr>
+				<tr>
+					<th>Battle Start</th>
+					<td>When encountering an enemy.</td>
+				</tr>
+				<tr>
+					<th>Escape</th>
+					<td>When a party or enemy escapes during battle.</td>
+				</tr>
+				<tr>
+					<th>Enemy Attack</th>
+					<td>When an enemy performs a normal attack during battle.</td>
+				</tr>
+				<tr>
+					<th>Enemy Damage</th>
+					<td>When damaging an enemy during battle.</td>
+				</tr>
+				<tr>
+					<th>Enemy Collapse</th>
+					<td>When an enemy is knocked out during battle.</td>
+				</tr>
+				<tr>
+					<th>Boss Collapse 1</th>
+					<td>When the [Collapse Effect] of a [Trait] knocks out an enemy [Boss].</td>
+				</tr>
+				<tr>
+					<th>Boss Collapse 2</th>
+					<td>When the [Collapse Effect] of a [Trait] displays the vanishing effect of an enemy [Boss].</td>
+				</tr>
+				<tr>
+					<th>Actor Damage</th>
+					<td>When an actor is damaged.</td>
+				</tr>
+				<tr>
+					<th>Actor Collapse</th>
+					<td>When an actor becomes knocked out during battle.</td>
+				</tr>
+				<tr>
+					<th>Recovery</th>
+					<td>When an actor or enemy recovers during battle.</td>
+				</tr>
+				<tr>
+					<th>Miss</th>
+					<td>When a character fails to land a physical attack.</td>
+				</tr>
+				<tr>
+					<th>Evasion</th>
+					<td>When a character evades a physical attack.</td>
+				</tr>
+				<tr>
+					<th>Magic Evasion</th>
+					<td>When a character evades a magic attack.</td>
+				</tr>
+				<tr>
+					<th>Magic Reflection</th>
+					<td>When a character reflects a magic attack.</td>
+				</tr>
+				<tr>
+					<th>Shop</th>
+					<td>When buying or selling an item in the Shop Screen.</td>
+				</tr>
+				<tr>
+					<th>Use Item</th>
+					<td>When an item is used in the Menu Screen.</td>
+				</tr>
+				<tr>
+					<th>Use Skill</th>
+					<td>When a skill is used in the Menu Screen.</td>
+				</tr>
+			</table>
+		  <h3 class="main__title--h3"> Menu Commands </h3>
+		  <p> Switch commands in the Menu Screen to ON or OFF. </p>
+		  <h3 class="main__title--h3"> [SV] Attack Motions </h3>
+		  <p> Select motions that are displayed for normal attacks in side-view mode. </p>
+		  <h3 class="main__title--h3"> [SV] Magic Skills </h3>
+		  <p> List of skill types which require chanting motions in side-view mode. </p>
+		  <h3 class="main__title--h3"> Starting Positions </h3>
+		  <p>The positions of the player and vehicles (boats/ships/planes) when the game starts. Open the Settings Window for each field by pressing its [...] button, and specify the location by clicking a point on the map on the right. <br />
+		    <br />
+		    The starting location specified will be shown using an icon in a blue frame on the map. This icon can be moved just like map events by dragging them, and you can delete them by pressing the [Delete] key. <br />
+  <br />
+		    However, if the starting position for the player is undecided (deleting the icon), you cannot start the game.</p>
+		  <h3 class="main__title--h3"> Title Screen </h3>
+		  <p>The image which is displayed first in the Play Screen after starting the game. You can select an image in the [Select an Image] window that appears by pressing the field's [...] button. When [Draw Game Title] is enabled, the game's name that was specified in [Game Title] will be displayed towards the top of the Title Screen (disable when including the title of the game in the image).</p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_08_12_img02.png" width="830" height="491" alt="" />
+			</div>
+
+
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

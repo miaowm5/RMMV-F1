@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Scene Control</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v05">Scene Control</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li>&gt;</li>
+		  <li>Scene Control</li>
+	  </ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Battle Processing</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_12_img01.png" height="313" width="292" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Causes troops to appear and starts a battle.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Troop</dt>
+				<dd>Specify the troop that the player will fight against. Choose "Direct designation" and select the troop to have the player fight against a specific troop. To specify a troop by ID, choose "Designation with a variable" and enter in the value to reference. If you choose "Same as Random Encounter", the chosen troop will appear based on the [Encounter] settings of the map that the party is currently in.</dd>
+				<dt>Can Escape</dt>
+				<dd>When enabled, the [Escape] command will be enabled during battle, and you can make conditional branches based on "if player won" and "if player escaped".</dd>
+				<dt>Can Lose</dt>
+				<dd>When enabled, there will not be a game over even if the entire party is defeated, and you can make conditional branches based on "if player won" and "if player lost".</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>This cannot be used in battle events.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Shop Processing</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_12_img02.png" height="359" width="292" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Calls the shop screen where the player can buy weapons, armors and items.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Merchandise</dt>
+				<dd>Specify the items to sell. Set the [Merchandise] and [Price] in the window that is displayed when you double-click an empty row in the list. Choosing [Standard] will set the price to what was set in the data, and choosing [Specify] will set this price only to what is specified using this event command.</dd>
+				<dt>Purchase Only</dt>
+				<dd>When enabled, the player will be unable to sell items.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>This cannot be used in battle events.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Name Input Processing</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_12_img03.png" height="189" width="222" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Displays the name input screen for actors, and the actors name will be changed according to the input of the player.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+			  <dt>Actor</dt>
+				<dd>Specify which actor will have their name changed.</dd>
+				<dt>Max characters</dt>
+				<dd>Specify the max amount of characters (1 to 16) for the name.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>This cannot be used in battle events.</li>
+			  <li>When entering a name while playing, you can move the cursor using the D-pad, and enter characters using the confirm button and delete the last character using the delete button. </li>
+			</ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Open Menu Screen</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Calls the Menu Screen. There are no parameters to set.</p>
+		  <h3 class="main__title--h3--sub">Remarks</h3>
+			<ul class="main__ul">
+			  <li>This cannot be used in battle events.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p05">
+		  <h2 class="main__title--h2">Open Save Screen</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Calls the Save Screen. There are no parameters to set.</p>
+		  <h3 class="main__title--h3--sub">Remarks </h3>
+			<ul class="main__ul">
+			  <li>This cannot be used in battle events.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p06">
+		  <h2 class="main__title--h2">Game Over</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Forces the game to end and displays the Game Over Screen. There are no parameters to set.</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p07">
+		  <h2 class="main__title--h2">Return to Title Screen</h2>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Forces the game to end and returns to the Title Screen. There are no parameters to set.</p>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

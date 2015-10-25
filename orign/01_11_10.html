@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Using Official Plugins</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v06">Using Official Plugins</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li>Documentation</li>
+		  <li>&gt;</li>
+			<li>Using Official Plugins</li>
+	  </ul>
+	  <p>In RPG Maker MV, there are several plugins already included in your new project and can be used with simple settings.</p>
+	  <div class="main__section" id="m03">
+		<h2 class="main__title--h2">AltMenuScreen</h2>
+		<p>A plugin that changes the Menu Screen to a different layout.<br />
+		  Party members will be displayed horizontally. </p>
+		<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img01.png" height="662" width="832" alt="" />
+			</div>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="m04">
+			<h2 class="main__title--h2">AltSaveScreen</h2>
+			<p> A plugin that changes the Save Screen and Load Screen to a different layout. <br />
+			  It becomes possible to display images such as the faces of party members. </p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img02.png" height="662" width="832" alt="" />
+			</div>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="m05">
+			<h2 class="main__title--h2">EnemyBook</h2>
+		  <h3 class="main__title--h3--sub">Monster Enemy Book</h3>
+		  <p> You can make a [Monster Enemy Book] which lists the enemies the player has fought. </p>
+		  <h3 class="main__title--h3--sub">Plugin Command</h3>
+			<p>Set up as an event using the [Plugin Command] advanced event command.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img03.png" height="300" width="600" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>EnemyBook open</th>
+					<td>Open the Enemy Book Screen</td>
+				</tr>
+				<tr>
+					<th>EnemyBook add 3</th>
+					<td>Add the enemy 3 to the Enemy Book</td>
+				</tr>
+				<tr>
+					<th>EnemyBook remove 4</th>
+					<td>Remove enemy 4 from the Enemy Book</td>
+				</tr>
+				<tr>
+					<th>EnemyBook complete</th>
+					<td>Complete the Enemy Book</td>
+				</tr>
+				<tr>
+					<th>EnemyBook clear</th>
+					<td>Clear the Enemy Book</td>
+				</tr>
+			</table>
+		  <h3 class="main__title--h3--sub">Enemy Note</h3>
+		  <p>Writes to the [Note] section in the [Enemies] tab of the database.</p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img04.png" height="631" width="769" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>&lt;desc1:description 1&gt;</th>
+					<td>Display description on the first line</td>
+				</tr>
+				<tr>
+					<th>&lt;desc2:description 2&gt;</th>
+					<td>Display description on the second line</td>
+				</tr>
+				<tr>
+					<th>&lt;book:no&gt;</th>
+					<td>Use when you will not put in the Enemy Book</td>
+				</tr>
+			</table>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="m06">
+			<h2 class="main__title--h2">ItemBook</h2>
+		  <h3 class="main__title--h3--sub">Item Book</h3>
+		  <p> You can make an [Item Book] which lists all the equipment and items a player has collected. </p>
+		  <h3 class="main__title--h3--sub">Plugin Command</h3>
+			<p>Set up as an event using the [Plugin Command] advanced event command.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img05.png" height="300" width="600" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>ItemBook open</th>
+					<td>Open the Item Book Screen</td>
+				</tr>
+				<tr>
+					<th>ItemBook add weapon 3</th>
+					<td>Add weapon 3 to the Item Book</td>
+				</tr>
+				<tr>
+					<th>ItemBook add armor 4</th>
+					<td>Add armor 4 to the Item Book</td>
+				</tr>
+				<tr>
+					<th>ItemBook remove armor 5</th>
+					<td>Remove armor 5 from the Item Book</td>
+				</tr>
+				<tr>
+					<th>ItemBook remove item 6</th>
+					<td>Remove item 6 from the Item Book</td>
+				</tr>
+				<tr>
+					<th>ItemBook complete</th>
+					<td>Complete the Item Book</td>
+				</tr>
+				<tr>
+					<th>ItemBook clear</th>
+					<td>Clear the Item Book</td>
+				</tr>
+			</table>
+		  <h3 class="main__title--h3--sub">Item (weapons, armors) Note</h3>
+			<p>Writes to the [Note] field in the [Items (weapons, armors)] tab in the database.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img06.png" height="631" width="769" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>&lt;book:no&gt;</th>
+					<td>Use when you will not put in the Item Book</td>
+				</tr>
+			</table>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="m07">
+			<h2 class="main__title--h2">SimpleMsgSideView</h2>
+		  <p> Hide the battle log shown in side-view during battle. Only the names of skills, items and actions (Attack and Guard) will be displayed in the upper part of the screen. </p>
+		  <h3 class="main__title--h3--sub">Parameters</h3>
+			<dl class="main__dl--sub">
+			  <dt>displayAttack</dt>
+				<dd>Whether to display a normal [Attack] or not. <br />
+			    Will not be displayed when set to 0 (default), and will be displayed when set to 1.</dd>
+				<dt>position</dt>
+				<dd>Whether to display the names of skills and items to the left or in the center. <br />
+Left when set to 0, and in the center when set to 1.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="m08">
+			<h2 class="main__title--h2">TitleCommandPosition</h2>
+		  <p> A plugin that changes the position of the command window on the Title Screen and its background. </p>
+		  <h3 class="main__title--h3--sub">Parameters</h3>
+			<dl class="main__dl--sub">
+			  <dt>Offset X</dt>
+				<dd>The offset value for the X coordinate.</dd>
+				<dt>Offset Y</dt>
+				<dd>The offset value for the Y coordinate.</dd>
+				<dt>Width</dt>
+				<dd>Width of the command window.</dd>
+				<dt>Background</dt>
+				<dd>The background type. You can select from 3 different types: 0 - Normal, 1 - Dark, 2 - Transparent.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="m09">
+			<h2 class="main__title--h2">WeaponSkill</h2>
+		  <p> A plugin that changes the skill ID for the normal attacks for each weapon. <br />
+			  <br />
+			  Create the skill that you want to add to the weapon. Specifying the skill ID in the [Note] field of the weapon will cause that skill to be activated when attacking with a weapon. <br />
+			  Example: &lt;skill_id:3&gt;<br />
+  <br />
+			  You can create the following types of weapons. </p>
+			<ul class="main__ul">
+			  <li>Make a weapon that attacks multiple enemies.</li>
+			  <li>Make a weapon that attacks 2 or 3 times.</li>
+			  <li>If recovery magic is set to a skill, you can select an ally and cause them to recover when you select [Attack].</li>
+			  <li>It is possible to create weapons which are equal to the Guard command, etc.</li>
+			</ul>
+			<p> Set the [Skill Type] to "None" for skills selected using weapons. <br />
+			  In the case that a Skill Type whose use can be disabled, the player will not be able to select "Attack" if that skill is disabled. </p>
+		</div><!-- /main__section -->
+
+
+
+	</div><!-- /main -->
+</body>
+</html>
+
+

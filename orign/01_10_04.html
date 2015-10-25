@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Party</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v05">Party</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li>&gt;</li>
+		  <li>Party</li>
+	  </ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Change Gold</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_04_img01.png" width="352" height="245" alt="" />
+			</div>
+		  <h3 class="main__title--h3--sub">Function</h3>
+		  <p>Changes the amount of gold of the party.</p>
+		  <h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease gold.</dd>
+				<dt>Operand</dt>
+				<dd>Set the amount to increase or decrease gold. Choose [Constant] to change the gold using a fixed value, and enter the amount. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Change Items</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_04_img02.png" width="352" height="300" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the quantity of items of the party. Upon changing the quantity, if that number is outside of the 0 to 99 range, the value will be adjusted to either 99 (max number a player can have) or 0 (none in inventory).</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Item</dt>
+				<dd>Specify the item to increase or decrease.</dd>
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease the quantity.</dd>
+				<dt>Operand</dt>
+				<dd>Set the amount by which to increase or decrease the quantity. Choose [Constant] to change the quantity using a fixed value, and enter the amount. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Change Weapons</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_04_img03.png" width="352" height="328" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the quantity of weapons of the party. Upon changing the quantity, if that number is outside of the 0 to 99 range, the value will be adjusted to either 99 (max number a player can have) or 0 (none in inventory).</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Weapon</dt>
+				<dd>Specify the weapon to increase or decrease.</dd>
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease the quantity.</dd>
+				<dt>Operand</dt>
+				<dd>Set the amount by which to increase or decrease the quantity. Choose [Constant] to change the quantity using a fixed value, and enter the amount. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+				<dt>Include Equipment</dt>
+				<dd>When enabled, weapons that actors have equipped can also be decreased.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Change Armors</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_04_img04.png" width="352" height="328" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the quantity of armors of the party. Upon changing the quantity, if that number is outside of the 0 to 99 range, the value will be adjusted to either 99 (max number a player can have) or 0 (none in inventory).</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Armor</dt>
+				<dd>Specifies the armor to increase or decrease.</dd>
+				<dt>Operation</dt>
+				<dd>Specifies whether to increase or decrease the quantity.</dd>
+				<dt>Operand</dt>
+				<dd>Set the amount by which to increase or decrease the quantity. Choose [Constant] to change the quantity using a fixed value, and enter the amount. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+				<dt>Include Equipment</dt>
+				<dd>When enabled, armor that actors have equipped can also be decreased.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p05">
+		  <h2 class="main__title--h2">Change Party Member</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_04_img05.png" width="262" height="224" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Change the formation of the actors in the party. You can also change the number of actors in the party to 0 using this command. If so, players will not be displayed on the map.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the actor to change.</dd>
+				<dt>Operation</dt>
+				<dd>Select which operation to perform (Add/Remove).</dd>
+				<dt>Initialize</dt>
+				<dd>When enabled, the traits when adding an actor will be reset according to the parameters in the [Database].</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

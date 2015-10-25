@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>How to Use Aid Tools</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v01">How to Use Aid Tools</h1>
+		<ul class="breadcrumb">
+		  <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+			<li>How to Use Aid Tools</li>
+		</ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Plugin Manager</h2>
+		  <p>With the [Plugin Manager] tool that you can open by going to [Tools] → [Plugin Manager], you can manage official plugins and ones that you have created.</p>
+		  <p> When you click on a plugin displayed in the list, a dialog window will appear where you can change their ON/OFF switches and parameter values. </p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_05_img01.png" width="362" alt="" />
+				<img src="../inc/img/01_05_img02.png" width="250" alt="" />
+			</div>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Sound Test</h2>
+		  <p>With the [Sound Test] tool that you can open by going to [Tools] → [Sound Test], you can test the sound of music and sound files which are included in your project. Music will continue playing even after you close the window so you can use it to play background music as you are making your game.<br />
+		    <br />
+		    The window is divided into 4 tabs: BGM (background music), BGS (background sound), ME (music effects) and SE (sound effects). You can assign music by clicking on the song in the File List of each tab. When you press [Play] the music will begin to play. Click [Stop] to stop the music.<br />
+  <br />
+		    You can adjust the Playback Volume (0 to 100%), Pitch (50 to 150%) and Pan (-100 to 100) by using their respective sliders.</p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_05_img03.png" width="384" height="541" alt="" />
+			</div>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Event Searcher</h2>
+		  <p>With the [Event Searcher] tool which can be opened by going to [Tools] → [Event Searcher], you can search events by their switches, variables and names and display them in a list.</p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_05_img04.png" height="658" alt="" width="606" />
+			</div>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p05">
+			<h2 class="main__title--h2">Character Generator</h2>
+			<p>Open this tool by clicking on [Tools] → [Character Generator]. Here you can make character images allocated for actors and events.</p>
+
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img05.png" height="747" alt="" width="1060" />
+			</div>
+			<p>
+				Click on the [Male] or [Female] tabs to change the screen, and choose the variation and color for each feature. Your selection will be displayed in the [Preview] area.
+			</p>
+			<dl class="main__dl">
+				<dt>Randomize</dt>
+				<dd>
+					Sets all the parts at random.
+				</dd>
+				<dt>Face Image</dt>
+				<dd>
+					Opens the export window for face images.
+				</dd>
+				<dt>Walk Character</dt>
+				<dd>
+					Opens the export window for walk characters.
+				</dd>
+				<dt>Damage Character</dt>
+				<dd>
+					Opens the export window for damage characters.
+				</dd>
+				<dt>Battler</dt>
+				<dd>
+					Opens the export window for side-view battlers.
+				</dd>
+				<dt>Save Settings</dt>
+				<dd>
+					Saves the settings of the character created.
+				</dd>
+				<dt>Load Settings</dt>
+				<dd>
+					Loads the saved character settings.
+				</dd>
+			</dl>
+			<h3 class="main__title--h3">Export Window</h3>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img07.png" height="420" alt="" width="614" />
+			</div>
+			<dl class="main__dl--sub">
+				<dt>Import</dt>
+				<dd>
+					Loads a base image from a file and inserts a newly made image.
+				</dd>
+				<dt>Export</dt>
+				<dd>
+					Saves the image to a file.
+				</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p06">
+			<h2 class="main__title--h2">Generate Dungeon</h2>
+			<p>Right click the map data text in the Map List and select [Generate Dungeon] to open.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img08.png" height="595" alt="" width="316" />
+			</div>
+			<p>
+				When you select wall and floor tiles, a map will automatically be drawn in maze form. The dungeon will be generated on your selected map, so be sure to increase the map size if you would like to make a large dungeon. If your map size is too small, you will not be able to make a very dungeon-like map.
+			</p>
+			<dl class="main__dl">
+				<dt>Type</dt>
+				<dd>
+					Choose between [Rooms] and [Maze] types. When you select [Rooms], a dungeon with rooms connected by passages will be generated. When you select [Maze], a dungeon with only passages will be generated.
+				</dd>
+				<dt>Options</dt>
+				<dd>
+					<dl class="main__dl--sub">
+						<dt>Add Margins</dt>
+						<dd>When selected, margins will be added to the bottom, top, right, and left of the map.</dd>
+						<dt>Wide passages</dt>
+						<dd>When selected, passages will be widened.</dd>
+					</dl>
+				</dd>
+				<dt>Wall</dt>
+				<dd>
+					Select tiles to be used on walls.<br />
+					* Select from the A4 (Wall) tileset being used.
+				</dd>
+				<dt>Floor</dt>
+				<dd>
+					Select tiles to be used on floors.<br />
+					* Select from the A5 (Floor) tileset being used.
+				</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Playtest</h2>
+		  <p>You can test play your game at any point during creation using the Playtest feature which can be executed by going to [Game] → [Playtest] in the Menu Bar. Using this, you can see whether or not settings and events run as intended upon the release of your game.</p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_05_img06.png" width="832" height="662" alt="" />
+			</div>
+
+			<dl class="main__dl">
+				<dt>Using the Debug Feature </dt>
+				<dd> The Debug Screen will be displayed when you press F9 on the keyboard during Playtest. You can change switches and the values of variables currently displayed using this screen.<br />
+				* Press [F9] or the cancel button while in the Debug Screen to return to the Playtest.<br />
+                  <br />
+To change the value of variables, select the target switch/variable (S at the top being the switch, V being the variable, and the number being the range of numbers), then click the action button, and a cursor will appear in the list on the right at the target switch/variable. The ON/OFF values for switches are changed using the action button, and variables are changed using the left and right direction buttons or L/R buttons. </dd>
+				<dt id="p04_01">How to Use Developer Tools</dt>
+				<dd>
+					Press the F8 key during a Playtest to open Developer Tools. Developer Tools have the same function as those built-in to Google Chrome. You can check each element of the game constructed in HTML5.
+					<div class="al-c mt5px mb20px"><img src="../inc/img/01_01_01_08_img05.png" width="716" height="538" alt="" /></div>
+				</dd>
+				<dt>Quitting Playtest </dt>
+				<dd> To quit testing your game, press the X button to close the window. </dd>
+			</dl>
+		</div><!-- /main__section -->
+
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

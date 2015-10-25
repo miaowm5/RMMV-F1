@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Enemy Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">Enemy Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>Enemy Settings</li>
+	  </ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Data that represents the enemy characters that the player fights. In addition to having the same trait values as actors, you also need to set the action patterns that enemies will perform during battle. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_06_img01.png" width="769" height="631" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> General Settings </h3>
+		  <h3 class="main__title--h3--sub"> Name </h3>
+		  <p>Name of the enemy. If the name is long, it may not be completely displayed on the Play Screen.</p>
+		  <h3 class="main__title--h3--sub"> Image </h3>
+		  <p>The image of the enemy that is displayed while playing. You can select an image in the [Select an Image] window that appears after double-clicking on the icon's image. When selecting an image, you can change the hue of the image by moving the [Hue] slider. If the image is set to [None], an image will not be displayed.</p>
+		  <h3 class="main__title--h3--sub"> Max HP/Max MP/Attack/Defense/M.Attack/M.Defense/Agility/Luck </h3>
+		  <p>The trait values of an enemy when a battle begins. [Max HP] can be set between 1 and 999999, [Max MP] can be set between 0 and 9999, and all others can be set between 1 and 999.</p>
+		  <h3 class="main__title--h3"> Rewards </h3>
+		  <p>The amount of EXP (1 to 9999999) and Gold (0 to 9999999) that the party receives after winning a battle.</p>
+		  <h3 class="main__title--h3"> Drop Items </h3>
+		  <p>Items (including weapons and armor) that the party receives after winning a battle. In the window that opens when you double-click inside the field, you can specify the desired item and chance of getting that item by setting the [Probability] (1/1 to 1/1000).</p>
+		  <h3 class="main__title--h3"> Action Patterns </h3>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_08_06_img02.png" width="384" height="432" alt="" />
+			</div>
+			<dl class="main__dl">
+				<dt>Turn</dt>
+				<dd>The number of turns that have passed will be used as a condition. Turns will be defined using [A + B * X] with A being the number of turns from the start of battle, and B being the interval of turns. If you set A to 2, and B to 3, conditions will be met every 3 turns from the 2nd turn (5th turn, 8th turn...). </dd>
+				<dt>HP </dt>
+				<dd>The HP of the enemy will be used as a condition. Specify the range of the percentage of Max HP (0 to 100%). The condition will be met when the enemy's HP is within the specified range.</dd>
+				<dt>MP </dt>
+				<dd>The MP of the enemy will be used as a condition. Specify the range of the percentage of Max MP (0 to 100%). The condition will be met when the enemy's MP is within the specified range.</dd>
+				<dt>State </dt>
+				<dd>When the character is in the specified state will be used as a condition.</dd>
+				<dt>Party Level </dt>
+				<dd>The level of the party members will be used as a condition. The condition will be met when the level of the party member with the highest level is equal to or above the specified value.</dd>
+				<dt>Switch </dt>
+				<dd>The specified switch will be used as a condition. The condition will be met when this switch is on.</dd>
+			</dl>
+		  <h3 class="main__title--h3"> Traits </h3>
+		  <p>Traits of the enemy. You define the details in the window that is displayed when double-clicking each row of the settings field. For more information please refer to [<a href="01_08_15.html">How to Set Traits</a>].</p>
+		  <h3 class="main__title--h3"> Note </h3>
+		  <p>The [Note] section can be used to make notes while making your game.</p>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Application Rules for Action Patterns</h2>
+		  <p>Amongst the actions set in [Action Patterns], the actions which will be performed during battle will be decided according to the following rules.</p>
+		  <ol class="main__ol">
+		    <li>Those actions which fulfill the conditions will be picked out from the configured actions. No action will occur if there is no action that meets the required condition.</li>
+		    <li>Within those actions that meet the conditions, the action with the highest rating and the action with a rating that is within two points of the highest rating will be treated as possible choices.</li>
+		    <li>Amongst those possible choices, those actions which have a rating difference of 1 and 2 from the highest rating will have their chance of being chosen being 2/3 and 1/3 of the highest rating. The chance of being chosen will be the same for multiple actions which have the same rating.
+<dl class="main__dl--sub mt10px">
+					<dt>Example 1: The action rating is [5] and [5] </dt>
+					<dd>The chance for each becomes 50%.</dd>
+					<dt>Example 2: The action rating is [6],[5],[4],[3] </dt>
+					<dd>[6] will be 50%, [5] will be 33.3% (2/3 of 50%), [4] will be 16.6% (1/3 of 50%). [3] will not be a choice.</dd>
+					<dt>Example 3: The action rating is [5],[3] and [3] </dt>
+					<dd>[5] is 60%, each [3] is 20% (1/3 of 60%).</dd>
+				</dl>
+				</li>
+		    <li>The action used will be determined using random numbers based on the usage probability of those actions which are candidates.</li>
+		  </ol>
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

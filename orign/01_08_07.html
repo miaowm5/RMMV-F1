@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Troop Settings</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v03">Troop Settings</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+		  <li>&gt;</li>
+		  <li><a href="01_08.html">Database</a></li>
+		  <li>&gt;</li>
+		  <li>Troop Settings</li>
+		</ul>
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Role of Data</h2>
+		  <p> Troops are the data for the groups of enemies that appear during gameplay. The enemies that you have the player fight with through moving in the map and command events are specified based on this data. Even when having the player fight against just one enemy, you must prepare data for the troop with that enemy. "Battle Events" (events during battle) will also be set for each troop. </p>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_08_07_img01.png" width="769" height="631" alt="" />
+			</div>
+		  <h3 class="main__title--h3"> General Settings </h3>
+		  <h3 class="main__title--h3--sub"> Name </h3>
+		  <p>The name of the troop. This property is just used in the editor (does not affect the game). By clicking the [Auto-name] button, a name will be automatically generated based on the characters entered.</p>
+		  <h3 class="main__title--h3--sub"> Change BG </h3>
+		  <p>Change the battle background that will be displayed in the Placement View. Specify the background using the left field, and the image used for the ground in the right field respectively in the window that is displayed. These settings are only used inside the editor (does not affect the game), and other data will be shared and used also when editing.</p>
+		  <h3 class="main__title--h3--sub"> Battle Test </h3>
+		  <p>Run a battle test with the troop. Specify the actors that will battle, equipment, and levels using the tabs labeled [1] through [4] in the window that is displayed (trait values based on the settings will be displayed in the [Status] section). A window will open and a battle will start when you click [OK]. The test will end when the window is closed.<br />
+			* Save edited data when a plugin is set. When not saved, the plugin settings will not be reflected in the battle test. </p>
+		  <h3 class="main__title--h3--sub"> Placement View </h3>
+		  <p>Those enemies that belong to the troop. It is possible to register up to 8 enemies (including those of the same type) in a single group. <br />
+		    <br />
+		    By dragging on an enemy in the Placement View, you can move the enemy. Additionally, when you right-click on an enemy in the Placement View and select [Appear Halfway], the enemy will become an enemy that will not appear until running an [Enemy Appearance] Event Command in the Battle Events. <br />
+  <br />
+		    Use the buttons below to edit contents of the troop. </p>
+		  <dl class="main__dl--sub">
+			<dt>Add </dt>
+				<dd>Add the enemy selected in the field on the right to the Placement View. You can also add by double-clicking an enemy in the list. The order in which the enemies were added will be reflected in the enemy list displayed during battle.</dd>
+				<dt>Remove </dt>
+				<dd>Remove the enemy selected in the Placement View.</dd>
+				<dt>Clear </dt>
+				<dd>Delete all enemies in the Placement View.</dd>
+				<dt>Align </dt>
+				<dd>Align the positions of the enemies in the Placement View according to the order which they were entered from the left.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section">
+		  <h2 class="main__title--h2">Battle Event Parameters</h2>
+		  <p>Configure event conditions executed during battle with enemies and their details in the [Battle Event] section. Just like map events, it is possible to divide the contents processed depending on the situation using the Event Page and appear conditions.</p>
+		  <h3 class="main__title--h3--sub"> Event Page Controls </h3>
+		  <p>You can control Event Pages using the [New Event Page], [Copy Event Page], [Paste Event page] and [Clear Event Page] buttons located on the left. The functions are the same as the map events.</p>
+		  <h3 class="main__title--h3--sub"> Conditions </h3>
+		  <p>Conditions for the event pages. In the [Conditions] window that appears when the [...] button is pressed, enable the conditions from the below 5 conditions, and configure the decision criterion used for each. Unlike map events, if you do not specify any conditions for the battle events, the event page will not be run. Also, if there are multiple event pages that fulfill conditions, the event page with the smallest number will be the one which is used.</p>
+		  <div class="al-c mb20px">
+				<img src="../inc/img/01_08_07_img02.png" width="477" height="279" alt="" />
+			</div>
+			<dl class="main__dl--sub">
+				<dt>Turn End </dt>
+				<dd>The moment a turn ends will be treated as a condition. </dd>
+				<dt>Turn</dt>
+				<dd>When the number of turns specified have passed from the start of battle will be treated as a condition. Specify the number of turns from the start of battle in the field on the left and the interval between turns on the right.</dd>
+				<dt>Enemy HP </dt>
+				<dd>When an enemy's HP falls below the specified amount, it will be treated as a condition. Specify the enemy and the value (percentage of Max HP).</dd>
+				<dt>Actor HP </dt>
+				<dd>Treats when an actor's HP falls below the specified value. Specify the actor and the value (percentage of Max HP).</dd>
+				<dt>Switch </dt>
+				<dd>When the specified switch is set to ON will be treated as a condition.</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> Span </h3>
+		  <p>Specify the timing of when the contents of the event page are allowed to run.</p>
+			<dl class="main__dl--sub">
+			  <dt>Battle </dt>
+				<dd>The event will run when a condition is first met from the start of battle. Once it has been run once, it will not be run again.</dd>
+				<dt>Turn </dt>
+				<dd>Conditions will be checked each turn, and the event will be run if there is a condition met.</dd>
+				<dt>Moment </dt>
+				<dd>The event will be run repeatedly while a condition is met. If event pages are not controlled with switches, there are cases where a battle will not progress, so please keep that in mind.</dd>
+			</dl>
+		  <h3 class="main__title--h3--sub"> Run Contents </h3>
+		  <p>Running an event when [Conditions] and [Span] are met will be configured based on event commands. Editing is done the same way as the&nbsp;[<a href="01_09_03.html#p03">Contents</a>] for map events.</p>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>

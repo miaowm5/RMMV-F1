@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Bitmap Class</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v07">Bitmap Class</h1>
+		<ul class="breadcrumb">
+			<li>JS Library</li>
+			<li>&gt;</li>
+			<li>Bitmap Class</li>
+		</ul>
+		<p>The basic object that represents an image.</p>
+		<div class="main__section">
+			<h2 class="main__title--h2">Constructor</h2>
+<pre class="main__pre--code">
+Bitmap ( width , height )
+</pre>
+			<div class="params">
+				<h4>Parameters:</h4>
+
+				<ul class="params-list">
+					<li class="param">
+						<code class="param-name">width</code>
+						<span class="type">Number</span>
+						<div class="param-description">
+							<p>The width of the bitmap</p>
+						</div>
+					</li>
+
+					<li class="param">
+						<code class="param-name">height</code>
+						<span class="type">Number</span>
+						<div class="param-description">
+							<p>The height of the bitmap</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Item Index</h2>
+			<b>Methods</b>
+			<ul class="main__ul--inline">
+				<li><a href="#m01">addLoadListener</a></li>
+				<li><a href="#m02">adjustTone</a></li>
+				<li><a href="#m03">blt</a></li>
+				<li><a href="#m04">blur</a></li>
+				<li><a href="#m05">clear</a></li>
+				<li><a href="#m06">clearRect</a></li>
+				<li><a href="#m07">drawCircle</a></li>
+				<li><a href="#m08">drawText</a></li>
+				<li><a href="#m09">fillAll</a></li>
+				<li><a href="#m10">fillRect</a></li>
+				<li><a href="#m11">getAlphaPixel</a></li>
+				<li><a href="#m12">getPixel</a></li>
+				<li><a href="#m13">gradientFillRect</a></li>
+				<li><a href="#m14">isError</a></li>
+				<li><a href="#m15">isReady</a></li>
+				<li><a href="#m16">load</a> <span>static</span></li>
+				<li><a href="#m17">measureTextWidth</a></li>
+				<li><a href="#m18">resize</a></li>
+				<li><a href="#m19">rotateHue</a></li>
+				<li><a href="#m20">snap</a> <span>static</span></li>
+			</ul>
+
+			<b>Properties</b>
+			<ul class="main__ul--inline">
+				<li><a href="#p01">baseTexture</a></li>
+				<li><a href="#p02">canvas</a></li>
+				<li><a href="#p03">context</a></li>
+				<li><a href="#p04">fontFace</a></li>
+				<li><a href="#p05">fontItalic</a></li>
+				<li><a href="#p06">fontSize</a></li>
+				<li><a href="#p07">height</a></li>
+				<li><a href="#p08">outlineColor</a></li>
+				<li><a href="#p09">outlineWidth</a></li>
+				<li><a href="#p10">paintOpacity</a></li>
+				<li><a href="#p11">rect</a></li>
+				<li><a href="#p12">smooth</a></li>
+				<li><a href="#p13">textColor</a></li>
+				<li><a href="#p14">url</a></li>
+				<li><a href="#p15">width</a></li>
+			</ul>
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Methods</h2>
+
+			<div id="m01" class="main__subsection">
+<pre class="main__pre--code">
+addLoadListener ( listner )
+</pre>
+				<p class="mb10px">Add a callback function that will be called when the bitmap is loaded.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">listner</code>
+							<span class="type">Function</span>
+							<div class="param-description">
+								<p>The callback function</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m02" class="main__subsection">
+<pre class="main__pre--code">
+adjustTone ( r , g , b )
+</pre>
+				<p class="mb10px">Changes the color tone of the entire bitmap.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">r</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The red strength in the range (-255, 255)</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">g</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The green strength in the range (-255, 255)</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">b</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The blue strength in the range (-255, 255)</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m03" class="main__subsection">
+<pre class="main__pre--code">
+blt ( source , sx , sy , sw , sh , dx , dy , [dw=sw] , [dh=sh] )
+</pre>
+				<p class="mb10px">Performs a block transfer.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">source</code>
+							<span class="type">Bitmap</span>
+							<div class="param-description">
+								<p>The bitmap to draw</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">sx</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate in the source</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">sy</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate in the source</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">sw</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The width of the source image</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">sh</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The height of the source image</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">dx</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate in the destination</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">dy</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate in the destination</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">[dw=sw]</code>
+							<span class="type">Number</span>
+							<span class="type">[optional]</span>
+							<div class="param-description">
+								<p>The width to draw the image in the destination</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">[dh=sh]</code>
+							<span class="type">Number</span>
+							<span class="type">[optional]</span>
+							<div class="param-description">
+								<p>The height to draw the image in the destination</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m04" class="main__subsection">
+<pre class="main__pre--code">
+blur ()
+</pre>
+				<p class="mb10px">Applies a blur effect to the bitmap.</p>
+			</div><!-- /div -->
+
+			<div id="m05" class="main__subsection">
+<pre class="main__pre--code">
+clear ()
+</pre>
+				<p class="mb10px">Clears the entire bitmap.</p>
+			</div><!-- /div -->
+
+			<div id="m06" class="main__subsection">
+<pre class="main__pre--code">
+clearRect ( x , y , width , height )
+</pre>
+				<p class="mb10px">Clears the specified rectangle.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">x</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate for the upper-left corner</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">y</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate for the upper-left corner</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">width</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The width of the rectangle to clear</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">height</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The height of the rectangle to clear</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m07" class="main__subsection">
+<pre class="main__pre--code">
+drawCircle ( x , y , radius , color )
+</pre>
+				<p class="mb10px">Draw the filled circle.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">x</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate of the center of the circle</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">y</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate of the center of the circle</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">radius</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The radius of the circle</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">color</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The color of the circle in CSS format</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m08" class="main__subsection">
+<pre class="main__pre--code">
+drawText ( text , x , y , maxWidth , lineHeight , align )
+</pre>
+				<p class="mb10px">Draws the outline text to the bitmap.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">text</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The text that will be drawn</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">x</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate for the left of the text</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">y</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate for the top of the text</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">maxWidth</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The maximum allowed width of the text</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">lineHeight</code>
+							<span class="type"Number></span>
+							<div class="param-description">
+								<p>The height of the text line</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">align</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The alignment of the text</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m09" class="main__subsection">
+<pre class="main__pre--code">
+fillAll ( color )
+</pre>
+				<p class="mb10px">Fills the entire bitmap.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">color</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The color of the rectangle in CSS format</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m10" class="main__subsection">
+<pre class="main__pre--code">
+fillRect ( x , y , width , height , color )
+</pre>
+				<p class="mb10px">Fills the specified rectangle.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">x</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate for the upper-left corner</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">y</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate for the upper-left corner</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">width</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The width of the rectangle to clear</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">height</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The height of the rectangle to clear</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">color</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The color of the rectangle in CSS format</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m11" class="main__subsection">
+<pre class="main__pre--code">
+getAlphaPixel ( x , y ) <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">Returns alpha pixel value at the specified point.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">x</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate of the pixel in the bitmap</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">y</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate of the pixel in the bitmap</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">String:</span><br />
+					The alpha value</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m12" class="main__subsection">
+<pre class="main__pre--code">
+getPixel ( x , y ) <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">Returns pixel color at the specified point.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">x</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate of the pixel in the bitmap</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">y</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate of the pixel in the bitmap</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">String:</span><br />
+					The pixel color (hex format)</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m13" class="main__subsection">
+<pre class="main__pre--code">
+gradientFillRect ( x , y , width , height , color1 , color2 , vertical )
+</pre>
+				<p class="mb10px">Draws the rectangle with a gradation.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">x</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The x coordinate for the upper-left corner</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">y</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The y coordinate for the upper-left corner</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">width</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The width of the rectangle to clear</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">height</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The height of the rectangle to clear</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">color1</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The start color of the gradation</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">color2</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The end color of the gradation</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">vertical</code>
+							<span class="type">Boolean</span>
+							<div class="param-description">
+								<p>Whether it draws a vertical gradient</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m14" class="main__subsection">
+<pre class="main__pre--code">
+isError () <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">Checks whether a loading error has occurred.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if a loading error has occurred</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m15" class="main__subsection">
+<pre class="main__pre--code">
+isReady () <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">Checks whether the bitmap is ready to render.</p>
+				<div class="params">
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Boolean:</span><br />
+					True if the bitmap is ready to render</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m16" class="main__subsection">
+<pre class="main__pre--code">
+load ( url ) <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Loads a image file and returns a new bitmap object.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">url</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The image url of the texture</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Bitmap</span></p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m17" class="main__subsection">
+<pre class="main__pre--code">
+measureTextWidth ( text ) <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">Returns the width of the specified text.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">text</code>
+							<span class="type">String</span>
+							<div class="param-description">
+								<p>The text to be measured</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Number:</span> <br />
+					The width of the text in pixels</p>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m18" class="main__subsection">
+<pre class="main__pre--code">
+resize ( width , height )
+</pre>
+				<p class="mb10px">Resizes the bitmap.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">width</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The new width of the bitmap</p>
+							</div>
+						</li>
+						<li class="param">
+							<code class="param-name">height</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The new height of the bitmap</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m19" class="main__subsection">
+<pre class="main__pre--code">
+rotateHue ( offset )
+</pre>
+				<p class="mb10px">Rotates the hue of the entire bitmap.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">offset</code>
+							<span class="type">Number</span>
+							<div class="param-description">
+								<p>The hue offset in 360 degrees</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /div -->
+
+			<div id="m20" class="main__subsection">
+<pre class="main__pre--code">
+snap ( stage ) <span class="pre__static">[static]</span>
+</pre>
+				<p class="mb10px">Takes a snapshot of the game screen and returns a new bitmap object.</p>
+				<div class="params">
+					<h4>Parameters:</h4>
+					<ul class="params-list">
+						<li class="param">
+							<code class="param-name">stage</code>
+							<span class="type">PIXI.Stage</span>
+							<div class="param-description">
+								<p>The stage object</p>
+							</div>
+						</li>
+					</ul>
+					<h4>Returns:</h4>
+					<p><span class="pre__type">Bitmap</span></p>
+				</div>
+			</div><!-- /div -->
+		</div><!-- /main__section -->
+
+
+		<div class="main__section">
+			<h2 class="main__title--h2">Properties</h2>
+			<div id="p01" class="main__subsection">
+<pre class="main__pre--code">
+baseTexture <span class="pre__type">PIXI.BaseTexture</span>
+</pre>
+				<p class="mb10px">[read-only] The base texture that holds the image.</p>
+			</div><!-- /div -->
+
+			<div id="p02" class="main__subsection">
+<pre class="main__pre--code">
+canvas <span class="pre__type">HTMLCanvasElement</span>
+</pre>
+				<p class="mb10px">[read-only] The bitmap canvas.</p>
+			</div><!-- /div -->
+
+			<div id="p03" class="main__subsection">
+<pre class="main__pre--code">
+context <span class="pre__type">CanvasRenderingContext2D</span>
+</pre>
+				<p class="mb10px">[read-only] The 2d context of the bitmap canvas.</p>
+			</div><!-- /div -->
+
+			<div id="p04" class="main__subsection">
+<pre class="main__pre--code">
+fontFace <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The face name of the font.</p>
+			</div><!-- /div -->
+
+			<div id="p05" class="main__subsection">
+<pre class="main__pre--code">
+fontItalic <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">Whether the font is italic.</p>
+			</div><!-- /div -->
+
+			<div id="p06" class="main__subsection">
+<pre class="main__pre--code">
+fontSize <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The size of the font in pixels.</p>
+			</div><!-- /div -->
+
+			<div id="p07" class="main__subsection">
+<pre class="main__pre--code">
+height <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">[read-only] The height of the bitmap.</p>
+			</div><!-- /div -->
+
+			<div id="p08" class="main__subsection">
+<pre class="main__pre--code">
+outlineColor <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The color of the outline of the text in CSS format.</p>
+			</div><!-- /div -->
+
+			<div id="p09" class="main__subsection">
+<pre class="main__pre--code">
+outlineWidth <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The width of the outline of the text.</p>
+			</div><!-- /div -->
+
+			<div id="p10" class="main__subsection">
+<pre class="main__pre--code">
+paintOpacity <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">The opacity of the drawing object in the range (0, 255).</p>
+			</div><!-- /div -->
+
+			<div id="p11" class="main__subsection">
+<pre class="main__pre--code">
+rect <span class="pre__type">Rectangle</span>
+</pre>
+				<p class="mb10px">[read-only] The rectangle of the bitmap.</p>
+			</div><!-- /div -->
+
+			<div id="p12" class="main__subsection">
+<pre class="main__pre--code">
+smooth <span class="pre__type">Boolean</span>
+</pre>
+				<p class="mb10px">Whether the smooth scaling is applied.</p>
+			</div><!-- /div -->
+
+			<div id="p13" class="main__subsection">
+<pre class="main__pre--code">
+textColor <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">The color of the text in CSS format.</p>
+			</div><!-- /div -->
+
+			<div id="p14" class="main__subsection">
+<pre class="main__pre--code">
+url <span class="pre__type">String</span>
+</pre>
+				<p class="mb10px">[read-only] The url of the image file.</p>
+			</div><!-- /div -->
+
+			<div id="p15" class="main__subsection">
+<pre class="main__pre--code">
+width <span class="pre__type">Number</span>
+</pre>
+				<p class="mb10px">[read-only] The width of the bitmap.</p>
+			</div><!-- /div -->
+
+
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>

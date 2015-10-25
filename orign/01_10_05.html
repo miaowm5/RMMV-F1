@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Actor</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	  <h1 class="main__title--h1 main__title--h1--v05">Actor</h1>
+	  <ul class="breadcrumb">
+	    <li><a href="01.html">RPG Maker MV</a></li>
+	    <li>&gt;</li>
+			<li><a href="01_10.html">Event Commands</a></li>
+			<li>&gt;</li>
+			<li>Actor</li>
+	  </ul>
+
+		<div class="main__section" id="p01">
+		  <h2 class="main__title--h2">Change HP</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img01.png" height="377" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the HP of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. Select [Fixed] when wanting to select a specific actor and specify the actor (all members will be selected when selecting [Entire party]). Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease the HP.</dd>
+				<dt>Operand</dt>
+				<dd>Specify the amount by which to raise or lower the HP. Select [Constant] to set this to a fixed value, and enter a value (1 to 9999). Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+				<dt>Allow Knockout</dt>
+				<dd>When enabled, the actor will be knocked out when their HP falls below 0. When disabled, when the HP falls below 0, the HP will be set to 1.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+		  <h2 class="main__title--h2">Change MP</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img02.png" height="349" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the MP of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. Select [Fixed] when wanting to select a specific actor and specify the actor (all members will be selected when selecting [Entire party]). Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease the MP.</dd>
+				<dt>Operand</dt>
+				<dd>Specify the amount by which to raise or lower the MP. Select [Constant] to set this to a fixed value, and enter a value (1 to 9999). Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p03">
+		  <h2 class="main__title--h2">Change TP</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img03.png" height="349" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the TP of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. Select [Fixed] when wanting to select a specific actor and specify the actor (all members will be selected when selecting [Entire party]). Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease the TP.</dd>
+				<dt>Operand</dt>
+				<dd>Specify the amount by which to raise or lower the TP. Select [Constant] to set this to a fixed value, and enter a value (1 to 100). Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p04">
+		  <h2 class="main__title--h2">Change State</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img04.png" height="300" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the state of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. Select [Fixed] when wanting to select a specific actor and specify the actor (all members will be selected when selecting [Entire party]). Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+				<dt>Operation</dt>
+				<dd>Specify the content (Add/Remove) of the operation.</dd>
+				<dt>State</dt>
+				<dd>Specify the state that will be added or removed.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p05">
+		  <h2 class="main__title--h2">Recover All</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img05.png" height="183" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Fully recovers the HP and MP of the actor, and removes all states.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. Select [Fixed] when wanting to select a specific actor and specify the actor (all members will be selected when selecting [Entire party]). Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p06">
+		  <h2 class="main__title--h2">Change EXP</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img06.png" height="377" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the EXP of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. Select [Fixed] when wanting to select a specific actor and specify the actor (all members will be selected when selecting [Entire party]). Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease the EXP.</dd>
+
+				<dt>Operand</dt>
+				<dd>Specify the amount by which to raise or lower the EXP. Select [Constant] to set this to a fixed value, and enter a value (1 to 99999999). Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+
+				<dt>Show Level Up</dt>
+				<dd>When enabled, a message will be displayed on the Play Screen indicating if an actor leveled up after their EXP increased.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p07">
+		  <h2 class="main__title--h2">Change Level</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img07.png" height="377" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the level of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. Select [Fixed] when wanting to select a specific actor and specify the actor (all members will be selected when selecting [Entire party]). Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease the level.</dd>
+				<dt>Operand</dt>
+				<dd>Specify the amount by which to raise or lower the level. Select [Constant] to set this to a fixed value, and enter a value (1 to 98). Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+				<dt>Show Level Up</dt>
+				<dd>When enabled, a message will be displayed on the Play Screen indicating if an actor leveled up after their level increased.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p08">
+		  <h2 class="main__title--h2">Change Parameter</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img08.png" height="404" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the actor's parameters.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. Select [Fixed] when wanting to select a specific actor and specify the actor (all members will be selected when selecting [Entire party]). Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+				<dt>Parameter</dt>
+				<dd>Specify the type of parameter to increase or decrease.</dd>
+				<dt>Operation</dt>
+				<dd>Specify whether to increase or decrease the parameter.</dd>
+				<dt>Operand</dt>
+				<dd>Specify the amount by which to raise or lower the parameter. Select [Constant] to set this to a fixed value, and enter a value (1 to 9999). Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p09">
+		  <h2 class="main__title--h2">Change Skill</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img09.png" height="300" width="352" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Controls the skills that actors can use.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor. When selecting a specific actor, select [Fixed] and specify the actor. Select [Variable] when wanting to select an actor using an ID number, and specify the value to reference.</dd>
+				<dt>Operation</dt>
+				<dd>Select [Learn] to make a skill useable, and select [Forget] to make it unusable.</dd>
+				<dt>Skill</dt>
+				<dd>Specify the skill that will be added or removed.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p10">
+		  <h2 class="main__title--h2">Change Equipment</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img10.png" height="244" width="222" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the equipment of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor.</dd>
+				<dt>Equipment Type</dt>
+				<dd>Specify the type of equipment to change.</dd>
+				<dt>Equipment Item</dt>
+				<dd>Specify the new equipment to equip. A party must possess the specified equipment.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks</h3>
+			<ul class="main__ul">
+			  <li>Equipment will not be changed in the party does not possess the specified equipment item. To forcibly equip an item, you must first give the equipment armor to the party using the [Change Weapons] and [Change Armors] event commands.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p11">
+		  <h2 class="main__title--h2">Change Name</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img11.png" height="189" width="222" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the name of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor.</dd>
+				<dt>Name </dt>
+				<dd>Specify the name after changing it.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p12">
+		  <h2 class="main__title--h2">Change Class</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img12.png" height="189" width="222" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the class of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor.</dd>
+				<dt>Class</dt>
+				<dd>Specify the class to be changed to.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Remarks</h3>
+			<ul class="main__ul">
+				<li>The actor’s level is set to 1 when class has been changed. You can adjust the actor’s status after changing classes by changing [Change Level] and [Change EXP].</li>
+				<li>Equipment and armor that cannot be equipped will automatically be unequipped.</li>
+		  </ul>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p13">
+		  <h2 class="main__title--h2">Change Nickname</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img13.png" height="189" width="222" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the nickname of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor.</dd>
+				<dt>Nickname</dt>
+				<dd>Specify the nickname after changing it.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p14">
+		  <h2 class="main__title--h2">Change Profile</h2>
+		  <div class="al-c mt20px mb20px">
+				<img src="../inc/img/01_10_05_img14.png" height="214" width="422" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Function</h3>
+			<p>Changes the profile of the actor.</p>
+			<h3 class="main__title--h3--sub">Settings</h3>
+			<dl class="main__dl--sub">
+				<dt>Actor</dt>
+				<dd>Select the target actor.</dd>
+				<dt>Profile</dt>
+				<dd>Specify the profile after changing it.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+	</div><!-- /main -->
+
+</body>
+</html>
