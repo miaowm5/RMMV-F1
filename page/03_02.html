@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Graphics Class</title>
+	<title>Graphics 类</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,17 +11,17 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v07">Graphics Class</h1>
+		<h1 class="main__title--h1 main__title--h1--v07">Graphics 类</h1>
 		<ul class="breadcrumb">
-			<li>JS Library</li>
+			<li>JS 库</li>
 			<li>&gt;</li>
-			<li>Graphics Class</li>
+			<li>Graphics 类</li>
 		</ul>
-		<p>The static class that carries out graphics processing.</p>
+		<p>负责画面处理的静态类。</p>
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Item Index</h2>
-			<b>Methods</b>
+			<h2 class="main__title--h2">索引</h2>
+			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">canPlayVideoType</a> <span>static</span></li>
 				<li><a href="#m02">canUseDifferenceBlend</a> <span>static</span></li>
@@ -48,7 +48,7 @@
 				<li><a href="#m23">updateLoading</a> <span>static</span></li>
 			</ul>
 
-			<b>Properties</b>
+			<b>属性</b>
 			<ul class="main__ul--inline">
 				<li><a href="#p01">BLEND_ADD</a> <span>static</span></li>
 				<li><a href="#p02">BLEND_MULTIPLY</a> <span>static</span></li>
@@ -71,21 +71,21 @@
 <pre class="main__pre--code">
 canPlayVideoType ( type ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the browser can play the specified video type.</p>
+				<p class="mb10px">检查浏览器是否能播放指定格式的视频。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">type</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The video type to test support for</p>
+								<p>需要检测的视频格式</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the browser can play the specified video type</p>
+					若浏览器可以播放该格式，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -93,11 +93,11 @@ canPlayVideoType ( type ) <span class="pre__type">Boolean</span> <span class="pr
 <pre class="main__pre--code">
 canUseDifferenceBlend () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the canvas blend mode 'difference' is supported.</p>
+				<p class="mb10px">检查 canvas 是否支持差值混合模式。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the canvas blend mode 'difference' is supported</p>
+					若支持该混合模式，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -105,11 +105,11 @@ canUseDifferenceBlend () <span class="pre__type">Boolean</span> <span class="pre
 <pre class="main__pre--code">
 canUseSaturationBlend () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the canvas blend mode 'saturation' is supported.</p>
+				<p class="mb10px">检查 canvas 是否支持饱和度混合模式。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the canvas blend mode 'saturation' is supported</p>
+					若支持该混合模式，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -117,18 +117,18 @@ canUseSaturationBlend () <span class="pre__type">Boolean</span> <span class="pre
 <pre class="main__pre--code">
 endLoading () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Erases the "Now Loading" image.</p>
+				<p class="mb10px">清除“正在读取中”图片。</p>
 			</div><!-- /div -->
 
 			<div id="m05" class="main__subsection">
 <pre class="main__pre--code">
 hasWebGL () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the current browser supports WebGL.</p>
+				<p class="mb10px">检查浏览器是否支持 WebGL。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the current browser supports WebGL.</p>
+					若支持 WebGL，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -136,36 +136,36 @@ hasWebGL () <span class="pre__type">Boolean</span> <span class="pre__static">[st
 <pre class="main__pre--code">
 hideFps () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Hides the FPSMeter element.</p>
+				<p class="mb10px">隐藏 FPS 显示。</p>
 			</div><!-- /div -->
 
 			<div id="m07" class="main__subsection">
 <pre class="main__pre--code">
 initialize ( width , height , type ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Initializes the graphics system.</p>
+				<p class="mb10px">初始化画面系统。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">width</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The width of the game screen</p>
+								<p>游戏屏幕的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">height</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The height of the game screen</p>
+								<p>游戏屏幕的高度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">type</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The type of the renderer. 'canvas', 'webgl', or 'auto'.</p>
+								<p>渲染器的类型（'canvas'、'webgl' 或 'auto'）</p>
 							</div>
 						</li>
 					</ul>
@@ -176,21 +176,21 @@ initialize ( width , height , type ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 isFontLoaded ( name ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the font file is loaded.</p>
+				<p class="mb10px">检查字体文件是否载入。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">name</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The face name of the font</p>
+								<p>字体的文件名。</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the font file is loaded</p>
+					若成功载入，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -198,28 +198,28 @@ isFontLoaded ( name ) <span class="pre__type">Boolean</span> <span class="pre__s
 <pre class="main__pre--code">
 isInsideCanvas ( x , y ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the specified point is inside the game canvas area.</p>
+				<p class="mb10px">检测指定点是否在游戏的 canvas 区域内。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate on the canvas area</p>
+								<p>被检测点的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate on the canvas area</p>
+								<p>被检测点的 Y 坐标</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the specified point is inside the game canvas area</p>
+					若该点在 canvas 内，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -227,11 +227,11 @@ isInsideCanvas ( x , y ) <span class="pre__type">Boolean</span> <span class="pre
 <pre class="main__pre--code">
 isVideoPlaying () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the video is playing.</p>
+				<p class="mb10px">检测是否正在播放视频。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the video is playing</p>
+					若正在播放视频，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -239,11 +239,11 @@ isVideoPlaying () <span class="pre__type">Boolean</span> <span class="pre__stati
 <pre class="main__pre--code">
 isWebGL () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the renderer type is WebGL.</p>
+				<p class="mb10px">检测渲染器的类型是否为 WebGL 。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span><br />
-					True if the renderer type is WebGL</p>
+					若为WebGL，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -251,22 +251,22 @@ isWebGL () <span class="pre__type">Boolean</span> <span class="pre__static">[sta
 <pre class="main__pre--code">
 loadFont ( name , url ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Loads a font file.</p>
+				<p class="mb10px">读取字体文件。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">name</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The face name of the font</p>
+								<p>字体文件的文件名</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">url</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The url of the font file</p>
+								<p>字体文件的地址</p>
 							</div>
 						</li>
 					</ul>
@@ -277,21 +277,21 @@ loadFont ( name , url ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 pageToCanvasX ( x ) <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Converts an x coordinate on the page to the corresponding x coordinate on the canvas area.</p>
+				<p class="mb10px">将页面的 X 坐标转换为与之对应的 canvas 的 X 坐标。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate on the page to be converted</p>
+								<p>待转换的页面 X 坐标。</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Number:</span><br />
-					The x coordinate on the canvas area</p>
+					与之对应的 canvas 的 X 坐标。</p>
 				</div>
 			</div><!-- /div -->
 
@@ -299,21 +299,21 @@ pageToCanvasX ( x ) <span class="pre__type">Number</span> <span class="pre__stat
 <pre class="main__pre--code">
 pageToCanvasY ( y ) <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Converts a y coordinate on the page to the corresponding y coordinate on the canvas area.</p>
+				<p class="mb10px">将页面的 Y 坐标转换为与之对应的 canvas 的 Y 坐标。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate on the page to be converted</p>
+								<p>待转换的页面 Y 坐标。</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Number:</span><br />
-					The y coordinate on the canvas area</p>
+					与之对应的 canvas 的 Y 坐标。</p>
 				</div>
 			</div><!-- /div -->
 
@@ -321,13 +321,16 @@ pageToCanvasY ( y ) <span class="pre__type">Number</span> <span class="pre__stat
 <pre class="main__pre--code">
 playVideo ( src ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Starts playback of a video.</p>
+				<p class="mb10px">开始播放视频。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">src</code>
 							<span class="type">String</span>
+							<div class="param-description 呵呵">
+								<p>视频文件的地址。</p>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -337,22 +340,22 @@ playVideo ( src ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 printError ( name , message ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Displays the error text to the screen.</p>
+				<p class="mb10px">在屏幕上显示错误信息。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">name</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The name of the error</p>
+								<p>错误的名称</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">message</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The message of the error</p>
+								<p>错误信息的内容</p>
 							</div>
 						</li>
 					</ul>
@@ -363,15 +366,15 @@ printError ( name , message ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 render ( stage ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Renders the stage to the game screen.</p>
+				<p class="mb10px">在屏幕上渲染指定的 stage（场景） 。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">stage</code>
 							<span class="type">Stage</span>
 							<div class="param-description">
-								<p>The stage object to be rendered</p>
+								<p>需要渲染的 stage（场景） 对象。</p>
 							</div>
 						</li>
 					</ul>
@@ -382,118 +385,118 @@ render ( stage ) <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 setLoadingImage () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Sets the source of the "Now Loading" image.</p>
+				<p class="mb10px">设置“正在读取中”时显示的图片。</p>
 			</div><!-- /div -->
 
 			<div id="m19" class="main__subsection">
 <pre class="main__pre--code">
 showFps () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Shows the FPSMeter element.</p>
+				<p class="mb10px">显示 FPS 。</p>
 			</div><!-- /div -->
 
 			<div id="m20" class="main__subsection">
 <pre class="main__pre--code">
 startLoading () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Initializes the counter for displaying the "Now Loading" image.</p>
+				<p class="mb10px">初始化“正在读取中”状态的计时器。</p>
 			</div><!-- /div -->
 
 			<div id="m21" class="main__subsection">
 <pre class="main__pre--code">
 tickEnd () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Marks the end of each frame for FPSMeter.</p>
+				<p class="mb10px">帧结束的标志（用于计算 FPS ）。</p>
 			</div><!-- /div -->
 
 			<div id="m22" class="main__subsection">
 <pre class="main__pre--code">
 tickStart () <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Marks the beginning of each frame for FPSMeter.</p>
+				<p class="mb10px">帧开始的标志（用于计算 FPS ）。</p>
 			</div><!-- /div -->
 
 			<div id="m23" class="main__subsection">
 <pre class="main__pre--code">
 updateLoading () <span class="pre__type"></span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Increments the loading counter and displays the "Now Loading" image if necessary.</p>
+				<p class="mb10px">累加读取状态的计时器时间，必要时，显示“正在读取中”图片。</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Properties</h2>
+			<h2 class="main__title--h2">属性</h2>
 
 			<div id="p01" class="main__subsection">
 <pre class="main__pre--code">
 BLEND_ADD <span class="pre__type">Number</span> <span class="pre__static">[final]</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The alias of PIXI.blendModes.ADD.</p>
+				<p class="mb10px"> PIXI.blendModes.ADD. 函数的别名。</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
 <pre class="main__pre--code">
 BLEND_MULTIPLY <span class="pre__type">Number</span> <span class="pre__static">[final]</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The alias of PIXI.blendModes.MULTIPLY.</p>
+				<p class="mb10px"> PIXI.blendModes.MULTIPLY. 函数的别名。</p>
 			</div><!-- /div -->
 
 			<div id="p03" class="main__subsection">
 <pre class="main__pre--code">
 BLEND_NORMAL <span class="pre__type">Number</span> <span class="pre__static">[final]</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The alias of PIXI.blendModes.NORMAL.</p>
+				<p class="mb10px"> PIXI.blendModes.NORMAL. 函数的别名。</p>
 			</div><!-- /div -->
 
 			<div id="p04" class="main__subsection">
 <pre class="main__pre--code">
 BLEND_SCREEN <span class="pre__type">Number</span> <span class="pre__static">[final]</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The alias of PIXI.blendModes.SCREEN.</p>
+				<p class="mb10px"> PIXI.blendModes.SCREEN. 函数的别名。</p>
 			</div><!-- /div -->
 
 			<div id="p05" class="main__subsection">
 <pre class="main__pre--code">
 boxHeight <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The height of the window display area.</p>
+				<p class="mb10px">窗口显示区域的高度。</p>
 			</div><!-- /div -->
 
 			<div id="p06" class="main__subsection">
 <pre class="main__pre--code">
 boxWidth <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The width of the window display area.</p>
+				<p class="mb10px">窗口显示区域的宽度。</p>
 			</div><!-- /div -->
 
 			<div id="p07" class="main__subsection">
 <pre class="main__pre--code">
 frameCount <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The total frame count of the game screen.</p>
+				<p class="mb10px">游戏运行经过的总帧数。</p>
 			</div><!-- /div -->
 
 			<div id="p08" class="main__subsection">
 <pre class="main__pre--code">
 height <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The height of the game screen.</p>
+				<p class="mb10px">游戏画面的高度。</p>
 			</div><!-- /div -->
 
 			<div id="p09" class="main__subsection">
 <pre class="main__pre--code">
 scale <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The zoom scale of the game screen.</p>
+				<p class="mb10px">游戏画面的缩放倍率。</p>
 			</div><!-- /div -->
 
 			<div id="p10" class="main__subsection">
 <pre class="main__pre--code">
 width <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">The width of the game screen.</p>
+				<p class="mb10px">游戏画面的宽度。</p>
 			</div><!-- /div -->
 
 		</div>
