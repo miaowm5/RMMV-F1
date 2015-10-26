@@ -219,37 +219,37 @@ C:\apache-ant-1.9.6
 			<p>除了名称和版本号，其他一切可以保留原样。<br/>把manifest.json文件保存在你先前部署的“/ www”的文件夹中。<br/>文件里的属性名称和值的作用如下表所示。</p>
 			<table class="main__table--type01">
 				<tr>
-					<th>Property name</th>
-					<th>Value</th>
+					<th>属性名称</th>
+					<th>值</th>
 				</tr>
 				<tr>
 					<td>name</td>
-					<td>The game&apos;s name.</td>
+					<td>游戏的名字。</td>
 				</tr>
 				<tr>
 					<td>xwalk_version</td>
-					<td>Version number. Increase the number if there is an update. Be sure to follow the X.X.X version format.</td>
+					<td>版本号，当你更新的时候记着增加你的版本编号，记着要保持X.X.X version这个格式。</td>
 				</tr>
 				<tr>
 					<td>start_url</td>
-					<td>The game&apos;s URL. This will be set to index.html.</td>
+					<td>游戏的路径，一般设置它指向index.html这个文件。</td>
 				</tr>
 				<tr>
 					<td>display</td>
-					<td>Specifies the full screen setting. This will be set to fullscreen.</td>
+					<td>可以设置全屏或者窗口化。</td>
 				</tr>
 				<tr>
 					<td>orientation</td>
-					<td>The orientation of the screen. This will be set to landscape.</td>
+					<td>游戏在屏幕中显示的位置，默认设置是横向显示的的。</td>
 				</tr>
 				<tr>
 					<td>icons</td>
-					<td>Icons</td>
+					<td>图标</td>
 				</tr>
 			</table>
-			<p>Reference URL: Manifest for a web application: <a href="http://w3c.github.io/manifest" target="_blank">http://w3c.github.io/manifest/</a></p>
+			<p>引用地址: Manifest网页应用设置: <a href="http://w3c.github.io/manifest" target="_blank">http://w3c.github.io/manifest/</a></p>
 
-			<h3 class="main__title--h3">4-2 Running the Packaging Script</h3>
+			<h3 class="main__title--h3">4-2 运行封装脚本</h3>
 			<p>Inside the Android app template that you downloaded in 2-5 is a file called &quot;make_apk.py&quot; which is a script that runs the packaging process. This is used through the command prompt.<br />Open the command prompt and move to the inside of the "/Game Name/www" folder (the below game folder) found in the folder where you deployed the game. It is more convenient if you open the game folder using explorer and open the command prompt from the file menu.</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-1.png" height="493" width="987" alt="" /></div>
 			<p>Below is an example of running the command on the environment we have just prepared.</p>
