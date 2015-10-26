@@ -2,161 +2,182 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>How to Set Traits</title>
+	<title>如何设置特性</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
 </head>
 <body>
 
-	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v03">How to Set Traits</h1>
-	  <ul class="breadcrumb">
-	    <li><a href="01.html">RPG Maker MV</a></li>
-		  <li>&gt;</li>
-		  <li><a href="01_08.html">Database</a></li>
-		  <li>&gt;</li>
-		  <li>How to Set Traits</li>
-	  </ul>
+    <div class="main">
+        <h1 class="main__title--h1 main__title--h1--v03">如何设置特性</h1>
+        <ul class="breadcrumb">
+            <li><a href="01.html">RPG Maker MV</a></li>
+            <li>&gt;</li>
+            <li><a href="01_08.html">数据库</a></li>
+            <li>&gt;</li>
+            <li>如何设置特性</li>
+        </ul>
 
-		<div class="main__section">
-		  <h2 class="main__title--h2">Settings Overview</h2>
-		  <p> The [Traits] parameter for actors, classes, weapons, armors, enemies and states define the unique properties and functions for each type of data. <br />
-		    <br />
-		    The 24 types of properties that can be given are found below. By giving these properties according to the contents of the data you wish to create, you can give the various types of data complex traits. <br />
-  <br />
-		    Traits for classes, weapons, armors and states will be reflected in a character's traits when that character has that type of data added (equipped).<br />
-  <br />
-		    Furthermore, please be careful when configuring traits that permanently restrict actions. For example, a weapon which is set to [Lock Equip] cannot be removed once an actor equips it. </p>
-		</div><!-- /main__section -->
+        <div class="main__section">
+            <h2 class="main__title--h2">设置概述</h2>
+            <p>
+                主角、职业、武器、防具、敌人以及状态的[特性]参数定义了每种数据独一无二的属性和功能。<br />
+                <br />
+                以下列出24种可以设置的属性。通过根据你所想创建的数据的内容设置这些属性，你可以赋予多种数据复杂的特性。<br />
+                <br />
+                当一个角色增加（装备）职业、武器、防具和状态等数据时，它们的特性会在这个角色的特性中反应出来。<br />
+                <br />
+                此外，请小心配置永久限制动作的特性。
+                例如，一个武器设置为[锁定装备]时，主角一旦装备它，便无法将其移除。
+            </p>
+        </div><!-- /main__section -->
 
-		<div class="main__section">
-		  <h2 class="main__title--h2">Setting Traits</h2>
-		  <div class="al-c mt20px mb20px">
-				<img src="../inc/img/01_08_15_img01.png" height="361" width="364" alt="" />
-			</div>
-		  <p> To set a trait, double-click an empty row in the Traits field. Select the property type in the displayed window, and specify what effects are applied. <br />
-		    <br />
-		    The property details will be displayed in the [Traits] list. You can re-edit the contents of properties by double-clicking the item. Additionally, you can perform actions such as copying the settings and deleting them in the context menu that is displayed when you right-click a trait. </p>
-		</div><!-- /main__section -->
+        <div class="main__section">
+            <h2 class="main__title--h2">设定特性</h2>
+            <div class="al-c mt20px mb20px">
+                <img src="../inc/img/01_08_15_img01.png" height="361" width="364" alt="" />
+            </div>
+            <p>
+                双击特性区域的空行来设置一个特性。
+                在显示的窗口中，选择属性类型，并指定要应用的效果。
+                <br />
+                <br />
+                属性的详细信息会显示在[特性]列表里面。
+                通过双击该条你可以重新编辑属性的内容。
+                此外，你可以右键点击一个特性，在出现的上下文菜单中进行诸如复制和删除设定等操作。
+            </p>
+        </div><!-- /main__section -->
 
-		<div class="main__section">
-		  <h2 class="main__title--h2">Contents of Each Trait</h2>
-		  <h3 class="main__title--h3">[Rate] Tab </h3>
-		  <dl class="main__dl">
-			<dt>Element Rate </dt>
-				<dd>Change the damage received when an attack contains an element. Specify the desired element and its rate (0 to 1000%). An attack's damage will become larger than normal if the rate is set over 100%, indicating that this character is weak against the specified element.</dd>
-				<dt>Debuff Rate</dt>
-				<dd>Change the success rate of items and skills which have a [Debuff] effect when used. Specify the desired parameter and the change of success (0 to 1000%, 100% means no change).</dd>
-				<dt>State Rate </dt>
-				<dd>Change the success rate of items and skills which have an [Add State] effect when used. Specify the desired state and the change in rate of success (0 to 1000%, 100% means no change).</dd>
-				<dt>State Resist </dt>
-				<dd>Negates the specified state. If [Knockout] is selected, a character will not be knocked out even when their HP reaches 0.</dd>
-			</dl>
-		  <h3 class="main__title--h3">[Param] Tab </h3>
-		  <dl class="main__dl">
-		    <dt>Parameter </dt>
-				<dd>Raises and lowers parameters such as Max HP, and Attack Power at a fixed rate. Specify the desired parameter and the change (0 to 1000%, 100% means no change).</dd>
-				<dt>Ex-Parameter </dt>
-				<dd>Raises and lowers the values of extra parameters such as Hit Rate and Evasion Rate. Specify the desired parameter and the percentage to add (-100 to 100%, starting value is 0%).</dd>
-				<dt>Sp-Parameter </dt>
-				<dd>Raises and lowers the values of special parameters such as Target Rate and Guard Rate. Specify the desired parameter and the change (0 to 1000%, starting value is 100%).</dd>
-			</dl>
-		  <h3 class="main__title--h3">[Attack] Tab </h3>
-		  <dl class="main__dl">
-		    <dt>Attack Element </dt>
-				<dd>Adds the specified element to normal attacks.</dd>
-				<dt>Attack State </dt>
-				<dd>Adds an effect of changing states to normal attacks. Specify the effect and the change in rate of success (0 to 1000%, 100% means no change).</dd>
-				<dt>Attack Speed </dt>
-				<dd>Raises and lowers agility when choosing a normal attack in battle. Specify the raise/lower value (-999 to 999).</dd>
-				<dt>Attack Times </dt>
-				<dd>Increases the number of times (1 time normally) a target is damaged using normal attacks. Specify the amount to increase.</dd>
-			</dl>
-		  <h3 class="main__title--h3">[Skill] Tab </h3>
-		  <dl class="main__dl">
-		    <dt>Add Skill Type </dt>
-				<dd>Allows the player to select the specified skill type command.</dd>
-				<dt>Seal Skill Type </dt>
-				<dd>Prevents the player from selecting the specified skill type.</dd>
-				<dt>Add Skill </dt>
-				<dd>Makes the specified skill usable.</dd>
-				<dt>Seal Skill </dt>
-				<dd>Makes the specified skill unusable.</dd>
-			</dl>
-		  <h3 class="main__title--h3">[Equip] Tab </h3>
-		  <dl class="main__dl">
-		    <dt>Equip Weapon </dt>
-				<dd>Makes the specified weapon type able to be equipped.</dd>
-				<dt>Equip Armor </dt>
-				<dd>Makes the specified armor type able to be equipped.</dd>
-				<dt>Lock Equip </dt>
-				<dd>Makes it so that equipment for the specified slot cannot be changed. Use this when you do not want to change the equipment of an actor that is temporarily in the party.</dd>
-				<dt>Seal Equip </dt>
-				<dd>Prevents equipment from being equipped in the specified slot. This allows you to create things such as "Two-handed Weapons" which seals shield equipment and "Full-body Clothing" that seals head equipment.</dd>
-				<dt>Slot Type </dt>
-				<dd>This can be only set to [Dual Wield]. In exchange for not being able to equip a shield, characters can equip two weapons.</dd>
-			</dl>
-		  <h3 class="main__title--h3">[Other] Tab </h3>
-		  <dl class="main__dl">
-		    <dt>Action Times +</dt>
-				<dd>Sets the chance of raising the number of actions during battle by 1 using the specified probability. If a character has multiple entries for this trait, each instance will be calculated separately on whether to increase the number of actions using the specified probability. For example, if a character has two of these traits with a probability of 50% each, the chance of the number of actions increasing 2 times, and the chance of actions not increasing even 1 time will both be 25% (50% x 50%).</dd>
-				<dt>Special Flag </dt>
-				<dd> Grants special traits related to actions during battle.
-<table class="main__table--type01 mt10px">
-				<tr>
-					<th style="width: 80px;">Auto Battle</th>
-					<td>Characters will perform actions automatically without taking commands from the player.</td>
-			    </tr>
-				<tr>
-					<th>Guard</th>
-					<td>Decreases the amount of damage taken by a fixed rate.</td>
-			    </tr>
-				<tr>
-					<th>Substitute</th>
-					<td>Take damage in place of an ally when they are attacked when their HP is low.</td>
-			    </tr>
-				<tr>
-					<th>Preserve TP </th>
-					<td>Accumulated TP will be preserved for the next battle. By default, TP will be reset each battle, and the amount of TP that each character has at the start of battle will be decided randomly.</td>
-			    </tr>
-			</table>
-				</dd>
-				<dt>Collapse Effect </dt>
-				<dd>This only effective towards enemies. The effect when an enemy is knocked out and collapses will change to the specified effect.</dd>
-				<dt>Party Ability </dt>
-				<dd> Grants special traits related to the party's actions during battle. The various traits of each actor will be reflected as traits for the entire party when even just one of those actors is in the party.
-<table class="main__table--type01 mt10px">
-				<tr>
-					<th style="width: 120px;">Encounter Half</th>
-					<td>The frequency of encounters while moving on the map will be reduced by half.</td>
-			    </tr>
-				<tr>
-					<th>Encounter None</th>
-					<td>No encounters will occur while moving on the map.</td>
-			    </tr>
-				<tr>
-					<th>Cancel Surprise</th>
-					<td>Suprise attacks (when only an enemy troop can perform actions on the first turn) will no longer occur when a battle starts.</td>
-			    </tr>
-				<tr>
-					<th>Raise Preemptive </th>
-					<td>The chance of preemptive attacks (when only the party can perform actions on the first turn) when a battle starts will increase.</td>
-			    </tr>
-				<tr>
-					<th>Gold Double </th>
-					<td>The amount of gold received when the party wins a battle will be twice the normal amount.</td>
-			    </tr>
-				<tr>
-					<th>Drop Item Double</th>
-					<td>The rate of a party getting items from enemies after winning a battle will be twice the normal rate (only when an item has been configured for the enemy that is defeated).</td>
-			    </tr>
-			</table>
-				</dd>
-			</dl>
-		</div><!-- /main__section -->
+        <div class="main__section">
+            <h2 class="main__title--h2">特性的详细设定</h2>
+            <h3 class="main__title--h3">[比率]标签页 </h3>
+            <dl class="main__dl">
+                <dt>元素倍率</dt>
+                <dd>
+                    当攻击包含元素时，改变受到的伤害。
+                    指定特定的元素以及伤害的倍率（0到1000%）。
+                    如果这个倍率设置到超过100%，攻击的伤害会变得比正常情况高，也就是说这个角色对这个属性抗性较弱。
+                </dd>
+                <dt>减益成功率</dt>
+                <dd>
+                    改变使用时具有[减益效果]的物品和技能的成功率。
+                    指定特定的参数以及成功率的修改倍率（0到1000%，100%意味着没有改变）
+                </dd>
+                <dt>状态成功率 </dt>
+                <dd>
+                    改变使用时具有[增加状态]的物品和技能的成功率。
+                    指定特定的状态以及成功率的修改倍率（0到1000%，100%意味着没有改变）
+                </dd>
+                <dt>状态抵抗 </dt>
+                <dd>抵抗特定的状态。 如果[战斗不能]被选中，角色即使HP降到0也不会进入无法战斗的状态。</dd>
+            </dl>
+            <h3 class="main__title--h3">[参数]标签页 </h3>
+            <dl class="main__dl">
+                <dt>参数 </dt>
+                <dd>使用固定的倍率提高或降低诸如最大HP和攻击强度等参数。指定一个特定的参数以及改变率（0到1000%，100%意味着没有改变）。</dd>
+                <dt>额外参数 </dt>
+                <dd>提高或降低诸如命中率和回避率等的额外参数的数值。指定一个特定的参数以及增加的百分比（-100%到100%，初始值是0%）。</dd>
+                <dt>特殊参数 </dt>
+                <dd>提高或降低诸如被攻击概率和防御效率等的特殊参数的数值。指定一个特定的参数以及改变率（0到1000%，初始值是100%）。</dd>
+            </dl>
+            <h3 class="main__title--h3">[攻击]标签页 </h3>
+            <dl class="main__dl">
+                <dt>攻击元素 </dt>
+                <dd>在普通攻击中附加指定的元素。</dd>
+                <dt>攻击附加状态 </dt>
+                <dd>在普通攻击中附加改变状态效果。指定效果以及成功概率的改变率（0到1000%，100%意味着没有改变）。</dd>
+                <dt>攻击速度 </dt>
+                <dd>提高或降低在战斗中选择普通攻击时的敏捷。指定提高/降低的数值（-999到999）。</dd>
+                <dt>攻击次数</dt>
+                <dd>提高使用普通攻击时目标受伤的次数（一般是1次）。指定要提高的数量。</dd>
+            </dl>
+            <h3 class="main__title--h3">[技能]标签页 </h3>
+            <dl class="main__dl">
+                <dt>允许技能类型 </dt>
+                <dd>允许玩家选择指定的技能类型的指令。</dd>
+                <dt>封印技能类型 </dt>
+                <dd>阻止玩家选择指定的技能类型的指令。</dd>
+                <dt>允许技能 </dt>
+                <dd>使指定的技能可用。</dd>
+                <dt>封印技能 </dt>
+                <dd>使指定的技能不可用。</dd>
+            </dl>
+            <h3 class="main__title--h3">[装备]标签页 </h3>
+            <dl class="main__dl">
+                <dt>装备武器 </dt>
+                <dd>使特定的武器类型可以装备。</dd>
+                <dt>装备防具 </dt>
+                <dd>使特定的防具类型可以装备</dd>
+                <dt>锁定装备 </dt>
+                <dd>使特定装备槽的装备不能更改。在你不想改变临时入队的主角的装备时使用它。 </dd>
+                <dt>封印装备 </dt>
+                <dd>阻止装备被装备在特定的装备槽中。这让你可以创造诸如封印盾牌装备的“双手武器”以及封印头部装备的“连体衣服”等装备。</dd>
+                <dt>副手槽类型 </dt>
+                <dd>只能设置为[双持]。作为不能装备盾牌的交换，角色可以装备两个武器。</dd>
+            </dl>
+            <h3 class="main__title--h3">[其他]标签页 </h3>
+            <dl class="main__dl">
+                <dt>行动次数+</dt>
+                <dd>将在战斗中增加1次的行动次数的机会设置为特定的概率。 如果一个角色有多个这个特性的条目，每个实例都会使用其设定的概率独立的计算是否添加行动次数。 例如，如果一个角色有两个这样的特性，每个都有50%的概率， 那么提高两次行动次数的概率，以及不增加行动次数的概率，都会是25%（50%*50%）。</dd>
+                <dt>特殊标志 </dt>
+                <dd>
+                    在战斗中获得和动作有关的特殊特性。
+                    <table class="main__table--type01 mt10px">
+                        <tr>
+                            <th style="width: 80px;">自动战斗</th>
+                            <td>角色会自动行动，玩家无法下达指令。</td>
+                        </tr>
+                        <tr>
+                            <th>防御</th>
+                            <td>将伤害的数量降低固定的比率。</td>
+                        </tr>
+                        <tr>
+                            <th>援护</th>
+                            <td>代替在HP很低时受到攻击的友方承受伤害。</td>
+                        </tr>
+                        <tr>
+                            <th>保留TP </th>
+                            <td>积累的TP会保留到下一次战斗。默认情况下，TP在每个战斗开始都会重置，并且每个角色在战斗开始时的TP数量是随机决定的。</td>
+                        </tr>
+                    </table>
+                </dd>
+                <dt>溃败特效 </dt>
+                <dd>这个只对敌人有效。敌人被击倒并且溃败时候的特效会更改为指定的特效。</dd>
+                <dt>队伍能力 </dt>
+                <dd>
+                   在战斗中获得与队伍行动有关的特殊特性。 就算只有其中一个主角在队伍中，每个主角的各个特性都会反映在整个队伍的特性中。
+                    <table class="main__table--type01 mt10px">
+                        <tr>
+                            <th style="width: 120px;">遇敌率减半</th>
+                            <td>在地图上移动时遭遇敌人的频率降低一半。</td>
+                        </tr>
+                        <tr>
+                            <th>不遇敌</th>
+                            <td>在地图上移动时不会遭遇敌人。</td>
+                        </tr>
+                        <tr>
+                            <th>取消伏击</th>
+                            <td>伏击（第一回合只有敌群可以行动）不会在战斗开始时发生。</td>
+                        </tr>
+                        <tr>
+                            <th>提高先手 </th>
+                            <td>战斗开始时先手攻击（第一回合只有我方可以行动）的机会增加。</td>
+                        </tr>
+                        <tr>
+                            <th>金币双倍 </th>
+                            <td>队伍取得战斗胜利时获得的金币的数量为正常数量的两倍。</td>
+                        </tr>
+                        <tr>
+                            <th>掉落双倍</th>
+                            <td>战斗胜利后队伍从敌人身上获得道具的概率为正常概率的两倍（只有被打败的敌人身上配置了掉落物品的时候有效）。</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+        </div><!-- /main__section -->
 
-	</div><!-- /main -->
+    </div><!-- /main -->
 
 </body>
 </html>

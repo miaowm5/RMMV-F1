@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,207 +10,207 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v05">Messages</h1>
+	  <h1 class="main__title--h1 main__title--h1--v05">信息</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令集</a></li>
 		  <li>&gt;</li>
-		  <li>Messages</li>
+		  <li>信息</li>
 		</ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Show Text</h2>
+		  <h2 class="main__title--h2">显示文字</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_01_img01.png" width="586" height="264" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Opens the Message Window and displays text.</p>
-		  <h3 class="main__title--h3--sub"> Settings </h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>打开一个信息窗口并显示文字。</p>
+		  <h3 class="main__title--h3--sub"> 设置 </h3>
 		  <dl class="main__dl--sub">
-			<dt>Face</dt>
-				<dd>Specifies the face image to display in the left side of the Message Window. You can select an image in the [Select an Image] Window that appears after double-clicking in the image area.</dd>
+			<dt>角色肖像图</dt>
+				<dd>指定信息窗口内左方显示的肖像图。双击可以打开[选择图像]窗口，在其中指定要使用的图片。</dd>
 
-				<dt>Text</dt>
-				<dd>Input the text to display. It is possible to display up to 4 lines of text at once in the Message Window. Press the [Enter] key to go to the next line when wanting to display text after the 2nd line.</dd>
+				<dt>文字</dt>
+				<dd>输入要显示的文字。消息窗口一次最多能显示四行，通过按下[Enter]键来切换到下一行。</dd>
 
-				<dt>Background</dt>
-				<dd>Select the Message Window format that will display the text.</dd>
+				<dt>窗口背景</dt>
+				<dd>选择显示文字的消息窗口的形式。</dd>
 
-				<dt>Window Position</dt>
-				<dd>Specify either [Bottom], [Middle] or [Top] for the display position of the Message Window.</dd>
+				<dt>窗口位置</dt>
+				<dd>指定信息窗口显示的位置，[底部]、[中间]或[顶部]中的一个。</dd>
 
-				<dt>Preview</dt>
-				<dd>You can check what will actually be displayed by clicking this.</dd>
+				<dt>浏览</dt>
+				<dd>点击后可以查看显示效果。</dd>
 
-				<dt>Batch Entry</dt>
-				<dd>When enabled, it allows you to enter more than 4 lines of text. Text which exceeds 4 lines will be set in the contents window after dividing every 4 lines into multiple [Show Text] event commands.</dd>
+				<dt>批量输入</dt>
+				<dd>启用后允许一次性输入大于四行的文字，多余部分会被切分成多个[显示文字]事件指令。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> Remarks </h3>
+		  <h3 class="main__title--h3--sub"> 备注</h3>
 		  <ul class="main__ul">
-		    <li>Pressing [Ctrl] + [Enter] while inputting text is the same as pressing the [OK] button.</li>
-		    <li>The vertical line in the [Text] field is a guide for the amount of characters that are possible to display in the Message Window. To check whether the text is displayed as intended, enter text while checking the [Preview].</li>
-		    <li>You can display values of variables and names of actors by entering control characters into the text. Control characters and what will be displayed is as follows. Be sure to enter all control characters using half-width input.</li>
+		    <li>输入文字时按下 [Ctrl] + [Enter] 相当于点击了[确定] 按钮.</li>
+		    <li>文字栏中的竖直线标记了消息窗口可以显示的文字数。输入文字时点击[浏览]确认文字是否正确显示。</li>
+		    <li>通过在文字中输入控制字符，来显示变量的值和角色名。控制字符及其显示效果如下。控制符请务必以半角文字输入。</li>
 		  </ul>
 
 			<table class="main__table--type01">
 				<tr>
 					<th>\V[n]</th>
-					<td>Will be replaced with the value of the nth variable.</td>
+					<td>替换为第n号变量的值。</td>
 				</tr>
 				<tr>
 					<th>\N[n]</th>
-					<td>Will be replaced with the name of the nth actor.</td>
+					<td>替换为第n号角色的名字。</td>
 				</tr>
 				<tr>
 					<th>\P[n]</th>
-					<td>Will be replaced by the name of the nth (arranged order) party member.</td>
+					<td>替换为第n号（排列顺序）队员的名字。</td>
 				</tr>
 				<tr>
 					<th>\G</th>
-					<td>Will be replaced by the currency unit.</td>
+					<td>替换为货币单位。</td>
 				</tr>
 				<tr>
 					<th>\C[n]</th>
-					<td>Draw the subsequent text in the nth color. Text color conforms to the contents of the [Window.png] system image.</td>
+					<td>将后边的文字显示为第n号颜色。颜色序号以系统图片[Window.png]为准。</td>
 				</tr>
 				<tr>
 					<th>\I[n]</th>
-					<td>Draws the nth icon.</td>
+					<td>绘制第n号图标。</td>
 				</tr>
 				<tr>
 					<th>\{</th>
-					<td>Increases the text by 1 step.</td>
+					<td>将之后文字大小放大一级。</td>
 				</tr>
 				<tr>
 					<th>\}</th>
-					<td>Decreases the text by 1 step.</td>
+					<td>将之后文字的大小缩小一级。</td>
 				</tr>
 				<tr>
 					<th>\\</th>
-					<td>Replaced with the backslash character.</td>
+					<td>替换为一个反斜杠。</td>
 				</tr>
 				<tr>
 					<th>\$</th>
-					<td>Open the gold window.</td>
+					<td>打开显示所持金钱的窗口。</td>
 				</tr>
 				<tr>
 					<th>\.</th>
-					<td>Wait for 1/4 second.</td>
+					<td>显示文字时等待四分之一秒。</td>
 				</tr>
 				<tr>
 					<th>\|</th>
-					<td>Wait for 1 second.</td>
+					<td>显示文字时等待一秒。</td>
 				</tr>
 				<tr>
 					<th>\!</th>
-					<td>Wait for button input.</td>
+					<td>等待玩家按键。</td>
 				</tr>
 				<tr>
 					<th>\></th>
-					<td>Display remaining text on same line all at once.</td>
+					<td>一次性显示同一行剩余文字。</td>
 				</tr>
 				<tr>
 					<th>\<</th>
-					<td>Cancel the effect that displays text all at once.</td>
+					<td>取消一次性显示文字的效果。</td>
 				</tr>
 				<tr>
 					<th>\^</th>
-					<td>Do not wait for input after displaying the next.</td>
+					<td>文字显示完成后不等待输入。</td>
 				</tr>
 			</table>
 			<p class="mb0px">
-				* The control characters \V, \N, \P, \G, \C, \I, \\ may be used in the below places as well.
+				* 控制字符 \V, \N, \P, \G, \C, \I, \\也可以在以下场景使用。
 			</p>
 
 			<ul class="main__ul">
-				<li>Event Command: [<a href="#p02">Show Choices</a>]</li>
-				<li>Database: [Profile] in [<a href="01_08_01.html">Actor Settings</a>]</li>
-				<li>Database: [Message] in [<a href="01_08_03.html">Skill Settings</a>]</li>
-				<li>Database: [Description] in [<a href="01_08_04.html">Item Settings</a>] and [<a href="01_08_05.html">Weapon/Armor Settings</a>]</li>
-				<li>Database: [Messages] in [<a href="01_08_08.html">State Settings</a>]</li>
-				<li>Database: [Save Message] and [Load Message] fields in [Messages] in [<a href="01_08_14.html">Terms Settings</a>]</li>
-				<li>Database: In [Messages] in [<a href="01_08_14.html">Terms Settings</a>], the messages used during battle from [Party Name] and below (For things displayed in the window,  \$ \. \| \! \> \< \^ may also be used)</li>
+				<li>事件指令集： [<a href="#p02">>显示选项</a>]</li>
+				<li>数据库：[<a href="01_08_01.html">角色设置</a>]中的[简介] </li>
+				<li>数据库：[<a href="01_08_03.html">技能设置</a>]中的[使用时的信息]</li>
+				<li>数据库：[<a href="01_08_04.html">物品设置</a>]和[<a href="01_08_05.html">武器/防具 设置</a>]中的[说明]</li>
+				<li>数据库：[<a href="01_08_08.html">状态设置</a>]中的[信息]</li>
+				<li>数据库：[<a href="01_08_14.html">用语设置</a>]中[信息]一栏中的[存档信息]和[读档信息]</li>
+				<li>数据库：[<a href="01_08_14.html">用语设置</a>]中的[信息]一栏从[开始游戏]开始的信息内容中，这些内容在战斗时将显示在窗口里。（这些信息还支持使用控制符 \$ . | ! > < 以及 ^）</li>
 			</ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Show Choices</h2>
+		  <h2 class="main__title--h2">显示选项</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_01_img02.png" width="412" height="306" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Displays the Choices Window (up to 6 choices), and handles branches according to the player's choices. You can use control characters similar to how you use them in messages.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>>显示选项窗口（最多6个选择），并根据玩家的选择来处理分支。你可以使用显示文字中的控制字符。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 		  <dl class="main__dl--sub">
-			<dt>Choices (1 through 6)</dt>
-				<dd>Specifies the text for the choices. Choices left blank will not be displayed.</dd>
-				<dt>Background</dt>
-				<dd>Specifies the background type for choices.</dd>
-				<dt>Window Position</dt>
-				<dd>Specifies the display position of the choices on the screen.</dd>
+			<dt>选项(1~6)</dt>
+				<dd>指定选项的文字。留白的选项将不会显示。</dd>
+				<dt>窗口背景</dt>
+				<dd>指定选项窗口的背景类型。</dd>
+				<dt>窗口位置</dt>
+				<dd>指定选项窗口在屏幕上的显示位置。</dd>
 				<dt>Default</dt>
-				<dd>Specifies the initial position of the cursor.</dd>
-				<dt>Cancel</dt>
-				<dd>Handling method for when the cancel button is pressed.</dd>
+				<dd>指定光标的起始位置。</dd>
+				<dt>取消</dt>
+				<dd>当按下取消按钮时的处理方法。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub">Remarks</h3>
+		  <h3 class="main__title--h3--sub">备注</h3>
 		  <ul class="main__ul">
-				<li>After confirming your settings, all the branches that handle the choices (including Cancel) will be created in the [Contents] section. What will be run after selecting a choice will be set in these branches.</p>
+				<li>决定了设置项目后，在[执行内容]中制作各选项（包括取消）的分支。在这些分支里面设置选择对应选项后需要执行的内容。</p>
 	      </ul>
 
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">Input Number</h2>
+		  <h2 class="main__title--h2">数值输入处理</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_01_img03.png" width="222" height="189" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Displays the Input Number screen, and assigns the value input by the player to a variable.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>显示数值输入画面，将玩家输入的数值代入变量</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 		  <dl class="main__dl--sub">
-			<dt>Variable</dt>
-				<dd>Specify the variable that will store the number specified by the player.</dd>
+			<dt>接受数值的变量</dt>
+				<dd>这个变量将接收玩家输入的数值。</dd>
 
-				<dt>Digits</dt>
-				<dd>Specify the number of digits (1 through 8) that the input will accept.</dd>
+				<dt>位数</dt>
+				<dd>指定接收输入的数值位数（1~8）。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Select Item</h2>
+		  <h2 class="main__title--h2">物品选择处理</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_01_img04.png" width="222" height="189" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Displays the Item Selection Window. Assigns the ID of the item that the player selects to a variable.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>显示一个物品选择的窗口.将选择的物品ID放入指定变量中。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 		  <dl class="main__dl--sub">
-			<dt>Variable</dt>
-				<dd>Specifies the variable that the item number (item ID) selected by the player will be assigned to.</dd>
-				<dt>Item Type</dt>
-				<dd>Specify the types of items to display in the list.</dd>
+			<dt>接受物品ID的变量</dt>
+				<dd>指定一个变量，玩家选择的物品ID会被放入该变量。</dd>
+				<dt>物品类型</dt>
+				<dd>指定物品选择列表中的物品类型。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Show Scrolling Text</h2>
+		  <h2 class="main__title--h2">显示滚动文字</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_01_img05.png" width="472" height="336" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Displays text that scrolls from the bottom to the top. Scrolling will be fast forwarded when the confirm button is pressed.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>从上往下显示一段滚动文字。按住确定键可以加快滚动速度。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 		  <dl class="main__dl--sub">
-			<dt>Text</dt>
-				<dd>Input the text to display.</dd>
+			<dt>文字</dt>
+				<dd>输入要显示的文字。</dd>
 
-				<dt>Speed</dt>
-				<dd>Specifies the scroll speed (1 through 8). The higher the number, the faster the scrolling becomes.</dd>
+				<dt>速度</dt>
+				<dd>设定卷动速度（1~8）。数值越大，卷动速度越快。</dd>
 
-				<dt>No Fast Forward</dt>
-				<dd>Fast forwarding will not be possible when the confirm button is pressed.</dd>
+				<dt>禁止快进</dt>
+				<dd>按确定键无法快进。</dd>
 			</dl>
 		</div><!-- /main__section -->
 

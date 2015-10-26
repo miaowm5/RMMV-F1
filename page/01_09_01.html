@@ -10,56 +10,83 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v04">Map Event System</h1>
+	  <h1 class="main__title--h1 main__title--h1--v04">地图事件系统</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_09.html">Events</a></li>
+		  <li><a href="01_09.html">事件</a></li>
 	    <li>&gt;</li>
-	    <li>Map Event System</li>
+	    <li>地图事件系统</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2" id="p01">Map Event Processing Flow</h2>
+      <h2 class="main__title--h2" id="p01">地图事件处理流程</h2>
 		  <dl class="main__dl">
-			<dt>Expressing Events </dt>
-				<dd>The details of events expressed in the game using map events are defined following this flow: where (location), what kind of situation (appearance conditions), what action is taken (trigger), what happens (contents). <br />
-                  <br />
-Events such as characters and chests with items in them are expressed by assigning images to the map events which defined the contents of what happens. Also, processes such as moving between the outside and inside of buildings, cut-scenes that advance automatically can be prepared using events that do not have images. <br />
-<br />
-When creating an event, you first need to decide "where (location) and what happens) in the map view of the Main Window. After doing this, you will decide the remaining contents such as "what situation (appearance conditions)". </dd>
-				<dt>Event Pages with "Conditional" Contents</dt>
-				<dd>It is possible to change the details of what happens according to the play conditions of the game using map events. <br />
-                  <br />
-[Event Pages] are responsible for this. Event pages [conditionally] determine the contents of events. You can have one event with up to 20 event pages, and specify different images, triggers, and what processes are run for each. In other words, you can [conditionally] choose from 20 different events for one map event. </dd>
-				<dt>Restrict Event Pages Using Appearance Conditions </dt>
-				<dd>Deciding "what situation" to use the [conditional] event page is the [Conditions] parameter. Conditions are set based on criterion such as the values of [Switches] and [Variables], or "does the player have the specified item". <br />
-                  <br />
-Map events occur during gameplay based on the contents of the page which meet these conditions. When there are multiple pages which meet these [Conditions], the event page with the highest number will be used on the map. Conversely, nothing will happen on the map if there are no event pages which meet the [Conditions]. </dd>
+			<dt>事件表示（Expressing Events） </dt>
+				<dd>
+          游戏中地图事件详情的声明遵循以下流程：在哪里（位置），何种情况（表现出来的情况）， 被何种行动触发, 将会发生什么（事件执行内容）。
+          <br />
+          <br />
+
+          比如角色对话和有物品的箱子这种类型的事件，表现为指派到地图事件的图像，而地图事件声明了“将会发生什么”。另外，像出入建筑，场景切换之类的过程，可以用没有图像的事件来实现。
+          <br />
+          <br />
+          创建事件的时候，你首先需要在主窗口的地图上面决定“在哪里 和 发生什么”。然后，你就可以定义剩余的内容，比如“什么情况下发生”。
+        </dd>
+				<dt>事件页面的“条件”（Event Pages with "Conditional" Contents）</dt>
+				  <dd>
+          地图事件中，你可以根据当前游戏状态来决定发生什么事情。
+          <br />
+          <br />
+            [Event Pages]（事件页）就负责这一块。事件页[conditionally]（条件）决定了发生的事件内容。你可以设定一个事件页多达20页的事件，同时指定不同的图像，触发条件，并为每一个事件页指定一个事件内容。
+            换句话说，你可以在一个地图事件中[根据条件]有20种不同选择。
+          </dd>
+        <dt>用条件限制事件页
+        </dt>
+				<dd>
+          决定“何种情况” 使用哪个特定的事件页的参数是 [条件](Conditions)。“条件” 基于[开关](Switches)和[变量](Variables)或者"玩家是否拥有某个特定的物品"而设定。
+          <br />
+          <br />
+          游戏流程中地图事件的发生基于事件页中设定的条件是否被满足。当有许多事件页满足设定的[条件]时，地图中拥有最高数字的事件页将会被触发。反之，将不会发生任何事件。
+        </dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2" id="p02">Evaluating Play Conditions</h2>
+		  <h2 class="main__title--h2" id="p02">计量游戏状态</h2>
 		  <dl class="main__dl">
-			<dt>Evaluating Play Conditions Using Switches </dt>
-				<dd>Under [Conditions] in the event page, [Switches] and [Variables] are primarily used for determining the play conditions of the game. <br />
-                  <br />
-Switches record either the [ON] or [OFF] value. This is used for evaluating conditions of the game and state of progress such as "did the player accept the request from the king" or "did the player defeat the boss". <br />
-<br />
-The game will start with all switches set to [OFF]. On top of that, when running an event that changes the position in the game, the specific switch's value in the "contents" will be switched to "ON". <br />
-<br />
-By using that switch in the [Conditions] of other event pages, it is possible to use the switch being set to [ON] to switch the contents of the map event all at once. The games story can be built through continuously changing the state of the overall game through the changing of these events. </dd>
-				<dt>Variables That Store Values </dt>
-				<dd>[Variables] are what store arbitrary values (integers). The values at the start of the game are set to 0, and you can do calculations such as assigning values of your choice according to the state of the game or add to other values (use [Control Variables] event command). <br />
-                  <br />
-By using this variable, you can do things like change the details of events using the HP of the player and the amount of gold they possess, allowing you to finely control the map event conditions and results. </dd>
-				<dt>Management Switch Variables </dt>
-				<dd>It is possible to use up to 5000 switches and variables each in one game. Which switch number/variable, what state is evaluated is up to the creator. Use names that help you understand their purposes so that you do not confuse the relationship of the two. You can set their names in the [Name] field in their respective selection windows.</dd>
-				<dt>Using the "Self Switch" for Autonomous Events </dt>
-				<dd>You can also use "Self Switches" in map events. This switch can be used only in each individual map event. You can store values in the 4 types of self switches, "A" through "D", included in an event. <br />
-                  <br />
-This self switch is used for evaluating the state of events that are completed using self processing. For example, for treasure chests which contain items, by managing whether the chest was opened or not using self switches, and setting the contents for "before opening" and "after opening" in two event pages, you can make it so that an item can be obtained only the first time the chest was checked. </dd>
+			<dt>使用开关来计量游戏状态</dt>
+				<dd>
+          事件页中的[条件](Conditions)当中，[Switches]（开关）和 [Variables]（变量）是用来设定条件的主要手段。
+          <br />
+          <br />
+          开关能记录[ON]和[OFF]的值。这个用来计量一些二值化的游戏状态，例如“玩家是否已经接受了国王的任务”，“玩家是否打败了boss”。
+          <br />
+          <br />
+          游戏开始时，所有的开关都被设置为[OFF]。最重要的是，当触发了一个事件的时候，你可以将相应的[开关]值在事件页“内容”（事件产生的结果）里设置为[ON]。
+          <br />
+          <br />
+          通过在别的事件页的[条件]里读取之前设定的[开关]状态，你可以用一个开关值来控制其他所有地图事件的内容。整个游戏剧情发展都可以通过持续改变开关状态来控制事件触发来构建。
+        </dd>
+				<dt>用变量来追踪数值</dt>
+				<dd>
+          [变量]可以用来存储任意值（整数）。游戏开始时候数值被自动设为0， 你可以根据游戏状态来给变量赋值或者与其他值做加法（通过[Control Variables](控制变量)事件命令）。
+          <br />
+          <br />
+         通过使用变量，你可以精细控制地图事件的出现条件和结果，比如，根据玩家的剩余HP、金钱或其他数值来改变事件的内容。
+        </dd>
+				<dt>管理开关变量</dt>
+				<dd>
+          在一个游戏里，你最多可以使用共5000个开关/变量。开关或者变量的数量多少和如何使用都取决于你。使用合理的命名帮你理解这个开关/变量的用途以及两者的区别。你可以在他们各自的选择窗口设置他们的名字。
+        </dd>
+        <dt>在自主事件中使用“独立开关”
+        </dt>
+				<dd>
+          地图事件还支持独立开关。独立开关只能在某事件的内部使用，每个事件最多四个（A到D）。
+          <br />
+          <br />
+          当一个事件的进程控制仅由它自己完成的时候，可以使用独立开关。例如：一个含有宝物的宝箱就可以使用独立开关来判断是否已被开启过。设置两个事件页（未被开启和已被开启），在第一个事件页（未被开启）页的最后打开独立开关，使之成为第二个事件页出现的条件，这样只有在宝箱未被开启（第一次触发）的时候才能得到宝物。
+        </dd>
 			</dl>
 
 		</div><!-- /main__section -->

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>WebAudio Class</title>
+	<title>WebAudio 类</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,27 +11,27 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v07">WebAudio Class</h1>
+		<h1 class="main__title--h1 main__title--h1--v07">WebAudio 类</h1>
 		<ul class="breadcrumb">
-			<li>JS Library</li>
+			<li>JS 库</li>
 			<li>&gt;</li>
-			<li>WebAudio Class</li>
+			<li>WebAudio 类</li>
 		</ul>
-		<p>The audio object of Web Audio API.</p>
+		<p>使用 Web Audio API 的音频对象。</p>
 		<div class="main__section">
-			<h2 class="main__title--h2">Constructor</h2>
+			<h2 class="main__title--h2">构造函数</h2>
 <pre class="main__pre--code">
 WebAudio ( url )
 </pre>
 			<div class="params">
-				<h4>Parameters:</h4>
+				<h4>参数：</h4>
 
 				<ul class="params-list">
 					<li class="param">
 						<code class="param-name">url</code>
 						<span class="type">String</span>
 						<div class="param-description">
-							<p>The url of the audio file</p>
+							<p>音频文件的地址</p>
 						</div>
 					</li>
 				</ul>
@@ -41,8 +41,8 @@ WebAudio ( url )
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Item Index</h2>
-			<b>Methods</b>
+			<h2 class="main__title--h2">索引</h2>
+			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">addLoadListener</a></li>
 				<li><a href="#m02">addStopListener</a></li>
@@ -60,7 +60,7 @@ WebAudio ( url )
 				<li><a href="#m14">stop</a></li>
 			</ul>
 
-			<b>Properties</b>
+			<b>参数</b>
 			<ul class="main__ul--inline">
 				<li><a href="#p01">pan</a></li>
 				<li><a href="#p02">pitch</a></li>
@@ -71,7 +71,7 @@ WebAudio ( url )
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Methods</h2>
+			<h2 class="main__title--h2">方法</h2>
 
 			<div id="m01" class="main__subsection">
 <pre class="main__pre--code">
@@ -79,13 +79,13 @@ addLoadListener ( listner )
 </pre>
 				<p class="mb10px">Add a callback function that will be called when the audio data is loaded.</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">listner</code>
 							<span class="type">Function</span>
 							<div class="param-description">
-								<p>The callback function</p>
+								<p>回调函数</p>
 							</div>
 						</li>
 					</ul>
@@ -98,13 +98,13 @@ addStopListener ( listner )
 </pre>
 				<p class="mb10px">Add a callback function that will be called when the playback is stopped.</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">listner</code>
 							<span class="type">Function</span>
 							<div class="param-description">
-								<p>The callback function</p>
+								<p>回调函数</p>
 							</div>
 						</li>
 					</ul>
@@ -115,11 +115,11 @@ addStopListener ( listner )
 <pre class="main__pre--code">
 canPlayM4a () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the browser can play m4a files.</p>
+				<p class="mb10px">检测浏览器能否播放 m4a 文件。</p>
 				<div class="params">
 					<h4>Returns:</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the browser can play m4a files</p>
+					若浏览器支持播放 m4a 文件，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -127,11 +127,11 @@ canPlayM4a () <span class="pre__type">Boolean</span> <span class="pre__static">[
 <pre class="main__pre--code">
 canPlayOgg () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Checks whether the browser can play ogg files.</p>
+				<p class="mb10px">检测浏览器能否播放 ogg 文件。</p>
 				<div class="params">
 					<h4>Returns:</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the browser can play ogg files</p>
+					若浏览器支持播放 ogg 文件，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -139,22 +139,22 @@ canPlayOgg () <span class="pre__type">Boolean</span> <span class="pre__static">[
 <pre class="main__pre--code">
 clear ()
 </pre>
-				<p class="mb10px">Clears the audio data.</p>
+				<p class="mb10px">清除音频数据。</p>
 			</div><!-- /div -->
 
 			<div id="m06" class="main__subsection">
 <pre class="main__pre--code">
 fadeIn ( duration )
 </pre>
-				<p class="mb10px">Performs the audio fade-in.</p>
+				<p class="mb10px">淡入音频。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">duration</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>Fade-in time in seconds</p>
+								<p>淡入的时间（秒）</p>
 							</div>
 						</li>
 					</ul>
@@ -165,15 +165,15 @@ fadeIn ( duration )
 <pre class="main__pre--code">
 fadeOut ( duration )
 </pre>
-				<p class="mb10px">Performs the audio fade-out.</p>
+				<p class="mb10px">淡出音频</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">duration</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>Fade-out time in seconds</p>
+								<p>淡出的时间（秒）</p>
 							</div>
 						</li>
 					</ul>
@@ -184,21 +184,21 @@ fadeOut ( duration )
 <pre class="main__pre--code">
 initialize ( noAudio ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Initializes the audio system.</p>
+				<p class="mb10px">初始化音频系统。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">noAudio</code>
 							<span class="type">Boolean</span>
 							<div class="param-description">
-								<p>Flag for the no-audio mode</p>
+								<p>无声模式的标志</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the audio system is available</p>
+					若音频系统能够正常使用，返回 True</p>
 				</div>
 			</div><!-- /div -->
 
@@ -206,11 +206,11 @@ initialize ( noAudio ) <span class="pre__type">Boolean</span> <span class="pre__
 <pre class="main__pre--code">
 isError () <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Checks whether a loading error has occurred.</p>
+				<p class="mb10px">检测加载时是否有错误发生。</p>
 				<div class="params">
 					<h4>Returns:</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if a loading error has occurred</p>
+					若发生错误，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -218,11 +218,11 @@ isError () <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 isPlaying () <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Checks whether the audio is playing.</p>
+				<p class="mb10px">检测音频是否正在播放。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the audio is playing</p>
+					若正在播放，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -230,11 +230,11 @@ isPlaying () <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 isReady () <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Checks whether the audio data is ready to play.</p>
+				<p class="mb10px">检测音频是否已经可以开始播放。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the audio data is ready to play</p>
+					若音频可以开始播放，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -242,22 +242,23 @@ isReady () <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 play ( loop , offset )
 </pre>
-				<p class="mb10px">Checks whether the audio data is ready to play.</p>
+				<!-- <p class="mb10px 呵呵">Checks whether the audio data is ready to play.</p> -->
+				<p class="mb10px">播放音频。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">loop</code>
 							<span class="type">Boolean</span>
 							<div class="param-description">
-								<p>Whether the audio data play in a loop</p>
+								<p>是否要循环播放</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">offset</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The start position to play in seconds</p>
+								<p>播放开始的时间（秒）</p>
 							</div>
 						</li>
 					</ul>
@@ -268,14 +269,14 @@ play ( loop , offset )
 <pre class="main__pre--code">
 seek ()
 </pre>
-				<p class="mb10px">Gets the seek position of the audio.</p>
+				<p class="mb10px">获取当前音频的播放位置。</p>
 			</div><!-- /div -->
 
 			<div id="m14" class="main__subsection">
 <pre class="main__pre--code">
 stop ()
 </pre>
-				<p class="mb10px">Stops the audio.</p>
+				<p class="mb10px">停止播放音频。</p>
 			</div><!-- /div -->
 
 
@@ -283,34 +284,34 @@ stop ()
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Properties</h2>
+			<h2 class="main__title--h2">属性</h2>
 
 			<div id="p01" class="main__subsection">
 <pre class="main__pre--code">
 pan <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">The pan of the audio.</p>
+				<p class="mb10px">音频的声场位置。</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
 <pre class="main__pre--code">
 pitch <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">The pitch of the audio.</p>
+				<p class="mb10px">音频的音调。</p>
 			</div><!-- /div -->
 
 			<div id="p03" class="main__subsection">
 <pre class="main__pre--code">
 url <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">[read-only] The url of the audio file.</p>
+				<p class="mb10px">[只读] 音频文件的地址。</p>
 			</div><!-- /div -->
 
 			<div id="p04" class="main__subsection">
 <pre class="main__pre--code">
 volume <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">The volume of the audio.</p>
+				<p class="mb10px">音频的音量。</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->

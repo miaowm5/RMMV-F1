@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Maps</title>
+	<title>地图</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,48 +10,48 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v02">Maps</h1>
+	  <h1 class="main__title--h1 main__title--h1--v02">地图</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li>Maps</li>
+		  <li>地图</li>
 		</ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">What are Maps?</h2>
-		  <p> Maps are the data that represent the setting for your game. Maps will unfold based on where a character moves on the map when playing the game.<br />
+		  <h2 class="main__title--h2">什么是地图？</h2>
+		  <p> 地图是用来表示你游戏的背景和环境的数据。当玩游戏时，地图会随着玩家所到区域而显示出来。<br />
 		    <br />
-		    A map's design is edited by placing together parts using for composing your map called "Tiles". </p>
+		    设计地图，就是将一些部分拼接起来，这些部分叫做“图块”。</p>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_07_img01.png" height="940" width="1383" alt="" />
 			</div>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Map Basic Specifications</h2>
-		  <h3 class="main__title--h3--sub">Role of Tiles </h3>
-		  <p>Tiles are images which give a map its appearance, and are configured to allow or not allow a character to move across that tile.<br />
+		  <h2 class="main__title--h2">地图基本说明</h2>
+		  <h3 class="main__title--h3--sub">图块的作用 </h3>
+		  <p>图块是决定地图外观的图像，并且你可以设置哪些图块玩家可以穿过，哪些不可以。<br />
 		    <br />
-		    In one map, multiple tiles grouped together assigned to be one piece of data are called a "Tileset", which is used as the basis of designing the shape of a map. You can instantly change the appearance of a map by changing the tileset you are using. The contents of a tileset can be edited using the [<a href="01_08_10.html">Database</a>].</p>
-		  <h3 class="main__title--h3--sub">Tile Classifications </h3>
-		  <p>It is possible to include 5 types of tiles for A through E in one tileset. A is the lower layer which represents the terrain and ground, and B through E are upper layer tiles which represent surface elements such as trees and bushes or sign boards.<br />
+		    在一张地图当中，许多块图块被组织到一起包装成一整块数据，形成所谓的“图块组”。它是设计地图轮廓的基础。通过改变你所使用的图块组，你可以即时更改地图的外观。要编辑图块组的数据内容，你可以使用[<a href="01_08_10.html">数据库</a>]。</p>
+		  <h3 class="main__title--h3--sub">图块分类 </h3>
+		  <p>在一个图块组中，总共可以包含 5 种不同类型的图块，它们的编号为 A ~ E。A 是最低的一层，它代表地形和地面；B ~ E 则是较高层次的图块，它们用于表示地表上的元素，例如树木，灌木丛，或者标志牌。<br />
 		    <br />
-		    It is possible to place an upper layer and lower layer tile on the same location on the map. By using this two-layer composition, it is possible to create a very detailed and intricate map.<br />
+		    你可以将上层图块和下层图块放在地图的同一个位置上。使用这样的两层设计，你可以创造极其精致复杂的地图。<br />
   <br />
-		    As a standard, tiles that represent things such as the ocean, grasslands, floors and walls are the lower layer tiles, and upper layer tiles used to decorate those layers are provided. <br />
-		    Moreover, it is now possible to overlap two types of upper layer tiles allowing for more variation in this version.</p>
+		    作为标准，表示海洋，草地，地板，墙体的图块是底层图块，而上层图块被用来装饰底层图块的内容。<br />
+		    此外，你还可以将两种上层的图块重叠在一起。因此在这个版本的 RPG Maker 中，地图会变得更加多样。</p>
 		  &nbsp;
 		  <div class="al-c mb20px">
 			  <img src="../inc/img/01_07_img02.png" height="230" width="958" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Map Size and Display Method </h3>
-		  <p>The size of a map is measured in tiles, and can be set to have a width and height of 0 to 256 tiles respectively.<br />
+		  <h3 class="main__title--h3--sub">地图尺寸和显示方法 </h3>
+		  <p>地图的尺寸以图块为单位，宽度和高度可分别设置为 0 ~ 256 个图块。<br />
 		    <br />
-		    The number of tiles visible on a game when playing is 17x13 tiles at one time. For maps larger than this, the area displayed will automatically move centered on the position of the player (scroll processing). Moreover, by connecting the edges of maps, you can have settings where the map loops just as if it was a planet (loop processing).</p>
-		  <h3 class="main__title--h3--sub">Map Positioning </h3>
-		  <p>The position of tiles on the map is represented in [Map Coordinates]. The origin of a map is at the upper left corner at (0,0), and moving away from this point X tiles to the right becomes the X coordinate, and moving away from this point Y tiles down becomes the Y coordinate. For example, in a map which has a tile size of 100x100, the coordinates of the bottom right corner is (99,99). The map coordinates of the tile which is currently being edited will appear in the status bar.<br />
+		    当游戏运行时，屏幕中可看到的图块数量为 17×13 。在大于此尺寸的地图中，显示区域会自动以主角为中心(卷动处理)。此外，通过连接地图的边缘，你可以做出循环地图的效果，就好像玩家身处一个星球上一样(循环处理)。</p>
+		  <h3 class="main__title--h3--sub">地图定位 </h3>
+		  <p>地图上图块的位置代表着[地图坐标]。地图的原点位于左上角，坐标为(0,0)，X 坐标轴向右延伸，Y 坐标轴向下延伸。例如，在一个尺寸为 100×100 的地图中，右下角的坐标为(99,99)。当前编辑的图块坐标会显示在底部的状态栏上。<br />
 		    <br />
-		    Map coordinates can be used in event commands which monitor the current location of your party and the locations where a party moves based on variables. </p>
+		    地图坐标可被用于一些事件指令当中，这些事件指令监测当前队伍的所在位置或者是以变量指定的移动地点。</p>
 		</div><!-- /main__section -->
 
 
