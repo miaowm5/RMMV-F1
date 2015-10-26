@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>菜单栏</title>
+	<title>The Menu Bar</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,94 +11,94 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v01 mb20px">菜单栏</h1>
+		<h1 class="main__title--h1 main__title--h1--v01 mb20px">The Menu Bar</h1>
 		<ul class="breadcrumb">
 		  <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-			<li>菜单栏</li>
+			<li>The Menu Bar</li>
 		</ul>
 
 		<div class="main__section">
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_04_img01.png" width="650" alt="" />
 			</div>
-		  <p>有关主窗口菜单栏中的选项的细节如下。</p>
-		  <h3 class="main__title--h3--sub">[File]菜单 </h3>
+		  <p>Details regarding the items found in the Menu Bar in the Main Window are as follows.</p>
+		  <h3 class="main__title--h3--sub">[File] Menu </h3>
 			<dl class="main__dl--sub">
 			  <dt>New Project</dt>
-				<dd> 创建新的工程。如果一个工程已经被打开，那么当创建新工程的同时，这个工程将会被关闭。</dd>
+				<dd> Creates a new project. If a project is already opened, it will be closed upon creating a new project. </dd>
 				<dt>Open Project </dt>
-				<dd> 打开保存的工程，这使得你可以继续编辑你的游戏。进入到你的工程目录，并在[open]窗口中选择你的[Game](或者[Game.rpgproject])文件。</dd>
+				<dd> Opens a saved project, allowing you to edit your game. Select your [Game] (or [Game.rpgproject]) file by selecting it inside its project folder using the [Open] window. </dd>
 				<dt>Close Project </dt>
-				<dd> 关闭当前打开的工程。如果数据未保存，那么你将会看到一个确认对话框。点击[Yes]将保存并关闭工程，点击[No]将关闭工程，但是不保存。</dd>
+				<dd> Closes the currently opened project. A confirmation window will appear if there is data which has not been saved. Click [Yes] to close the project after saving and click [No] to close the project without saving. </dd>
 				<dt>Save Project </dt>
-				<dd> 保存你当前正编辑的工程的内容。</dd>
+				<dd> Overwrites the contents of the project you are currently editing. </dd>
 				<dt>Deployment </dt>
-				<dd> 根据你所选发布平台建立你的工程。具体请参考[<a href="01_11_04.html">输出格式</a>]。</dd>
+				<dd> Builds your project in the platform format selected. For more information, please view [<a href="01_11_04.html">Output Formats</a>]. </dd>
 				<dt>Exit RPG Maker MV</dt>
-				<dd> 关闭程序。和[Close Project]一样，如果有未储存的数据，那么你将会看到一个确认窗口。</dd>
+				<dd> Closes the program. Just like [Close Project], a confirmation window will appear if there is any unsaved data. </dd>
 			</dl>
-		  <h3 class="main__title--h3--sub">[Edit] 菜单</h3>
+		  <h3 class="main__title--h3--sub">[Edit] Menu</h3>
 			<dl class="main__dl--sub">
 			  <dt>Undo </dt>
-				<dd> 允许你撤销刚刚的操作，将工程恢复到一步之前的状态。你至多可以撤销20步操作。</dd>
+				<dd> Allows you to undo the action that you just performed and return the project to its previous state as it was 1 step prior. You can undo up to 20 actions. </dd>
 				<dt>Cut </dt>
-				<dd> 将你选中的内容(例如地图数据和地图事件)删除，并把它们复制到剪贴板上。</dd>
+				<dd> Deletes data which you have selected such as map data and map events and copies it to the clipboard. </dd>
 				<dt>Copy </dt>
-				<dd> 将你选中的内容(例如地图数据和地图事件)复制到剪贴板上。</dd>
+				<dd> Copies data such as map data and map events to the clipboard. </dd>
 				<dt>Paste </dt>
-				<dd> 将剪贴板上的内容(例如地图数据和地图事件)添加到所选位置。</dd>
+				<dd> Adds the contents of the clipboard as new map data and map events. </dd>
 				<dt>Delete</dt>
-				<dd> 删除选中的数据(例如地图数据和地图事件)。</dd>
+				<dd> Deletes data such as the map data and map events you have selected. </dd>
 			</dl>
-		  <h3 class="main__title--h3--sub">[Mode] 菜单</h3>
+		  <h3 class="main__title--h3--sub">[Mode] Menu</h3>
 			<dl class="main__dl--sub">
 			  <dt>Map </dt>
-				<dd> 切换到地图设计器模式。</dd>
+				<dd> Switches to the Map Design Editor Mode. </dd>
 				<dt>Event </dt>
-				<dd> 切换到事件编辑模式。在此模式下，地图上会出现网格，网格的大小和图块大小相当。<br />
-				  *&nbsp;在图块窗口选择[R]标签可以进入区域编辑模式，在此模式下你可以决定敌人将出现在何区域(遇敌区域)。<br />
+				<dd> Switches to the mode that allows you to create and edit map events. Lines which are determined by the size of tiles are displayed in the Map View. <br />
+				  *&nbsp;Select the [R] tab in the Tileset to enter the Region Editor Mode where you can define the region where enemy groups will appear (areas where you encounter enemies).<br />
 				</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">[Draw] 菜单 </h3>
-		  <p>在图块上绘制的工具已经可以在地图编辑模式下使用了。详情请参考[<a href="01_07_01.html">编辑地图</a>]&nbsp;。</p>
-		  <h3 class="main__title--h3--sub">[Scale] 菜单 </h3>
+			<h3 class="main__title--h3--sub">[Draw] Menu </h3>
+		  <p>A tool for drawing on tiles is available in the Map Editing Mode. Please refer to [<a href="01_07_01.html">Editing Map Designs</a>]&nbsp;for more information.</p>
+		  <h3 class="main__title--h3--sub">[Scale] Menu </h3>
 			<dl class="main__dl--sub">
 			  <dt>Zoom In </dt>
-				<dd> 当你每次选择“放大”时，地图预览窗的内容会变得更大。</dd>
+				<dd> The Map View will get bigger each time you select Zoom In. </dd>
 				<dt>Zoom Out </dt>
-				<dd> 当你每次选择“缩小”时，地图预览窗的内容会变得更小。</dd>
+				<dd> The Map View will get smaller each time you select Zoom Out. </dd>
 				<dt>Actual Size </dt>
-				<dd> 以标准大小显示地图(实际大小和当前编辑器中的大小相同). </dd>
+				<dd> Displays map in standard size (displays at same magnification). </dd>
 			</dl>
-		  <h3 class="main__title--h3--sub">[Tool] 菜单 </h3>
+		  <h3 class="main__title--h3--sub">[Tool] Menu </h3>
 			<dl class="main__dl--sub">
 			  <dt>Database </dt>
-				<dd> 打开[Database]窗口，以便创建/编辑游戏数据(例如角色和道具)。</dd>
+				<dd> Opens the settings window for the [Database] where you can create/edit elements such as your characters and items. </dd>
 				<dt>Plugin Manager </dt>
-				<dd> 你在这里管理你的插件。详情请参考[<a href="01_05.html#p01">如何使用辅助工具</a>]。</dd>
+				<dd> You manage your plugins here. For more information, please view [<a href="01_05.html#p01">How to use Aid Tools</a>]. </dd>
 				<dt>Sound Test </dt>
-				<dd> 你可以播放导入到工程中测试声音。详情请参考[<a href="01_05.html#p02">如何使用辅助工具</a>]。</dd>
+				<dd> You can play test sounds loaded as asset files in your project. For more information, please view [<a href="01_05.html#p02">How to use Aid Tools</a>]. </dd>
 				<dt>Event Searcher</dt>
-				<dd> 你可以使用各种各样的条件搜索事件。详情请参考[<a href="01_05.html#p03">如何使用辅助工具</a>]。</dd>
+				<dd> You can search for events using various conditions. For more information, please view [<a href="01_05.html#p03">How to use Aid Tools</a>]. </dd>
 				<dt>Character Generator</dt>
 				<dd>
-				将事先做好的素材组合起来，生成角色脸谱，行走图，战斗图。详情请参考[<a href="01_05.html#p05">如何使用辅助工具</a>]。
+				Combine pre-made parts to make face graphics, walk characters, and battlers. For more information, please view [<a href="01_05.html#p05">How to Use Aid Tools</a>].
 				</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub">[Game] 菜单 </h3>
+		  <h3 class="main__title--h3--sub">[Game] Menu </h3>
 			<dl class="main__dl--sub">
 				<dt>Playtest </dt>
-				<dd> 开始游戏测试。详情请参考[<a href="01_05.html#p04">如何使用辅助工具</a>]。</dd>
+				<dd> Starts a Playtest of your game. For more information, please view [<a href="01_05.html#p04">How to use Aid Tools</a>].</dd>
 				<dt>Open Folder </dt>
-				<dd> 打开工程所在的文件夹。当你要查看工程文件夹的位置或者手动将文件移动到工程文件夹中时，请使用这个功能。</dd>
+				<dd> Opens the folder where your project is saved. Use this when you want to check the location of your project folder or when you want to manually move files in your project folder. </dd>
 			</dl>
-		  <h3 class="main__title--h3--sub">[Help] 菜单 </h3>
+		  <h3 class="main__title--h3--sub">[Help] Menu </h3>
 			<dl class="main__dl--sub">
 			  <dt>Contents </dt>
-				<dd> 显示帮助窗口(本窗口)。</dd>
+				<dd> Displays the Help window (this window). </dd>
 				<dt>About </dt>
-				<dd> 显示此软件的版本信息。</dd>
+				<dd> Shows version information about this software. </dd>
 			</dl>
 
 		</div><!-- /main__section -->

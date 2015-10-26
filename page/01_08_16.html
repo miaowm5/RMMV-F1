@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>如何设置效果</title>
+	<title>How to Set Effects</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,94 +11,71 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v03">如何设置效果</h1>
+		<h1 class="main__title--h1 main__title--h1--v03">How to Set Effects</h1>
 		<ul class="breadcrumb">
 		  <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_08.html">数据库</a></li>
+		  <li><a href="01_08.html">Database</a></li>
 		  <li>&gt;</li>
-			<li>如何设置效果</li>
+			<li>How to Set Effects</li>
 		</ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">设置概述</h2>
-		  <p>[效果]参数定义了当一个主角/敌人使用技能或物品时给指定的角色应用的效果。<br />
+		  <h2 class="main__title--h2">Settings Overview</h2>
+		  <p> The [Effects] parameter defines the effects that you give to the desired character when an actor/enemy uses a skill or item. <br />
 		    <br />
-		    下面列出13种可以使用的效果。你可以通过配置多种效果来创建拥有组合效果的技能/道具。</p>
+		    The 13 types of effects that can be given are found below. You can create skills/items which possess a combination of effects by configuring multiple effects. </p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">设置效果</h2>
+		  <h2 class="main__title--h2">Setting Effects</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_16_img01.png" height="329" width="364" alt="" />
 			</div>
-		  <p>双击效果区域的空行来添加一个效果。在显示的窗口中选择效果的类型，并指定一些设置诸如效果应用的目标、效果的强度等。<br />
+		  <p> To set an effect, double-click an empty row in the Effects field. Select the type of effect in the window that is displayed, and specify such things as the targets which the effect applies to, the strength of the effect, etc. <br />
 		    <br />
-            设置的效果的详细信息会显示在[效果]列表里面。 
-            你可以通过双击该条重新编辑效果的内容。
-            此外，你可以右键点击一个效果，在出现的上下文菜单中进行诸如复制和删除设定等操作。</p>
+		    The details of the configured effect will be displayed in the [Effects] list. You can re-edit the contents of effects by double-clicking the item. Additionally, you can perform actions such as copying the settings and deleting them in the context menu that is displayed when you right-click an effect. </p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">效果的详细设定</h2>
-		  <h3 class="main__title--h3">回复标签页</h3>
+		  <h2 class="main__title--h2">Contents of Each Effect</h2>
+		  <h3 class="main__title--h3"> Recover Tab </h3>
 		  <dl class="main__dl">
-			<dt>回复HP</dt>
-				<dd>回复HP（添加到当前值）。 
-              指定一个目标角色的最大HP的百分比（-100%到100%）的数值以及一个固定的数值（-999999到999999）。
-              如果你只打算设置其中的一种数值，那么将另一种设置为0.
-              将这种效果设置到道具上时，回复效果会根据使用者的[药物学]特殊特性值进行改变。
-              </dd>
-				<dt>回复MP </dt>
-				<dd>回复MP（添加到当前值）。 
-                    指定一个目标角色的最大MP的百分比（-100%到100%）的数值以及一个固定的数值（-9999到9999）。
-                    如果你只打算设置其中的一种数值，那么将另一种设置为0.</dd>
-				<dt>获取TP</dt>
-				<dd>按照确定的数量提升TP。使用一个确定的数值（0到100）来指定提升量。</dd>
+			<dt>Recover HP </dt>
+				<dd>Recovers HP (adds to current value). Specify a value that is a percentage of the target character's Max HP (-100% to 100%) and a set value (-999999 to 999999). In the case that you want to set just one of the values, set the other value to 0. Setting this effect to an item, the recovery value will change according to the user's [Pharmacology] special trait value.</dd>
+				<dt>Recover MP </dt>
+				<dd>Recovers MP (adds to current value). Specify a value that is a percentage of the target character's Max MP (-100% to 100%) and a set value (-9999 to 9999). In the case that you want to set just one of the values, set the other value to 0.</dd>
+				<dt>Gain TP</dt>
+				<dd>Increases TP by only the specified amount. Specify the increase using a set value (0 to 100).</dd>
 			</dl>
-		  <h3 class="main__title--h3">[状态]标签页 </h3>
+		  <h3 class="main__title--h3">[State] Tab </h3>
 		  <dl class="main__dl">
-		    <dt>添加状态 </dt>
-				<dd>添加一个状态。
-              指定一个所需的状态并更改成功的概率（0到1000%）。
-              通过将这个值设置到高于100%，将有比原有效用更高的机会成功获得状态。</dd>
-				<dt>移除状态</dt>
-				<dd>移除一个状态。 
-              指定一个所需的状态并更改成功移除的概率（0到100%）。
-              </dd>
+		    <dt>Add State </dt>
+				<dd>Adds a state. Specify the desired state and the change in rate of success (0 to 1000%). By setting this to a value higher than 100%, this will have a higher chance of success to add the state than its original effectiveness.</dd>
+				<dt>Remove State </dt>
+				<dd>Removes a state. Specify the desired state and the change in rate of success (0 to 100%).</dd>
 			</dl>
-		  <h3 class="main__title--h3">[参数]标签页 </h3>
+		  <h3 class="main__title--h3">[Param] Tab </h3>
 		  <dl class="main__dl">
-		    <dt>添加增益效果 </dt>
-				<dd>提高一层特定特性的修正。
-              每一层修正对原有数值有25%的影响。
-              要想使层数同时增加超过两层，需要多次添加这个效果。
-               设置目标特性以及这个效果持续的回合数（1到100）。
-              </dd>
-				<dt>添加减益效果</dt>
-				<dd>降低一层特定特性的修正。
-              每一层修正对原有数值有25%的影响。
-              要想使层数同时降低超过两层，需要多次添加这个效果。
-               设置目标特性以及这个效果持续的回合数。</dd>
-				<dt>移除增益效果 </dt>
-				<dd>当一个特性的修正层数是增益时，将这个特性重置到它原来的数值。
-              </dd>
-				<dt>移除减益效果 </dt>
-				<dd>当一个特性的修正层数是减益时，将这个特性重置到它原来的数值。</dd>
+		    <dt>Add Buff </dt>
+				<dd>Raises the fluctuation level of the specified trait by one. For each level, there is a 25% fluctuation in the original value. To have this raise more than two levels at one time, add this effect multiple times. Set the target trait and the number of turns (1 to 1000) this effect will last.</dd>
+				<dt>Add Debuff</dt>
+				<dd>Lowers the fluctuation level of the specified trait by one. For each level, there is a 25% fluctuation in the original value. To have this lower more than two levels at one time, add this effect multiple times. Set the target trait and the number of turns (1 to 1000) this effect will last.</dd>
+				<dt>Remove Buff </dt>
+				<dd>Resets a trait to its original value when the fluctuation level of the specified trait is buffed.</dd>
+				<dt>Remove Debuff </dt>
+				<dd>Resets a trait to its original value when the fluctuation level of the specified trait is debuffed.</dd>
 			</dl>
-		  <h3 class="main__title--h3">[其他]标签页 </h3>
+		  <h3 class="main__title--h3">[Other] Tab </h3>
 		  <dl class="main__dl">
-		    <dt>特殊效果 </dt>
-				<dd>你只能将这个设置为[逃跑]。目标角色会从战斗中逃脱。如果主角受到了这个效果的影响，则将不会获得任何经验值。</dd>
-				<dt>成长 </dt>
-				<dd>
-              永久性增加一个特性的值。
-              指定目标特性和它增加的数值（1到1000）。
-              </dd>
-				<dt>学习技能 </dt>
-				<dd>一个主角将学习特定的技能。这个效果不能应用在敌人身上。</dd>
-				<dt>公共事件 </dt>
-				<dd>运行特定的公共事件。一种数据只能设置一个这种效果。</dd>
+		    <dt>Special Effect </dt>
+				<dd>You can set this only to [Escape]. The target character will flee from battle. If the actor has received this effect, they will not earn any EXP.</dd>
+				<dt>Grow </dt>
+				<dd>Permanently raise the value of a trait. Specify the target trait and the value (1 to 1000) to be added.</dd>
+				<dt>Learn Skill </dt>
+				<dd>An actor will learn the specified skill. This effect will not be applied to enemies.</dd>
+				<dt>Common Event </dt>
+				<dd>Run the specified common event. Only one of this effect can be set for one type of data.</dd>
 			</dl>
 		</div><!-- /main__section -->
 

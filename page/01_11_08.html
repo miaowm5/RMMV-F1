@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>本地服务器搭建</title>
+	<title>Local Server Setup</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,146 +10,146 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v06">本地服务器搭建</h1>
+	  <h1 class="main__title--h1 main__title--h1--v06">Local Server Setup</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li>文档</li>
+		  <li>Documentation</li>
 		  <li>&gt;</li>
-			<li>本地服务器搭建</li>
+			<li>Local Server Setup</li>
 	  </ul>
 
 
 		<div class="main__section" id="p01">
-		  <p>因为安全的原因，无法直接在浏览器中打开工程目录下的index.html文件。<br />
-		    你必须在你的电脑中搭建一个本地服务器。本小节会解释如何做。</p>
-		  <h2 class="main__title--h2">在Windows下搭建本地服务器</h2>
-		  <h3 class="main__title--h3">开启Internet Information Service</h3>
+		  <p>For reasons related to security, it is not possible to open the index.html file in the project folder by opening it directly in a browser. <br />
+		    You must set up a local server inside your computer. This section will explain how to do so.</p>
+		  <h2 class="main__title--h2">Local Server Setup on Windows</h2>
+		  <h3 class="main__title--h3">Enabling Internet Information Service</h3>
 		  <ol class="main__ol">
-				<li>在“控制面板”中，点击“程序”。
+				<li>Click [Programs] in the [Control Panel].
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img01.png" width="627" height="415" alt="" />
 			</div>
 				</li>
-				<li>点击“启用或关闭Windows功能”。
+				<li>Click [Turn Windows features on or off].
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img02.png" width="605" height="92" alt="" />
 			</div>
 				</li>
-				<li class="mb30px">在“Windows功能”窗口中，点击“Internet Information Services”来启用它。
+				<li class="mb30px">In the [Windows Features] window, click [Internet Information Services] to enable it.
 <div class="al-c mt5px">
 				<img src="../inc/img/01_11_08_img03.png" width="786" height="450" alt="" />
 			</div>
-*不是选中，是不完全选中 </li>
-				<li>点击“确定”。</li>
+*Not checked but filled in </li>
+				<li>Click [OK].</li>
 		  </ol>
-		  <h3 class="main__title--h3">文件的安装位置</h3>
-		  <p>Internet Information Services 被启用时，会自动创建一个本地服务器的文件夹。把工程文件夹放在这个文件夹中。</p>
+		  <h3 class="main__title--h3">Install Location of Files</h3>
+		  <p>A folder for a local server will be automatically created when Internet Information Services is enabled. Place the project folder inside this folder.</p>
 		  <ol class="main__ol">
-				<li>点击“此电脑” → “本地磁盘 (C:)”。
+				<li>Click [This PC] → [Local Disk C:].
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img04.png" width="524" height="136" alt="" />
 			</div>
 				</li>
-				<li>打开“inetpub”文件夹中的“wwwroot”文件夹。</li>
-				<li>把你的工程文件夹放在“wwwroot”文件夹中。</li>
+				<li>Open the "wwwroot" folder found in the "inetpub" folder.</li>
+				<li>Place the project folder inside the "wwwroot" folder.</li>
 		  </ol>
-		  <h3 class="main__title--h3">在你的浏览器中访问</h3>
+		  <h3 class="main__title--h3">Accessing From Your Browser</h3>
 		  <ol class="main__ol">
-		    <li>打开你的浏览器。</li>
-		    <li>在地址栏中输入以下地址并确认。<br />
-		      http://&lt;IP地址&gt;/工程文件夹名称/<br />
-		      或<br />
-		      http://&lt;计算机名&gt;/工程文件夹名称/<br />
-		      或<br />
-		      http://localhost/工程文件夹名称/<br />
+		    <li>Open your browser.</li>
+		    <li>Confirm by entering the address below into the address bar.<br />
+		      http://&lt;IP Address&gt;/Project Folder Name/<br />
+		      or<br />
+		      http://&lt;Computer Name&gt;/Project Folder Name/<br />
+		      or<br />
+		      http://localhost/Project Folder Name/<br />
   <br />
-		      例) http://192.168.0.1/工程文件夹名称/ </li>
+		      Ex.) http://192.168.0.1/Project Folder Name/ </li>
 		  </ol>
-		  <h3 class="main__title--h3">寻找计算机名</h3>
+		  <h3 class="main__title--h3">Finding the Computer Name</h3>
 		  <ol class="main__ol">
-				<li>打开文件资源管理器窗口，在侧边栏中右键点击“此电脑”并点击“属性”。
+				<li>Open the applicable folder window, and right-click [This PC] in the sidebar and click [Properties].
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img05.png" width="431" height="304" alt="" />
 			</div>
 				</li>
-				<li>在“系统”窗口的“计算机名、域和工作组设置”区域下方的“计算机名：”右边找到你的计算机的名称。
+				<li>Find your computer's name next to [Computer name:] located under [Computer name, domain, and workgroup settings] section in the [System] window.
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img06.png" width="376" height="131" alt="" />
 			</div>
 				</li>
 			</ol>
-		  <h3 class="main__title--h3">找到你的IP地址</h3>
+		  <h3 class="main__title--h3">Finding Your IP Address</h3>
 		  <ol class="main__ol">
-			  <li>在“控制面板”中点击“查看网络状态和任务”。
+			  <li>Click [View network status and tasks] in the [Control Panel].
 <div class="al-c mt5px mb30px">
 				  <img src="../inc/img/01_11_08_img07.png" width="636" height="348" alt="" />
 			  </div>
 				</li>
-				<li>在网络和共享中心窗口中，点击“连接：本地连接”。
+				<li>Click [Connections: Local Area Connection] in the network connection status window.
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img08.png" width="583" height="79" alt="" />
 			</div>
 				</li>
-				<li>在出现的本地连接状态窗口中，点击“详细信息...”。<br />
+				<li>Click [Details] in the local area connection status window that appears.<br />
 				  <div class="al-c mt5px mb30px">
 						<img src="../inc/img/01_11_08_img09.png" width="435" height="231" alt="" />
 					</div>
 				</li>
-				<li>在“IPv4 地址”右边找到的数字就是你的IP地址。
+				<li>The number found next to [IPv4 Address] is your IP address.
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img10.png" width="258" height="49" alt="" />
 			</div>
 				</li>
 			</ol>
-		  <h3 class="main__title--h3">设置localhost</h3>
-		  <p>要在浏览器中访问 http://localhost/ ，你需要设置“hosts”文件。</p>
+		  <h3 class="main__title--h3">Setting up localhost</h3>
+		  <p>To access http://localhost/ in your browser, you need to configure the "hosts" file.</p>
 		  <ol class="main__ol mb50px">
-				<li>点击“开始”按钮，进入“所有程序” → “附件”。右键点击“记事本”并点击“以管理员身份运行”。
+				<li>Click the [Start] button, and go to [All Programs] → [Accessories]. Right-click [Notepad] and click [Run as Administrator].
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img11.png" width="490" height="583" alt="" />
 			</div>
 				</li>
-				<li>在记事本中点击“文件” → “打开”，定位到 “C:\Windows\System32\drivers\etc”。选择“所有文件 (*.*)并打开“hosts”文件。
+				<li>Go to [File] → [Open] in Notepad, and go to "C:\Windows\System32\drivers\etc". Select "All Files" and open the "hosts" file.
 <div class="al-c mt5px mb30px">
 				<img src="../inc/img/01_11_08_img12.png" width="960" height="540" alt="" />
 			</div>
 				</li>
-				<li>在文件中修改以下位置，并保存文件。<br />
-■修改前
+				<li>Change the location below in the file and save the file.<br />
+■Before
 <pre class="main__pre--code">
 #   127.0.0.1       localhost
 </pre>
-■修改后
+■After
 <pre class="main__pre--code">
 127.0.0.1       localhost
 </pre>
 				</li>
-				<li>重新启动Windows。</li>
+				<li>Restart Windows. </li>
 		  </ol>
-		  <h2 class="main__title--h2">Mac OSX 本地服务器搭建</h2>
-		  <p>在Mac电脑中，Apache是默认安装的。你可以通过运行Apache来使用本地服务器。</p>
-		  <h3 class="main__title--h3">Apache 基本操作</h3>
-		  <p>在终端中输入命令，运行Apache。</p>
-		  <h3 class="main__title--h3--sub">运行 Apache</h3>
+		  <h2 class="main__title--h2">Mac OSX Local Server Setup</h2>
+		  <p>Apache is installed by default on Macs. You can use a local server by running Apache.</p>
+		  <h3 class="main__title--h3">Apache Basic Controls</h3>
+		  <p>Enter commands into the terminal, and run Apache.</p>
+		  <h3 class="main__title--h3--sub">Running Apache</h3>
 		  <pre class="main__pre--code">
 $ sudo apachectl start
 </pre>
-		  <h3 class="main__title--h3--sub">退出 Apache</h3>
+		  <h3 class="main__title--h3--sub">Quitting Apache</h3>
 		  <pre class="main__pre--code mb30px">
 $ sudo apachectl stop
 </pre>
-		  <h3 class="main__title--h3">文件的安装位置</h3>
-		  <p>把工程文件夹放到以下位置中。</p>
+		  <h3 class="main__title--h3">Install Location of Files</h3>
+		  <p>Place the project folder in the location below.</p>
 		  <pre class="main__pre--code">
 /Library/WebServer/Documents
 </pre>
-		  <p>* 在建立新工程和保存时，工程文件夹会被定位在“位置”指定的位置中。</p>
-		  <h3 class="main__title--h3">在你的浏览器中访问</h3>
+		  <p>* The project folder will be located in the location specified in [Location] when creating a new project and saving.</p>
+		  <h3 class="main__title--h3">Accessing From Your Browser</h3>
 		  <ol class="main__ol">
-		    <li>打开你的浏览器。</li>
-		    <li>在地址栏中输入以下地址并确认。<br />
-			http://localhost/工程文件夹名称/<br />
+		    <li>Open your browser.</li>
+		    <li>Confirm by entering the address below into the address bar.<br />
+			http://localhost/Project Folder Name/<br />
 		  </ol>
 		</div><!-- /main__section -->
 
