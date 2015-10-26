@@ -43,7 +43,7 @@
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-8.png" height="613" width="874" alt="" /></div>
 			<p>点击环境变量. 选择[Path]变量，对就是图中Variables下面那个(在你电脑下并不一定是Variables下面那个)，然后点击编辑按钮。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-9.png" height="613" width="874" alt="" /></div>
-			<p>修改变量.在最末尾的地方添加[;C:\Python34\](不包括方括号)，点确定。</p>
+			<p>修改变量，在最末尾的地方添加[;C:\Python34\](不包括方括号)，点确定。</p>
 <pre class="main__pre--code">
 ;C:\Python34\
 </pre>
@@ -161,15 +161,15 @@ C:\apache-ant-1.9.6
 			<p>到这一步，封装环境已经部署完毕。</p>
 
 		</div><!-- /main__section --><div class="main__section" id="p03">
-			<h2 class="main__title--h2">3 Deploying Games Using RPG Maker</h2>
-			<p>Here we will export the necessary  game data, assets and game engine to a package from RPG Maker. Select [Deployment...] from the File Menu and the deployment dialog will appear. If you select [Android / iOS] and export, all the files needed for Android packaging will be placed in the selected folder. <br />In this example, we deployed to the desktop.</p>
+			<h2 class="main__title--h2">3 使用RPG Maker部署游戏</h2>
+			<p>从这儿开始我们必须使用RPG Maker将必要的游戏数据，资源以及游戏引擎导出到一个文件夹里。在RPG Maker的文件下拉框里，选择[Deployment]（部署），弹出部署的窗口，选择Android或者IOS并点击确定，所有你需要的游戏资源都将被部署到你指定的文件夹里。<br />在这个教程中，我们将其部署在桌面上。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/3-1-1.png" height="627" width="832" alt="" /></div>
 		</div><!-- /main__section --><div class="main__section" id="p04">
-			<h2 class="main__title--h2">4 Packaging</h2>
-			<p>Packaging refers to creating the apk file which you allow you to install applications to an Android device.</p>
+			<h2 class="main__title--h2">4 开始打包</h2>
+			<p>包装的目的是创建一个apk文件好让你把游戏安装到android平台上。</p>
 
-			<h3 class="main__title--h3">4-1 Creating manifest.json</h3>
-			<p>Let&apos;s create the manifest.json file using your preferred text editor which determines the actions in your game.<br />Below is an example of a manifest.json file.</p><b>manifest.json</b><pre class="main__pre--code">
+			<h3 class="main__title--h3">4-1 创建一个manifest.json文件</h3>
+			<p>让我们记事本来创建一个manifest.json文件（这是一个配置文件），它可以决定你游戏程序里的一些设置。<br />下面就是一个manifest.json文件的例子，你可以参照并进行修改。</p><b>manifest.json</b><pre class="main__pre--code">
 {
   &quot;name&quot;: &quot;Sample&quot;,
   &quot;xwalk_version&quot;: &quot;0.0.1&quot;,
@@ -216,7 +216,7 @@ C:\apache-ant-1.9.6
   ]
 }
 </pre>
-			<p>Aside from the name and version number, everything else can be left as is.<br />Save the manifest.json file in the "/www" folder which you deployed earlier.<br />The purpose of property names and values inside the file are as follows.</p>
+			<p>除了名称和版本号，其他一切可以保留原样。<br/>把manifest.json文件保存在你先前部署的“/ www”的文件夹中。<br/>文件里的属性名称和值的作用如下表所示。</p>
 			<table class="main__table--type01">
 				<tr>
 					<th>Property name</th>
