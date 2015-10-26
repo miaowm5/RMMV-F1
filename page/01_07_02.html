@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Map Data Controls</title>
+	<title>地图数据控制</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,53 +10,53 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v02">Map Data Controls</h1>
+	  <h1 class="main__title--h1 main__title--h1--v02">地图数据控制</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_07.html">Maps</a></li>
+		  <li><a href="01_07.html">地图</a></li>
 	    <li>&gt;</li>
-	    <li>Map Data Controls</li>
+	    <li>地图数据控制</li>
 	  </ul>
-	  <p>Right-clicking Map Data items in the Map List allows you to do things such as configure/change and copy. The functions of each item are as follows.</p>
+	  <p>在地图列表中，右键点击地图数据项目可以设置/改变/复制这个地图。每一项的功能如下。</p>
 	  <div class="main__section">
-	    <h2 class="main__title--h2">Controls via the Context Menu</h2>
-	    <p>Right-clicking Map Data items in the Map List allows you to do things such as configure/change and copy. The functions of each item are as follows.</p>
+	    <h2 class="main__title--h2">通过右键菜单控制</h2>
+	    <p>在地图列表中，右键点击地图数据项目可以设置/改变/复制这个地图。每一项的功能如下。</p>
 	    <dl class="main__dl">
-		  <dt>Edit </dt>
-				<dd>Opens the Settings Window for map data. For more information regarding items that can be configured, please view [<a href="01_07_03.html">Map Properties</a>].</dd>
-				<dt>New</dt>
-				<dd>Adds new map data. For more information regarding items that can be configured, please view [<a href="01_07_03.html">Map Properties</a>].</dd>
-				<dt>Load</dt>
-				<dd>New map data is created based on sample data. Click the data name on the list in the window displayed, confirm the details and click [OK].
+		  <dt>Edit(编辑) </dt>
+				<dd>打开地图的设置窗口。想要了解更多此选项的设置，请参考[<a href="01_07_03.html">地图属性</a>].</dd>
+				<dt>New(新建)</dt>
+				<dd>添加新的地图数据。想要了解更多此选项的设置，请参考[<a href="01_07_03.html">地图属性</a>].</dd>
+				<dt>Load(载入)</dt>
+				<dd>从样本地图中导入新地图。在所显示的窗口的列表中点击项目的名称，确定细节后点击[OK]。
 <div class="al-c mt10px mb20px">
 				<img src="../inc/img/01_07_02_img01.png" width="704" height="531" alt="" />
 			</div>
 				</dd>
-				<dt>Copy</dt>
-				<dd>Copies map data to the clipboard.</dd>
-				<dt>Paste </dt>
-				<dd>Adds map data currently in the clipboard.</dd>
-				<dt>Delete</dt>
-				<dd>Deletes map data.</dd>
-				<dt>Shift </dt>
-				<dd>Shifts the placement of all tiles on the map. Specify the shift direction and number of tiles.</dd>
-				<dt>Generate Dungeon</dt>
-				<dd>Automatically generates a maze form map. Please refer to [<a href="01_05.html#p06">How to Use Support Tools</a>] for more information.</dd>
-				<dt>Save as Image</dt>
-				<dd>Saves the currently selected map in an image format.<br />
+				<dt>Copy(复制)</dt>
+				<dd>将地图数据复制到剪贴板上。</dd>
+				<dt>Paste(粘贴) </dt>
+				<dd>将剪贴板上的地图数据添加到地图列表中。</dd>
+				<dt>Delete(删除)</dt>
+				<dd>删除地图数据。</dd>
+				<dt>Shift(移动) </dt>
+				<dd>将地图上的的所有图块的位置整体移动。使用时要指定移动的方向和移动的距离(图块数)。</dd>
+				<dt>Generate Dungeon(生成迷宫)</dt>
+				<dd>自动生成迷宫形式的地图。详情请参考[<a href="01_05.html#p06">如何使用辅助工具</a>]。</dd>
+				<dt>Save as Image(导出为图像)</dt>
+				<dd>将当前选择的地图导出为图片格式。<br />
 				</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Group Maps</h2>
+		  <h2 class="main__title--h2">组织地图</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_07_02_img04.png" width="256" height="319" alt="" />
 			</div>
-		  <p>By dragging map data in the Map List onto other map data, the data will appear under the latter map data. Just like grouping the interior map of a building under the map of a town, it is convenient for grouping map data and managing it. By dragging a map which has been moved to the bottom to the folder containing the project name, you can move it to the highest layer.<br />
+		  <p>通过把地图列表中的一个地图拖动到另一个地图上面的方式，被拖动的地图将会出现在后者的层次下。就像将建筑内部的图放到城镇地图层次下一样，管理/组织地图时非常方便的。如果你要将已经移动到底部的地图放到最上面的层次上，你可以将它直接拖动到地图列表中的工程文件夹下。<br />
 		    <br />
-		    This hierarchical display only changes the way that things are displayed on the Map List. This will in no way affect the design and settings of the map. </p>
+		    这种等级制的显示方法仅仅是改变了地图列表的显示方式，绝不会影响地图的布局和设置。</p>
 		</div><!-- /main__section -->
 
 
