@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Database</title>
+	<title>数据库</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,110 +10,110 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v03">Database</h1>
+	  <h1 class="main__title--h1 main__title--h1--v03">数据库</h1>
 	  <ul class="breadcrumb">
 		<li><a href="01.html">RPG Maker MV</a></li>
 			<li>&gt;</li>
-			<li>Database</li>
+			<li>数据库</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">What is the Database?</h2>
-		  <p> The database is what keeps together all components that make up a game aside from the map and map events. Components such as the character that the player controls, items magic and properties can be prepared as the following 15 types of data. <br />
+		  <h2 class="main__title--h2">什么是数据库？</h2>
+		  <p> 数据库将所有游戏成分（地图和地图事件除外）组织到了一起，例如玩家控制的角色，物品，魔法，属性。这些成分可大致分为下面 15 种数据。<br />
 		    <br />
-		    Data excluding [System], [Types] and [Terms] will be prepared for each type that appears in the game. For example, you will create data for each piece of equipment such as "Health Potions" and "Keys", and configure characteristics such as their names, images and what effects they have when used. </p>
+		    Data excluding [System], [Types] and [Terms] will be prepared for each type that appears in the game. [待议]除了[System(系统)]，[Types(种类)]和[Terms(用语)]，游戏中出现的每种数据都会被准备一份。例如，你可以创建每一件装备的数据，例如“生命药水”和“钥匙”，然后设定它们的特点，例如名字，图像，使用效果。</p>
 		  <table class="main__table--type01">
 				<tr>
-					<th>Actors</th>
-					<td>The character that the player can control.</td>
+					<th>Actors(角色)</th>
+					<td>玩家可控制的角色。</td>
 				</tr>
 				<tr>
-					<th>Class</th>
-					<td>Characteristics that you assign to the actor (traits, growth conditions, etc.).</td>
+					<th>Class(职业)</th>
+					<td>每个角色的特点(特性，成长条件等)。</td>
 				</tr>
 				<tr>
-					<th>Skills</th>
-					<td>Actions and special skills (normal attacks, special skills and magic).</td>
+					<th>Skills(技能)</th>
+					<td>行动与特殊技能(普通攻击，特技，魔法)。</td>
 				</tr>
 				<tr>
-					<th>Item</th>
-					<td>Items that the player owns (potions, keys, etc.)</td>
+					<th>Item(物品)</th>
+					<td>玩家拥有的物品(药水，钥匙等)。</td>
 				</tr>
 				<tr>
-					<th>Weapons</th>
-					<td>Equipment that actors use for attacking (swords, canes, bows, etc.)</td>
+					<th>Weapons(武器)</th>
+					<td>角色用于进攻的装备(剑，杖，弓等)。</td>
 				</tr>
 				<tr>
-					<th>Armors</th>
-					<td>Equipment that an actor uses for defense (armor, shields, accessories, etc.)</td>
+					<th>Armors(防具)</th>
+					<td>角色用于防御的装备(护甲，盾牌，装饰品等)。</td>
 				</tr>
 				<tr>
-					<th>Enemies </th>
-					<td>Characters that fight against actors in battle.</td>
+					<th>Enemies(敌人) </th>
+					<td>会和主角发生战斗的角色。</td>
 				</tr>
 				<tr>
-					<th>Troops</th>
-					<td>Group of enemies that appear in game.</td>
+					<th>Troops(敌群)</th>
+					<td>出现在游戏中的敌人队伍。</td>
 				</tr>
 				<tr>
-					<th>States </th>
-					<td>States for actors, enemies, etc. (Poison, Knockout)</td>
+					<th>States(状态) </th>
+					<td>角色，敌人的状态(中毒，战斗不能等)。</td>
 				</tr>
 				<tr>
-					<th>Animations</th>
-					<td>Visual effects that appear during times such as when skills are used.</td>
+					<th>Animations(动画)</th>
+					<td>一些视觉效果(例如发动技能时)。</td>
 				</tr>
 				<tr>
-					<th>Tileset</th>
-					<td>Organization of tiles used when creating maps.</td>
+					<th>Tileset(图块组)</th>
+					<td>创建地图时，用于管理图块的数据。</td>
 				</tr>
 				<tr>
-					<th>Common Events</th>
-					<td>Handles commonly used events.</td>
+					<th>Common Events(公共事件)</th>
+					<td>处理公共使用的事件。</td>
 				</tr>
 				<tr>
-					<th>System</th>
-					<td>Overall game basic settings for things like initial settings and music.</td>
+					<th>System(系统)</th>
+					<td>游戏的全局基础设定，例如初始设定和音乐。</td>
 				</tr>
 				<tr>
-					<th>Types</th>
-					<td>Configure Types for elements, skills, weapons, armors and equipment.</td>
+					<th>Types(种类)</th>
+					<td>设定元素，技能，武器，防具，装备的种类。</td>
 				</tr>
 				<tr>
-					<th>Terms</th>
-					<td>Text such as common game commands and parameters.</td>
+					<th>Terms(用语)</th>
+					<td>一些游戏指令和参数的文字内容。</td>
 				</tr>
 			</table>
 
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Editing the Database</h2>
-		  <h3 class="main__title--h3--sub">Displaying the Edit Screen </h3>
-		  <p>Contents of the database are edited in the [Database] window. To display the window, click the [Database] button on the toolbar (or go to [Tools] → [Database]).</p>
-		  <h3 class="main__title--h3--sub">Organization of the Edit Screen</h3>
-		  <p>You can select data according to data type using the side menu in the [Database] window. By clicking a button on the side menu and switching the screen, you can create and edit data.<br />
+		  <h2 class="main__title--h2">编辑数据库</h2>
+		  <h3 class="main__title--h3--sub">显示编辑窗口 </h3>
+		  <p>数据库的内容要在[Database(数据库)]窗口编辑。要显示数据库窗口，点击工具栏上的[Database(数据库)]按钮(或选择菜单栏中的[Tools(工具)] → [Database(数据库)])。</p>
+		  <h3 class="main__title--h3--sub">组织编辑窗口</h3>
+		  <p>你可以根据数据的类型在[Database(数据库)]窗口的侧边菜单中选择数据。要创建和编辑数据，请点击侧边菜单上的按钮切换屏幕显示的内容。<br />
 		    <br />
-		    When editing data aside from [System], [Types], and [Terms], first click to select the data that you will edit using the data list on the left side of the window. After doing so, by editing the details of the parameters that are organized on the right side of the window, you can define the characteristics of the data. <br />
+		    当编辑除[System(系统)]，[Types(种类)]，[Terms(用语)]以外的数据时，首先在屏幕左侧的数据列表中选择你要编辑的数据。在这之后，编辑窗口右侧的参数以进一步确定数据的特性。 <br />
   <br />
-		    By pressing [F4] or [F5] on the keyboard, you can switch between the previous and next data for data selected in the data list. </p>
-		  <h3 class="main__title--h3--sub">Changing the Number of Data Entries</h3>
-		  <p>The max number of skills, items, weapons, enemies and troops is set at 2000, and all other types of data are limited to 1000. To change the number of data entries, click the [Change Maximum] button below the data list, and define the new number of data entries. When lowering the maximum number of data entries, data which has a number that exceeds the maxium amount will be deleted.</p>
-		  <h3 class="main__title--h3--sub">Controls via the Context Menu </h3>
-		  <p>A menu will appear when right-clicking an item in the data list, allowing you to copy that data. The details for controls related to each item is as follows.</p>
+		    当按下键盘上的[F4] 或 [F5]键时，你可以在当前的数据列表中切换上一个数据和下一个数据。</p>
+		  <h3 class="main__title--h3--sub">更改数据条目的数量</h3>
+		  <p>技能，物品，武器，敌人，敌群的最大值被设定为 2000，其余类型的数据则是 1000。要改变数据条目的总数，点击数据列表下的[Change Maximum(更改最大值)]按钮，然后输入新的数据条目数量。当减少数据条目的最大值时，超过这个最大值的数据将被删除。</p>
+		  <h3 class="main__title--h3--sub">通过右键菜单控制 </h3>
+		  <p>当你右键点击数据列表中的一项时，会出现一个菜单。你可以进行例如复制数据这样的操作。如下是每一项命令的详细信息。</p>
 		  <dl class="main__dl--sub">
-			<dt>Copy </dt>
-				<dd>Copy the parameter details of that data to the clipboard.<br />
-			    When selecting while pressing the Shift key, you can copy multiple data entries.</dd>
-				<dt>Paste </dt>
-				<dd>Apply (overwrite) the parameter details in the clipboard to the data. All data for parameter details of data before performing this action will be lost.</dd>
-				<dt>Clear</dt>
-				<dd>Delete all data parameter details.</dd>
+			<dt>Copy(复制) </dt>
+				<dd>将选中数据的详细参数信息复制到剪贴板上。<br />
+			    当你按住[Shift]键进行选择时，可以复制多份数据。</dd>
+				<dt>Paste(粘贴) </dt>
+				<dd>将剪贴板上的详细参数信息应用(覆盖)到所选数据上。所选数据之前的参数信息将会被丢失。</dd>
+				<dt>Clear(清除)</dt>
+				<dd>删除本数据所有详细参数信息。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub">Regarding Data IDs </h3>
-		  <p>The numbers which appear at the front of each entry in the data list is its Data ID (unique number). This ID is used on occasions such as specifying data using variables that will be used in event commands. </p>
-		  <h3 class="main__title--h3--sub">Utilizing the Note Field </h3>
-		  <p>For some data elements (actors/classes/skills/items/weapons/armors/enemies/states/tilesets), there is a [Note] field available. This is for freely taking notes when creating your game. As a rule, this will not affect the game, there are plugins where you can define additional data using the notes field.</p>
+		  <h3 class="main__title--h3--sub">有关数据 ID </h3>
+		  <p>在每项数据记录前面显示的数字被称作它的数据 ID(这个数字是独一无二的)。当在事件指令中利用变量指定数据时，ID 就会派上用场。 </p>
+		  <h3 class="main__title--h3--sub">利用备注区域 </h3>
+		  <p>在某些数据中(actors(角色)/classes(职业)/skills(技能)/items(物品)/weapons(武器)/armors(防具)/enemies(敌人)/states(状态)/tilesets(图块组))，有一处[Note(备注)]区域。在制作游戏时你可以随便在这里写下备注。和前面一样，这不会影响游戏，在一些插件中，你可以利用备注来定义额外的信息。</p>
 		</div><!-- /main__section -->
 
 
