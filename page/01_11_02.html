@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Side-view Character Standards</title>
+	<title>横版战斗角色素材规格</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,36 +10,36 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v06">Side-view Character Standards</h1>
+	  <h1 class="main__title--h1 main__title--h1--v06">横版战斗角色素材规格</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li>Documentation</li>
+		  <li>资料集</li>
 		  <li>&gt;</li>
-			<li>Side-view Character Standards</li>
+			<li>横版战斗角色素材规格</li>
 	  </ul>
-	  <p>These are the standards for images used as the battle graphics of actors displayed in Side-view Mode. It is possible to use one image file per character.</p>
+	  <p>下面这个是在横版战斗模式下角色战斗图的规格。每个角色可以使用一张战斗图。</p>
 	  <div class="main__section" id="p01">
-	    <h2 class="main__title--h2">Specifications</h2>
+	    <h2 class="main__title--h2">规格</h2>
 	    <dl class="main__dl">
-		  <dt>Images are stored in a file in a 9x6=54 pattern.</dt>
+		  <dt>图像由 9x6=54 个切片组成。</dt>
 				<dd>
 				<div class="al-c mt5px mb20px">
 					<img src="../inc/img/01_11_02_img01.png" height="384" width="576" alt="" />
 				</div>
 					<ul class="main__ul">
-					  <li>The width of the image is 9 and the height is 6, which becomes the size for 1 character.</li>
-					  <li>The image size for standard assets is 576x384.</li>
+					  <li>一张图像在水平方向上能容纳9个角色，竖直方向上则容纳6个角色。</li>
+					  <li>标准的图像的大小为 576x384 。</li>
 					</ul>
 				</dd>
-				<dt>3 patterns lined up in a row will be treated as one motion.</dt>
+				<dt>三个并列的图像将组成一个动作。</dt>
 				<dd>
 					<div class="al-c mt5px mb20px">
 						<img src="../inc/img/01_11_02_img02.png" height="384" width="576" alt="" />
 					</div>
 					<ul class="main__ul">
-					  <li>Looping standby motions will be repeatedly displayed in a 1-2-3-2 order starting from the left.</li>
-					  <li>Motions that occur only 1 time such as damage motions will be shown in 1-2-3 order starting from the left.</li>
+					  <li>循环显示的动作将从左边开始按照 1-2-3-2 的顺序循环切换图像。</li>
+					  <li>像是受到伤害这种只播放一次的动作将从左边开始按照 1-2-3 的顺序切换图像。</li>
 					</ul>
 				</dd>
 			</dl>

@@ -1,9 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Bitmap Class</title>
-	<link rel="stylesheet" href="../inc/css/style.min.css" />
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Bitmap 类</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css">
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
 </head>
@@ -11,27 +10,26 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v07">Bitmap Class</h1>
+		<h1 class="main__title--h1 main__title--h1--v07">Bitmap 类</h1>
 		<ul class="breadcrumb">
-			<li>JS Library</li>
+			<li>JS 库</li>
 			<li>&gt;</li>
-			<li>Bitmap Class</li>
+			<li>Bitmap 类</li>
 		</ul>
-		<p>The basic object that represents an image.</p>
+		<p>用于表示位图的基本对象。</p>
 		<div class="main__section">
-			<h2 class="main__title--h2">Constructor</h2>
-<pre class="main__pre--code">
-Bitmap ( width , height )
+			<h2 class="main__title--h2">构造函数</h2>
+<pre class="main__pre--code">Bitmap ( width , height )
 </pre>
 			<div class="params">
-				<h4>Parameters:</h4>
+				<h4>参数：</h4>
 
 				<ul class="params-list">
 					<li class="param">
 						<code class="param-name">width</code>
 						<span class="type">Number</span>
 						<div class="param-description">
-							<p>The width of the bitmap</p>
+							<p>位图的宽度</p>
 						</div>
 					</li>
 
@@ -39,7 +37,7 @@ Bitmap ( width , height )
 						<code class="param-name">height</code>
 						<span class="type">Number</span>
 						<div class="param-description">
-							<p>The height of the bitmap</p>
+							<p>位图的高度</p>
 						</div>
 					</li>
 				</ul>
@@ -48,8 +46,8 @@ Bitmap ( width , height )
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Item Index</h2>
-			<b>Methods</b>
+			<h2 class="main__title--h2">索引</h2>
+			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">addLoadListener</a></li>
 				<li><a href="#m02">adjustTone</a></li>
@@ -73,7 +71,7 @@ Bitmap ( width , height )
 				<li><a href="#m20">snap</a> <span>static</span></li>
 			</ul>
 
-			<b>Properties</b>
+			<b>属性</b>
 			<ul class="main__ul--inline">
 				<li><a href="#p01">baseTexture</a></li>
 				<li><a href="#p02">canvas</a></li>
@@ -95,21 +93,20 @@ Bitmap ( width , height )
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Methods</h2>
+			<h2 class="main__title--h2">方法</h2>
 
 			<div id="m01" class="main__subsection">
-<pre class="main__pre--code">
-addLoadListener ( listner )
+<pre class="main__pre--code">addLoadListener ( listner )
 </pre>
-				<p class="mb10px">Add a callback function that will be called when the bitmap is loaded.</p>
+				<p class="mb10px">添加一个回调函数，在位图被加载时调用该函数。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">listner</code>
 							<span class="type">Function</span>
 							<div class="param-description">
-								<p>The callback function</p>
+								<p>回调函数</p>
 							</div>
 						</li>
 					</ul>
@@ -117,32 +114,31 @@ addLoadListener ( listner )
 			</div><!-- /div -->
 
 			<div id="m02" class="main__subsection">
-<pre class="main__pre--code">
-adjustTone ( r , g , b )
+<pre class="main__pre--code">adjustTone ( r , g , b )
 </pre>
-				<p class="mb10px">Changes the color tone of the entire bitmap.</p>
+				<p class="mb10px">改变位图色调。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">r</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The red strength in the range (-255, 255)</p>
+								<p>红色通道强度（-255～255）</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">g</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The green strength in the range (-255, 255)</p>
+								<p>绿色通道强度（-255～255）</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">b</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The blue strength in the range (-255, 255)</p>
+								<p>蓝色通道强度（-255～255）</p>
 							</div>
 						</li>
 					</ul>
@@ -150,76 +146,75 @@ adjustTone ( r , g , b )
 			</div><!-- /div -->
 
 			<div id="m03" class="main__subsection">
-<pre class="main__pre--code">
-blt ( source , sx , sy , sw , sh , dx , dy , [dw=sw] , [dh=sh] )
+<pre class="main__pre--code">blt ( source , sx , sy , sw , sh , dx , dy , [dw=sw] , [dh=sh] )
 </pre>
-				<p class="mb10px">Performs a block transfer.</p>
+				<p class="mb10px">将源位图给定矩形区域的数据传送到当前位图的给定矩形区域内。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">source</code>
 							<span class="type">Bitmap</span>
 							<div class="param-description">
-								<p>The bitmap to draw</p>
+								<p>源位图</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">sx</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate in the source</p>
+								<p>源位图矩形区域左上角的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">sy</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate in the source</p>
+								<p>源位图矩形区域左上角的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">sw</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The width of the source image</p>
+								<p>源位图矩形区域的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">sh</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The height of the source image</p>
+								<p>源位图矩形区域的高度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">dx</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate in the destination</p>
+								<p>目标区域左上角的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">dy</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate in the destination</p>
+								<p>目标区域左上角的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">[dw=sw]</code>
 							<span class="type">Number</span>
-							<span class="type">[optional]</span>
+							<span class="type">[可选参数]</span>
 							<div class="param-description">
-								<p>The width to draw the image in the destination</p>
+								<p>目标区域的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">[dh=sh]</code>
 							<span class="type">Number</span>
-							<span class="type">[optional]</span>
+							<span class="type">[可选参数]</span>
 							<div class="param-description">
-								<p>The height to draw the image in the destination</p>
+								<p>目标区域的高度</p>
 							</div>
 						</li>
 					</ul>
@@ -227,53 +222,50 @@ blt ( source , sx , sy , sw , sh , dx , dy , [dw=sw] , [dh=sh] )
 			</div><!-- /div -->
 
 			<div id="m04" class="main__subsection">
-<pre class="main__pre--code">
-blur ()
+<pre class="main__pre--code">blur ()
 </pre>
-				<p class="mb10px">Applies a blur effect to the bitmap.</p>
+				<p class="mb10px">对位图执行模糊效果。</p>
 			</div><!-- /div -->
 
 			<div id="m05" class="main__subsection">
-<pre class="main__pre--code">
-clear ()
+<pre class="main__pre--code">clear ()
 </pre>
-				<p class="mb10px">Clears the entire bitmap.</p>
+				<p class="mb10px">清除位图。</p>
 			</div><!-- /div -->
 
 			<div id="m06" class="main__subsection">
-<pre class="main__pre--code">
-clearRect ( x , y , width , height )
+<pre class="main__pre--code">clearRect ( x , y , width , height )
 </pre>
-				<p class="mb10px">Clears the specified rectangle.</p>
+				<p class="mb10px">清除位图中指定矩形区域的内容。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate for the upper-left corner</p>
+								<p>矩形区域左上角的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate for the upper-left corner</p>
+								<p>矩形区域左上角的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">width</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The width of the rectangle to clear</p>
+								<p>矩形区域的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">height</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The height of the rectangle to clear</p>
+								<p>矩形区域的高度</p>
 							</div>
 						</li>
 					</ul>
@@ -281,39 +273,38 @@ clearRect ( x , y , width , height )
 			</div><!-- /div -->
 
 			<div id="m07" class="main__subsection">
-<pre class="main__pre--code">
-drawCircle ( x , y , radius , color )
+<pre class="main__pre--code">drawCircle ( x , y , radius , color )
 </pre>
-				<p class="mb10px">Draw the filled circle.</p>
+				<p class="mb10px">填充指定的圆形区域。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate of the center of the circle</p>
+								<p>圆形区域圆心的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate of the center of the circle</p>
+								<p>圆形区域圆心的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">radius</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The radius of the circle</p>
+								<p>圆形区域的半径</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">color</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The color of the circle in CSS format</p>
+								<p>圆形区域的颜色（CSS格式）</p>
 							</div>
 						</li>
 					</ul>
@@ -321,53 +312,52 @@ drawCircle ( x , y , radius , color )
 			</div><!-- /div -->
 
 			<div id="m08" class="main__subsection">
-<pre class="main__pre--code">
-drawText ( text , x , y , maxWidth , lineHeight , align )
+<pre class="main__pre--code">drawText ( text , x , y , maxWidth , lineHeight , align )
 </pre>
-				<p class="mb10px">Draws the outline text to the bitmap.</p>
+				<p class="mb10px">在位图上绘制描边文字。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">text</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The text that will be drawn</p>
+								<p>要绘制的文字</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate for the left of the text</p>
+								<p>文字左侧的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate for the top of the text</p>
+								<p>文字顶部的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">maxWidth</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The maximum allowed width of the text</p>
+								<p>文字允许的最大宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">lineHeight</code>
-							<span class="type"Number></span>
+							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The height of the text line</p>
+								<p>文字的行高</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">align</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The alignment of the text</p>
+								<p>文字的对齐方式</p>
 							</div>
 						</li>
 					</ul>
@@ -375,18 +365,17 @@ drawText ( text , x , y , maxWidth , lineHeight , align )
 			</div><!-- /div -->
 
 			<div id="m09" class="main__subsection">
-<pre class="main__pre--code">
-fillAll ( color )
+<pre class="main__pre--code">fillAll ( color )
 </pre>
-				<p class="mb10px">Fills the entire bitmap.</p>
+				<p class="mb10px">填充整个位图</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">color</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The color of the rectangle in CSS format</p>
+								<p>填充的颜色（CSS格式）</p>
 							</div>
 						</li>
 					</ul>
@@ -394,46 +383,45 @@ fillAll ( color )
 			</div><!-- /div -->
 
 			<div id="m10" class="main__subsection">
-<pre class="main__pre--code">
-fillRect ( x , y , width , height , color )
+<pre class="main__pre--code">fillRect ( x , y , width , height , color )
 </pre>
-				<p class="mb10px">Fills the specified rectangle.</p>
+				<p class="mb10px">填充指定的矩形区域。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate for the upper-left corner</p>
+								<p>矩形区域的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate for the upper-left corner</p>
+								<p>矩形区域的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">width</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The width of the rectangle to clear</p>
+								<p>矩形区域的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">height</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The height of the rectangle to clear</p>
+								<p>矩形区域的高度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">color</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The color of the rectangle in CSS format</p>
+								<p>填充的颜色（CSS格式）</p>
 							</div>
 						</li>
 					</ul>
@@ -441,10 +429,9 @@ fillRect ( x , y , width , height , color )
 			</div><!-- /div -->
 
 			<div id="m11" class="main__subsection">
-<pre class="main__pre--code">
-getAlphaPixel ( x , y ) <span class="pre__type">String</span>
+<pre class="main__pre--code">getAlphaPixel ( x , y ) <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">Returns alpha pixel value at the specified point.</p>
+				<p class="mb10px">返回指定像素点的不透明度（alpha 值）。</p>
 				<div class="params">
 					<h4>Parameters:</h4>
 					<ul class="params-list">
@@ -452,107 +439,105 @@ getAlphaPixel ( x , y ) <span class="pre__type">String</span>
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate of the pixel in the bitmap</p>
+								<p>位图中指定点的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate of the pixel in the bitmap</p>
+								<p>位图中指定点的 Y 坐标</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
-					<p><span class="pre__type">String:</span><br />
-					The alpha value</p>
+					<h4>返回值：</h4>
+					<p><span class="pre__type">String:</span><br>
+					不透明度（alpha 值）</p>
 				</div>
 			</div><!-- /div -->
 
 			<div id="m12" class="main__subsection">
-<pre class="main__pre--code">
-getPixel ( x , y ) <span class="pre__type">String</span>
+<pre class="main__pre--code">getPixel ( x , y ) <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">Returns pixel color at the specified point.</p>
+				<p class="mb10px">返回指定像素点的颜色。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate of the pixel in the bitmap</p>
+								<p>位图中指定点的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate of the pixel in the bitmap</p>
+								<p>位图中指定点的 Y 坐标</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
-					<p><span class="pre__type">String:</span><br />
-					The pixel color (hex format)</p>
+					<h4>返回值：</h4>
+					<p><span class="pre__type">String:</span><br>
+					颜色（十六进制格式）</p>
 				</div>
 			</div><!-- /div -->
 
 			<div id="m13" class="main__subsection">
-<pre class="main__pre--code">
-gradientFillRect ( x , y , width , height , color1 , color2 , vertical )
+<pre class="main__pre--code">gradientFillRect ( x , y , width , height , color1 , color2 , vertical )
 </pre>
-				<p class="mb10px">Draws the rectangle with a gradation.</p>
+				<p class="mb10px">以渐变模式填充指定的矩形区域。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The x coordinate for the upper-left corner</p>
+								<p>矩形区域的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The y coordinate for the upper-left corner</p>
+								<p>矩形区域的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">width</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The width of the rectangle to clear</p>
+								<p>矩形区域的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">height</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The height of the rectangle to clear</p>
+								<p>矩形区域的高度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">color1</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The start color of the gradation</p>
+								<p>渐变的起始颜色</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">color2</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The end color of the gradation</p>
+								<p>渐变的结束颜色</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">vertical</code>
 							<span class="type">Boolean</span>
 							<div class="param-description">
-								<p>Whether it draws a vertical gradient</p>
+								<p>是否为纵向渐变</p>
 							</div>
 						</li>
 					</ul>
@@ -560,92 +545,87 @@ gradientFillRect ( x , y , width , height , color1 , color2 , vertical )
 			</div><!-- /div -->
 
 			<div id="m14" class="main__subsection">
-<pre class="main__pre--code">
-isError () <span class="pre__type">Boolean</span>
+<pre class="main__pre--code">isError () <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Checks whether a loading error has occurred.</p>
+				<p class="mb10px">检测位图加载时是否发生错误。</p>
 				<div class="params">
-					<h4>Returns:</h4>
-					<p><span class="pre__type">Boolean:</span><br />
-					True if a loading error has occurred</p>
+					<h4>返回值：</h4>
+					<p><span class="pre__type">Boolean:</span><br>
+					若发生错误，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
 			<div id="m15" class="main__subsection">
-<pre class="main__pre--code">
-isReady () <span class="pre__type">Boolean</span>
+<pre class="main__pre--code">isReady () <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Checks whether the bitmap is ready to render.</p>
+				<p class="mb10px">检测位图能否开始渲染。</p>
 				<div class="params">
-					<h4>Returns:</h4>
-					<p><span class="pre__type">Boolean:</span><br />
-					True if the bitmap is ready to render</p>
+					<h4>返回值：</h4>
+					<p><span class="pre__type">Boolean:</span><br>
+					若位图能够开始渲染，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
 			<div id="m16" class="main__subsection">
-<pre class="main__pre--code">
-load ( url ) <span class="pre__static">[static]</span>
+<pre class="main__pre--code">load ( url ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Loads a image file and returns a new bitmap object.</p>
+				<p class="mb10px">加载图片文件，返回一个新的位图对象。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">url</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The image url of the texture</p>
+								<p>加载图片的地址</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
-					<p><span class="pre__type">Bitmap</span></p>
+					<h4>返回值：</h4>
+					<p><span class="pre__type">Bitmap（位图） 对象</span></p>
 				</div>
 			</div><!-- /div -->
 
 			<div id="m17" class="main__subsection">
-<pre class="main__pre--code">
-measureTextWidth ( text ) <span class="pre__type">Number</span>
+<pre class="main__pre--code">measureTextWidth ( text ) <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">Returns the width of the specified text.</p>
+				<p class="mb10px">测量指定文字的宽度。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">text</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The text to be measured</p>
+								<p>待测量的文字</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
-					<p><span class="pre__type">Number:</span> <br />
-					The width of the text in pixels</p>
+					<h4>返回值：</h4>
+					<p><span class="pre__type">Number:</span> <br>
+					文字的宽度（像素）</p>
 				</div>
 			</div><!-- /div -->
 
 			<div id="m18" class="main__subsection">
-<pre class="main__pre--code">
-resize ( width , height )
+<pre class="main__pre--code">resize ( width , height )
 </pre>
-				<p class="mb10px">Resizes the bitmap.</p>
+				<p class="mb10px">调整位图大小。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">width</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The new width of the bitmap</p>
+								<p>位图调整后的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">height</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The new height of the bitmap</p>
+								<p>位图调整后的高度</p>
 							</div>
 						</li>
 					</ul>
@@ -653,18 +633,17 @@ resize ( width , height )
 			</div><!-- /div -->
 
 			<div id="m19" class="main__subsection">
-<pre class="main__pre--code">
-rotateHue ( offset )
+<pre class="main__pre--code">rotateHue ( offset )
 </pre>
-				<p class="mb10px">Rotates the hue of the entire bitmap.</p>
+				<p class="mb10px">变换位图的色相。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">offset</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The hue offset in 360 degrees</p>
+								<p>色相环的偏移量（360度以内）</p>
 							</div>
 						</li>
 					</ul>
@@ -672,133 +651,117 @@ rotateHue ( offset )
 			</div><!-- /div -->
 
 			<div id="m20" class="main__subsection">
-<pre class="main__pre--code">
-snap ( stage ) <span class="pre__static">[static]</span>
+<pre class="main__pre--code">snap ( stage ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Takes a snapshot of the game screen and returns a new bitmap object.</p>
+				<p class="mb10px">截取当前游戏画面，返回一个新的 Bitmap（位图） 对象。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">stage</code>
 							<span class="type">PIXI.Stage</span>
 							<div class="param-description">
-								<p>The stage object</p>
+								<p>stage（场景） 对象</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
-					<p><span class="pre__type">Bitmap</span></p>
+					<h4>返回值：</h4>
+					<p><span class="pre__type">Bitmap（位图） 对象</span></p>
 				</div>
 			</div><!-- /div -->
 		</div><!-- /main__section -->
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Properties</h2>
+			<h2 class="main__title--h2">属性</h2>
 			<div id="p01" class="main__subsection">
-<pre class="main__pre--code">
-baseTexture <span class="pre__type">PIXI.BaseTexture</span>
+<pre class="main__pre--code">baseTexture<span class="pre__type">PIXI.BaseTexture</span>
 </pre>
-				<p class="mb10px">[read-only] The base texture that holds the image.</p>
+				<p class="mb10px">[只读]位图对象的 BaseTexture</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
-<pre class="main__pre--code">
-canvas <span class="pre__type">HTMLCanvasElement</span>
+<pre class="main__pre--code">canvas<span class="pre__type">HTMLCanvasElement</span>
 </pre>
-				<p class="mb10px">[read-only] The bitmap canvas.</p>
+				<p class="mb10px">[只读]位图对象的 Canvas</p>
 			</div><!-- /div -->
 
 			<div id="p03" class="main__subsection">
-<pre class="main__pre--code">
-context <span class="pre__type">CanvasRenderingContext2D</span>
+<pre class="main__pre--code">context<span class="pre__type">CanvasRenderingContext2D</span>
 </pre>
-				<p class="mb10px">[read-only] The 2d context of the bitmap canvas.</p>
+				<p class="mb10px">[只读]位图对象的 CanvasRenderingContext2D 对象</p>
 			</div><!-- /div -->
 
 			<div id="p04" class="main__subsection">
-<pre class="main__pre--code">
-fontFace <span class="pre__type">String</span>
+<pre class="main__pre--code">fontFace<span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">The face name of the font.</p>
+				<p class="mb10px">字体名称</p>
 			</div><!-- /div -->
 
 			<div id="p05" class="main__subsection">
-<pre class="main__pre--code">
-fontItalic <span class="pre__type">Boolean</span>
+<pre class="main__pre--code">fontItalic<span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Whether the font is italic.</p>
+				<p class="mb10px">字体倾斜</p>
 			</div><!-- /div -->
 
 			<div id="p06" class="main__subsection">
-<pre class="main__pre--code">
-fontSize <span class="pre__type">Number</span>
+<pre class="main__pre--code">fontSize<span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">The size of the font in pixels.</p>
+				<p class="mb10px">字体大小</p>
 			</div><!-- /div -->
 
 			<div id="p07" class="main__subsection">
-<pre class="main__pre--code">
-height <span class="pre__type">Number</span>
+<pre class="main__pre--code">height<span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">[read-only] The height of the bitmap.</p>
+				<p class="mb10px">[只读]位图的高度</p>
 			</div><!-- /div -->
 
 			<div id="p08" class="main__subsection">
-<pre class="main__pre--code">
-outlineColor <span class="pre__type">String</span>
+<pre class="main__pre--code">outlineColor<span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">The color of the outline of the text in CSS format.</p>
+				<p class="mb10px">文字描边的颜色（CSS格式）</p>
 			</div><!-- /div -->
 
 			<div id="p09" class="main__subsection">
-<pre class="main__pre--code">
-outlineWidth <span class="pre__type">Number</span>
+<pre class="main__pre--code">outlineWidth<span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">The width of the outline of the text.</p>
+				<p class="mb10px">文字描边的厚度</p>
 			</div><!-- /div -->
 
 			<div id="p10" class="main__subsection">
-<pre class="main__pre--code">
-paintOpacity <span class="pre__type">Number</span>
+<pre class="main__pre--code">paintOpacity<span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">The opacity of the drawing object in the range (0, 255).</p>
+				<p class="mb10px">位图对象的不透明度（alpha 值）（0~255）</p>
 			</div><!-- /div -->
 
 			<div id="p11" class="main__subsection">
-<pre class="main__pre--code">
-rect <span class="pre__type">Rectangle</span>
+<pre class="main__pre--code">rect <span class="pre__type">Rectangle</span>
 </pre>
-				<p class="mb10px">[read-only] The rectangle of the bitmap.</p>
+				<p class="mb10px">[只读]位图对象的矩形区域</p>
 			</div><!-- /div -->
 
 			<div id="p12" class="main__subsection">
-<pre class="main__pre--code">
-smooth <span class="pre__type">Boolean</span>
+<pre class="main__pre--code">smooth<span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Whether the smooth scaling is applied.</p>
+				<p class="mb10px">是否应用平滑缩放</p>
 			</div><!-- /div -->
 
 			<div id="p13" class="main__subsection">
-<pre class="main__pre--code">
-textColor <span class="pre__type">String</span>
+<pre class="main__pre--code">textColor<span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">The color of the text in CSS format.</p>
+				<p class="mb10px">文字的颜色（CSS格式）</p>
 			</div><!-- /div -->
 
 			<div id="p14" class="main__subsection">
-<pre class="main__pre--code">
-url <span class="pre__type">String</span>
+<pre class="main__pre--code">url<span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">[read-only] The url of the image file.</p>
+				<p class="mb10px">[只读]图片文件的地址</p>
 			</div><!-- /div -->
 
 			<div id="p15" class="main__subsection">
-<pre class="main__pre--code">
-width <span class="pre__type">Number</span>
+<pre class="main__pre--code">width<span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">[read-only] The width of the bitmap.</p>
+				<p class="mb10px">[只读]位图的宽度。</p>
 			</div><!-- /div -->
 
 
@@ -807,6 +770,5 @@ width <span class="pre__type">Number</span>
 
 
 	</div><!-- /main -->
-
-</body>
+  </body>
 </html>

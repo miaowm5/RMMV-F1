@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>JsExtensions Class</title>
+	<title>JsExtensions 类</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,18 +11,18 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v07">JsExtensions Class</h1>
+		<h1 class="main__title--h1 main__title--h1--v07">JsExtensions 类</h1>
 		<ul class="breadcrumb">
-			<li>JS Library</li>
+			<li>JS 库</li>
 			<li>&gt;</li>
-			<li>JsExtensions Class</li>
+			<li>JsExtensions 类</li>
 		</ul>
-		<p>This is not a class, but contains some methods that will be added to the standard Javascript objects.</p>
+		<p>这并不是一个类，而是一系列对标准 Javascript 的扩展方法。</p>
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Item Index</h2>
-			<b>Methods</b>
+			<h2 class="main__title--h2">索引</h2>
+			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">Array.prototype.clone</a></li>
 				<li><a href="#m02">Array.prototype.contains</a></li>
@@ -42,11 +42,11 @@
 <pre class="main__pre--code">
 Array.prototype.clone () <span class="pre__type">Array</span>
 </pre>
-				<p class="mb10px">Makes a shallow copy of the array.</p>
+				<p class="mb10px">浅复制指定数组。</p>
 				<div class="params">
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Array:</span> <br />
-					A shallow copy of the array</p>
+					浅复制后的数组对象。</p>
 				</div>
 			</div><!-- /div -->
 
@@ -54,21 +54,21 @@ Array.prototype.clone () <span class="pre__type">Array</span>
 <pre class="main__pre--code">
 Array.prototype.contains ( element ) <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Checks whether the array contains a given element.</p>
+				<p class="mb10px">检查数组中是否包含指定元素。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">element</code>
 							<span class="type">Any</span>
 							<div class="param-description">
-								<p>The element to search for</p>
+								<p>需要检查的元素</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the array contains a given element</p>
+					若数组中包含指定元素，返回 True</p>
 				</div>
 			</div><!-- /div -->
 
@@ -76,21 +76,21 @@ Array.prototype.contains ( element ) <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 Array.prototype.equals ( array ) <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Checks whether the two arrays are same.</p>
+				<p class="mb10px">对比两个数组是否相等。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">array</code>
 							<span class="type">Any</span>
 							<div class="param-description">
-								<p>The array to compare to</p>
+								<p>需要对比的数组</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the two arrays are same</p>
+					若数组相等，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -98,21 +98,21 @@ Array.prototype.equals ( array ) <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 Math.randomInt ( max ) <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">Generates a random integer in the range (0, max-1).</p>
+				<p class="mb10px">随机生成一个在 0～max-1 区间的整数。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">max</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The upper boundary (excluded)</p>
+								<p>随机数的最大值（生成的随机数不包含该值）</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Number:</span> <br />
-					A random integer</p>
+					随机的整数</p>
 				</div>
 			</div><!-- /div -->
 
@@ -120,28 +120,28 @@ Math.randomInt ( max ) <span class="pre__type">Number</span> <span class="pre__s
 <pre class="main__pre--code">
 Number.prototype.clamp ( min , max ) <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">Returns a number whose value is limited to the given range.</p>
+				<p class="mb10px">返回指定范围中的值。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">min</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The lower boundary</p>
+								<p>最小值</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">max</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The upper boundary</p>
+								<p>最大值</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Number:</span> <br />
-					A number in the range (min, max)</p>
+					在最大值和最小值之间的值</p>
 				</div>
 			</div><!-- /div -->
 
@@ -149,21 +149,21 @@ Number.prototype.clamp ( min , max ) <span class="pre__type">Number</span>
 <pre class="main__pre--code">
 Number.prototype.mod ( n ) <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">Returns a modulo value which is always positive.</p>
+				<p class="mb10px">返回总为正数的模的值。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">n</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The divisor</p>
+								<p>除数</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Number:</span> <br />
-					A modulo value</p>
+					模</p>
 				</div>
 			</div><!-- /div -->
 
@@ -171,21 +171,21 @@ Number.prototype.mod ( n ) <span class="pre__type">Number</span>
 <pre class="main__pre--code">
 Number.prototype.padZero ( length ) <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">Makes a number string with leading zeros.</p>
+				<p class="mb10px">生成以零开头的字符串。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">length</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The length of the output string</p>
+								<p>字符串的长度</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">String:</span> <br />
-					A string with leading zeros</p>
+					以零开头的字符串</p>
 				</div>
 			</div><!-- /div -->
 
@@ -193,21 +193,21 @@ Number.prototype.padZero ( length ) <span class="pre__type">String</span>
 <pre class="main__pre--code">
 String.prototype.contains ( string ) <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">Checks whether the string contains a given string.</p>
+				<p class="mb10px">检查字符串中是否包含指定字符。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">string</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>The string to search for</p>
+								<p>需要检查的指定字符</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					True if the string contains a given string</p>
+					若包含指定字符，返回 True </p>
 				</div>
 			</div><!-- /div -->
 
@@ -215,21 +215,21 @@ String.prototype.contains ( string ) <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 String.prototype.format ( ...args ) <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">Replaces %1, %2 and so on in the string to the arguments.</p>
+				<p class="mb10px">将字符串中的 %1, %2 等内容替换成给定的内容。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">...args</code>
 							<span class="type">Any</span>
 							<div class="param-description">
-								<p>The objects to format</p>
+								<p>需要替换的内容</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">String:</span> <br />
-					A formatted string</p>
+					替换后的字符串</p>
 				</div>
 			</div><!-- /div -->
 
@@ -237,21 +237,21 @@ String.prototype.format ( ...args ) <span class="pre__type">String</span>
 <pre class="main__pre--code">
 String.prototype.padZero ( length ) <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">Makes a number string with leading zeros.</p>
+				<p class="mb10px">生成以零开头的数字字符串。</p>
 				<div class="params">
-					<h4>Parameters:</h4>
+					<h4>参数：</h4>
 					<ul class="params-list">
 						<li class="param">
 							<code class="param-name">length</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>The length of the output string</p>
+								<p>字符串的长度</p>
 							</div>
 						</li>
 					</ul>
-					<h4>Returns:</h4>
+					<h4>返回值：</h4>
 					<p><span class="pre__type">String:</span> <br />
-					A string with leading zeros</p>
+					以零开头的字符串</p>
 				</div>
 			</div><!-- /div -->
 

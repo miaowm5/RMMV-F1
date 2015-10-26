@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Map Event Creation and Controls</title>
+	<title>事件创建和控制</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,58 +10,79 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v04">Map Event Creation and Controls</h1>
+	  <h1 class="main__title--h1 main__title--h1--v04">地图事件创建和控制</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_09.html">Events</a></li>
+		  <li><a href="01_09.html">事件</a></li>
 	    <li>&gt;</li>
-	    <li>Map Event Creation and Controls</li>
+	    <li>地图事件创建和控制</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2" id="p01">Map Event Creation and Controls</h2>
-		  <h3 class="main__title--h3--sub"> Switch to Editing Mode </h3>
-		  <p>To create and edit Map Events, switch to event editing mode by clicking the [Events] button in the toolbar in the Main Window (or by going to [Mode] → [Events] in the menu bar).</p>
-		  <h3 class="main__title--h3--sub"> Creating a New Map Event </h3>
-		  <p>To create a new map event, double-click the location where you wish to place the event on the map view. Edit the settings for your event in the [Event Editor] Window that appears, and click [OK]. For more information on parameter details, please view [<a href="01_09_03.html">Map Event Settings</a>]. </p>
-		  <h3 class="main__title--h3--sub"> Re-editing and Moving </h3>
-		  <p>When you place a map event, an icon will be displayed at that location (the image that was selected on the first event page will be used). Double-clicking this icon will open the [Event Editor] Window where you can re-edit the event's settings details. You can change the location by dragging and dropping the icon.</p>
-		  <h3 class="main__title--h3--sub"> Controls via the Context Menu </h3>
-		  <p>When you right-click the map view in event editing mode, you can perform actions such as copying and deleting the event that you placed. The functions of each item are as follows.</p>
+		  <h2 class="main__title--h2" id="p01">地图事件创建和控制</h2>
+		  <h3 class="main__title--h3--sub">切换到编辑模式</h3>
+		  <p>
+        为了创建和编辑地图事件，首先通过点击主窗口工具栏中的[事件](Events)按钮切换到事件编辑模式（菜单栏中使用[Mode]（模式） -> [Events]（事件）也可以切换）
+      </p>
+		  <h3 class="main__title--h3--sub">创建一个新的地图事件 </h3>
+        要创建新地图事件，先在地图上双击你需要放置事件的地方。然后在弹出的[Event Editor](事件编辑器)中编辑你的设定，按下[OK]按钮确定。要获得更多关于设置参数的帮助，请查看[<a href="01_09_03.html">地图事件设置</a>].
+      </p>
+		  <h3 class="main__title--h3--sub">再编辑和移动</h3>
+		  <p>
+        当你放置一个地图事件的时候，一个图标将会在你事件的位置显示（你第一个事件页选择的图像会默认被使用）。双击这个图像，会再次打开[Event Editor]（事件编辑器）窗口，这里你可以再次编辑事件设置。此时，你也可以通过拖动图标来移动你的事件位置。
+      </p>
+		  <h3 class="main__title--h3--sub"> 通过上下文菜单控制 </h3>
+		  <p>
+        当你在事件编辑模式右击地图的时候，你可以复制或者删除已经放置的事件。上下文菜单有如下功能。
+      </p>
 		  <dl class="main__dl--sub">
-			<dt>Edit ("New" when an event has not yet been placed) </dt>
-				<dd>Opens the Event Editor Window.</dd>
-				<dt>Cut </dt>
-				<dd>Copies the map event that you right clicked to the clipboard and delete it.</dd>
-				<dt>Copy </dt>
-				<dd>Copies the map event that you right clicked to the clipboard.</dd>
-				<dt>Paste </dt>
-				<dd>Places the map event in the clipboard at the location you right-clicked.</dd>
-				<dt>Delete </dt>
-				<dd>Deletes the map event that you right-clicked.</dd>
-				<dt>Quick Event Creation </dt>
-				<dd>Creates 4 types of events using simple settings (mentioned later).</dd>
-				<dt>Set Starting Position </dt>
-				<dd>Sets the position for the player and vehicles at the start of the game. The starting position will be indicated by a blue frame. <br />
-			    *Event icons use white frames.</dd>
+			  <dt>Edit（编辑） (当图块没有事件的时候，这里是“New”，新建事件) </dt>
+				<dd>打开事件编辑器窗口</dd>
+        <dt>Cut （剪切）</dt>
+				<dd>复制当前事件到剪贴板并删除当前事件</dd>
+				<dt>Copy （复制）</dt>
+				<dd>复制你右击的地图事件</dd>
+				<dt>Paste （粘贴）</dt>
+				<dd>粘贴剪贴板的地图时间到你右击的位置</dd>
+				<dt>Delete （删除）</dt>
+				<dd>删除你右击的地图事件</dd>
+				<dt>Quick Event Creation （快速创建事件）</dt>
+				<dd>使用默认配置创建四个类型的事件（稍后会提到）</dd>
+				<dt>Set Starting Position（设置初始点） </dt>
+				<dd>
+          设定玩家和交通工具的起始点。起始点将会被蓝色框标识。
+          <br />
+			    *事件图标使用白色框
+        </dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2" id="p02">Quick Event Creation Feature</h2>
-		  <p> By going to the [Quick Event Creation] section in the Context Menu, you can create the four following types of events often created in typical RPGs using simple settings: [Transfer], [Door], [Treasure] and [Inn]. The contents and parameter details for events that you can create using each option are as follows. <br />
+		  <h2 class="main__title--h2" id="p02">快速事件创建</h2>
+		  <p>
+        通过使用上下文菜单中的[Quick Event Creation](快速事件创建)，你可以创建四种传统RPG中常用的事件类型（使用默认设置）：[Transfer]（场所移动）, [Door](门), [Treasure]（宝物）, [Inn]（旅馆）
+        <br />
 		    <br />
-		    Just like other events, events created using Quick Event Creation can also have their parameter details edited, copied, etc. </p>
+        就像其他事件一样，使用“快速事件创建”创建的事件一样可以编辑，复制其的参数和进行其他可以对标准事件进行的操作。
+      </p>
 		  <dl class="main__dl--sub">
-			<dt>Transfer </dt>
-				<dd>Creates an invisible (no image) event that transfers the player to the specified location. Use this for things such as entrances and stairs. In [Location] and [Direction], specify the location after transfer and the direction that the player is facing.</dd>
-				<dt>Door </dt>
-				<dd>Creates an event with an image that transfers the player to the specified location. Specify the image used in the [Image] field, and the location after transfer in [Location].</dd>
-				<dt>Treasure </dt>
-				<dd>Create an event where a player can get an item from a treasure chest limited to the first time the treasure chest is checked. Set the image to display in [Image], and specify what the player can obtain (gold/items/weapons/armor) in the [Content] section.</dd>
-				<dt>Inn </dt>
-				<dd>Event which allows the party to complete recover. Set the image to display in [Image], and the price in the [Price] field.</dd>
+			<dt>Transfer（场所移动） </dt>
+				<dd>
+          在地图上的指定位置创建一个不可见的事件，将玩家传送到指定位置。请在楼梯或者入口这种地方使用这个事件。在[Location](位置)和[Direction]（方向）参数中指定玩家被传送的目的地和玩家的朝向。
+        </dd>
+				<dt>Door（门）</dt>
+				<dd>
+          创建包含一张图像的事件，它会将玩家传送到指定位置。使用[Image]（图像）字段指定显示的图像，用[Location]（位置）字段指定玩家被传送到的位置。
+        </dd>
+				<dt>Treasure（宝物） </dt>
+				<dd>
+          创建一个可以在玩家第一次打开时从宝箱获得物品的事件。使用[Image]（图像）字段指定显示的图像，通过[Content]（执行内容）字段指定玩家能获得什么样的物品（金币/物品/武器/防具）
+        </dd>
+				<dt>Inn（旅馆）</dt>
+				<dd>
+          创建一个可以让你的队伍完成回复的事件，使用[Image]（图像）字段指定显示的图像， 使用[Price]（价格）字段指定回复的价格。
+        </dd>
 			</dl>
 		</div><!-- /main__section -->
 
