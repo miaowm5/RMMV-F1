@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Map Properties</title>
+	<title>地图属性</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,84 +10,84 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v02">Map Properties</h1>
+	  <h1 class="main__title--h1 main__title--h1--v02">地图属性</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_07.html">Maps</a></li>
+		  <li><a href="01_07.html">地图</a></li>
 		  <li>&gt;</li>
-		  <li>Map Properties</li>
+		  <li>地图属性</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Map Details</h2>
-		  <p>The Map Properties Window will be displayed when you either create a new map or by right-clicking the map and selecting "Edit". In this window, you can edit things like the size of the map, tools used for designing, background music, conditions for encounters (when a battle starts) with troops and behavior of the game during gameplay.</p>
+		  <h2 class="main__title--h2">地图详细信息</h2>
+		  <p>当你新建一个地图，或者右键点击一个已有地图然后选择“编辑”时，地图属性窗口就会打开。在本窗口中，你可以编辑地图大小，所用的工具，背景音乐，遇敌条件(触发战斗的条件)和游戏的行为。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Property Details</h2>
+		  <h2 class="main__title--h2">属性详细信息</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_07_03_img01.png" width="852" height="642" alt="" />
 			</div>
-		  <h3 class="main__title--h3"> General Settings </h3>
-		  <h3 class="main__title--h3--sub"> Name </h3>
-		  <p>This is the name of the map. This property is just used in the editor (does not affect the game).</p>
-		  <h3 class="main__title--h3--sub"> Display Name </h3>
-		  <p>The name of the map that is displayed when the player is moving on the map.</p>
-		  <h3 class="main__title--h3--sub"> Tileset </h3>
-		  <p>Specify tilesets to be used in the design of the map.</p>
-		  <h3 class="main__title--h3--sub"> Width/Height </h3>
-		  <p>The size of the map. The [Width] and [Height] can be set from values between 0 and 256 respectively. Parts which extend beyond the map when making it smaller after creation will be deleted.</p>
-		  <h3 class="main__title--h3--sub"> Scroll Type </h3>
-		  <p>Determines how the map loops. When you set the map to loop, the edge pairs of the map that you designate will allow the player to loop from one edge to the other.</p>
+		  <h3 class="main__title--h3"> 常规设置 </h3>
+		  <h3 class="main__title--h3--sub"> Name(名字) </h3>
+		  <p>地图的名字。这个属性只在编辑器中使用(不会影响游戏)。</p>
+		  <h3 class="main__title--h3--sub"> Display Name(显示名称) </h3>
+		  <p>在角色进入地图时显示在屏幕上的地图名。</p>
+		  <h3 class="main__title--h3--sub"> Tileset(图块组) </h3>
+		  <p>指定地图布局所使用的图块组。</p>
+		  <h3 class="main__title--h3--sub"> Width/Height(宽度/高度) </h3>
+		  <p>地图的尺寸。[Width(宽度)] 和 [Height(高度)] 的设置范围为 0 ~ 256。当缩小地图尺寸时，地图以外的部分将被删除。</p>
+		  <h3 class="main__title--h3--sub"> Scroll Type(滚动模式) </h3>
+		  <p>决定地图如何循环滚动。当设置为循环模式时，角色可以从地图的一边循环走到另一边。</p>
 		  <dl class="main__dl--sub">
-			<dt>No Loop </dt>
-				<dd>There will be no looping.</dd>
-				<dt>Loop Vertically </dt>
-				<dd>The upper and lower edges of the map will be connected.</dd>
-				<dt>Loop Horizontally </dt>
-				<dd>The left and right edges of the map will be connected.</dd>
-				<dt>Loop Both </dt>
-				<dd>Both the upper and lower, and the left and right edges of the map will be connected.</dd>
+			<dt>No Loop(不循环) </dt>
+				<dd>地图不是循环的。</dd>
+				<dt>Loop Vertically(垂直循环) </dt>
+				<dd>地图的上下边界会连接起来。</dd>
+				<dt>Loop Horizontally(水平循环) </dt>
+				<dd>地图的上下边界会连接起来。</dd>
+				<dt>Loop Both(水平/垂直循环) </dt>
+				<dd>上下边界，左右边界都会连接起来。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> Encounter Steps (Enc. Steps) </h3>
-		  <p>Determine the frequency of random encounters by setting the average number of steps a player walks on the map before an encounter occurs (1 to 999/per step equals the movement distance per tile). Set this value low when you want monsters to appear frequently.</p>
-		  <h3 class="main__title--h3--sub"> Autoplay BGM/ Autoplay BGS </h3>
-		  <p>When enabled, BGM (background music) and BGS (background sounds) will start playing automatically when the player exists on the map. Select the sound files for each that you wish to play. <br />
-		  When the map and battle BGM is identical, the music will not stop when switching between screens.</p>
-		  <h3 class="main__title--h3--sub" id="p01"> Specify Battleback </h3>
-		  <p>When enabled, the background when a battle occurs on this map can be designated using two types of images in combination. <br />
-		    When not specified, a background that conforms to the terrain will be automatically selected. For other maps, a background which uses a processed image of the map screen will be used. </p>
+		  <h3 class="main__title--h3--sub"> Encounter Steps(遇敌步数) </h3>
+		  <p>决定主角随机遇敌的频率。设定值为主角平均走多少步就会遇敌敌人(范围为 1 ~ 999，一步的含义就是移动一个图块的距离)。如果你想要怪物频繁出现，请把此数值下调。</p>
+		  <h3 class="main__title--h3--sub"> Autoplay BGM/ Autoplay BGS(自动播放 BGM/BGS) </h3>
+		  <p>启用时，主角进入该地图后，BGM(背景音乐)和 BGS(背景声音)将会自动播放。请分别选择你想要播放的声音文件。<br />
+		  如图地图的 BGM 和战斗 BGM 相同，切换场景时，音乐不会停止。</p>
+		  <h3 class="main__title--h3--sub" id="p01"> Specify Battleback(指定战斗背景) </h3>
+		  <p>启用时，你可以使用两种图像的组合来指定此地图战斗的背景。<br />
+		    未指定时，战斗背景会自动和地形一致。对其他地图来讲，战斗背景图也可能是处理过的地图画面。</p>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_07_03_img02.png" width="830" height="491" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub"> Disable Dashing </h3>
-		  <p>When enabled, a player cannot dash on this map.</p>
-		  <h3 class="main__title--h3"> Parallax Background </h3>
-		  <p>An image that appears in the transparent part of the map. Select the file you want to use in the window that opens when you click the [...]. <br />
+		  <h3 class="main__title--h3--sub"> Disable Dashing(禁止加速) </h3>
+		  <p>启用时，玩家不能在这个地图上加速跑。</p>
+		  <h3 class="main__title--h3"> Parallax Background(远景图) </h3>
+		  <p>出现在地图透明处的图像。点击[...]按钮后，在弹出的窗口中选择你想使用的文件。<br />
 		    <br />
-		    When you enable [Loop Vertically] or [Loop Horizontally], the background will scroll according to the movement direction of the player. Also, by setting the scroll to a value other than 0 (-32 to 32), it will automatically scroll. If it's a positive value, it will scroll left or up. If it is a negative number, it will scroll right or down. The higher the absolute value is, the quicker the scroll will be. <br />
+		    当你启用[Loop Vertically(垂直循环)] 或 [Loop Horizontally(水平循环)]时，背景也会随着主角移动方向而卷动。并且，如果你设置的滚动值不是 0 (范围为 -32 ~ 32)，它也会自动滚动。如果滚动值时正数，它会向左或向上滚动，如果滚动值时负数，它会向右或向下滚动。数值的绝对值越大，滚动速度越快。<br />
   <br />
-		    When you enable [Show in the Editor], you can confirm the parallax background that you set in the editor. However, there are times when how it is displayed differs in the actual game. <br />
+		    如果你启用[Show in the Editor(在编辑器中显示)]，那么你就会在编辑器中看到远景图预览。然而，显示的内容并不总是和实际游戏中的相同。<br />
 		    <br />
-			Also, when you add a "!" to the beginning of a parallax background image file name, the parallax will become 0.</p>
-		  <h3 class="main__title--h3"> Note </h3>
-		  <p>Here you can freely add notes when creating your game. This property is just used in the editor (does not affect the game).</p>
-		  <h3 class="main__title--h3--sub"> Encounters </h3>
-		  <p>This is the list of enemy troops that appear randomly when the player moves in this map. You can configure the following in the window that opens when you double-click a blank row. When you right-click a troop that you have entered, you can perform actions such as Copy and Delete using the context menu.</p>
+			此外，如果你在远景图文件名的前面加上"!"，该图的视差会变为 0。</p>
+		  <h3 class="main__title--h3"> Note(备注) </h3>
+		  <p>在制作游戏时，你可以随便在这里添加备注。这个属性仅仅在编辑器中有效(不会影响游戏)。</p>
+		  <h3 class="main__title--h3--sub"> Encounters(遇敌) </h3>
+		  <p>这个列表显示了所有角色在地图上移动时随机遇到的敌群。双击空行会打开一个窗口，你可以设定以下内容。当右键点击一个已有的敌群时，你可以在右键菜单中做复制或删除等操作。</p>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_07_03_img03.png" width="342" height="283" alt="" />
 			</div>
 			<dl class="main__dl--sub">
-				<dt>Troops </dt>
-				<dd>Define the troops you want to configure.</dd>
-				<dt>Weight</dt>
-				<dd>Set the order of priority (0 to 100) that troops appear as battle opponents when encountering enemies. The higher that a troop's weight value is, the higher its encounter will be when there are multiple troops configured. <br />
+				<dt>Troops(敌群) </dt>
+				<dd>定义你想要设置的敌群。</dd>
+				<dt>Weight(权重)</dt>
+				<dd>设置遇敌时此敌群出现的优先顺序(0 ~ 100)。权重越高，当定义多个敌群时，遇到这一组敌群的可能就越大。<br />
                   <br />
-                  The encounter rate for troops will be calculated based on a percentage of the total weight of all troops. So for example, let's assume that Troop A's weight is 9, B's is 7 and C's is 4. In this case, Troop A's encounter rate is 9/20 (the total weight being 9+7+4), or 0.45. In other words, it has a 45% chance of appearing. Likewise, Troop B's is 7/20 or 35% and Troop C's is 20%. <br />
+                  敌群的遇敌概率计算取决于此敌群权重的所占比例。例如，敌群 A 的权重为 9，敌群 B 的权重为 7 ，敌群 C 的权重为 4。这种情况下，遇到敌群 A 的概率为 9/20(总权重为 9+7+4)，也就是 0.45。换句话说，它会有 45% 的几率出现。相似地，敌群 B 出现几率为  7/20(35%)，敌群 C 的为 20%。<br />
 				</dd>
-				<dt>Range </dt>
-				<dd>The range at which this troop is encountered. When setting the troop to be encountered regardless of the region, select "Entire Map". To have an enemy encountered only in a specified region, select "Specify by Region ID" and specify the region ID (up to 3 regions). The way to set the region is as follows.</dd>
+				<dt>Range(范围) </dt>
+				<dd>敌群出现的区域。如果遇敌范围和区域无关，请选择"Entire Map(整个地图)"。如果要指定仅在特定区域遇敌，请选择"Specify by Region ID(由区域 ID 指定)"，并指定区域的 ID(最多指定 3 个区域)。设置区域的方法如下。</dd>
 			</dl>
 
 
@@ -95,13 +95,13 @@
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Setting the Region</h2>
+		  <h2 class="main__title--h2">设置区域</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_07_03_img04.png" width="1383" height="940" alt="" />
 			</div>
-		  <p>The [Region] that you specify in the Encounter settings of the map indicate the region in which the troop appears. One map can be divided into 255 regions. <br />
+		  <p>在地图的遇敌设置中指定的[Region(区域)]表明在此区域你将遇到何种敌人。一张地图可以分成至多 255 个区域。<br />
 		    <br />
-		    To configure region settings, select the R tab for the Tile Palette to switch to Editing Mode. After doing so, click to select the region ID (1 to 255) on the upper left of the window, and by clicking on the Map View, you can configure the region of the tile in that position. Only one region ID can be assigned per tile. </p>
+		    要设置区域，首先在图块调色板上选择 R 标签，切换到编辑模式。之后，在窗口的左上方选择区域的 ID(1 ~ 255)，然后在地图上点击就可以设置相应图块的区域。一个图块只能设置一个区域 ID。 </p>
 		</div><!-- /main__section -->
 
 
