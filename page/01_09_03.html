@@ -10,169 +10,195 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v04">Map Event Settings</h1>
+	  <h1 class="main__title--h1 main__title--h1--v04">地图事件设置</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_09.html">Events</a></li>
+		  <li><a href="01_09.html">事件</a></li>
 		  <li>&gt;</li>
-			<li>Map Event Settings</li>
+			<li>地图事件设置</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2" id="p01">Common Settings and Event Page Controls</h2>
+		  <h2 class="main__title--h2" id="p01">通用设置和事件页（Event Pages）设置</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_09_03_img01.png" width="650" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub"> ID (Displayed in Title Bar) </h3>
-		  <p>The event's unique ID. IDs will be automatically set for each map in the order that they are created. This ID is used for occasions such as specifying events using variables.</p>
-		  <h3 class="main__title--h3--sub"> Name </h3>
-		  <p>The name of the map event. This property is just used in the editor (does not affect the game). The name that uses the ID will be automatically entered in the initial state. Change the name of the event to something easily identifiable if necessary. </p>
-		  <h3 class="main__title--h3--sub"> Note </h3>
-		  <p> A text area where you can freely enter notes. </p>
-		  <h3 class="main__title--h3--sub"> Event Page ID </h3>
-		  <p>The event page ID included in the event. By clicking a tab, you can switch to the event page that you want to edit.</p>
-		  <h3 class="main__title--h3--sub"> Event Page Control Buttons </h3>
-		  <p>The buttons located towards the top of the window can be used to perform actions such as creating new event pages and deleting them. The functions of each button are as follows.</p>
+		  <h3 class="main__title--h3--sub"> ID (标题栏显示) </h3>
+		  <p>
+        每个事件都有自己的唯一ID，ID会在事件创建时根据这张地图内创建顺序被自动分配。事件ID被用于如指定事件使用特定变量的情况。
+      </p>
+		  <h3 class="main__title--h3--sub"> Name （名字）</h3>
+		  <p>
+        地图事件的名字，这个属性仅被用在编辑器（不会影响游戏）。ID将会被自动输入作为初始名字。必要时可以改动名字以提高可读性。
+      </p>
+		  <h3 class="main__title--h3--sub"> Note （备注）</h3>
+		  <p> 给自己看的备注 </p>
+		  <h3 class="main__title--h3--sub"> Event Page ID（事件页ID） </h3>
+		  <p>
+        包含在这个事件当中的事件页ID。通过点击选项卡，你可以切换到你想要编辑的事件页。
+      </p>
+		  <h3 class="main__title--h3--sub"> Event Page Control Buttons（事件页控制按钮） </h3>
+		  <p>
+        窗口顶部的按钮可以进行创建，删除事件页等操作。每个按钮的功能罗列如下。
+      </p>
 		  <dl class="main__dl--sub">
-			<dt>New Event Page </dt>
-				<dd>Creates a new consecutively numbered event page following the one that is currently being edited. Each following additional event page will have an ID that increases by 1 each time one is created.</dd>
-				<dt>Copy Event Page</dt>
-				<dd>Copies the contents of the event page currently being edited to the clipboard.</dd>
-				<dt>Paste Event Page </dt>
-				<dd>Adds (inserts) the event page in the clipboard using the ID that follows the event page currently being edited. Each event page added will have an ID that increases by 1 each time it is created.</dd>
-				<dt>Delete Event Page </dt>
-				<dd>Deletes the event page that is currently being edited. The ID for each event page that follows the one that was deleted will have its ID decreased by 1. </dd>
-				<dt>Clear Event Page </dt>
-				<dd>Deletes the entire contents of the event page currently being edited (returns it to its initial state).</dd>
+			<dt>New Event Page（新建事件页）</dt>
+				<dd>
+          在当前正在编辑的事件页后创建一个新的事件页。每个额外事件页创建时将会有一个数字自增ID。
+        </dd>
+				<dt>Copy Event Page（复制事件页）</dt>
+				<dd>复制当前事件页的内容到剪贴板</dd>
+				<dt>Paste Event Page （粘贴事件页）</dt>
+				<dd>
+          从剪贴板复制的内容中添加（插入）一个事件页到当前编辑的事件页之后。事件页创建时将会获得一个自增ID。
+        </dd>
+				<dt>Delete Event Page （删除事件页）</dt>
+				<dd>
+          删除当前编辑的事件页。在这个事件页之后的事件页ID将会被减1.
+        </dd>
+				<dt>Clear Event Page （清空事件页）</dt>
+				<dd>清空当前正在编辑的事件页内容（重置为初始状态）</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2" id="p02">Event Page Settings</h2>
+		  <h2 class="main__title--h2" id="p02">事件页设置</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_09_03_img02.png" width="650" alt="" />
 			</div>
-		  <h3 class="main__title--h3"> Conditions </h3>
-		  <p>Conditions for the map event to appear on the map based on the settings of this event page. Enable what will be used as the conditions within the [Switch], [Variable], [Self Switch], [Item] and [Actor] settings, and set the criterion to be evaluated. <br />
+		  <h3 class="main__title--h3"> Conditions（触发条件） </h3>
+		  <p>
+        这个事件页的内容触发的条件。触发条件可以在[Switch]（开关）, [Variable]（变量）, [Self Switch]（独立开关）, [Item]（物品） and [Actor]（角色）。设定特定的条件以满足你的需求。
+        <br />
 		    <br />
-		    Leave the condition settings as disabled when you want to have an event occur without any conditions. If multiple conditions are set, an event will only occur when all conditions are met.<br />
+        如果你希望事件无条件触发，那么不要设置任何条件。如果你设置多了多个条件，那么事件仅会在所有条件都满足的情况下事件才会被触发。
+        <br />
   <br />
-		    If the conditions of multiple event pages are met, the event with the ID with the highest value will be used. Conversely, an event will not occur if there are no pages which meet the conditions set. </p>
+        如果有多个事件页的条件被同时满足了，那么拥有最大ID的事件页内容将会被触发。反之，如果没有事件页的条件被满足则不会有任何事件页被触发。
+      </p>
 		  <dl class="main__dl">
-			<dt>Switch</dt>
-				<dd>The event will occur when the specified switch is set to ON.</dd>
-				<dt>Variable </dt>
-				<dd>The event will occur when the specified variable is greater than the fixed value.</dd>
-				<dt>Self Switch </dt>
-				<dd>The event will occur when the specified self switch is set to ON.</dd>
-				<dt>Item </dt>
-				<dd>The event will occur when a party possesses the specified item.</dd>
-				<dt>Actor </dt>
-				<dd>The event will occur when the specified actor is in the party.</dd>
+			<dt>Switch（开关）</dt>
+				<dd>如果开关被设置为ON则此类型事件将会被触发</dd>
+				<dt>Variable （变量）</dt>
+				<dd>指定变量大于给定值的时候事件将会被触发。</dd>
+				<dt>Self Switch （独立开关）</dt>
+				<dd>指定独立开关变成ON状态时被触发</dd>
+				<dt>Item （物品）</dt>
+				<dd>一个队伍拥有指定物品的时候事件将被触发</dd>
+				<dt>Actor （角色）</dt>
+				<dd>指定角色在队伍中时事件将被触发</dd>
 			</dl>
-		  <h3 class="main__title--h3"> Image </h3>
-		  <p>Images that are displayed when an event occurs on a map. To specify an image, click the file list (left) and image (right) in order in the [Select an Image] window that appears when you double-click inside the frame.<br />
+		  <h3 class="main__title--h3"> Image （图像）</h3>
+		  <p>
+        当事件出现在地图上的时候图像会被显示。要指定图像，双击事件框中心并在弹出的[Select an Image](选择文件)窗口中点击文件列表（左边）和图像（右边）并选中。
+        <br />
 		    <br />
-		    An image will not be visible on a map if an image is not set. Select [(None)] located in the very top of the file list in the [Select an Image] window to delete the image you have set. </p>
-		  <h3 class="main__title--h3"> Autonomous Movement </h3>
-		  <p>Specifies how the map event will move based on the [Type], [Speed] and [Frequency] settings. [Speed] determines the speed when the map event moves and the greater the number, the faster the map event will move. [Frequency] is the interval at which the map event moves and the greater the number, the shorter the movement interval will be. You can choose from the following 4 types of movements in [Type].</p>
+        如果你没设置图像，则事件图像将不可见。在选择图像的窗口中选择位于文件列表顶部的[(None)]可以删除已经设置的图像。
+      </p>
+		  <h3 class="main__title--h3"> Autonomous Movement （自动移动）</h3>
+		  <p>
+        用[Type]（类型）、[Speed]（速度）和[Frequency](频率) 来指定地图事件的移动方式。[速度]定义了移动的速度，数值越大移动越快。[频率]定义了移动的周期，数值越大周期越短。[Type](类型)让你指定下面四种移动方式之一。
+      </p>
 		  <dl class="main__dl">
-			<dt>Fixed</dt>
-				<dd>The map event will not move.</dd>
-				<dt>Random </dt>
-				<dd>The map event will move around at random.</dd>
-				<dt>Approach </dt>
-				<dd>The map event moves towards the location of the player.</dd>
-				<dt>Custom </dt>
-				<dd>The map event follows the specified route. You can specify the route in the window that appears when you click [Set Movement Route]. For more information, please refer to [<a href="01_10_06_01.html">Set Movement Route</a>].</dd>
+			  <dt>Fixed(固定)</dt>
+				<dd>地图事件将不会移动</dd>
+				<dt>Random （随机）</dt>
+				<dd>地图事件将会随机四处移动</dd>
+				<dt>Approach （接近）</dt>
+				<dd>地图事件将会自动接近玩家</dd>
+				<dt>Custom （自定义）</dt>
+				<dd>沿一条特定的路线移动。单击[移动路线]的时候可以指定路线。更多信息请参见 [<a href="01_10_06_01.html">设置移动路线</a>].</dd>
 			</dl>
 		  <h3 class="main__title--h3"> Options </h3>
-		  <p>How the image will be displayed. Enable the items to apply as necessary.</p>
+		  <p>可选的图像的显示方式。需要的话就选中特定的选项。</p>
 		  <dl class="main__dl">
-			<dt>Walking</dt>
-				<dd>Displays animation when moving. Use when wanting to display characters and animals as walking.</dd>
+			<dt>Walking（步行动画）</dt>
+				<dd>移动的时候播放步行动画。当事件是角色或动物等的时候使用。</dd>
 
-				<dt>Stepping</dt>
-				<dd>Displays the stepping animation while the character is stopped. Use when wanting to display the water's surface and fire as moving.</dd>
+				<dt>Stepping（踏步动画）</dt>
+				<dd>不动的时候播放踏步动画。当事件是波浪或火焰等的时候使用。</dd>
 
-				<dt>Direction Fix </dt>
-				<dd>Prevents the direction that the image is facing from changing while moving.</dd>
+				<dt>Direction Fix （固定朝向）</dt>
+				<dd>禁止改变图像的朝向，即使是在移动的时候。</dd>
 
-				<dt>Through </dt>
-				<dd>Allows to pass through terrain and events that cannot be passed through.</dd>
+				<dt>Through（允许穿透）</dt>
+				<dd>允许它穿过一些无法通行的地形或事件。</dd>
 			</dl>
-		  <h3 class="main__title--h3"> Priority </h3>
-		  <p>Choose from the below in order to specify the priority of how players and other events are displayed on top of one another. The image that is on top will be prioritized and displayed when events and players can overlap.</p>
+		  <h3 class="main__title--h3"> 优先级 </h3>
+		  <p>在下面的选项中指定一个以确定事件和玩家的高低位置关系。如果事件和玩家可以重叠，那么位置在上方的图像优先显示。</p>
 		  <dl class="main__dl">
-			<dt>Below characters</dt>
-				<dd>Players and so on will be able to move on top of this event. However, if a tile is selected in [Images], whether or not the player can move on top of that tile depends on the settings of the tile.</dd>
+			<dt>Below characters（人物下方）</dt>
+				<dd>玩家和其他角色可以从该事件上方通过。然而，如果在[Image]（图像）中选择了一个图块作为图像，那么玩家能否通行会根据这个图块的通行度来决定。</dd>
 
-				<dt>Same as characters</dt>
-				<dd>Will be at the same height as characters, and it will not be possible to go through this event.</dd>
+				<dt>Same as characters（与人物同层）</dt>
+				<dd>将事件和玩家置于同层，禁止玩家走到该事件的位置。</dd>
 
-				<dt>Above characters</dt>
-				<dd>Players and so on will be able to move beneath this event.</dd>
+				<dt>Above characters（人物上方）</dt>
+				<dd>玩家和其他角色可以从该事件下方通过。</dd>
 			</dl>
-		  <h3 class="main__title--h3"> Triggers </h3>
-		  <p>Choose the timing for when the processing of the [Contents] of an event that occurs on the map will be.</p>
+		  <h3 class="main__title--h3"> 触发条件 </h3>
+		  <p>对于已经出现在地图上了的事件，在下面的选项中指定一个以确定什么时候执行事件的[Contents]（执行内容）。</p>
 		  <dl class="main__dl">
-			<dt>Action Button</dt>
-				<dd>When the player touches the event, and presses the action button while facing (when overlapping an event where overlapping is possible) in the direction of the event.</dd>
+			<dt>Action Button(按确定键)</dt>
+				<dd>当玩家面对事件（如果允许重叠就是和玩家重叠）按下确定键的时候执行。</dd>
 
-				<dt>Player Touch</dt>
-				<dd>When the player touches the event (when overlapping an event where overlapping is possible), and presses the action button while in that state.</dd>
+				<dt>Player Touch(玩家接触)</dt>
+				<dd>玩家碰触到事件（如果允许重叠就是经过事件）的时候执行。这种情况下按确定键也会执行。</dd>
 
-				<dt>Event Touch</dt>
-				<dd>When an event makes contact (when overlapping where overlapping is possible) with a player through via the autonomous movement of the event as well as when in the same state as in [Player Touch].</dd>
+				<dt>Event Touch（事件接触）</dt>
+				<dd>当一个[Autonomous Movement](自主移动)的事件碰到了玩家（如果允许重叠就是经过玩家），以及[玩家接触]的时候执行。</dd>
 
-				<dt>Autorun</dt>
-				<dd>When the event appears after meeting appear conditions.</dd>
+				<dt>Autorun（自动执行）</dt>
+				<dd>当事件满足出现条件，出现在地图上后立刻执行。</dd>
 
-				<dt>Parallel</dt>
-				<dd>When the event appears after meeting appear conditions (contents of the event will be repeatedly processed).</dd>
+				<dt>并行处理</dt>
+				<dd>当事件满足出现条件，出现在地图上后立刻执行（周期性地循环处理执行内容）。</dd>
 			</dl>
-		  <h3 class="main__title--h3"> Contents </h3>
-		  <p>List of the processes that will be run when the [Trigger] is activated. For more information, please refer to the following [Editing Contents] section.</p>
+		  <h3 class="main__title--h3"> Contents （事件内容）</h3>
+		  <p>当满足[Conditions]（触发条件）满足的时候执行的命令列表。更多信息请看接下来的项目："编辑事件指令"。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2" id="p03">Editing Contents</h2>
-		  <h3 class="main__title--h3--sub"> Viewing the Contents of the List </h3>
-		  <p> Processes added to the game while playing are edited using commands called [Event Commands].<br />
+		  <h2 class="main__title--h2" id="p03">编辑内容</h2>
+		  <h3 class="main__title--h3--sub">查看执行内容列表</h3>
+		  <p>
+        在执行内容中，将游戏中的处理以“[Event Commands](事件指令)”的方式进行编辑
+        <br />
 		    <br />
-		    Event commands will be processed in order from the top item in the list and will be reflected in the game being played. Rows with a [◆] in the list indicate a registered event command. Rows with a [:] display the settings of event commands and indicate the position of where the flow of processes will be branched. </p>
-		  <h3 class="main__title--h3--sub"> Additional Event Commands </h3>
-		  <p>Double-click the row with a [◆] to add an event command to the list. Select the event command to use in the window that appears, and define the details (excluding some parts) of the process. Double-clicking a row which already has an event command will insert the new event command in that position.</p>
-		  <h3 class="main__title--h3--sub"> Controls via the Context Menu </h3>
-		  <p>Registered event commands will be displayed using a [◆]. Right-clicking this row will cause a menu to appear where you can perform actions such as [Copy] and [Delete]. Each available action is as follows.</p>
+		    事件指令会从顶部开始按顺序处理，并且被应用到游戏内容中。已被添加的事件指令会在行的最左端有一个[◆]的标记。以[:]开头的行是它上方的事件指令的内容，或者是处理流程发生分支的位置
+      </p>
+		  <h3 class="main__title--h3--sub">添加事件指令</h3>
+		  <p>要向列表中注册一个事件指令，只需要双击有[◆]标记的行。在弹出的窗口中，选择要使用的事件指令，然后定义想要的行为和设置即可（除了一小部分）。新双击的位置已经存在事件指令时，新添加的事件指令会插入到双击的位置。</p>
+		  <h3 class="main__title--h3--sub">上下文菜单的操作</h3>
+		  <p>已经被注册了的事件指令有一个[◆]的标记。在这样的行上面右击会弹出一个菜单，里面有一些常用操作如[Copy]（复制）和[Delete]（删除）。这些项目的功能如下。</p>
 		  <dl class="main__dl--sub">
-			<dt>New</dt>
-				<dd>Inserts a new event command at the selected position.</dd>
+			<dt>New（新建）</dt>
+				<dd>在选择的指令的上一行插入一条新的事件指令</dd>
 
-				<dt>Edit</dt>
-				<dd>Re-edit the settings of the event command in the row that is selected.</dd>
+				<dt>Edit（编辑）</dt>
+				<dd>编辑选中的事件指令。</dd>
 
-				<dt>Cut</dt>
-				<dd>Copies the contents of the selected row to the clipboard and deletes it from the list.</dd>
+				<dt>Cut（剪切）</dt>
+				<dd>把当前的事件指令复制到剪贴板并删除。</dd>
 
-				<dt>Copy</dt>
-				<dd>Copies the contents of the selected row to the clipboard.</dd>
+				<dt>Copy（复制）</dt>
+				<dd>把当前的事件指令复制到剪贴板。</dd>
 
-				<dt>Paste</dt>
-				<dd>Inserts the contents of the clipboard to the row that is selected.</dd>
+				<dt>Paste（粘贴）</dt>
+				<dd>把剪贴板中的内容插入到选择的位置。</dd>
 
-				<dt>Delete</dt>
-				<dd>Delete the event command in the row that is selected.</dd>
+				<dt>Delete（删除）</dt>
+				<dd>删除所选的事件指令。</dd>
 
-				<dt>Select All</dt>
-				<dd>Selects everything in the list as items to be edited. </dd>
+				<dt>Select All（全选）</dt>
+				<dd>将列表中的所有事件指令全部选中。</dd>
 
-				<dt>Test</dt>
-				<dd>Tests the selected event in the game screen.</dd>
+				<dt>Test（测试）</dt>
+				<dd>在游戏中测试所有选中指令</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> Selecting Multiple Items at Once </h3>
-		  <p>While having one of the rows in the list selected, clicking another row while holding down the [Shift] key will select all the event commands (blocks that have a [◆]) within that range. Right-clicking those items selected (highlighted in blue) will allow you to perform actions to all the items via a context menu. However, you can only select the items which are in the same branch when including branch processes.</p>
+		  <h3 class="main__title--h3--sub">选择多行指令</h3>
+		  <p>单击选中开始的那一行，然后按住[Shift]键单击结束的那一行。这样在这两行之间的所有带[◆]标记的指令都会被选中。在选中的事件指令（会变成蓝色）上右键就可以弹出一个上下文菜单，你可以在里面选择一些操作，这些操作会影响所有被选中的指令。值得注意的是，如果选择的指令在一个分支中，只有处于同一个分支的指令才能用这种方式选中。</p>
 		</div><!-- /main__section -->
 
 	</div><!-- /main -->
