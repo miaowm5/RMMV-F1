@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>输出格式</title>
+	<title>Output Formats</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,55 +10,52 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v06">输出格式</h1>
+	  <h1 class="main__title--h1 main__title--h1--v06">Output Formats</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li>资料集</li>
+		  <li>Documentation</li>
 		  <li>&gt;</li>
-			<li>输出格式</li>
+			<li>Output Formats</li>
 	  </ul>
 
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">构建游戏发行包</h2>
+		  <h2 class="main__title--h2">Deployment</h2>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_11_04_img01.png" height="190" width="502" alt="" />
 			</div>
-		  <p>您可以为游戏构建包括 Windows、Mac OS X、安卓和 iOS 在内全部平台的发行包。</p>
+		  <p>Exports the deployment package for each platform. It is possible to output to Windows, Mac OS X, Android and iOS.</p>
 		  <dl class="main__dl">
-		    <dt>Windows平台</dt>
-				<dd> 选择打包后将导出游戏的工程文件夹。<br />
-						如果您希望将文件夹打包成单独的 .exe 文件，请参考 [<a href="01_11_07.html">使用 Enigma Virtual Box</a>] 部分。</dd>
+		    <dt>Windows</dt>
+				<dd> The exported game folder will be deployed. <br />
+Please read [<a href="01_11_07.html">Using Enigma Virtual Box</a>] when wanting to package the game folder and distribute only the .exe file. </dd>
 				<dt>Mac OS X</dt>
-				<dd> 请发布游戏的工程文件夹以及文件夹下的 Game.app 文件。<br />
-* 在 Windows 平台下 Game.app 会显示成了一个文件夹，请不用担心，它可以在 Mac OS X 下正常运行。</dd>
-				<dt>在 安卓/iOS 上运行游戏</dt>
-				<dd>请参考 [<a href="01_11_05.html">转换为安卓应用</a>] 和 [<a href="01_11_06.html">转换为 iOS 应用</a>] 部分。</dd>
-				<dt>发布到网络平台</dt>
-				<dd>将游戏文件夹上传到服务器上后您便能直接在线进行游戏。<br />
-* 游戏文件夹的位置在创建新工程或者保存工程时可以设置。<br />
-* 运行游戏并不需要 Game.rpgproject 文件和 save 文件夹，不过您上传了它们也不会有任何影响。<br />
+				<dd> Distributes the exported game folder or the Game.app file inside the game folder. <br />
+* Game.app will be displayed as a folder in a Windows environment, but you can run this as an application in a Mac OS X environment. </dd>
+				<dt>Running Your Game On Android/iOS</dt>
+				<dd>Please view [<a href="01_11_05.html">Converting to an Android App</a>] and [<a href="01_11_06.html">Converting to an iOS App</a>].</dd>
+				<dt>When Publishing on the Web</dt>
+				<dd>You can play the game in the browser by simply uploading the project folder onto a Web server.<br />
+* The project folder will be located in the location specified in "Location" when creating a new project and saving. <br />
+* The Game.rpgproject and save folder are not needed to run the game, but there will not be any issues even if you upload them.<br />
 <br />
 					<dl class="main__dl--sub">
-						<dt id="p01_01">运行游戏所需的系统要求</dt>
+						<dt id="p01_01">Gameplay System Requirements</dt>
 						<dd>
 							<table class="main__table--type01">
 								<tr>
-								<th>系统要求</th>
-								<td>
-									需要支持 HTML5 Canvas 以及 Web Audio API
-									<br />iOS 8 或更高版本
-									<br />Android 4.4 或更高版本</td>
+								<th>System Requirements</th>
+								<td>Environments which support HTML5 Canvas and Web Audio API<br />iOS 8 or higher<br />Android 4.4 or higher</td>
 								</tr>
 								<tr>
-								<th>推荐运行环境</th>
-								<td>Windows, Android: Google Chrome 浏览器<br />Mac OS X, iOS: Safari 浏览器</td>
+								<th>Recommended Environments</th>
+								<td>Windows, Android: Google Chrome <br />Mac OS X, iOS: Safari</td>
 								</tr>
 								<tr>
 									<td colspan="2">
-										* 在线进行游戏时请使用 Wi-Fi 。<br />
-										* 推荐使用支持 WebGL 的浏览器进行游戏。
+										* Please use Wi-Fi when playing using a browser on a smartphone.<br />
+										* A browser that supports WebGL is recommended for gameplay.
 									</td>
 								</tr>
 							</table>

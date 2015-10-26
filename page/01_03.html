@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>基本编辑器控制</title>
+	<title>Basic Editor Controls</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,56 +11,56 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v01">基本编辑器控制</h1>
+		<h1 class="main__title--h1 main__title--h1--v01">Basic Editor Controls</h1>
 		<ul class="breadcrumb">
 		  <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-			<li>基本编辑器控制</li>
+			<li>Basic Editor Controls</li>
 		</ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">各个窗口组件的名称和功能</h2>
-		  <p>打开工程后显示的窗口称为“主窗口”。主窗口主要用于编辑地图和事件。例如[Database]这样的工具箱就是在主窗口菜单中打开的。各个组件的功能如下。</p>
+		  <h2 class="main__title--h2">Names and Functions of Each Window Component</h2>
+		  <p>The screen which appears after opening a project is called the "Main Window". The Main Window is primarily used to edit the map and events. Tools such as the [Database] are opened from the Main Window menu. The functions of each component are as follows.</p>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_03_img01.png" width="1381" height="944" alt="" />
 			</div>
 
 			<dl class="main__dl">
-				<dt>(1) 菜单栏</dt>
-				<dd> 这个软件的可用功能可以从这里选择。</dd>
-				<dt>(2) 工具栏</dt>
-				<dd> 一些特定功能可以通过点击上面的按钮来打开。</dd>
-				<dt>(3) 图块板</dt>
-				<dd> 绘制地图的可用图块都在这里显示。你可以利用下面的标签来切换成组/区域编辑模式。</dd>
-				<dt>(4) 地图列表</dt>
-				<dd> 显示当前游戏所创建的所有地图数据的列表。</dd>
-				<dt>(5) 地图预览</dt>
-				<dd> 显示当前所选择的地图中的内容。它主要被用来绘制地图和指定事件放置的位置。</dd>
-				<dt>(6) 状态栏</dt>
-				<dd> 显示当前所选功能的详细信息，地图名和地图坐标。</dd>
+				<dt>(1) Menu Bar</dt>
+				<dd> Functions available in this software are selected from here. </dd>
+				<dt>(2) Toolbar</dt>
+				<dd> The specified function can be run from clicking its button. </dd>
+				<dt>(3) Tile Palette</dt>
+				<dd> Tilesets which can be placed on the map are displayed here. You can switch to Set/Region Editor Mode using the tabs below. </dd>
+				<dt>(4) Map List</dt>
+				<dd> A list which shows Map data included in the game currently being created. </dd>
+				<dt>(5) Map View</dt>
+				<dd> Displays the contents of the map that is currently selected. It is used for things such as editing designs and specifying placement of events. </dd>
+				<dt>(6) Status Bar</dt>
+				<dd> Displays details of the function that is currently selected, the map name and map coordinates. </dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">编辑参数</h2>
-		  <p>在使用本软件制作游戏时，制作过程的核心是在各类窗口中调节对象的可用参数，并指定像文本和道具这样的游戏内容。下面是可设定的项目以及他们的编辑方式。</p>
+		  <h2 class="main__title--h2">Editing Parameters</h2>
+		  <p>Adjusting the parameters available in the various windows of the things you want to make, and specifying things such as text and items is at the core of the creation process when creating games using this software. The different types of items you can set and how to edit them are as follows.</p>
 		  <dl class="main__dl">
-			<dt>输入文本 </dt>
-				<dd> 当你点击设置区域，"|"光标就会出现。在这种状态下使用键盘输入文本，文本会出现在光标的位置上。你也可以使用键盘上的方向键移动光标。输入文本的方式取决于你所使用的输入法。</dd>
-				<dt>输入数值 </dt>
-				<dd> 就像输入文本一样，当点击参数的区域时，"|"光标就会出现。在这种状态下使用键盘输入半角数字。通过点击设置区域右边的[∧] 和[∨]按钮，你可以增加或减少数值。</dd>
-				<dt>单选框 </dt>
-				<dd> 从多个项目中选择一项。点击[○]按钮后，中间有黑点的选项处于选中状态。</dd>
-				<dt>复选框 </dt>
-				<dd> 启用/禁用旁边所显示的参数。点击[□]按钮后，对应参数被启用。再次点击一次会撤销选中的状态。 </dd>
-				<dt>下拉列表 </dt>
-				<dd> 从列表中选择一项。你可以通过点击设置区域右侧的[∨] 箭头来打开列表。</dd>
-				<dt>列表框 </dt>
-				<dd> 在列表中显示多项设定。通过双击一个项目，你可以增添或变更窗口中的内容。</dd>
-				<dt>[...]按钮 </dt>
-				<dd> 有些项目的详细信息在另外的独立窗口中显示，这些项目的设置区域右侧会有一个[...]按钮。点击[...]按钮，并在打开的窗口中设置你的参数。</dd>
-				<dt>[OK] [Cancel] [Apply]按钮 </dt>
-				<dd> 当你要完成你所做的更改时，应该使用这些按钮。点击[OK]按钮确认更改并关闭窗口，点击[Cancel]放弃当前更改并关闭窗口，而点击[Apply]按钮则是确认更改但不关闭窗口。</dd>
+			<dt>Input Text </dt>
+				<dd> When you click on the settings field, the "|" cursor is displayed. Input text using the keyboard in this state. Text will appear at the location of the cursor. You can also move the cursor using the cursor key on the keyboard. The method for entering text differs depending on the input software (IME) you are using. </dd>
+				<dt>Input Values </dt>
+				<dd> Just as with entering text, when clicking on the parameter field, the "|" cursor is displayed. Input values using half-width characters using the keyboard in this state. By clicking on the [∧] and [∨] buttons located to the right of the settings field, you can increase or decrease the values. </dd>
+				<dt>Radio Buttons </dt>
+				<dd> Select one item from a list of multiple items. By clicking the [○], the item which contains the black dot is enabled. </dd>
+				<dt>Check Boxes </dt>
+				<dd> Enables/disables the parameter displayed next to the parameter name. By checking the [□], that parameter becomes enabled. Clicking once again removes the checkmark. </dd>
+				<dt>Pull-down List </dt>
+				<dd> Make a selection from items displayed in a list. Clicking the [∨] arrow located to the right of the settings field opens the list. </dd>
+				<dt>List Box </dt>
+				<dd> Display multiple settings in a list. You can add details and make changes in the window by double-clicking an item. </dd>
+				<dt>[...] Button </dt>
+				<dd> Details of items which have a [...] located to the right of a settings field are specified in a separate window. Click the [...] and set your parameters in the window that is displayed. </dd>
+				<dt>[OK] [Cancel] [Apply] Buttons </dt>
+				<dd> By confirming the details of the settings which you have changed, they will become effective. Clicking [OK] finalizes these settings and closes the window. Clicking [Cancel] discards all changes to items and closes the window and clicking [Apply] confirms settings without closing the window. </dd>
 			</dl>
 		</div><!-- /main__section -->
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>插件脚本规格</title>
+	<title>Plugin Specifications</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,152 +10,147 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v06">插件脚本规格</h1>
+	  <h1 class="main__title--h1 main__title--h1--v06">Plugin Specifications</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li>资料集</li>
+		  <li>Documentation</li>
 		  <li>&gt;</li>
-			<li>插件脚本规格</li>
+			<li>Plugin Specifications</li>
 	  </ul>
-	  <p>
-	  	在 RPG Maker MV 中，你可以使用 JavaScript 语言制作插件脚本。<br />
-	  	下面的内容是面向希望使用 JS 书写自己脚本的作者的。</p>
+	  <p>In RPG Maker MV, you can use JavaScript to create your own plugins. Below is information for developers regarding creating plugins.<br />
+	  The following information is for those developers who want to create original plugins using JavaScript.</p>
 	  <div class="main__section" id="p01">
 	    <h2 class="main__title--h2">Basics</h2>
 	    <ul class="main__ul">
-	      <li>作为脚本的 .js 文件应该放到 js/plugins 目录下。</li>
-	      <li>编辑器会在 js/plugins.js 文件中列出被启用的脚本以及该脚本的设置参数。</li>
-	      <li>为了防止变量命名的冲突，脚本将被封装成一个立即执行函数。</li>
-	      <li>字符编码使用 UTF-8 。</li>
+	      <li>A plugin's .js file will be placed in the js/plugins folder.</li>
+	      <li>The editor will write to the js/plugins.js file, storing the name of the plugins that will be used and their parameters.</li>
+	      <li>In order to limit the scope of variables in plugin scripts, they will all be enclosed in immediate functions.</li>
+	      <li>UTF-8 will be used for the character code.</li>
 	    </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">函数重定义</h2>
+		  <h2 class="main__title--h2">Redefining Methods</h2>
 		  <ul class="main__ul">
-		    <li>在重定义函数前，出于保险，请先将它们保存到一个变量中。</li>
-		    <li>为了防止脚本冲突，请不要大幅修改原始函数。</li>
+		    <li>Redefine the methods which you want to change the behaviors of after saving to a local variable as necessary.</li>
+		    <li>To minimize conflicts between plugins, it is best to add behaviors that are as original as possible.</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">设置参数</h2>
+		  <h2 class="main__title--h2">Parameters</h2>
 		  <ul class="main__ul">
-				<li> 脚本的说明以及其需要在编辑器中显示的设置参数可以在脚本开头以 “/*:” 开始的注释中设置。
+				<li> Descriptions for plugins and their parameters displayed in the editor are specified in comments that start with "/*:".
 <table class="main__table--type01">
 				<tr>
 					<th>@plugindesc</th>
-					<td>脚本的简单说明。</td>
+					<td>The plugin's description.</td>
 			    </tr>
 				<tr>
 					<th>@author</th>
-					<td>脚本的作者。</td>
+					<td>The plugin's author.</td>
 			    </tr>
 				<tr>
 					<th>@param</th>
-					<td>参数的名称。</td>
+					<td>Name of the parameters.</td>
 			    </tr>
 				<tr>
 					<th>@desc</th>
-					<td>参数的说明。</td>
+					<td>Description of the parameters.</td>
 			    </tr>
 				<tr>
 					<th>@default</th>
-					<td>参数的默认值。</td>
+					<td>Default values of the parameters.</td>
 			    </tr>
 				<tr>
 					<th>@help</th>
-					<td>脚本的详细说明。</td>
+					<td>A detailed description of the plugin.</td>
 			    </tr>
 			</table>
 				</li>
-				<li>使用 PluginManager.parameters() 来获取用户在编辑器中设置的参数。</li>
-				<li>所有的参数值都为字符串，因此在必要时请进行数据类型的转换。</li>
+				<li>Use PluginManager.parameters() to get the parameters specified by the editor.</li>
+				<li>All parameters will be treated as strings so convert them as necessary.</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">元数据</h2>
-		  <p>
-		  	数据库中 [Note（备注）] 区域填写的特殊内容可以作为附加数据被脚本所读取。</p>
+		  <h2 class="main__title--h2">Metadata</h2>
+		  <p>The [Note] field found in each item of the database can be used to define unique data used with each plugin.</p>
 		  <pre class="main__pre--code">
 &lt;name:data&gt;
 </pre>
-		  <p>通过上面这种方式书写的备注将自动储存到变量 “meta” 中。<br />
-		  	例如，在上面这个例子里，下面这个条件式成立（objects 代表当前读取的数据）。</p>
+		  <p> In this way, data which has been written in a fixed format will be automatically developed inside a "meta" variable by standard scripts.<br />
+		    In the case above, the following conditions will be met (objects will be treated as data). </p>
 		  <pre class="main__pre--code">
 object.meta.name === 'data'
 </pre>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">插件指令（Plugin Command）</h2>
-		  <p>
-		  	事件指令中的 插件指令（Plugin Command） 用于方便的执行插件中的某些操作。若要使用插件指令，请这样重定义 Game_Interpreter 中的 pluginCommand 函数。
-		  	</p>
+		  <h2 class="main__title--h2">Plugin Command</h2>
+		  <p>Plugin commands are used for easily defining unique event processes for plugins. When implementing these, the pluginCommand of the Game_Interpreter class will be redefined in the following way.</p>
 		  <div class="main__pre--code--wrap">
 <pre class="line-pre"><div id="file-gistfile1-js-LC1" class="line">    <span class="pl-s">var</span> _Game_Interpreter_pluginCommand <span class="pl-k">=</span>
 </div><div id="file-gistfile1-js-LC2" class="line">            Game_Interpreter.<span class="pl-sc">prototype</span>.pluginCommand;
 </div><div id="file-gistfile1-js-LC3" class="line">    <span class="pl-s3">Game_Interpreter</span>.<span class="pl-sc">prototype</span>.<span class="pl-en">pluginCommand</span> <span class="pl-k">=</span> <span class="pl-st">function</span>(<span class="pl-vpf">command</span>, <span class="pl-vpf">args</span>) {
 </div><div id="file-gistfile1-js-LC4" class="line">        _Game_Interpreter_pluginCommand.<span class="pl-s3">call</span>(<span class="pl-v">this</span>, command, args);
-</div><div id="file-gistfile1-js-LC5" class="line">        <span class="pl-c">// 在这里插入额外的内容</span>
+</div><div id="file-gistfile1-js-LC5" class="line">        <span class="pl-c">// insert additional processing details here</span>
 </div><div id="file-gistfile1-js-LC6" class="line">    };
 </div></pre>
 </div>
-		  <p>用户通过插件指令输入的内容将作为名为 command 和 args 的参数传入该函数，command 是一个字符串，args 则是一个由字符串组成的数组。例如，当用户输入“MyPlugin clear”时，下面的语句将会执行。</p>
+		  <p> The contents of the plugin commands called by the user will pass through the function command and args methods. Commands will be strings, and args will be an array of strings. For example, when evaluating whether or not the user has entered in "MyPlugin clear", the following will occur. </p>
 		  <div class="main__pre--code--wrap">
 <pre class="line-pre"><div id="file-gistfile1-js-LC1" class="line">        <span class="pl-k">if</span> (command <span class="pl-k">===</span> <span class="pl-s1"><span class="pl-pds">'</span>MyPlugin<span class="pl-pds">'</span></span> <span class="pl-k">&amp;&amp;</span> args[<span class="pl-c1">0</span>] <span class="pl-k">===</span> <span class="pl-s1"><span class="pl-pds">'</span>clear<span class="pl-pds">'</span></span>) {
 </div><div id="file-gistfile1-js-LC2" class="line">        }
 </div></pre>
 </div>
-		  <p>和脚本的设置参数一样，由于传入的参数都是字符串，需要时请进行转换。</p>
+		  <p>Just like the parameters for a plugin, everything will be passed as a string to convert them as necessary.</p>
 	  </div><!-- /main__section -->
 
 		<div class="main__section" id="p06">
-		  <h2 class="main__title--h2">多语言支持</h2>
-		  <p>
-		  	在注释开头插入“/*:”加上下面的语言代码可以将注释内容标注为相应的语言。例如，将代码标注为日语的注释就是：“/*:ja”。被标注为对应语言的代码只会在对应语言版本的RM编辑器中生效。未标注语言的部分（通常为英语）则作为默认语言显示。</p>
+		  <h2 class="main__title--h2">Multi-language Support</h2>
+		  <p>You can specify the language code following the "/*:" in the beginning of the comment block. This will become "/*:ja" when setting this to Japanese. Comment blocks with a language code specified will only be used in that language's editor environment, the unlabeled part (normally English) will be used when a language is not supported.</p>
 		  <table class="main__table--type01">
 				<tr>
-					<th>语言代码</th>
-					<th>语言</th>
+					<th>Codes</th>
+					<th>Language</th>
 				</tr>
 				<tr>
 					<td>ja</td>
-					<td>日语</td>
+					<td>Japanese</td>
 				</tr>
 				<tr>
 					<td>fr</td>
-					<td>法语</td>
+					<td>French</td>
 				</tr>
 				<tr>
 					<td>de</td>
-					<td>德语</td>
+					<td>German</td>
 				</tr>
 				<tr>
 					<td>es</td>
-					<td>西班牙语</td>
+					<td>Spanish</td>
 				</tr>
 				<tr>
 					<td>it</td>
-					<td>意大利语</td>
+					<td>Italian</td>
 				</tr>
 				<tr>
 					<td>pt</td>
-					<td>葡萄牙语</td>
+					<td>Portuguese </td>
 				</tr>
 				<tr>
 					<td>ru</td>
-					<td>俄罗斯语</td>
+					<td>Russian</td>
 				</tr>
 				<tr>
 					<td>zh</td>
-					<td>中文</td>
+					<td>Chinese</td>
 				</tr>
 				<tr>
 					<td>ko</td>
-					<td>韩语</td>
+					<td>Korean</td>
 				</tr>
 			</table>
 		</div><!-- /main__section -->

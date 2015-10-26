@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>~ Map 类</title>
+	<title>~ Map Class</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,16 +11,16 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v07">~ Map 类</h1>
+		<h1 class="main__title--h1 main__title--h1--v07">~ Map Class</h1>
 		<ul class="breadcrumb">
-			<li>JS 库</li>
+			<li>JS Library</li>
 			<li>&gt;</li>
-			<li>~ Map 类</li>
+			<li>~ Map Class</li>
 		</ul>
-		<p>地图数据的JSON。</p>
+		<p>The JSON data structure of a map.</p>
 
 		<div class="main__section">
-			<b>属性</b>
+			<b>Properties</b>
 			<ul class="main__ul--inline"></a></li>
 			<li><a href="#p01">autoplayBgm</a></li>
 			<li><a href="#p02">autoplayBgs</a></li>
@@ -51,174 +51,174 @@
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">属性</h2>
+			<h2 class="main__title--h2">Properties</h2>
 
 			<div id="p01" class="main__subsection">
 <pre class="main__pre--code">
 autoplayBgm <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">是否自动播放BGM。</p>
+				<p class="mb10px">The "autoplay BGM" option.</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
 <pre class="main__pre--code">
 autoplayBgs <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">是否自动播放BGS。</p>
+				<p class="mb10px">The "autoplay BGS" option.</p>
 			</div><!-- /div -->
 
 			<div id="p03" class="main__subsection">
 <pre class="main__pre--code">
 battleback1Name <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">战斗背景下层图片的文件名。</p>
+				<p class="mb10px">The file name of the battle background floor image.</p>
 			</div><!-- /div -->
 
 			<div id="p04" class="main__subsection">
 <pre class="main__pre--code">
 battleback2Name <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">战斗背景上层图片的文件名。</p>
+				<p class="mb10px">The file name of the battle background wall image.</p>
 			</div><!-- /div -->
 
 			<div id="p05" class="main__subsection">
 <pre class="main__pre--code">
 bgm <span class="pre__type"><a href="03_26.html">~ AudioFile</a></span>
 </pre>
-				<p class="mb10px">地图的BGM。</p>
+				<p class="mb10px">The BGM for autoplay.</p>
 			</div><!-- /div -->
 
 			<div id="p06" class="main__subsection">
 <pre class="main__pre--code">
 bgs <span class="pre__type"><a href="03_26.html">~ AudioFile</a></span>
 </pre>
-				<p class="mb10px">地图的BGS。</p>
+				<p class="mb10px">The BGS for autoplay.</p>
 			</div><!-- /div -->
 
 			<div id="p07" class="main__subsection">
 <pre class="main__pre--code">
 data <span class="pre__type">Array</span>
 </pre>
-				<p class="mb10px">地图数据的三维数组。</p>
+				<p class="mb10px">The three-dimensional array containing the map data.</p>
 			</div><!-- /div -->
 
 			<div id="p08" class="main__subsection">
 <pre class="main__pre--code">
 disableDashing <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">是否允许跑步。</p>
+				<p class="mb10px">The "disable dashing" option.</p>
 			</div><!-- /div -->
 
 			<div id="p09" class="main__subsection">
 <pre class="main__pre--code">
 displayName <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">地图显示名称。</p>
+				<p class="mb10px">The display name.</p>
 			</div><!-- /div -->
 
 			<div id="p10" class="main__subsection">
 <pre class="main__pre--code">
 encounterList <span class="pre__type">Array</span>
 </pre>
-				<p class="mb10px">由 <a href="03_44.html">地图遇敌</a> 数据组成的数组。</p>
+				<p class="mb10px">The array of <a href="03_44.html">Encounter</a> data.</p>
 			</div><!-- /div -->
 
 			<div id="p11" class="main__subsection">
 <pre class="main__pre--code">
 encounterStep <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">遇敌平均步数。</p>
+				<p class="mb10px">The encounter steps.</p>
 			</div><!-- /div -->
 
 			<div id="p12" class="main__subsection">
 <pre class="main__pre--code">
 events <span class="pre__type">Array</span>
 </pre>
-				<p class="mb10px">由 <a href="03_37.html">事件</a> 数据组成的数组。</p>
+				<p class="mb10px">The array of <a href="03_37.html">Event</a> data.</p>
 			</div><!-- /div -->
 
 			<div id="p13" class="main__subsection">
 <pre class="main__pre--code">
 height <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">地图高度。</p>
+				<p class="mb10px">The height.</p>
 			</div><!-- /div -->
 
 			<div id="p14" class="main__subsection">
 <pre class="main__pre--code">
 note <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">地图备注。</p>
+				<p class="mb10px">The note.</p>
 			</div><!-- /div -->
 
 			<div id="p15" class="main__subsection">
 <pre class="main__pre--code">
 parallaxLoopX <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">是否开启远景图横向循环。</p>
+				<p class="mb10px">The "loop horizontally" option for the parallax background.</p>
 			</div><!-- /div -->
 
 			<div id="p16" class="main__subsection">
 <pre class="main__pre--code">
 parallaxLoopY <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">是否开启远景图纵向循环。</p>
+				<p class="mb10px">The "loop vertically" option for the parallax background.</p>
 			</div><!-- /div -->
 
 			<div id="p17" class="main__subsection">
 <pre class="main__pre--code">
 parallaxName <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">远景图的文件名。</p>
+				<p class="mb10px">The file name of the parallax background image.</p>
 			</div><!-- /div -->
 
 			<div id="p18" class="main__subsection">
 <pre class="main__pre--code">
 parallaxShow <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">远景图是否在编辑器中显示。</p>
+				<p class="mb10px">The "show in the editor" option for the parallax background.</p>
 			</div><!-- /div -->
 
 			<div id="p19" class="main__subsection">
 <pre class="main__pre--code">
 parallaxSx <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">远景图的水平滚动速度。</p>
+				<p class="mb10px">The automatic x-axis scrolling speed for the parallax background.</p>
 			</div><!-- /div -->
 
 			<div id="p20" class="main__subsection">
 <pre class="main__pre--code">
 parallaxSy <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">远景图的垂直滚动速度。</p>
+				<p class="mb10px">The automatic y-axis scrolling speed for the parallax background.</p>
 			</div><!-- /div -->
 
 			<div id="p21" class="main__subsection">
 <pre class="main__pre--code">
 scrollType <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">地图循环方式。</p>
+				<p class="mb10px">The scroll type.</p>
 			</div><!-- /div -->
 
 			<div id="p22" class="main__subsection">
 <pre class="main__pre--code">
 specifyBattleback <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">是否使用战斗背景图像。</p>
+				<p class="mb10px">The "specify battleback" option.</p>
 			</div><!-- /div -->
 
 			<div id="p23" class="main__subsection">
 <pre class="main__pre--code">
 tilesetId <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">地图使用的图块组 ID。</p>
+				<p class="mb10px">The tileset ID.</p>
 			</div><!-- /div -->
 
 			<div id="p24" class="main__subsection">
 <pre class="main__pre--code">
 width <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">地图的宽度</p>
+				<p class="mb10px">The width.</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
