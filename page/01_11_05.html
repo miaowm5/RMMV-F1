@@ -284,14 +284,14 @@ python C:\crosswalk-10.39.235.16\make_apk.py --package=com.example.sample --mani
 &gt; adb devices
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-2-1.png" width="997" height="493" alt="" /></div>
-			<p我们将使用adb命令列表里的安装指令去运行安装包进行安装。输入[adb install -r Sample_0.0.1_arm.apk]（不包括方括号），回车。至于那个"-r"命令，它的作用是当你重复安装的时候，只要安装包名是一致的，就可以直接对你的游戏进行更新。<br />若安装结束之后显示[Success]（成功）的字样，则表示你的程序已经成功安装了，接下来你就可以在你的手机上看到游戏的图标，并且可以打开它尽情地玩耍啦。.</p>
+			<p>我们将使用adb命令列表里的安装指令去运行安装包进行安装。输入[adb install -r Sample_0.0.1_arm.apk]（不包括方括号），回车。至于那个"-r"命令，它的作用是当你重复安装的时候，只要安装包名是一致的，就可以直接对你的游戏进行更新。<br />若安装结束之后显示[Success]（成功）的字样，则表示你的程序已经成功安装了，接下来你就可以在你的手机上看到游戏的图标，并且可以打开它尽情地玩耍啦。（cherikens:额……一般有手机助手之类的软件的话，你连接手机之后双击apk就行了）</p>
 <pre class="main__pre--code">
 &gt; adb install -r Sample_0.0.1_arm.apk
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-16-31-26.png" width="1920" height="1080" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">4-3-3 Installing via Internet</h3>
-			<p>To use a cloud service such as Google Drive and installing via an Internet connection, you will need to upload the apk file to a cloud service of your choice and download and install using an Android device.<br />In order to do so you will need to set permissions to allow installations from unknown sources on the Android device. Do this by navigating to [Settings] → [Security] → [Unknown sources] and set it this on.</p>
+			<h3 class="main__title--h3--sub">4-3-3 通过互联网安装</h3>
+			<p>若之前你有安装谷歌驱动，那么使用云服务通过互联网安装程序也是一种选择。你只需要把程序上传到服务器上，在用你的手机下载下来进行安装就行了。<br />不过要通过这种方式安装的话，你需要先在手机上设定未知资源的安装权限。选择[设置]→[安全]→[未知来源]，保持这个选项选中开启。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-16-54-27.png" width="720" height="1280" alt="" /></div>
 
 		</div><!-- /main__section --><div class="main__section" id="p05">
