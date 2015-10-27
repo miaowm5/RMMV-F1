@@ -240,7 +240,7 @@ C:\apache-ant-1.9.6
 				</tr>
 				<tr>
 					<td>orientation</td>
-					<td>游戏在屏幕中显示的位置，默认设置是横向显示的的。</td>
+					<td>游戏在屏幕中显示的模式，这里设置是横屏显示的（即landscape模式，竖屏为portrait模式）。</td>
 				</tr>
 				<tr>
 					<td>icons</td>
@@ -250,41 +250,41 @@ C:\apache-ant-1.9.6
 			<p>引用地址: Manifest网页应用设置: <a href="http://w3c.github.io/manifest" target="_blank">http://w3c.github.io/manifest/</a></p>
 
 			<h3 class="main__title--h3">4-2 运行封装脚本</h3>
-			<p>Inside the Android app template that you downloaded in 2-5 is a file called &quot;make_apk.py&quot; which is a script that runs the packaging process. This is used through the command prompt.<br />Open the command prompt and move to the inside of the "/Game Name/www" folder (the below game folder) found in the folder where you deployed the game. It is more convenient if you open the game folder using explorer and open the command prompt from the file menu.</p>
+			<p>之前在2-5章节下载的android模板里有个make_apk.py的文件，这是一个运行包装处理的脚本，不过你需要在cmd控制台调用它。<br/>打开cmd，在cmd内移动到 "/游戏名称/ www" 的文件夹路径下（就是之前部署游戏的文件夹）。如果你使用浏览器打开游戏文件夹并从文件菜单中打开cmd会更方便。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-1.png" height="493" width="987" alt="" /></div>
-			<p>Below is an example of running the command on the environment we have just prepared.</p>
+			<p>你可以照着下面这例子使用命令调用封装脚本来打包你的游戏（com.example.sample是这个例子中游戏的项目名称），当然，前提是你的环境部署必须完全正确。</p>
 <pre class="main__pre--code">
 python C:\crosswalk-10.39.235.16\make_apk.py --package=com.example.sample --manifest=manifest.json
 </pre>
-			<p>The packaging script is written using Python. Using Python commands, we can specify the script.</p>
+			<p>封装脚本是用Python写的，所以我们用Python命令能够调用我们指定的脚本。</p>
 			<dl class="main__dl--sub">
-				<dt>--package</dt>
-				<dd>Specifies the package name. If you have a domain of your own, feel free to use it for your game. Just like the provided example, the domain name is used in reverse with the top level domain (&quot;com&quot; in the example) and is connected using a &quot;.&quot;. Following at the end is your game&apos;s name (&quot;sample&quot; in the example&quot;). You will use the package name used here forever for this game&apos;s package so please be careful.<br /><b>* example.com is a domain that can be used temporarily. This cannot be published in the Play Store which will be explained later.</b><br />
-				<br />Domain example:<br />If the domain that you own is [example.com] and your game&apos;s name is [sample], you would write:<br />com.example.sample</dd>
-				<dt>--manifest</dt>
-				<dd>This specifies this package&apos;s manifest file. It is possible to specify things such as the game&apos;s version, icon and behavior related to the running of the game with the manifest file.</dd>
+				<dt>--安装包</dt>
+				<dd>指定包名。如果你有自己的域名，你大可以使用它做为你游戏的名字，就像我们展示的示例一样，顶级域名（即com.example.sample中的com）被放在了最前面，并使用“.”作连接符号。而在末尾的是你游戏的名字（即com.example.sample中的sample）。如果名字一旦确定就很难再做更改，所以在设定前请务必思考清楚。<br/><b>* example.com只是做临时使用的域，并不能发布在正规的app Play商店，之后我们会解释为什么。</b><br />
+				<br />域名范例:<br />比如说，你的域名是 [example.com] 然后你的游戏名字叫[sample]，那你这里就应该署上:<br />com.example.sample</dd>
+				<dt>--配置文件</dt>
+				<dd>这个指定文件 </dd>
 			</dl>
-			<p>If you run the command and the packaging finishes without an issue, a [BUILD SUCCESSFUL] message will appear.</p>
+			<p>如果你运行过程中没有任何报错，那么就会显示[BUILD SUCCESSFUL]（构建成功）这个消息。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-2.png" height="673" width="917" alt="" /></div>
-			<p>You can check that the two files, &quot;Sample_0.0.1_arm.apk&quot; and &quot;Sample_0.0.1_x86.apk&quot; have been created in the game folder. The file that contains [arm] is a package meant for the ARM architecture CPU which is a CPU widely used for implementation. This is used in the majority of Android smart phones and tablets currently in the market. The file containing [x86] is the package meant for the x86 architecture which is mainly used in computers.</p>
+			<p>你可以查看文件夹里新生成的两个新文件,一个是Sample_0.0.1_arm.apk，另一个是Sample_0.0.1_x86.apk。这个文件名包含[arm]的安装包一般是面相ARM处理器用的，这类处理器广泛地用在各种接口上，现在绝大部分的android系统的手机和市面上品牌机中都在使用它。而另外一个文件名包含[x86]的安装包则是用于x86构架的系统，也就是一般用于PC端上。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-3.png" height="627" width="832" alt="" /></div>
-			<p>If you run the packaging script again, these two apk files will be included in the package so be sure to place the files outside of the folder.</p>
+			<p>如果你再次运行打包脚本，那这两个APK文件也将包含在包中，所以一定要提前把他们放置在游戏文件夹以外的地方。</p>
 
 
-			<h3 class="main__title--h3">4-3 Installing to the Device</h3>
+			<h3 class="main__title--h3">4-3 安装到手机</h3>
 
-			<h3 class="main__title--h3--sub">4-3-1 Preparing an Android Device</h3>
-			<p>In order to be able to install a package using an USB connection, you need to enable [Developer Options] on your device.<br />In order to enable [Developer Options] go to [Settings] → [About] → [Software Information] → [More], and tap the [Build Number] text 7 times.<br /><b>*The location of the [Build Number] may vary depending on the device you are using.<br />　Ex.) [Settings] → [About Device]</b></p>
+			<h3 class="main__title--h3--sub">4-3-1 准备安装到android平台</h3>
+			<p>为了使用USB连接安装程序，你需要先启用你手机上的[Developer Options]（开发人员选项）。<br />要打开[Developer Options]你需要先进入[设置] → [关于本机] → [系统信息] → [高级选项]，然后触按[Build Number]（系统版本号）7次，然后系统会提示你已经切入开发者模式（cherikens:我不知道写F1的工作人员是用的什么手机以及什么版本的android，不过我想这里指的应该是[设置]→[开发人员选项]→[USB调试模式]）。<br /><b>*[Build number]（版本号）所在的目录取决于你手机使用的android版本，所以指不准在哪里。<br />　比如.) [设置] → [关于版本]</b></p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-15-49-26.png" width="720" height="1280" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">4-3-2 Installing Using an USB Connection</h3>
-			<p>Here we will install the package using an USB connection. If you do not have the necessary USB drivers for your Android device on your computer, you can get them using the Android SDK Manager which was introduced in 2-4-3.<br />Connect the Android device to your PC using the USB cable. Be sure to use an USB cable that can be used for transferring data, not for recharging your device.<br />When successfully connect your device to your PC, a dialog will appear on your Android device asking you if you want to enable USB debugging so be sure to enable this.<br />
-				<br />Enter &quot;adb devices&quot; into the command prompt and press the Enter key. If you have managed to connect the device, the device&apos;s name will appear.</p>
+			<h3 class="main__title--h3--sub">4-3-2 使用USB连接安装</h3>
+			<p>在这里，我们将安装使用USB连接并安装程序。如果你电脑上没有必要的USB驱动程序，你可以使用Android SDK管理器来下载并安装它，之前我们在2-4-3章节里提到的那个。<br />用USB连接线连接你的手机和电脑，确保这根连接线能够在你手机和电脑之间传输数据，而不是拿来充电。<br />当你连接成功之后，手机上会跳出一个对话框，提示你是否确认进入USB连接模式。<br />
+				<br />打开cmd控制台输入adb devices，回车。 如果你正确连接到手机端，那cmd上就会显示硬件的名称。</p>
 <pre class="main__pre--code">
 &gt; adb devices
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-2-1.png" width="997" height="493" alt="" /></div>
-			<p>We will use the &quot;install&quot; option from the adb commands to install the package. Enter &quot;adb install -r Sample_0.0.1_arm.apk&quot; and press the Enter key. The &quot;-r&quot; option is an option used for reinstalling but if the name of the package is the same, you can update the game.<br />[Success] will be displayed once you&apos;ve successfully installed the package. You will be able to run the game located in the list of applications on your device.</p>
+			<p我们将使用adb命令列表里的安装指令去运行安装包进行安装。输入[adb install -r Sample_0.0.1_arm.apk]（不包括方括号），回车。至于那个"-r"命令，它的作用是当你重复安装的时候，只要安装包名是一致的，就可以直接对你的游戏进行更新。<br />若安装结束之后显示[Success]（成功）的字样，则表示你的程序已经成功安装了，接下来你就可以在你的手机上看到游戏的图标，并且可以打开它尽情地玩耍啦。.</p>
 <pre class="main__pre--code">
 &gt; adb install -r Sample_0.0.1_arm.apk
 </pre>
