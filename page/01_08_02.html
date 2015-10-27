@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Class Settings</title>
+	<title>职业设置</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,93 +11,93 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v03">Class Settings</h1>
+		<h1 class="main__title--h1 main__title--h1--v03">职业设置</h1>
 		<ul class="breadcrumb">
 		  <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_08.html">Database</a></li>
+		  <li><a href="01_08.html">数据库</a></li>
 		  <li>&gt;</li>
-		  <li>Class Settings</li>
+		  <li>职业设置</li>
 		</ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Role of Data</h2>
-		  <p> Class data is the collection of traits related to the abilities of actors. Actors must belong to a class, and things such as the way that an actor levels up, how their ability points increase, and the skills they can acquire are determined based on those parameters. It is also possible to give actors unique class traits. </p>
+		  <h2 class="main__title--h2">数据的作用</h2>
+		  <p> 职业数据是有关角色能力特性的集合。你必须为每一个角色指定一个职业，然后通过改变各项参数来调节角色升级的方式，能力值的增长方式，升级所学会的技能等。你还可以为角色赋予职业特性。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-			<h2 class="main__title--h2">Parameters</h2>
+			<h2 class="main__title--h2">参数</h2>
 			<div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_02_img01.png" width="769" height="631" alt="" />
 			</div>
 
 			<dl class="main--dl">
 				<h3 class="main__title--h3--sub">
-					Name
+					Name(名称)
 				</h3>
-				<p>Name of the Class. The class will be displayed in places such as on the Menu Screen and upper part of the Status List Screen.</p>
+				<p>职业的名称。它会被显示在菜单画面和状态画面的上半部分。</p>
 
-				<h3 class="main__title--h3--sub">EXP Curve</h3>
-				<p>Parameters for determining the EXP which is required for leveling up. When an actor acquires the needed amount of EXP for each level, that actor's level will increase 1 level and their Skill Points will increase and they will acquire new skills. <br />
+				<h3 class="main__title--h3--sub">EXP Curve(经验曲线)</h3>
+				<p>决定升级所需 EXP 的参数。当角色的经验达到升级所需经验时，角色的等级会提升 1 级，并且会获得技能点，学会新的技能。<br />
 					<br />
-					The EXP required is set based on the below 4 values in the window that is displayed when you click the [...] in the settings column. The EXP required for each level will be displayed in a list, and a graph will be displayed in the background in the [To Next Level] tab. It's a good idea to refer to this while setting your parameters. The total amount of EXP until reaching each next level can be viewed in the [Total] tab.
+					升级所需 EXP 由下面 4 个数值所决定。当你在设置区域点击[...]按钮时，会出现这四个数值的设置窗口。升级所需 EXP 会显示在一个列表当中，相应的图标也会作为[To Next Level(下一级所需经验)]标签的背景出现。当设置 EXP 参数时，参考此图表是个不错的做法。升级到下一级的累计 EXP 可以在[Total(总计)]标签里找到。
 				</p>
 				<div class="al-c mb20px">
 					<img src="../inc/img/01_08_02_img02.png" width="582" height="551" alt="" />
 				</div>
 				<dl class="main__dl--sub">
-					<dt>Base Value </dt>
-					<dd>The standard value for calculating necessary EXP. By lowering this value, the overall necessary EXP will decrease.</dd>
-					<dt>Extra Value </dt>
-					<dd>The designated value added to necessary EXP for each level.</dd>
-					<dt>Acceleration A </dt>
-					<dd>Adjust the rate at which to increase the necessary EXP. By setting this value higher, the amount of necessary EXP will increase proportionately according to the increase in level.</dd>
-					<dt>Acceleration B</dt>
-					<dd>Adjust the rate at which to increase the necessary EXP. By setting this value higher, the rate of increase of necessary EXP will become larger primarily at higher levels.</dd>
+					<dt>Base Value(基础值) </dt>
+					<dd>计算所需 EXP 的基本值。降低此数值时，全局的所需 EXP 数值都会减少。</dd>
+					<dt>Extra Value(增加值) </dt>
+					<dd>指定每提升 1 级所需 EXP 的增加值。</dd>
+					<dt>Acceleration A(加速度 A) </dt>
+					<dd>调节所需 EXP 增长的速度。增加此值时，每一级升级所需 EXP 会成比例增长。</dd>
+					<dt>Acceleration B(加速度 B)</dt>
+					<dd>调节所需 EXP 增长的速度。增加此值时，高等级时升级所需 EXP 的增长速率会变大。</dd>
 				</dl>
 
 				<h3 class="main__title--h3--sub">
-					Parameter Curves
+					Parameter Curves(参数曲线)
 				</h3>
-				<p> The parameters for trait values for each level. The Parameter Settings window will open when you double-click a graph. Please refer to the [<a href="#p01">Setting Parameter Curves</a>] mentioned later to learn how to set parameters.</p>
+				<p> 每一级所对应属性值的详细参数。当你双击图表时，参数设置窗口就会打开。如何设置参数请参考后面提到的[<a href="#p01">设置参数曲线</a>]。</p>
 
 				<h3 class="main__title--h3--sub">
-					Skills
+					Skills(技能)
 				</h3>
-				<p> Skills that an actor gets upon leveling up. Set the levels and skills acquired in the window that is displayed when double-clicking in a column.</p>
+				<p> 角色升级时自动学会的技能。设置的方法为在窗口中双击一列数据，然后设置等级和学会的技能。</p>
 
 				<h3 class="main__title--h3--sub">
-					Traits
+					Traits(特性)
 				</h3>
-				<p> Traits which you give to actors set to this class. For more information please refer to [<a href="01_08_15.html">How to Set Traits</a>].</p>
+				<p> 属于这个职业的角色的特性。详情请参考[<a href="01_08_15.html">如何设置特性</a>]。</p>
 
 				<h3 class="main__title--h3--sub">
-					Note
+					Note(备注)
 				</h3>
-				<p> The [Note] section can be used to make notes while making your game.</p>
+				<p> [Note(备注)]被用来在制作游戏的过程当中作备注。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-			<h2 class="main__title--h2" id="p01"> Setting Parameter Curves
+			<h2 class="main__title--h2" id="p01"> 设置参数曲线
 </h2>
-			<p>In the [Parameter Curves] window, parameter values for each level are set based on the items below. By clicking the tab with the parameter's name, you can switch to the parameter that you want to edit. The value that you specify will be reflected when you click [OK] after you finish editing (changes will be abandoned when you press [Cancel]).</p>
+			<p>在[Parameter Curves(参数曲线)]窗口当中，每个等级的参数值可以基于以下的方法进行设定。要切换要编辑的参数，直接点击带有该参数名称的标签即可。当你完成编辑后，点击[OK]，你设置的数值就会被保存(当按下[Cancel(取消)]键时会放弃本次更改)。</p>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_08_02_img03.png" width="632" height="489" alt="" />
 			</div>
 
 			<dl class="main__dl">
-				<dt>Quick Settings</dt>
-				<dd>The values set previously will be applied to the parameter values for all levels. There are 5 types of patterns listed [A] through [E], and each pattern will be applied by clicking that pattern's button.</dd>
-				<dt>Level/Value </dt>
-				<dd>Directly edit the parameters for each level. After specifying the level (1 to 99) you wish to edit in the [Level] box, specify the value (Max HP and Max MP can be set from 1 to 9999, all others from 1 to 999) for that level in the [Value] box.</dd>
-				<dt>Generate Curve </dt>
-				<dd>The values of levels will be calculated automatically based on the values at level 1 and level 99. <br />
+				<dt>Quick Settings(快速设置)</dt>
+				<dd>此功能会将各个等级的参数值设置为软件事先指定的数值。总共有 5 个级别，分别为 [A] ~ [E]，点击对应的按钮之后该级别的数据就会被自动设置。</dd>
+				<dt>Level/Value(等级/数值) </dt>
+				<dd>直接为每个等级编辑参数。操作方法为先在[Level(等级)]输入框指定你要设置的等级(1 ~ 99)，然后在[Value(数值)]输入框指定当前等级对应的参数(最大 HP 和 最大 MP 的范围为 1 ~ 9999，其他参数为 1 ~ 999)。</dd>
+				<dt>Generate Curve(生成曲线) </dt>
+				<dd>可以由 1 级和 99 级的数据自动计算所有等级所对应的参数值。<br />
                   <br />
-Define the values (Max HP and Max MP can be set from 1 to 9999, all others from 1 to 999) at [Level 1] and [Level 99] in the window that appears when the [Generate Curve] button is clicked. <br />
+点击[Generate Curve(生成曲线)]后，首先在显示的窗口中定义[1 级]和[99 级]的数值(最大 HP 和 最大 MP 的范围为 1 ~ 9999，其他参数为 1 ~ 999)。 <br />
 <br />
-Next, decide the Growth Type using the slider. The rate of growth (the amount at which parameter values increase) when set to the left (Fast) will become lower when leveling up, and will become higher when set to the right (Slow). When you click [OK], parameters will be set based on what was specified.</dd>
-				<dt>Graph</dt>
-				<dd>The parameter values for each level will be displayed in a bar graph. By clicking or dragging within the displayed area, you can get the value for parameters for level in the location clicked.</dd>
+然后，利用滑块决定增长类型。当滑块偏左(早熟)时，增长的速率(参数增长的数量)会随着级别的升高而减慢，当滑块偏右(晚熟)时，增长的速率会随着级别的升高而加快。点击[OK]后，参数会按照你指定的内容进行设置。</dd>
+				<dt>Graph(图表)</dt>
+				<dd>每个等级的参数值会显示在一个条形图中。直接在图表的显示区域上点击或拖动鼠标，你就可以设置对应等级的参数值。</dd>
 			</dl>
 
 		</div><!-- /main__section -->
