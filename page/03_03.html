@@ -59,7 +59,7 @@ Html5Audio ()
 <pre class="main__pre--code">
 addLoadListener ( listner ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">添加一个音频文件读取成功后执行的回调函数。</p>
+				<p class="mb10px">添加一个回调函数，当音频文件被加载时调用该函数。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -67,7 +67,7 @@ addLoadListener ( listner ) <span class="pre__static">[static]</span>
 							<code class="param-name">listner</code>
 							<span class="type">Function</span>
 							<div class="param-description">
-								<p>需要回调的函数</p>
+								<p>回调函数</p>
 							</div>
 						</li>
 					</ul>
@@ -85,7 +85,7 @@ clear () <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 fadeIn ( duration ) <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">淡入声音。</p>
+				<p class="mb10px">淡入音频。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -93,7 +93,7 @@ fadeIn ( duration ) <span class="pre__static">[static]</span>
 							<code class="param-name">duration</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>淡入的秒数。</p>
+								<p>淡入的时间（秒）</p>
 							</div>
 						</li>
 					</ul>
@@ -112,7 +112,7 @@ fadeOut ( duration ) <span class="pre__static">[static]</span>
 							<code class="param-name">duration</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>淡出的秒数。</p>
+								<p>淡出的时间（秒）</p>
 							</div>
 						</li>
 					</ul>
@@ -127,7 +127,7 @@ initialize () <span class="pre__type">Boolean</span> <span class="pre__static">[
 				<div class="params">
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若音频系统可以使用，返回 True 。</p>
+					若音频系统可以使用，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -135,11 +135,11 @@ initialize () <span class="pre__type">Boolean</span> <span class="pre__static">[
 <pre class="main__pre--code">
 isError () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">检查载入是否出错。</p>
+				<p class="mb10px">检测载入是否出错。</p>
 				<div class="params">
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若载入时出现错误，返回 True 。</p>
+					若载入时出现错误，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -147,11 +147,11 @@ isError () <span class="pre__type">Boolean</span> <span class="pre__static">[sta
 <pre class="main__pre--code">
 isPlaying () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">检查音频是否正在播放。</p>
+				<p class="mb10px">检测音频是否正在播放。</p>
 				<div class="params">
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若音频正在播放，返回 True 。</p>
+					若音频正在播放，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -159,11 +159,11 @@ isPlaying () <span class="pre__type">Boolean</span> <span class="pre__static">[s
 <pre class="main__pre--code">
 isReady () <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">检查音频数据是否已经可以开始播放。</p>
+				<p class="mb10px">检测音频数据是否已经可以开始播放。</p>
 				<div class="params">
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若可以开始播放，返回 True 。</p>
+					若可以开始播放，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -179,14 +179,14 @@ play ( loop , offset ) <span class="pre__static">[static]</span>
 							<code class="param-name">loop</code>
 							<span class="type">Boolean</span>
 							<div class="param-description">
-								<p>是否要循环播放。</p>
+								<p>音频是否要循环播放</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">offset</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>播放开始的秒数。</p>
+								<p>音频开始播放的位置（秒）</p>
 							</div>
 						</li>
 					</ul>
@@ -212,7 +212,7 @@ setup ( url ) <span class="pre__static">[static]</span>
 							<code class="param-name">url</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>音频文件的地址。</p>
+								<p>音频文件的地址</p>
 							</div>
 						</li>
 					</ul>
@@ -242,7 +242,7 @@ url <span class="pre__type">String</span>
 <pre class="main__pre--code">
 volume <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">声音的音量。</p>
+				<p class="mb10px">音频的音量。</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
