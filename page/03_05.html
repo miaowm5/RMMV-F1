@@ -17,7 +17,7 @@
 			<li>&gt;</li>
 			<li>JsExtensions 类</li>
 		</ul>
-		<p>这并不是一个类，而是一系列对标准 Javascript 的扩展方法。</p>
+		<p>JsExtensions 并不是一个类，而是一系列对标准 Javascript 的扩展方法。</p>
 
 
 		<div class="main__section">
@@ -42,11 +42,11 @@
 <pre class="main__pre--code">
 Array.prototype.clone () <span class="pre__type">Array</span>
 </pre>
-				<p class="mb10px">浅复制指定数组。</p>
+				<p class="mb10px">浅拷贝指定数组。</p>
 				<div class="params">
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Array:</span> <br />
-					浅复制后的数组对象。</p>
+					该数组对象的一个浅拷贝</p>
 				</div>
 			</div><!-- /div -->
 
@@ -54,7 +54,7 @@ Array.prototype.clone () <span class="pre__type">Array</span>
 <pre class="main__pre--code">
 Array.prototype.contains ( element ) <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">检查数组中是否包含指定元素。</p>
+				<p class="mb10px">检测数组中是否包含指定元素。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -62,13 +62,13 @@ Array.prototype.contains ( element ) <span class="pre__type">Boolean</span>
 							<code class="param-name">element</code>
 							<span class="type">Any</span>
 							<div class="param-description">
-								<p>需要检查的元素</p>
+								<p>待检测的元素</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若数组中包含指定元素，返回 True</p>
+					若数组中包含指定元素，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -76,7 +76,7 @@ Array.prototype.contains ( element ) <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 Array.prototype.equals ( array ) <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">对比两个数组是否相等。</p>
+				<p class="mb10px">比较两个数组是否相等。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -84,13 +84,13 @@ Array.prototype.equals ( array ) <span class="pre__type">Boolean</span>
 							<code class="param-name">array</code>
 							<span class="type">Any</span>
 							<div class="param-description">
-								<p>需要对比的数组</p>
+								<p>需要进行比较的数组</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若数组相等，返回 True </p>
+					若两个数组相等，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -98,7 +98,7 @@ Array.prototype.equals ( array ) <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 Math.randomInt ( max ) <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">随机生成一个在 0～max-1 区间的整数。</p>
+				<p class="mb10px">随机生成一个介于 0 到 max-1 之间的整数。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -120,7 +120,7 @@ Math.randomInt ( max ) <span class="pre__type">Number</span> <span class="pre__s
 <pre class="main__pre--code">
 Number.prototype.clamp ( min , max ) <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">返回指定范围中的值。</p>
+				<p class="mb10px">返回一个大小不超出指定范围的数字值。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -128,20 +128,20 @@ Number.prototype.clamp ( min , max ) <span class="pre__type">Number</span>
 							<code class="param-name">min</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>最小值</p>
+								<p>指定范围的下限</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">max</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>最大值</p>
+								<p>指定范围的上限</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Number:</span> <br />
-					在最大值和最小值之间的值</p>
+					大小不超出指定范围的值</p>
 				</div>
 			</div><!-- /div -->
 
@@ -171,7 +171,7 @@ Number.prototype.mod ( n ) <span class="pre__type">Number</span>
 <pre class="main__pre--code">
 Number.prototype.padZero ( length ) <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">生成以零开头的字符串。</p>
+				<p class="mb10px">将数字转换成以零开头的字符串。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -179,13 +179,13 @@ Number.prototype.padZero ( length ) <span class="pre__type">String</span>
 							<code class="param-name">length</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>字符串的长度</p>
+								<p>生成字符串的长度</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">String:</span> <br />
-					以零开头的字符串</p>
+					转换后的字符串</p>
 				</div>
 			</div><!-- /div -->
 
@@ -193,7 +193,7 @@ Number.prototype.padZero ( length ) <span class="pre__type">String</span>
 <pre class="main__pre--code">
 String.prototype.contains ( string ) <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">检查字符串中是否包含指定字符。</p>
+				<p class="mb10px">检测字符串中是否包含指定字符。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -201,13 +201,13 @@ String.prototype.contains ( string ) <span class="pre__type">Boolean</span>
 							<code class="param-name">string</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>需要检查的指定字符</p>
+								<p>待检测的指定字符</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若包含指定字符，返回 True </p>
+					若字符串中包含指定字符，返回 true </p>
 				</div>
 			</div><!-- /div -->
 
@@ -215,7 +215,7 @@ String.prototype.contains ( string ) <span class="pre__type">Boolean</span>
 <pre class="main__pre--code">
 String.prototype.format ( ...args ) <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">将字符串中的 %1, %2 等内容替换成给定的内容。</p>
+				<p class="mb10px">将字符串中的 %1、 %2 等内容替换成给定的内容。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -223,7 +223,7 @@ String.prototype.format ( ...args ) <span class="pre__type">String</span>
 							<code class="param-name">...args</code>
 							<span class="type">Any</span>
 							<div class="param-description">
-								<p>需要替换的内容</p>
+								<p>需要替换的给定内容</p>
 							</div>
 						</li>
 					</ul>
@@ -237,7 +237,7 @@ String.prototype.format ( ...args ) <span class="pre__type">String</span>
 <pre class="main__pre--code">
 String.prototype.padZero ( length ) <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">生成以零开头的数字字符串。</p>
+				<p class="mb10px">将数字字符串转换成以零开头的字符串。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -245,13 +245,13 @@ String.prototype.padZero ( length ) <span class="pre__type">String</span>
 							<code class="param-name">length</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>字符串的长度</p>
+								<p>生成字符串的长度</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">String:</span> <br />
-					以零开头的字符串</p>
+					转换后的字符串</p>
 				</div>
 			</div><!-- /div -->
 
