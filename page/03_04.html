@@ -67,7 +67,7 @@ initialize () <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 isLongPressed  ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">检查某个按键是否被长时间按下。</p>
+				<p class="mb10px">检测某个按键是否正被长时间按下。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -75,13 +75,13 @@ isLongPressed  ( keyName ) <span class="pre__type">Boolean</span> <span class="p
 							<code class="param-name">keyName</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>对应按键的映射名。</p>
+								<p>待检测按键的映射名</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若按键长按则返回 True 。</p>
+					若按键正被长时间按下，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -89,7 +89,7 @@ isLongPressed  ( keyName ) <span class="pre__type">Boolean</span> <span class="p
 <pre class="main__pre--code">
 isPressed ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">检查按键是否被按下。</p>
+				<p class="mb10px">检测按键是否正被按下。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -97,13 +97,13 @@ isPressed ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__s
 							<code class="param-name">keyName</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>对应按键的映射名。</p>
+								<p>待检测按键的映射名</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若按键被按下则返回 True 。</p>
+					若按键正被按下，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -111,7 +111,7 @@ isPressed ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__s
 <pre class="main__pre--code">
 isRepeated ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">检查按键是否被重复按下。</p>
+				<p class="mb10px">检测按键是否正被重复按下。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -119,13 +119,13 @@ isRepeated ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__
 							<code class="param-name">keyName</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>对应按键的映射名。</p>
+								<p>待检测按键的映射名</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若按键被重复按下则返回 True 。</p>
+					若按键正被重复按下，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -133,7 +133,7 @@ isRepeated ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__
 <pre class="main__pre--code">
 isTriggered ( keyName ) <span class="pre__type">Boolean</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">检查按键是否刚被按下。</p>
+				<p class="mb10px">检测按键是否刚被按下。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -141,13 +141,13 @@ isTriggered ( keyName ) <span class="pre__type">Boolean</span> <span class="pre_
 							<code class="param-name">keyName</code>
 							<span class="type">String</span>
 							<div class="param-description">
-								<p>对应按键的映射名。</p>
+								<p>待检测按键的映射名</p>
 							</div>
 						</li>
 					</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Boolean:</span> <br />
-					若按键刚被按下则返回 True 。</p>
+					若按键刚被按下，返回 true</p>
 				</div>
 			</div><!-- /div -->
 
@@ -168,42 +168,42 @@ update () <span class="pre__static">[static]</span>
 <pre class="main__pre--code">
 date <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">[只读] 距离上一次按键经过的毫秒数。</p>
+				<p class="mb10px">[只读] 距离上一次按键所经过的时间（毫秒）。</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
 <pre class="main__pre--code">
 dir4 <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">[只读] 小键盘上对应四个方向的数字，无方向则为0。</p>
+				<p class="mb10px">[只读] 小键盘上与四个方向相对应的数字，无方向则为0。</p>
 			</div><!-- /div -->
 
 			<div id="p03" class="main__subsection">
 <pre class="main__pre--code">
 dir8 <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">[只读] 小键盘上对应八个方向的数字，无方向则为0。</p>
+				<p class="mb10px">[只读] 小键盘上与八个方向对应的数字，无方向则为0。</p>
 			</div><!-- /div -->
 
 			<div id="p04" class="main__subsection">
 <pre class="main__pre--code">
 gamepadMapper <span class="pre__type">Object</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">一个将手柄按键转换为按键映射名的散列表。</p>
+				<p class="mb10px">将手柄按键转换为按键映射名的散列表。</p>
 			</div><!-- /div -->
 
 			<div id="p05" class="main__subsection">
 <pre class="main__pre--code">
 keyMapper <span class="pre__type">Object</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">一个将虚拟按键转换为按键映射名的散列表。</p>
+				<p class="mb10px">将虚拟按键转换为按键映射名的散列表。</p>
 			</div><!-- /div -->
 
 			<div id="p06" class="main__subsection">
 <pre class="main__pre--code">
 keyRepeatInterval <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">重复按键状态更新间隔时间（帧)</p>
+				<p class="mb10px">更新重复按键状态的间隔时间（帧)。</p>
 
 			</div><!-- /div -->
 
@@ -211,7 +211,7 @@ keyRepeatInterval <span class="pre__type">Number</span> <span class="pre__static
 <pre class="main__pre--code">
 keyRepeatWait <span class="pre__type">Number</span> <span class="pre__static">[static]</span>
 </pre>
-				<p class="mb10px">进入长按状态前的等待时间（帧）</p>
+				<p class="mb10px">进入长按状态前的等待时间（帧）。</p>
 
 			</div><!-- /div -->
 
