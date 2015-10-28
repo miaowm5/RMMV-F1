@@ -300,34 +300,34 @@ python C:\crosswalk-10.39.235.16\make_apk.py --package=com.example.sample --mani
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-1.png" width="1024" height="673" alt="" /></div>
 			<p><b>不过很不幸的是，关于google play的事儿我们在这里不好解释太多，但是我们强烈推荐你先去阅读一下google play的各项条款和资源规定，以便为你发布带来指导。</b><br />这里我们只说明几点非常重要的事项。（cherikens:那你这个章节还介绍个鬼啦！）</p>
 
-			<h3 class="main__title--h3">5-1 注册登记App</h3>
-			<p>&quot;Signing&quot; an app refers to including proof in a package that the [Source], or in other words, you are the one that developed the game. This is similar to adding your signature to a piece of art which you have painted. Unsigned apps cannot be published on Google Play.<br />There are several ways to sign an app, but on this page we will introduce a way to sign your app using the make_apk.py script.</p>
+			<h3 class="main__title--h3">5-1 App签名</h3>
+			<p>为一个app签名在这里指将一个证明放在游戏资源里一起封装到包里，或者说，这是一种证明你有参与制作这款游戏的一种手段。用简单一点的说法就好比在你的艺术品上署名一样。没有签名的app是不能发布到google play的。<br />签名的方式有很多，这儿我们介绍一种使用 make_apk.py脚本进行签名的方法。</p>
 
-			<h3 class="mian__title--h3--sub">5-1-1 Creating a Keystore File</h3>
-			<p>A keystore file is a type of file which contains your passworded information and prevents a third party from freely using your app. Through doing this, you can guarantee that you were the one that developed your game.<br />You can manage multiple keys on the [Store] but one is enough for an Android package.<br />Furthermore, you can use the keystore file created here on the signatures of your other apps as well.<br />We will use the keytool command included in the JDK which installed when setting up your environment to create the keystore file. Below is an example of a command.</p>
+			<h3 class="mian__title--h3--sub">5-1-1 创建密钥库</h3>
+			<p>密钥库会将你的信息加密以防止第三方未经付费就盗用你的程序。通过这种手段，你才能保证这款由你开发的软件是属于你一个人的。<br />你可以密钥库里管理多个密钥，不过打包到android安装包的时候只要放一个就好了。<br />此外，你还可以用同一个密钥库为你的其他app进行签名。<br />我们将会使用到已经安装在你环境中的JDK，使用其中包含的密钥命令来创建密钥库文件，下面是个例子。</p>
 <pre class="main__pre--code">
 keytool -genkey -v -keystore sample.keystore -storepass password -alias release -keypass password -keyalg RSA -validity 10000
 </pre>
 
 			<dl class="main__dl--sub">
 				<dt>-genkey -v</dt>
-				<dd>Specifies to create a new key file.</dd>
+				<dd>指定创建新密钥文件。</dd>
 				<dt>-keystore</dt>
-				<dd>Specifies the name of the keystore file.</dd>
+				<dd>指定密钥库文件的名称。</dd>
 				<dt>-storepass</dt>
-				<dd>Specifies the password for the store. In the example, we&apos;ve used [password] but when actually creating a password, please set it to something that would be hard for a third party to figure out.</dd>
+				<dd>指定库的密码。在例子里我们直接用的[password]作为密码，但是等你真的开发完软件进行签名的时候，千万不要用这么简单的密码，以免被他人破解盗用了。</dd>
 				<dt>-alias</dt>
-				<dd>Specifies the alias of the key.</dd>
+				<dd>指定密钥昵称。</dd>
 				<dt>-keypass</dt>
-				<dd>Specifies the password of the key. In the example, we&apos;ve used [password] but when actually creating a password, please set it to something that would be hard for a third party to figure out.</dd>
+				<dd>指定密钥的密码。在例子里我们直接用的[password]作为密码，但是等你真的开发完软件进行签名的时候，千万不要用这么简单的密码，以免被他人破解盗用了。</dd>
 				<dt>-keyalg</dt>
-				<dd>Specifies a passworded algorithm (here it is RSA).</dd>
+				<dd>指定密钥库的算法。（这里默认是RSA）</dd>
 				<dt>-validity</dt>
-				<dd>Specifies the duration (in days) that the key file can be used. Set this to a long enough duration since the key file will continue to be used for things like updates.</dd>
+				<dd>指定密钥的有效期限（天数），可以把期限设置的长一些，毕竟以后还需要进行更新。</dd>
 			</dl>
-			<p>After entering in a command and pressing the Enter key, you will be prompted to input the key information.</p>
+			<p>输入完命令之后回车，接下来会提示你输入密钥信息。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-2.png" width="917" height="709" alt="" /></div>
-			<p>Please enter your own information that you have decided such as the name and organization name. Country code 81 refers to Japan.<br />If you are working in a &lt;Japanese&gt; environment, please enter  &lt;Yes&gt; when asked &lt;Are you sure?&gt;.<br />A keystore file with the name &quot;sample.keystore&quot; will be created in the folder you opened using the command prompt.</p>
+			<p>输入你事先想好的信息，比如说名字，单位，国家。这里的国家代码81指的是日本。<br />如果你系统的设定是在日语的环境下，那当它提示你是否确定是，你就可以选择yes了。（BTW:中国代码是86）<br />之后一个文件名为“sample.keystore”的密钥库文件就会在你所在的文件夹里被创建出来。</p>
 
 
 			<h3 class="mian__title--h3--sub">5-1-2 Packaging Using a Keystore File</h3>
