@@ -20,9 +20,9 @@
 
 		<div class="main__section" id="p01">
 			<h2 class="main__title--h2">1 概述</h2>
-			<p>从这个版本开始，使用RPG Maker MV做的游戏可以在那些支持HTML5(包括例如WebGL &amp; 2DCanvas, WebAudio and JavaScript)的浏览器上直接运行。 同时也可以进一步支持那些最近基于HTML5为Android平台开发的浏览器，大家可以在这些浏览器上直接运行由RPG Maker制作的游戏。<br />
+			<p>从这个版本开始，使用RPG Maker MV做的游戏可以在那些支持HTML5（包括例如WebGL &amp; 2DCanvas, WebAudio and JavaScript）的浏览器上直接运行。 同时也可以进一步支持那些最近基于HTML5为Android平台开发的浏览器，大家可以在这些浏览器上直接运行由RPG Maker制作的游戏。<br />
 				<br />不过与其向大家解释如何在浏览器上玩RM游戏，不如直接让我们向大家说明一下如何将你的游戏制作成Android平台的App. 本质上来说，在Android本地运行一个利用HTML5开发的游戏，与在Android平台上用一个支持HTML5的浏览器上跑一个使用RM做的游戏性质是一样的. 我们称这种能够在手机网页上运行的程序为 &quot;Hybrid App&quot;，并且从事实上看，这种跨平台的技术确实已经越来越流行了.<br />
-				<br />在浏览器内，可以处理显示与声音的内置Android引擎（WebView）会将游戏打包成应用。然而，浏览器内置的网络视图引擎（Android WebView）加载HTML5的效率并不高。为此，我们将介绍一个名为Crosswalk Project的技术，这项技术使用在给予它使用在Chrome的浏览器上，并且对HTML5有着高效率的支持。如果想对Crosswalk Project这项技术有更进一步的了解，你可以尝试查看这个网站。 ([<a href="https://crosswalk-project.org/documentation/android.html" target="_blank">Crosswalk Project on Android</a>]).</p>
+				<br />在浏览器内，可以处理显示与声音的内置Android引擎（WebView）会将游戏打包成应用。然而，浏览器内置的网络视图引擎（Android WebView）加载HTML5的效率并不高。为此，我们将介绍一个名为Crosswalk Project的技术，这项技术使用在给予它使用在Chrome的浏览器上，并且对HTML5有着高效率的支持。如果想对Crosswalk Project这项技术有更进一步的了解，你可以尝试查看这个网站。 （[<a href="https://crosswalk-project.org/documentation/android.html" target="_blank">Crosswalk Project on Android</a>]）.</p>
 			<h3 class="main__title--h3--sub">操作系统 </h3>
 			<p>推荐在window8.1或者mac系统 OS X 10.10以上的操作环境下运行。此外，执行程序的计算机将充当主机的功能。</p>
 		</div><!-- /main__section --><div class="main__section" id="p02">
@@ -41,14 +41,14 @@
 			<h3 class="main__title--h3--sub">2-1-2 Path 的设定与检测</h3>
 			<p>将Python的安装路径添加到环境设置里的路径里，这样能使Python命令更容易被调用。<br />右键点击我的电脑，选择高级系统设置</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-8.png" height="613" width="874" alt="" /></div>
-			<p>点击环境变量. 选择[Path]变量，对就是图中Variables下面那个(在你电脑下并不一定是Variables下面那个)，然后点击编辑按钮。</p>
+			<p>点击环境变量. 选择[Path]变量，对就是图中Variables下面那个（在你电脑下并不一定是Variables下面那个），然后点击编辑按钮。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-9.png" height="613" width="874" alt="" /></div>
-			<p>修改变量，在最末尾的地方添加[;C:\Python34\](不包括方括号)，点确定。</p>
+			<p>修改变量，在最末尾的地方添加[;C:\Python34\]（不包括方括号），点确定。</p>
 <pre class="main__pre--code">
 ;C:\Python34\
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-10.png" height="613" width="874" alt="" /></div>
-			<p>确定你设置路径无误之后，你可以点击开始菜单，搜索cmd，运行，弹出控制台。(如果你用的win8系统，你可以打开c盘的浏览器，并且选择打开cmd)</p>
+			<p>确定你设置路径无误之后，你可以点击开始菜单，搜索cmd，运行，弹出控制台。（如果你用的win8系统，你可以打开c盘的浏览器，并且选择打开cmd）</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-11.png" height="627" width="832" alt="" /></div>
 			<p>在控制台里输入python --version并回车。如果你看到你的控制台显示出来的画面和我们下面的图片是一样的话，就表示你python环境已经搭建完成啦。</p>
 <pre class="main__pre--code">
@@ -62,7 +62,7 @@
 			<h3 class="main__title--h3--sub">2-2-1 下载并安装 JDK</h3>
 			<p>你可以从这里下载JDK安装包 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>. 最新的版本是2015年9月发布的Java SE 8u51。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-13.png" height="673" width="1024" alt="" /></div>
-			<p>注意，JDK有64位和32位两个版本，分别对应你当前的操作系统[64-bit (Windows x64) and 32-bit (Windows x86)]，请务必确保你下载的JDK与你的操作系统相对应。 <br />在顶部选择"Accept License Agreement"(接受许可协议)按钮。</p>
+			<p>注意，JDK有64位和32位两个版本，分别对应你当前的操作系统[64-bit （Windows x64） and 32-bit （Windows x86）]，请务必确保你下载的JDK与你的操作系统相对应。 <br />在顶部选择"Accept License Agreement"（接受许可协议）按钮。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-14.png" height="673" width="1024" alt="" /></div>
 			<p>直接运行下载下来的安装文件，不需要做任何选择。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-15.png" height="393" width="514" alt="" /></div>
@@ -74,7 +74,7 @@ JAVA_HOME
 C:\Program Files\Java\jdk1.8.0_51
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-17.png" height="611" width="874" alt="" /></div>
-			<p>同样，点击确定之后，继续选择PATH路径，在PATH的末尾加入[;%JAVA_HOME%\bin\](不包括方括号) ，点击确定。</p>
+			<p>同样，点击确定之后，继续选择PATH路径，在PATH的末尾加入[;%JAVA_HOME%\bin\]（不包括方括号） ，点击确定。</p>
 <pre class="main__pre--code">
 ;%JAVA_HOME%\bin\
 </pre>
@@ -101,7 +101,7 @@ ANT_HOME
 C:\apache-ant-1.9.6
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-3.png" height="611" width="874" alt="" /></div>
-			<p>同样，继续选择PATH变量，编辑，在路径最末尾输入[;%ANT_HOME%\bin\](不包括方括号)，点击确定。</p>
+			<p>同样，继续选择PATH变量，编辑，在路径最末尾输入[;%ANT_HOME%\bin\]（不包括方括号），点击确定。</p>
 <pre class="main__pre--code">
 ;%ANT_HOME%\bin\
 </pre>
@@ -118,22 +118,22 @@ C:\apache-ant-1.9.6
 			<h3 class="main__title--h3--sub">2-4-1 Downloading &amp; Installing Android SDK</h3>
 			<p>从这里可以下载SDK安装包 <a href="http://developer.android.com/sdk/installing/index.html" target="_blank">http://developer.android.com/sdk/installing/index.html</a>. 在这个SDK里, 你可以找到[ANDROID STUDIO]，也就是开发Android程序的工具。 然而我们并不会使用到它，这里我们需要用的是一个叫[STAND-ALONE SDK TOOLS]的工具。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-1.png" height="673" width="1024" alt="" /></div>
-			<p>选择[STAND-ALONE SDK TOOLS] 点击并下载[Download the SDK now](下载SDK)。最新版本的SDK是2015年8月发布的r24.3.3版，你可以选择Windows或者OS X版本，点击下载exe安装文件。</p>
+			<p>选择[STAND-ALONE SDK TOOLS] 点击并下载[Download the SDK now]（下载SDK）。最新版本的SDK是2015年8月发布的r24.3.3版，你可以选择Windows或者OS X版本，点击下载exe安装文件。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-2.png" height="673" width="1024" alt="" /></div>
 			<p>运行SDK安装文件。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-3.png" height="400" width="513" alt="" /></div>
-			<p>跳出安装窗口，点击下一步，选择安装的位置，直接装在C盘是一个不错的选择，方便你找到它(其实无所谓 :p)。</p>
+			<p>跳出安装窗口，点击下一步，选择安装的位置，直接装在C盘是一个不错的选择，方便你找到它（其实无所谓 :p）。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-4.png" height="400" width="513" alt="" /></div>
 
 			<h3 class="main__title--h3--sub">2-4-2 下载组件和使用Android SDK管理器</h3>
 			<p>只有在安装程序结束之后，你才能开始下载或安装Android SDK。这里我们安装的是Android SDK Manger，即Android SDK的管理工具，我们可以使用它安装一些其他的组件比如Android平台工具。你可以在开始菜单里找到Android SDK Manger。<br />
-				<br />你可以通过Android SDK Manager下载连接硬件与主机的USB驱动，如果你不确定你应该下载哪一个，那么在你打开Android SDK Manager之后它会下载那些已经被选中的工具。然而，别忘了一定要选中[Android SDK platform-tools]，[Android SDK Build-tools]还有API(最新版本的API是5.1.1（API22）版本)。<br />以及，同时在[Extras](附加)文件夹选中添加 [Google USB Driver] (谷歌USB驱动，后面会解释)是个不错的选择，他可以让你直接使用USB进行安装。<br />
+				<br />你可以通过Android SDK Manager下载连接硬件与主机的USB驱动，如果你不确定你应该下载哪一个，那么在你打开Android SDK Manager之后它会下载那些已经被选中的工具。然而，别忘了一定要选中[Android SDK platform-tools]，[Android SDK Build-tools]还有API（最新版本的API是5.1.1（API22）版本）。<br />以及，同时在[Extras]（附加）文件夹选中添加 [Google USB Driver] （谷歌USB驱动，后面会解释）是个不错的选择，他可以让你直接使用USB进行安装。<br />
 			</p>
 			<ul class="main__ul">
-				<li>Android SDK platform-tools(android SDK 平台工具)</li>
-				<li>Android SDK Build-tools(android SDK 构建工具)</li>
-				<li>Android5.1.1 (API 22)</li>
-				<li>Google USB Driver(谷歌USB驱动)</li>
+				<li>Android SDK platform-tools（android SDK 平台工具）</li>
+				<li>Android SDK Build-tools（android SDK 构建工具）</li>
+				<li>Android5.1.1 （API 22）</li>
+				<li>Google USB Driver（谷歌USB驱动）</li>
 			</ul>
 			<p>*也有可能在你刚打开Android SDK Manager的时候，这些工具系统已经默认帮你选取了。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-5.png" height="500" width="700" alt="" /></div>
@@ -154,7 +154,7 @@ C:\apache-ant-1.9.6
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-7.png" height="493" width="996" alt="" /></div>
 
 			<h3 class="main__title--h3">2-5 为Crosswalk Project下载android程序模板</h3>
-			<p>部署Crosswalk Project并不需要去安装，只需要把他的压缩包下载下来并解压在任意的地方，你需要的文件例如浏览器引擎和封装脚本都在压缩包里。<br />Android程序模板则建议下载较为稳定的版本，(下载地址：<a href="https://download.01.org/crosswalk/releases/crosswalk/android/stable/" target="_blank">https://download.01.org/crosswalk/releases/crosswalk/android/stable/</a>)，虽然现在已经更新到了14.43，不过10.39.235.16 的版本比较稳定。<br />点击文件夹并开始下载 [crosswalk-10.39.235.16.zip]。</p>
+			<p>部署Crosswalk Project并不需要去安装，只需要把他的压缩包下载下来并解压在任意的地方，你需要的文件例如浏览器引擎和封装脚本都在压缩包里。<br />Android程序模板则建议下载较为稳定的版本，（下载地址：<a href="https://download.01.org/crosswalk/releases/crosswalk/android/stable/" target="_blank">https://download.01.org/crosswalk/releases/crosswalk/android/stable/</a>），虽然现在已经更新到了14.43，不过10.39.235.16 的版本比较稳定。<br />点击文件夹并开始下载 [crosswalk-10.39.235.16.zip]。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-5-1.png" height="673" width="1024" alt="" /></div>
 			<p>在这个教程里，我们直接把压缩包解压倒c盘。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-5-2.png" height="602" width="876" alt="" /></div>
