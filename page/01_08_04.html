@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Item Settings</title>
+	<title>物品设置</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,168 +10,165 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v03">Item Settings</h1>
+	  <h1 class="main__title--h1 main__title--h1--v03">物品设置</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_08.html">Database</a></li>
+		  <li><a href="01_08.html">数据库</a></li>
 		  <li>&gt;</li>
-		  <li>Item Settings</li>
+		  <li>物品设置</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Role of Data</h2>
-		  <p> Item data are those things which represent goods other than equipment. You can add effects that occur when an actor uses an item. Also, you can create items which are needed to progress the story (event contents) such as keys that open doors. </p>
+		  <h2 class="main__title--h2">数据的作用</h2>
+		  <p> 物品数据表示装备之外的道具。当角色使用物品时，你可以为其添加使用效果。此外，你可以创建推进剧情发展的关键物品(事件内容s)例如开门的钥匙。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <h2 class="main__title--h2">参数详细信息</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_04_img01.png" height="631" width="769" alt="" />
 			</div>
-		  <h3 class="main__title--h3"> General Settings </h3>
-		  <h3 class="main__title--h3--sub"> Name </h3>
-		  <p>Name of the item. If the name is long, it may not be completely displayed on the Play Screen.</p>
-		  <h3 class="main__title--h3--sub"> Icon </h3>
-		  <p>Image which appears together with the item name during gameplay. You can select an image in the [Select an Image] window that appears after double-clicking on the icon's image.</p>
-		  <h3 class="main__title--h3--sub"> Description </h3>
-		  <p>The description that appears when an item is selected in the Play Screen.</p>
-		  <h3 class="main__title--h3--sub"> Item Type </h3>
-			<p>The type of item.</p>
+		  <h3 class="main__title--h3"> 常规设置 </h3>
+		  <h3 class="main__title--h3--sub"> Name(名称) </h3>
+		  <p>物品的名称。如果物品名称太长，那么在游戏画面中可能会显示不全。</p>
+		  <h3 class="main__title--h3--sub"> Icon(图标) </h3>
+		  <p>游戏中和物品名称一同显示的图像。双击物品图标后，你可以在打开的[Select an Image(选择图像)]窗口中任意选择图标。</p>
+		  <h3 class="main__title--h3--sub"> Description(说明) </h3>
+		  <p>在游戏中，光标选中该物品时所显示的物品说明。</p>
+		  <h3 class="main__title--h3--sub"> Item Type(物品种类) </h3>
+			<p>物品的种类。</p>
 			<dl class="main__dl--sub">
-				<dt>[Key Item]</dt>
-				<dd>Displayed in a different frame from regular items in the item menu during gameplay.</dd>
-				<dt>[Hidden Item A] and [Hidden Item B] </dt>
-				<dd>These are not displayed on the item screen. These are special items that are only displayed when selecting items during events.</dd>
+				<dt>[Key Item(关键物品)]</dt>
+				<dd>区别于常规物品，在道具菜单中，关键物品会在另一个窗口中显示。</dd>
+				<dt>[Hidden Item A(隐藏物品 A)] 和 [Hidden Item B(隐藏物品 B)] </dt>
+				<dd>这些物品不会在物品画面中显示。只有在事件里选择物品的时候，这些特殊的物品才会显示。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> Price </h3>
-		  <p>This is the price of the item when purchasing it in a shop. The price when selling an item will be half of its original price. You can set it so it cannot be sold by setting this value to zero.</p>
-		  <h3 class="main__title--h3--sub"> Consumable </h3>
-		  <p>This parameter determines whether or not an item disappears after being used. If you set this to [Yes], the quantity of this item will go down by one every time it is used.</p>
-		  <h3 class="main__title--h3--sub"> Scope </h3>
-		  <p>The scope of the item's effect. You must choose one of the following.</p>
+		  <h3 class="main__title--h3--sub"> Price(价格) </h3>
+		  <p>该物品从商店买入时的价格。商品的卖出价为原始价格的一半。当价格设置为 0 时，此项物品无法卖出。</p>
+		  <h3 class="main__title--h3--sub"> Consumable(消耗) </h3>
+		  <p>这个参数决定了物品使用后是否消失。如果你设置为[Yes(是)]，每次使用时，物品的数量都会减少。</p>
+		  <h3 class="main__title--h3--sub"> Scope(使用范围) </h3>
+		  <p>物品效果的范围。你必须在如下的选项中选择一个。</p>
 		  <dl class="main__dl--sub">
-			<dt>None </dt>
-				<dd>Those items that have a scope which does not need to be specified</dd>
-				<dt>1 Enemy </dt>
-				<dd>One enemy within a group of enemies</dd>
-				<dt>All enemies </dt>
-				<dd>Entire enemy group</dd>
-				<dt>X Random Enemy </dt>
-				<dd>Randomly select number of enemies in a group (X being the number of targets)</dd>
-				<dt>1 Ally </dt>
-				<dd>One ally within a group of allies</dd>
-				<dt>All Allies </dt>
-				<dd>All allies in a group</dd>
-				<dt>1 Ally (Dead) </dt>
-				<dd>A specified ally in a group which is dead</dd>
-				<dt>All Allies (Dead) </dt>
-				<dd>All dead allies in a group</dd>
-				<dt>The User </dt>
-				<dd>The user of the item</dd>
+			<dt>None(无) </dt>
+				<dd>不需要指定使用范围的物品。</dd>
+				<dt>1 Enemy(敌单体) </dt>
+				<dd>敌人队伍中的一个敌人</dd>
+				<dt>All enemies(敌全体) </dt>
+				<dd>整个敌人队伍</dd>
+				<dt>X Random Enemy(X 个随机敌人) </dt>
+				<dd>随机选择指定数量的敌人(X 为目标数量)</dd>
+				<dt>1 Ally(己方单体) </dt>
+				<dd>队伍中的一名同伴</dd>
+				<dt>All Allies(己方全体) </dt>
+				<dd>队伍中的所有同伴</dd>
+				<dt>1 Ally (Dead)(己方阵亡单体) </dt>
+				<dd>队伍中的一名已经阵亡的同伴</dd>
+				<dt>All Allies (Dead)(己方阵亡全体) </dt>
+				<dd>队伍中所有已经阵亡的同伴</dd>
+				<dt>The User(使用者) </dt>
+				<dd>使用此技能的人</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> Occasion </h3>
-		  <p>The state in which an item can be used. Select one of the following: [Always] (possible to select both in battle and in the Menu Screen), [Battle Screen] (only selectable during battle), [Menu Screen] (only selectable in the Menu Screen), [Never].</p>
-		  <h3 class="main__title--h3"> Invocation </h3>
-		  <h3 class="main__title--h3--sub"> Speed </h3>
-		  <p>The value (between -2000 and 2000) added to an actor's Agility when using an item. Affects the action order during battle, meaning that they can be effects which are small but can be used quickly, big but take time to use.</p>
-		  <h3 class="main__title--h3--sub"> Success </h3>
-		  <p>The rate of success (0 to 100%) when using an item. The effectiveness of the target affects the actual rate of success.</p>
-		  <h3 class="main__title--h3--sub"> Repeat </h3>
-		  <p>The number of times (1 to 9 times) an effect is applied when used once.</p>
-		  <h3 class="main__title--h3--sub"> TP Gain </h3>
-		  <p>The amount of TP gained after applying an effect to a target after used successfully.</p>
-		  <h3 class="main__title--h3--sub"> Hit Type </h3>
-		  <p>Determines the type of hit.</p>
+		  <h3 class="main__title--h3--sub"> Occasion(使用场合) </h3>
+		  <p>选择物品可以被使用的场合。从如下的选项中选择一个：[Always(平时)] (可以在战斗中和菜单中使用)，[Battle Screen(战斗中)] (只能在战斗中使用)，[Menu Screen(菜单中)] (只能在菜单画面使用) 和 [Never(不能使用)]。</p>
+		  <h3 class="main__title--h3"> Invocation(使用) </h3>
+		  <h3 class="main__title--h3--sub"> Speed(速度) </h3>
+		  <p>当使用此物品时为角色(暂时)增加的速度(范围为 -2000 ~ 2000)。这会影响到战斗中的行动顺序，利用此设定可以制作威力较小但可以快速使用的物品或者是威力较大但是需要花费一定时间才能使用的物品。</p>
+		  <h3 class="main__title--h3--sub"> Success(成功率) </h3>
+		  <p>使用该物品的成功率(0 ~ 100%)。实际成功率还会受到对方有效度的影响。</p>
+		  <h3 class="main__title--h3--sub"> Repeat(重复次数) </h3>
+		  <p>物品使用一次后效果被应用的次数(1 ~ 9 次)。</p>
+		  <h3 class="main__title--h3--sub"> TP Gain(TP 获得数) </h3>
+		  <p>成功对目标使用物品后，TP 的增加值。</p>
+		  <h3 class="main__title--h3--sub"> Hit Type(击中类型) </h3>
+		  <p>决定物品的击中类型。你必须从如下的选项中选择一个。</p>
 		  <dl class="main__dl--sub">
-			<dt>Certain Hit </dt>
-				<dd>Treats the successful use of a skill as a hit. Counterattacks, Counter Magic and substitutions are ineffective.</dd>
-				<dt>Physical Attack </dt>
-				<dd>Determines the success based on the user's hit rate and the evasion rate of the target. Counterattacks and substitutions are applicable.</dd>
-				<dt>Magic Attack </dt>
-				<dd>Determines the success based on magic evasion rate of the target. Counter Magic and substitutions are applicable.</dd>
+			<dt>Certain Hit(必定击中) </dt>
+				<dd>物品成功使用就将其视为命中。反击，魔法反射和保护弱者都对该物品无效。</dd>
+				<dt>Physical Attack(物理攻击) </dt>
+				<dd>成功率由使用者的命中率和目标的回避率决定。反击和保护弱者会对该物品生效。</dd>
+				<dt>Magic Attack(魔法攻击) </dt>
+				<dd>成功率由目标的魔法回避率决定。魔法反射和保护弱者会对该物品生效。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> Animations </h3>
-		  <p>Animations that appear on the target of the item used during battle.</p>
-		  <h3 class="main__title--h3--sub"> Type </h3>
-		  <p>Effect types related to HP and MP. Select one open from 6 different types. [Damage] decreases, [Recover] increases, and [Drain] transfers (removes a small amount from target and gives to user).</p>
-		  <h3 class="main__title--h3--sub"> Element </h3>
-		  <p>The element that is assigned to an effect.</p>
-		  <h3 class="main__title--h3"> Damage </h3>
-		  <p>Specify the formula for the type of effect and the amount of effectiveness if a skill damages a target.</p>
+		  <h3 class="main__title--h3--sub"> Animations(动画) </h3>
+		  <p>战斗中出现在目标上方的动画。</p>
+		  <h3 class="main__title--h3"> Damage(伤害) </h3>
+		  <p>在物品对目标造成伤害时，指定效果的数量和此类效果的伤害公式。</p>
 		  <dl class="main__dl">
-			  <dt>Type </dt>
-				<dd>Effect types related to HP and MP. Select one open from 6 different types. [Damage] decreases, [Recover] increases, and [Drain] transfers (removes a small amount from target and gives to user).</dd>
-				<dt>Element </dt>
-				<dd>The element that is assigned to an effect.</dd>
-				<dt>Formula </dt>
-				<dd> Formula for determining the effectiveness.<br />
+			<dt>Type(种类) </dt>
+				<dd>与 HP、MP 有关的种类。从下面 6 种不同的种类的效果中选择一个。[Damage(伤害)]减少 HP/MP，[Recover(恢复)]增加 HP/MP 以及 [Drain(吸收)]转移 HP/MP (将一小部分 HP/MP 从目标转移到使用者身上)。</dd>
+				<dt>Element(属性) </dt>
+				<dd>效果的属性。</dd>
+				<dt>Formula(伤害公式) </dt>
+				<dd>决定物品效果的公式。 <br />
                   <br />
-Determine the referenced parameter using the strings below when entering a formula directly. Change "x" to "a" when referring to a value of the attacker, and "b" when referring to a value of the target. Entering "a.atk" refers to the attack power of the attacker. Additionally, you can reference the "n" variable's value by entering "v[n]". You can use the 4 basic arithmetic operator(+, -, *, /) symbols when writing your formula. <br />
+输入伤害公式时，可以直接使用下面的字符串来引用各项参数。当表示使用者时，将 "x" 改为 "a"，当表示目标时，将 "x" 改为 "b"。输入 "a.atk" 表示使用者的攻击力。此外，你可以使用 "v[n]" 来引用编号为 n 的变量。属性公式时，你可以使用基本的四则运算符号(+, -, *, /)。<br />
 <br />
-When you enter "a.atk * 4 - b.def * 2", the value for the effectiveness of an item will be calculated as "(Attacker's Attack Power x 4) - (Target's Defense x 2)".<br />
+当你输入 "a.atk * 4 - b.def * 2" 时，物品的效果值会被计算为"(攻击者的攻击力×4) - (目标的防御×2)"。 <br />
 <br />
-Also, since the effectiveness of an item can change depending on the element and defense actions, these factors will not be included in the formula.
+另一方面，由于物品的效果依赖于属性和防御，这些因素可不必出现在公式中。
 <table class="main__table--type01 mt10px">
 		  <tr>
 			  <th>x.atk</th>
-			  <td>Attack Power</td>
+			  <td>Attack Power(攻击力)</td>
 	      </tr>
 		  <tr>
 			  <th>x.def</th>
-			  <td>Defense</td>
+			  <td>Defense(防御)</td>
 	      </tr>
 		  <tr>
 			  <th>x.mat</th>
-			  <td>Magic Attack</td>
+			  <td>Magic Attack(魔法攻击力)</td>
 	      </tr>
 		  <tr>
 			  <th>x.mdf</th>
-			  <td>Magic Defense</td>
+			  <td>Magic Defense(魔法防御)</td>
 	      </tr>
 		  <tr>
 			  <th>x.agi</th>
-			  <td>Agility</td>
+			  <td>Agility(速度)</td>
 	      </tr>
 		  <tr>
 			  <th>x.luk</th>
-			  <td>Luck</td>
+			  <td>Luck(幸运)</td>
 	      </tr>
 		  <tr>
 			  <th>x.mhp</th>
-			  <td>Max HP</td>
+			  <td>Max HP(最大 HP)</td>
 	      </tr>
 		  <tr>
 			  <th>x.mmp</th>
-			  <td>Max MP</td>
+			  <td>Max MP(最大 MP)</td>
 	      </tr>
 		  <tr>
 			  <th>x.hp</th>
-			  <td>Current HP</td>
+			  <td>Current HP(当前 HP)</td>
 	      </tr>
 		  <tr>
 			  <th>x.mp</th>
-			  <td>Current MP</td>
+			  <td>Current MP(当前 MP)</td>
 	      </tr>
 		  <tr>
 			  <th>x.tp</th>
-			  <td>Current TP</td>
+			  <td>Current TP(当前 TP)</td>
 	      </tr>
 		  <tr>
 			  <th>x.level</th>
-			  <td>Level</td>
+			  <td>Level(等级)</td>
 	      </tr>
 		  </table>
+
 				</dd>
-				<dt>Variance </dt>
-				<dd>How much the effectiveness of an item varies (0 to 100%). Raise or lower the calculated effectiveness within the specified percentage. If the effectiveness is 100 and the variance is 20, the effectiveness will be a value between 80 and 120 (100±20).</dd>
-				<dt>Critical Hits </dt>
-				<dd>Specify whether or not an attack can critical or not by selecting [Yes] or [No]. When selecting [Yes], the chance of landing a critical attack will be determined based on the Critical Chance of the user and the Critical Evasion Rate of the target.</dd>
+				<dt>Variance(分散度) </dt>
+				<dd>物品效果的波动范围(0 ~ 100%)。在指定的百分比范围内提高或者降低物品的效果值。例如效果值为 100 分散度为 20，则实际的效果值会在 80 到 120 之间(100±20)。</dd>
+				<dt>Critical Hits(会心一击) </dt>
+				<dd>选择[Yes(是)]和[No(否)]来指定该物品使用后是否能造成会心一击。当选择[Yes(是)]时，产生会心一击的几率会由使用者的会心一击触发率和目标的会心一击回避率共同决定。</dd>
 			</dl>
-		  <h3 class="main__title--h3"> Effects </h3>
-		  <p>Details of effects aside from damage. These can be set in the [Effects] window that appear when double-clicking in the list. For more information, please refer to the [<a href="01_08_16.html">How to Set Effects</a>] section.</p>
-		  <h3 class="main__title--h3"> Note </h3>
-		  <p>The [Note] section can be used to make notes while making your game.</p>
+		  <h3 class="main__title--h3"> Effects(效果) </h3>
+		  <p>除伤害之外的其他效果的信息。你可以双击列表，然后在出现的[Effects(效果)]窗口中设置它们。详情请参考后面的[<a href="01_08_16.html">如何设置效果</a>]部分。</p>
+		  <h3 class="main__title--h3"> Note(备注) </h3>
+		  <p>[Note(备注)]部分由于在制作游戏时写下对物品的额外备注。</p>
 		</div><!-- /main__section -->
 
 	</div><!-- /main -->
