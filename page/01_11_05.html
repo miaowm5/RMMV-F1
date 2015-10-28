@@ -330,33 +330,33 @@ keytool -genkey -v -keystore sample.keystore -storepass password -alias release 
 			<p>输入你事先想好的信息，比如说名字，单位，国家。这里的国家代码81指的是日本。<br />如果你系统的设定是在日语的环境下，那当它提示你是否确定是，你就可以选择yes了。（BTW:中国代码是86）<br />之后一个文件名为“sample.keystore”的密钥库文件就会在你所在的文件夹里被创建出来。</p>
 
 
-			<h3 class="mian__title--h3--sub">5-1-2 Packaging Using a Keystore File</h3>
-			<p>We&apos;ll use an additional option when running the packaging script mentioned in 4-1 to specify a keystore file for signing the package. Below is an example of using that additional option.</p>
+			<h3 class="mian__title--h3--sub">5-1-2 使用密钥库进行封装</h3>
+			<p>4-1的时候我们曾提到过一个封装脚本，这里我们会使用一些附加选项来指定密钥库进行签名。下面是使用附加选项的例子。</p>
 <pre class="main__pre--code">
 python C:\crosswalk-10.39.235.16\make_apk.py --package=com.example.sample --manifest=manifest.json --keystore-path=C:\Users\IEUser\Desktop\sample.keystore --keystore-alias=release --keystore-passcode=password --keystore-alias-passcode=password
 </pre>
-			<p>The keystore-path, keystore-alias, keystore-passcode and keystore-alias-passcode options have increased.</p>
+			<p>在这条命令里分布增加了，keystore-path, keystore-alias, keystore-passcode 以及 keystore-alias-passcode这些个附加选项。</p>
 			<dl class="main__dl--sub">
 				<dt>--keystore-path</dt>
-				<dd>Using keystore-path specifies the location of the keystore file with a file name.</dd>
+				<dd>使用keystore-path可以指定密钥库文件的路径和文件名。</dd>
 				<dt>--keystore-alias</dt>
-				<dd>Specifies the alias of the keystore file when it was created.</dd>
+				<dd>生成密钥库的时候同时指定它的别名。</dd>
 				<dt>--keystore-passcode</dt>
-				<dd>Specifies the password of the keystore file when it was created.</dd>
+				<dd>生成密钥库的时候同时指定它的密码。</dd>
 				<dt>--keystore-alias-passcode</dt>
-				<dd>Specifies the key password of the keystore file when it was created.</dd>
+				<dd>生成密钥库的密钥，并指定它的密码。</dd>
 			</dl>
 
-			<p>Upload the apk file that you created to the Google Play Developer Console to apply. Please be sure to follow the instructions on the Google Play Developer Console for other necessary images, etc.</p>
+			<p>上传你的apk文件到Google Play Developer并进行申请。请确保你仔细阅读并遵守了相关的条款和申请规范。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-3.png" width="1024" height="673" alt="" /></div>
 
 		</div><!-- /main__section --><div class="main__section" id="p06">
-			<h2 class="main__title--h2">A Word of Caution</h2>
+			<h2 class="main__title--h2">总结与声明</h2>
 			<ul class="main__ul">
-				<li>We are not responsible for any issues that may occur on your PC using the environment settings and command controls.</li>
-				<li>We cannot guarantee that all Android game apps that you can develop using the methods we have introduced here will be published on Google Play.</li>
-				<li>This information is current as of August 2015. Some of the images displayed here may differ as all the software used here is constantly being updated.</li>
-				<li>If you have any questions regarding [App Submission to Google Play], please refer to <a href="https://support.google.com/googleplay/android-developer" target="_blank">Google Play Developer Help </a>.</li>
+				<li>对于在你打包的过程中使用的环境变量设置以及命令脚本而引发的任何错误或问题，我们概不负责。</li>
+				<li>即便你们完全按照我们介绍的方法制作并打包android游戏，我们也无法保证你们做的每一款游戏都能成功登陆Google Play。</li>
+				<li>这一章的介绍是写于2015年8月的，以后软件也许会进行更新，届时软件里的画面也许会和这里的图片稍有出入。</li>
+				<li>如果你对于如何将软件登陆Google Play 仍有疑问，你可以尝试查看这Google Play的官方指南<a href="https://support.google.com/googleplay/android-developer" target="_blank">Google Play Developer Help </a>。</li>
 			</ul>
 		</div><!-- /main__section --></div><!-- /main --></body>
 </html>
