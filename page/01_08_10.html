@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Tileset Settings</title>
+	<title>图块组设置</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,79 +10,79 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v03">Tileset Settings</h1>
+	  <h1 class="main__title--h1 main__title--h1--v03">图块组设置</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_08.html">Database</a></li>
+		  <li><a href="01_08.html">数据库</a></li>
 		  <li>&gt;</li>
-		  <li>Tileset Settings</li>
+		  <li>图块组设置</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Role of Data</h2>
-		  <p> Tilesets are the collection of "Tiles" used to design your map. Create tiles by setting whether a character can walk on the image used for the tile, and also the behavior in the game. <br />
+		  <h2 class="main__title--h2">数据的作用</h2>
+		  <p> 图块组就是用于设计地图的图块的集合。它也用于指定角色是否可在某图块上行走，或者是游戏中其他的特殊行为。 <br />
 		    <br />
-		    Original images created for the map can be used as well by creating tilesets which use those images, and assign as map data. <br />
+		    地图的原始图像也可以直接用在地图数据中。你只需要使用该图片创建图块组，然后将其直接绘制在地图上即可。 <br />
 		    <br />
-		    Moreover, whether or not vehicles (boats/large ships) can go over tiles is determined by the position over the tileset. For more information, please view <a href="01_11_01.html">Asset Standards</a>.<br />
-		    Planes are able to travel over all tiles. However, there are only able to land on tiles which can be walked on.</p>
+		    此外，交通工具（小船/大船）是否能经过某些图块取决于这些图块在图块组中的位置。详情请参考<a href="01_11_01.html">素材标准</a>。<br />
+		    飞机可以穿透任何图块。但是它只能在可行走的图块上降落。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <h2 class="main__title--h2">参数详细信息</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_10_img01.png" width="769" height="631" alt="" />
 			</div>
-		  <h3 class="main__title--h3"> General Settings </h3>
-		  <h3 class="main__title--h3--sub"> Name </h3>
-		  <p>A tileset's name. This property is just used in the editor (does not affect the game).</p>
-		  <h3 class="main__title--h3--sub"> Mode </h3>
-		  <p>The purpose of the tileset. This primarily influences the treatment of <a href="01_07_01.html#p01">special specifications of lower tiles</a> and <a href="01_07_03.html#p01">battlebacks</a>.<br />
-		    Basically, choose [Field Type] for tiles which represent the overworld like the ocean and land, and [Area Type] for all other situations. </p>
+		  <h3 class="main__title--h3"> 常规设置 </h3>
+		  <h3 class="main__title--h3--sub"> Name（名称） </h3>
+		  <p>图块组的名称。此属性只用于编辑器中（不会影响游戏）。</p>
+		  <h3 class="main__title--h3--sub"> Mode（模式） </h3>
+		  <p>图块组的作用。这一设定主要影响 <a href="01_07_01.html#p01">底层图块的特殊说明</a> 和 <a href="01_07_03.html#p01">战斗背景</a>。<br />
+		    基本上，你要为表示地图全景的海洋和陆地图块设置[Field Type（场地类型）]，为其他所有场景设置[Area Type（地区类型）]。</p>
 		  <p>
-		  <h3 class="main__title--h3"> Images </h3>
-		  <p>Settings for images used for tiles. Specify the file you want to use for each type (Sets A through E) in the [Select an Image] window that is displayed when you press the button for each type. An image's contents will be displayed in the [Tile List] on the right.</p>
-		  <h3 class="main__title--h3"> Tile List </h3>
-		  <p>The image used for a tileset in [Images] will be displayed. You can switch the images displayed by clicking tabs [A] through [E] at the bottom. The tiles for the images specified in [A1] through [A5] in the [Images] section will be displayed in order. <br />
+		  <h3 class="main__title--h3"> Images（图像） </h3>
+		  <p>设置用作图块的图像。你需要分别在打开的[Select an Image（选择图片）]窗口中设置每一类图块（A ~ E）所使用的图片文件。图片的内容会在右侧的[Tile List（图块列表）]中显示出来。</p>
+		  <h3 class="main__title--h3"> Tile List（图块列表） </h3>
+		  <p>显示用作图块组的图片。你可以通过点击底部的 [A] ~ [E] 标签来切换显示的图片。在[Images（图像）]部分指定的 [A1] ~ [A5] 的图片在此会按顺序显示。<br />
 		    <br />
-		    Marks representing the parameter values in the current settings editing mode will be displayed on top of each tile. You can change these parameter values by clicking the tile. </p>
-		  <h3 class="main__title--h3--sub"> Passage </h3>
-		  <p>Switch to the editing mode where you can set whether a tile can be entered or not. Tiles marked with a [○] can be entered, ones marked with an [×] cannot be entered. Those which have a [☆] can also be entered, however this is for when hiding characters behind buildings (only possible in all other tabs except [A]).</p>
-		  <h3 class="main__title--h3--sub"> Passage (4 dir) </h3>
-		  <p>Switch to the editing mode where you can set the direction from where tile can be entered. Use [Passage: Block] when creating tiles that can be passed only from a defined direction. For example, when you set the edge of a tile that represents a cliff as impassable, characters will be unable to move between that tile and the next tile, creating the sense of height. <br />
+		    每个图块上都会有代表当前编辑模式参数值的标志。你可以通过点击图块来改变参数值。 </p>
+		  <h3 class="main__title--h3--sub"> Passage（通行） </h3>
+		  <p>当你需要指定某图块是否可以进入时，你需要切换到此模式。带有[○]标志的图块可以进入，而带有[×]的图块不能进入。带有[☆]的图块也可以进入，然而此项设置用于制作将角色隐藏在建筑后面的效果（除了[A]标签的图块外，设置在其他标签的图块上时，该图块都可以通行）。</p>
+		  <h3 class="main__title--h3--sub"> Passage (4 dir)（通行：4 方向） </h3>
+		  <p>当你需要指定可以从哪个方向进入该图块时，你需要切换此编辑模式。要制作仅有部分方向可通行的图块，你需要使用[Passage: Block（通行：堵塞）]。例如，当你将表示峭壁的图块的边界设置为不可通行时，角色将不能在本图块和旁边的图块之间行走，以此来创造地图的高低感。<br />
 		    <br />
-		    Those tiles with marks displayed as arrows pointing in a specific indicate that it is possible to move from that direction, ones without arrows are not passable. Moreover, by changing the parameters of the [Passage] setting, these settings will change automatically. </p>
-		  <h3 class="main__title--h3--sub"> Ladder </h3>
-		  <p>Switch to the editing mode for ladder settings. When you add this parameter, the direction a character using this tile faces will be fixed to up, giving the appearance of going up and down things like ladders and ropes. <br />
+		    当图块上方标志为指向特定方向的箭头时，表明该方向可通行，否则就是不可通行。此外，通过改变[Passage（通行）]参数，这些设定会自动改变。 </p>
+		  <h3 class="main__title--h3--sub"> Ladder（梯子属性） </h3>
+		  <p>切换到草木繁茂处的编辑模式。如果你加入这个参数，那么角色通过这个图块时，面向将固定朝上，这看起来好像他们在梯子或者绳子上上下移动一样。<br />
 		    <br />
-		    Click the marks in the Tile List to change tiles to have this parameter or not. A mark (a ladder) will be displayed on tiles which have this setting. </p>
-		  <h3 class="main__title--h3--sub"> Bush </h3>
-		  <p class="mb5px">Switch to the editing mode for bush settings. When a tile has this setting, 12 pixels from the bottom of characters who cross this tile will appear half transparent, as if their feet are being hidden by dense grass. <br />
+		    要更改图块的此项参数，请点击图块列表中的标志。被设置为此属性的图块上方会出现特殊的标志（梯子标志）。</p>
+		  <h3 class="main__title--h3--sub"> Bush（草木繁茂处） </h3>
+		  <p class="mb5px">切换到草木繁茂处的编辑模式。如果某图块被设置为此属性，当角色穿过此图块时，从角色脚下起 12 个像素内的部分会变得半透明，就好像它们被茂密的草遮住了一样。<br />
 		    <br />
-		    However, part of the tile will not become half transparent depending on the image when giving this setting to tiles in [A1] through [A4]. <br />
+		    然而，当将此设置应用于 [A1] ~ [A4] 的图块时，图块的某些部分不会变成半透明的（取决于图片本身）。<br />
   <br />
-		    Click the marks in the Tile List to change tiles to have this parameter or not. A mark (two wavy lines) will be displayed on tiles which have this setting. </p>
+		    要更改图块的此项参数，请点击图块列表中的标志。被设置为此属性的图块上方会出现特殊的标志（两条粗线）。</p>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_08_10_img02.png" height="250" width="250" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub"> Counter </h3>
-		  <p class="mb5px">Switch to the editing mode for counter settings. When a tile is given this setting, it will start events even when a character and event are not right next to each other, just as when talking to a character with a desk between them. <br />
+		  <h3 class="main__title--h3--sub"> Counter（柜台属性） </h3>
+		  <p class="mb5px">切换到柜台属性的编辑模式。当某图块被设置为此属性时，角色不必走到事件旁边即可隔着本图块触发事件。例如可以制作隔着桌子和其他角色说话的效果。<br />
 		    <br />
-		    Also, setting this to the tile in [A2], tiles having this element will be drawn 12 pixels downward. <br />
+		    此外，如果将此设置应用于 [A2] 的图块，那么图块将会向下绘制 12 个像素单位。<br />
   <br />
-		    Click the marks in the Tile List to change tiles to have this parameter or not. Tiles which have this setting have a mark (4-sided diamond) displayed on them. </p>
+		    要更改图块的此项参数，请点击图块列表中的标志。被设置为此属性的图块上方会出现特殊的标志（四边钻石形）。 </p>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_08_10_img03.png" height="250" width="250" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub"> Damage Floor </h3>
-		  <p>Switch to the editing mode for Damage Floors. When a tile is given this setting, characters will receive damage when crossing this tile. This can be used for representing dangerous terrain like poisonous swamps, trees with thorns. <br />
+		  <h3 class="main__title--h3--sub"> Damage Floor（伤害地面） </h3>
+		  <p>切换到伤害地面的编辑模式。当某图块被设置为此属性时，角色经过此图块就会受到一定伤害。这可以用于表示危险地带，例如有毒的沼泽，或者是布满荆棘的树林。<br />
 		    <br />
-		    Click the marks in the Tile List to change tiles to have this parameter or not. A mark (two triangles) will be displayed on tiles which have this setting. </p>
-		  <h3 class="main__title--h3--sub"> Terrain Tag </h3>
-		  <p>You can assign values between 0 and 7 to each tile. No specific uses are defined. This value can be retrieved by using the [Get Location Info] event command. Those terrain tags retrieved which are located in upper layers other than zero will be prioritized. </p>
-		  <h3 class="main__title--h3"> Note </h3>
-		  <p>The [Note] section can be used to make notes while making your game.</p>
+		    要更改图块的此项参数，请点击图块列表中的标志。被设置为此属性的图块上方会出现特殊的标志（双三角形）。 </p>
+		  <h3 class="main__title--h3--sub"> Terrain Tag（地形标志） </h3>
+		  <p>你可以为每个图块设置地形标志（0 ~ 7）。此设置没有特殊的用途。你可以通过使用事件指令的[Get Location Info（获取位置信息）]来获取本属性值。处于上层并且地形标志不为 0 的图块会优先考虑。</p>
+		  <h3 class="main__title--h3"> Note（备注） </h3>
+		  <p>[Note(备注)]部分由于在制作游戏时写下对图块组的额外备注。</p>
 		</div><!-- /main__section -->
 
 	</div><!-- /main -->
