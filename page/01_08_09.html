@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Animation Settings</title>
+	<title>动画设置</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,123 +10,123 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v03">Animation Settings</h1>
+	  <h1 class="main__title--h1 main__title--h1--v03">动画设置</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_08.html">Database</a></li>
+		  <li><a href="01_08.html">数据库</a></li>
 		  <li>&gt;</li>
-		  <li>Animation Settings</li>
+		  <li>动画设置</li>
 		</ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Role of Data</h2>
-		  <p> Animations are the data that can be played for visual representations for when enemies attack in the Battle Screen and things on the Map Screen. These are created by placing image patterns (cells) in a "Frame". </p>
+		  <h2 class="main__title--h2">数据的作用</h2>
+		  <p> 动画就是表示一些视觉效果的数据，例如在战斗中敌人的进攻或者是地图上的一些物品效果。这些可以通过在一“帧”当中放置一些图案（动画单元）进行设置。 </p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <h2 class="main__title--h2">参数详细信息</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_09_img01.png" width="769" height="631" alt="" />
 			</div>
-		  <h3 class="main__title--h3"> General Settings </h3>
-		  <h3 class="main__title--h3--sub"> Name </h3>
-		  <p>The name of the animation. This property is just used in the editor (does not affect the game).</p>
-		  <h3 class="main__title--h3--sub"> Images </h3>
-		  <p>Image files used for creating animations (up to two images). Specify the file you want to use in the [Select an Image] window that is displayed when you press either button. When doing so, you can change the hue of the image by adjusting the [Hue] slider and use the adjusted image. The pattern image will be displayed in the [Pattern Palette] when you specify a file.</p>
-		  <h3 class="main__title--h3--sub"> Position </h3>
-		  <p>Specify the position where the animation will be displayed. By selecting [Head], [Center] or [Feet], the top, center, and bottom of each character will be used. The animation will be displayed on the entire screen if this is set to [Screen]. Moreover, this animation when set to a skill or item that has an effect that affects multiple characters, it will be displayed for each character when the animation's position is set to [Head], [Center] or [Feet].</p>
-		  <h3 class="main__title--h3--sub"> Max Frames </h3>
-		  <p>The overall frame count (1 to 200) for an animation. Specify this number in the window that appears when pressing the button. The number specified here will appear in the frame list. When you lower the frame count, those frames whose numbers exceed that amount will be deleted.</p>
-		  <h3 class="main__title--h3"> SE and Flash Timing </h3>
-		  <p>Sets the timing of when to play the sound effect and the screen flash during the animation. In the [SE and Flash Timing] window that is displayed when you double-click any row (a blank row when creating a new entry) in the list, you can specify the contents below. <br />
+		  <h3 class="main__title--h3"> 常规设置 </h3>
+		  <h3 class="main__title--h3--sub"> Name（名称） </h3>
+		  <p>动画的名称。本属性仅在编辑器中使用（不会影响游戏）。</p>
+		  <h3 class="main__title--h3--sub"> Images（图像） </h3>
+		  <p>用于制作动画的图像（最多可以指定两幅图片）。点击旁边的任意一个按钮后，在打开的[Select an Image（打开图片）]窗口中指定你想要使用的图片。当这样做时，你可以通过调节[Hue（色相）]滑块来调节图片的色相。当你指定文件后，图片的动画单元会显示在下面的[Pattern Palette（图案调色板）]中。</p>
+		  <h3 class="main__title--h3--sub"> Position（位置） </h3>
+		  <p>指定动画显示的位置。如果选择了[Head（头部）]，[Center（中间）]，[Feet（脚部）]，则每个角色的上方，中间，底部都会出现动画。如果选择了[Screen（画面）]，那么动画将会出现在整个画面上。此外，如果该动画对应的技能或道具被指定影响多个战斗者，当动画位置设置为[Head（头部）]，[Center（中间）] 或 [Feet（脚部）]时，每个指定的战斗者身上都会出现动画。</p>
+		  <h3 class="main__title--h3--sub"> Max Frames（最大帧数） </h3>
+		  <p>该动画总共的帧数（1 ~ 200）。你可以通过按下旁边的按钮指定最大帧数。在这里指定的帧数会出现在帧列表里。当你降低帧总数时，超过此数量的帧将会被删除。</p>
+		  <h3 class="main__title--h3"> SE and Flash Timing（SE 和闪烁时机） </h3>
+		  <p>设置动画播放过程中，播放音效和屏幕闪烁的时机。要设置此项，首先要双击列表中的一项（如果双击空行则是创建新的效果），然后在打开的[SE and Flash Timing（SE 和闪烁时机）]窗口中进行设置。你可以指定如下内容。<br />
 		    <br />
-		    A menu will appear if you right-click an item in the list where you can perform actions such as [Edit], [Cut], [Copy] and [Delete]. </p>
+		    当你右键点击某一项时，会出现一个右键菜单。在这里你可以做[Edit（编辑）]，[Cut（剪切）]，[Copy（复制）] 和 [Delete（删除）]操作。</p>
 		  <dl class="main__dl">
-			<dt>Frames </dt>
-				<dd>Specify the frame number where the sound effect and flash will be played.</dd>
+			<dt>Frames（帧） </dt>
+				<dd>指定音效和闪烁播放的帧的位置。</dd>
 				<dt>SE </dt>
-				<dd>Specify the sound effect that will play.</dd>
-				<dt>Flash</dt>
-				<dd>Specify details for when the flash is played. Select [Target] to make a character flash, [Screen] to make the entire screen flash. You can specify the color of the flash by adjusting the [Red], [Green] and [Blue] values, and its intensity by increasing and decreasing its [Strength] (between 0 and 255). [Duration] is set to play for the number of frames (1 to 200). [Hide Target] causes the character to disappear temporarily, and you use this when you want to hide the character during the animation.</dd>
+				<dd>指定播放的音效。</dd>
+				<dt>Flash（闪烁）</dt>
+				<dd>指定闪烁播放的细节。设置为[Target（目标）]可以让战斗图闪烁，而设置[Screen（画面）]则是让整个屏幕闪烁。你可以通过调节[Red（红）]，[Green（绿）]，[Blue（蓝）]数值来指定闪烁的颜色，同时调节[Strength（强度）]来更改闪烁的强度（范围为 0 ~ 255）。[Duration（持续时间）]可以被设置为 1 ~ 200 帧。[Hide Target（隐藏目标）]选项会使得目标战斗者暂时消失，所以你想要在动画播放时隐藏目标，就要勾选此选项。</dd>
 			</dl>
-		  <h3 class="main__title--h3"> Frames </h3>
-		  <h3 class="main__title--h3--sub"> Frame List </h3>
-		  <p>List of frames in the animation. The frame number that you click becomes the frame that you will edit, and its contents will be displayed in the Frame View. By clicking the [Back] and [Next] buttons at the top and bottom of the list, you can change to the previous or next frame to edit. Additionally, using the menu that is displayed when right-clicking the frame number, you can [Copy], [Paste], [Clear], [Insert] and Delete frames.</p>
-		  <h3 class="main__title--h3--sub"> Frame View </h3>
-		  <p>Contents of the frame. Set what is displayed by placing the images in the Pattern Palette as [Cells]. The green rectangle is the area that is displayed in the game window. <br />
+		  <h3 class="main__title--h3"> Frames（帧） </h3>
+		  <h3 class="main__title--h3--sub"> Frame List（帧列表） </h3>
+		  <p>动画所有帧的列表。当你点击某个帧序号时，此帧成为当前编辑的帧，它的内容会出现在帧预览中。如果想要编辑上一帧或下一阵，你需要点击帧列表下的[Back（上一帧）]和[Next（下一帧）]按钮。此外，右键点击帧序号时，会出现右键菜单。在这里你可以做[Copy（复制）]，[Paste（粘贴）]，[Clear（清除）]，[Insert（插入）] 和 [Delete（删除）]帧操作。</p>
+		  <h3 class="main__title--h3--sub"> Frame View（帧预览） </h3>
+		  <p>该帧的内容。你可以通过放置图案调色板上的[Cells（动画单元）]来设置显示的内容。绿色的矩形表示在游戏窗口中显示动画的区域。 <br />
 		    <br />
-		    Please view [Controlling the Frame View] mentioned later to learn how to edit. </p>
-		  <h3 class="main__title--h3--sub"> Change Target </h3>
-		  <p>Change the image of the enemy displayed in the Frame View. This property is just used in the editor (does not affect the game).</p>
+		    请参考后面的[Controlling the Frame View（控制帧预览）]来学习如何编辑帧。</p>
+		  <h3 class="main__title--h3--sub"> Change Target（更改目标） </h3>
+		  <p>更改帧预览中敌人的图像。本属性仅在编辑器中使用（不会影响游戏）。</p>
 			<h3 class="main__title--h3--sub">
-				Paste Last
+				Paste Last（复制上一帧）
 			</h3>
-			<p>Changes the currently selected frame to be the same as the previous one.</p>
-		  <h3 class="main__title--h3--sub"> Tween </h3>
-		  <p>Frame cells will be automatically created based on the two frames that were specified. Enter in the range for the frames and cells to be tweened, and check the items to tween using the boxes available and click [OK]. For example, by placing the cell in frame 1 to the left side, and placing it on the right in frame 10 and tweening the position between frames 1 and 10, the cells in frames 2 to 9 will be automatically animated to appear to be moving from left to right.</p>
-		  <h3 class="main__title--h3--sub"> Batch </h3>
-		  <p>Set the cells to be the same in the specified frame range. Specify the frame and cell range in the [Frame] and [Cell] fields, select the items to be set and select the values for each item.</p>
-		  <h3 class="main__title--h3--sub"> Shift </h3>
-		  <p>Shift the position of multiple cells placed in the specified frame.</p>
-		  <h3 class="main__title--h3--sub"> Play </h3>
-		  <p>The animation which you are currently making will be played when pressing the Play button.</p>
-		  <h3 class="main__title--h3--sub"> Pattern Palette </h3>
-		  <p>Displays the pattern images contained the file that was specified in the [Images] section. When clicked, the pattern will be the one to be placed in the frame. Treating the pattern in the upper left of the palette as #1, numbers (pattern number) for the other patterns will be assigned in order from left to right.</p>
+			<p>将上一帧的内容复制到这一帧上。</p>
+		  <h3 class="main__title--h3--sub"> Tween（补充帧） </h3>
+		  <p>该命令会按照指定的两帧自动补充中间的帧单元。使用时要输入待补间的帧和动画单元，然后在可用选项中选取你想要补充的部分，最后点击[OK]即可。例如，你在第一帧的左侧放置一个动画单元，然后在第 10 帧的右侧方式同样的单元，并且使用补充帧填补 1 ~ 10 帧的其他帧，那么第 2 ~ 9 帧会自动填补成移动过程中的相应位置，也就做出了从左到右的移动效果。</p>
+		  <h3 class="main__title--h3--sub"> Batch（批处理） </h3>
+		  <p>将制定范围的帧的动画单元设置为相同。你需要在[Frame（帧）]和[Cell（动画单元）]区域指定帧和动画单元的范围，然后选择要设置的项目和它们的值。</p>
+		  <h3 class="main__title--h3--sub"> Shift（移动） </h3>
+		  <p>移动指定帧的多个动画单元的位置。</p>
+		  <h3 class="main__title--h3--sub"> Play（播放） </h3>
+		  <p>当点击播放按钮时，正在编辑的动画会被播放出来。</p>
+		  <h3 class="main__title--h3--sub"> Pattern Palette（图案调色板） </h3>
+		  <p>当你在[Images（图像）]部分选择好图片时，这里就会出现该文件所包含的图案。选择某个图案时，该图案将被添加到帧中。使用时，可将调色板左上角的图案当做 #1 号图案，其余图案的编号会从左到右依次递增。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Controlling the Frame View</h2>
+		  <h2 class="main__title--h2">控制帧预览</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_09_img02.png" width="466" height="268" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub"> Placing Cells </h3>
-		  <p>Choose the image to be placed in the frame using the [Pattern Palette], and double click an empty spot in the Frame Edit Area. After doing so, that image will be placed in the prepared cell. It is possible to place up to 16 cells in 1 frame.</p>
-		  <h3 class="main__title--h3--sub"> Display </h3>
-		  <p>The frame and number will be displayed in the cell. A white frame means that the cell is currently selected. The number is the priority order of the cell, and larger cells will be displayed towards the front.</p>
-		  <h3 class="main__title--h3--sub"> Selecting a Cell to Edit </h3>
-		  <p>Clicking a cell will cause its frame to become white and will be selected to be edited. Smaller cells with the same number as other cells can be selected by clicking them while holding the [Shift] key.</p>
-		  <h3 class="main__title--h3--sub"> Moving Cells </h3>
-		  <p>Drag cells to move them. The position of cells currently selected will be displayed as coordinates in the bottom right of the Frame Edit Area. Assuming the coordinates in the center of the image are (0,0), X coordinates are displayed using values (-408 to 408) and Y coordinates are displayed using values (-312 to 312).</p>
-		  <h3 class="main__title--h3"> Controls via the Context Menu </h3>
-		  <p>By right-clicking a cell, a menu will be displayed where you can perform the following actions. You can open the [Cell Settings] window by also double-clicking.</p>
-		  <h3 class="main__title--h3--sub"> ▼Context Menu Items </h3>
+		  <h3 class="main__title--h3--sub"> 放置动画单元 </h3>
+		  <p>在[Pattern Palette（图案调色板）]中选择要放置到此帧中的图像，然后在帧编辑区域的空白处双击即可放置动画单元。这样之后，所选图像就会放在准备好的动画单元中。你最多可以在同一帧中放置 16 个动画单元。</p>
+		  <h3 class="main__title--h3--sub"> 显示 </h3>
+		  <p>每个动画单元会显示当前的帧和编号。带有白色边框的单元表明它当前处于选中状态。数字代表着动画单元的优先级，数字的动画单元将显示在数字较小的单元的上面。</p>
+		  <h3 class="main__title--h3--sub"> Selecting a Cell to Edit（选择动画单元编辑） </h3>
+		  <p>点击一个单元后，它的边框会变为白色，这表明它被选中并且等待编辑。当按住[Shift]键时，你可以选取编号相同但是尺寸较小的动画单元。</p>
+		  <h3 class="main__title--h3--sub"> 移动动画单元 </h3>
+		  <p>要移动动画单元，拖动它们即可。在帧编辑区域的右下角会显示当前选中单元的坐标。在这里假定中心的坐标为(0, 0)，X 坐标的范围是(-408 ~ 408)，Y 坐标的范围是(-312 ~ 312)。</p>
+		  <h3 class="main__title--h3"> 使用右键菜单控制 </h3>
+		  <p>右键点击动画单元时，会出现右键菜单。你可以执行以下操作。此外，双击某单元也可以打开[Cell Settings（动画单元设置）]窗口。</p>
+		  <h3 class="main__title--h3--sub"> ▼右键菜单项 </h3>
 		  <dl class="main__dl--sub">
-			<dt>New</dt>
-				<dd>Place a new cell.</dd>
-				<dt>Edit </dt>
-				<dd>Open the Cell Settings window.</dd>
-				<dt>Cut </dt>
-				<dd>Copy the currently selected cell to the clipboard and delete it.</dd>
-				<dt>Copy </dt>
-				<dd>Copy the currently selected cell to the clipboard.</dd>
-				<dt>Paste </dt>
-				<dd>Place the cell currently in the clipboard.</dd>
-				<dt>Delete </dt>
-				<dd>Delete the currently selected cell.</dd>
-				<dt>Undo </dt>
-				<dd>Cancel the most previous action, and return to the previous state prior to performing the action. It is possible to undo up to 20 actions.</dd>
-				<dt>Redo </dt>
-				<dd>Return the state back to what it was before pressing Undo.</dd>
-				<dt>To Upper/To Lower </dt>
-				<dd>Change the priority of displaying the cells (front/back).</dd>
+			<dt>New（新建）</dt>
+				<dd>放置新的动画单元。</dd>
+				<dt>Edit（编辑） </dt>
+				<dd>打开动画单元设置窗口。</dd>
+				<dt>Cut（剪切） </dt>
+				<dd>将当前选中的单元删除并复制到剪贴板上。</dd>
+				<dt>Copy（复制） </dt>
+				<dd>将当前选中的单元复制到剪贴板上。</dd>
+				<dt>Paste（粘贴） </dt>
+				<dd>将剪贴板上的单元放置到指定位置。</dd>
+				<dt>Delete（删除） </dt>
+				<dd>删除当前选中单元。</dd>
+				<dt>Undo（撤销） </dt>
+				<dd>取消最近一次操作，返回最近一次操作之前的状态。最多可以撤销 20 次操作。</dd>
+				<dt>Redo（恢复） </dt>
+				<dd>恢复到撤销之前的状态。</dd>
+				<dt>To Upper/To Lower（上移/下移） </dt>
+				<dd>更改动画单元显示的优先级（前/后）。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> ▼Cell Setting Window Contents </h3>
+		  <h3 class="main__title--h3--sub"> ▼动画单元设置窗口内容 </h3>
 		  <dl class="main__dl--sub">
-		    <dt>Pattern </dt>
-				<dd>The pattern number. Changing the number will change it to the corresponding cell.</dd>
-				<dt>X/Y </dt>
-				<dd>Display position of the cell. X coordinates can be set from -408 to 408, and Y coordinates can be set from -312 to 312.</dd>
-				<dt>Scale </dt>
-				<dd>Changes the display magnification of the cell. The scale of the cell can be changed from 20 to 800% with the original image being 100%.</dd>
-				<dt>Rotation </dt>
-				<dd>The rotation (1 to 360 degrees) of the cell when displayed. Cells will be rotated clockwise using the specified degree of rotation.</dd>
-				<dt>Mirror </dt>
-				<dd>Setting this to [Yes] will flip the display of the cell's pattern.</dd>
-				<dt>Opacity </dt>
-				<dd>The opacity (0 to 255) of the cell. The smaller the value, the more opaque the cell will be, and will not be visible when set to 0.</dd>
-				<dt>Blend </dt>
-				<dd>Allows you to blend the hue of two cells that overlap. [Normal] will have it be displayed normally, and [Additive] will cause it to be whiter.</dd>
+		    <dt>Pattern（图案） </dt>
+				<dd>图案的编号。更改此编号会影响相应的单元。</dd>
+				<dt>X/Y（X/Y 坐标） </dt>
+				<dd>单元的显示位置。X 坐标的范围是(-408 ~ 408)，Y 坐标的范围是(-312 ~ 312)。</dd>
+				<dt>Scale（尺度） </dt>
+				<dd>改变动画单元的缩放比例。缩放比例的范围为 20% ~ 800%，原始图片的缩放比例为 100%。</dd>
+				<dt>Rotation（旋转） </dt>
+				<dd>将动画单元旋转指定度数(1 ~ 360 度)。指定旋转角度后，动画单元将以顺时针方向旋转到该角度。</dd>
+				<dt>Mirror（镜像） </dt>
+				<dd>设置为[Yes（是）]后，单元的图案会镜像翻转。</dd>
+				<dt>Opacity（不透明度） </dt>
+				<dd>动画单元的不透明度(0 ~ 255)。该值越小，则单元会越透明，设置为 0 时该单元将会不可见。</dd>
+				<dt>Blend（混合模式） </dt>
+				<dd>允许你混合重叠部分的色相。设置为[Normal（正常）]则以正常模式显示，设置为[Additive（加法）]后，重叠部分会变得更亮。</dd>
 			</dl>
 
 

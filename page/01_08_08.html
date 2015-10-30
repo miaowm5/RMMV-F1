@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>State Settings</title>
+	<title>状态设置</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,72 +10,72 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v03">State Settings</h1>
+	  <h1 class="main__title--h1 main__title--h1--v03">状态设置</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_08.html">Database</a></li>
+		  <li><a href="01_08.html">数据库</a></li>
 		  <li>&gt;</li>
-		  <li>State Settings</li>
+		  <li>状态设置</li>
 		</ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Role of Data</h2>
-		  <p> States are things like "Poison" and "Confusion", those abnormal states which affect the condition and actions of a character. Configure the specific effects in the data when a state is added. You can prepare not only states with negative effects such as [Poison], [HP decreased], but also states with positive effects such as [Enraged], [Attack Power Increased]. <br />
+		  <h2 class="main__title--h2">数据的作用</h2>
+		  <p> 用于设置“中毒”和“疑惑”之类的状态，这些不正常的状态会影响战斗者的行为和自身条件。设置时需要指定状态附加后所产生的特殊效果。你不但可以设置负面状态，例如[Poison（中毒）]，[HP decreased（HP 减少）]，还可以设置增益状态，例如[Enraged（激怒）]，[Attack Power Increased（攻击力增加）]。 <br />
 		    <br />
-		    Moreover, State #1, named [Knockout], is a special state that is automatically applied to characters and enemies when their HP reaches zero. If all members of a party are in this state, it will result in a game over. </p>
+		    此外，状态 #1 [Knockout（战斗不能）]为一个特殊状态，当角色和敌人的 HP 降至为 0 时会自动附加。如果主角队伍中的所有成员都附加了此状态，游戏就会结束。 </p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <h2 class="main__title--h2">参数详细信息</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_08_img01.png" width="769" height="631" alt="" />
 			</div>
-		  <h3 class="main__title--h3"> General Settings </h3>
-		  <h3 class="main__title--h3--sub"> Name </h3>
-		  <p>The name of the state. States are displayed using icons so the name will never be used during gameplay.</p>
-		  <h3 class="main__title--h3--sub"> Icon </h3>
-		  <p>This icon is the image displayed next to an actor's name or above an enemy's head when in that state. You can select an image in the [Select an Image] window that appears after double-clicking on the icon's image. Try choosing an icon that makes the details of the state clear.</p>
-		  <h3 class="main__title--h3--sub"> Restriction </h3>
-		  <p>Restricts the actions of characters in a state. The details of a restriction will be set based on the 5 items below. If there are multiple restrictions configured for a state, the restriction at the bottom will be prioritized.</p>
+		  <h3 class="main__title--h3"> 常规设置 </h3>
+		  <h3 class="main__title--h3--sub"> Name（名称） </h3>
+		  <p>状态的名称。由于在游戏中，状态以图标显示，因此状态的名称不会在游戏中用到。</p>
+		  <h3 class="main__title--h3--sub"> Icon（图标） </h3>
+		  <p>当战斗者处于此状态时，状态图标会显示在角色名字的旁边或者是敌人的上方。双击状态图标的图像后，你可以在打开的[Select an Image（选择图像）]窗口中选取状态图标。选择的图标应该尽可能清楚地表示该状态的细节。</p>
+		  <h3 class="main__title--h3--sub"> Restriction（限制） </h3>
+		  <p>限制处于此状态中的战斗者的行为。限制的详细信息要在下面的 5 个项目中进行设置。如果一个状态设置了多重限制，那么处于限制列表下方的限制将会被优先考虑。</p>
 		  <dl class="main__dl--sub">
-			<dt>None </dt>
-				<dd>Actions will not be restricted.</dd>
-				<dt>Attack an Enemy</dt>
-				<dd>Will definitely attack an enemy.</dd>
-				<dt>Attack Anyone </dt>
-				<dd>Will definitely attack either an enemy or ally.</dd>
-				<dt>Attack an Ally </dt>
-				<dd>Will definitely attack an ally.</dd>
-				<dt>Cannot Move </dt>
-				<dd>Cannot move at all.</dd>
+			<dt>None（无） </dt>
+				<dd>行动不会受限制。</dd>
+				<dt>Attack an Enemy（普通攻击敌人）</dt>
+				<dd>必定攻击敌人。</dd>
+				<dt>Attack Anyone（普通攻击任何人） </dt>
+				<dd>必定攻击敌人或同伴。</dd>
+				<dt>Attack an Ally（普通攻击同伴） </dt>
+				<dd>必定攻击同伴。</dd>
+				<dt>Cannot Move（不行动） </dt>
+				<dd>不能做任何行动。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> Priority </h3>
-		  <p>Priority (0 to 100) of displaying state icons. The icon with the highest priority will be displayed if a character has multiple states. If the priorities are the same, the state with the youngest ID will be prioritized. </p>
-		  <h3 class="main__title--h3--sub"> [SV] Motion </h3>
-		  <p>Set the motion that will be displayed in Side Menu Mode when a state is active.</p>
-		  <h3 class="main__title--h3--sub"> [SV] Overlay </h3>
-		  <p>Set the overlay image that will be displayed in Side Menu Mode when a state is active.</p>
-		  <h3 class="main__title--h3"> Removal Conditions </h3>
-		  <p>Conditions to remove a state. Conditions will be set based on the items below. If there are multiple conditions configured, the requirements for each will be determined and the condition removed.</p>
+		  <h3 class="main__title--h3--sub"> Priority（优先级） </h3>
+		  <p>显示状态图标的优先级，范围为（0 ~ 100）。如果战斗者持有多重状态，具有最高优先级的状态图标才会被显示。如果优先级相同，那么 ID 较小的状态图标会被优先显示。 </p>
+		  <h3 class="main__title--h3--sub"> [SV] Motion（[SV]动作） </h3>
+		  <p>在横版战斗中，设置状态被附加时显示的动作。</p>
+		  <h3 class="main__title--h3--sub"> [SV] Overlay（[SV]重叠） </h3>
+		  <p>在横版战斗中，设置状态被附加时显示的重叠图像。</p>
+		  <h3 class="main__title--h3"> Removal Conditions（解除条件） </h3>
+		  <p>状态被解除的条件。条件需要在下面的项目中进行指定。如果指定了多重解除条件，那么只要有一个条件达到要求，状态就会被解除。</p>
 		  <dl class="main__dl">
-			<dt>Remove at Battle End </dt>
-				<dd>When enabled, the condition will be removed when the battle ends.</dd>
-				<dt>Remove by Restriction </dt>
-				<dd>When enabled, the condition will be removed when another state is added that has separate restrictions.</dd>
-				<dt>Auto-removal Timing/Duration in Turns </dt>
-				<dd>Removed after turn. When using [Action End], the condition will be removed after the active character finishes an action, and will be removed after a turn ends and before returning to Action Selection when using [Turn End]. Specify the lower limit and upper limit (0 to 9999) of number of turns until a condition is removed following being given a state using [Duration in Turns].</dd>
-				<dt>Remove by Damage </dt>
-				<dd>A condition will have a specified chance (0 to 100%) of being removed when receiving any sort of damage.</dd>
-				<dt>Remove by Walking </dt>
-				<dd>A condition will be removed when the player moves on the map after walking over the number of tiles specified (0 to 9999).</dd>
+			<dt>Remove at Battle End（战斗结束时解除） </dt>
+				<dd>启用时，战斗结束时自动解除该状态。</dd>
+				<dt>Remove by Restriction（由限制解除） </dt>
+				<dd>启用时，当另一有独立限制的状态被附加时，该状态会被自动解除。</dd>
+				<dt>Auto-removal Timing/Duration in Turns（自动解除时机/持续的回合数） </dt>
+				<dd>在回合后解除。使用[Action End（行动结束）]时，状态会在战斗者完成他的行动后解除。使用[Turn End（回合结束）]时，状态会在本回合结束，下一回合的命令选择开始之前解除。使用[Duration in Turns（持续的回合数）]时，需要指定状态被解除回合的下界和上界（0 ~ 9999）。</dd>
+				<dt>Remove by Damage（受到伤害解除） </dt>
+				<dd>当受到任何种类的伤害时，状态会以一定几率（0 ~ 100%）解除。</dd>
+				<dt>Remove by Walking（行走时解除） </dt>
+				<dd>当角色在地图上走了指定步数（0 ~ 9999）时，状态自动被解除。</dd>
 			</dl>
-		  <h3 class="main__title--h3"> Message </h3>
-		  <p>Message that gets displayed during battle when this state is given or removed. For each of the following 4 states, a message will be displayed following the target's name: "If an actor is inflicted with the state","If an enemy is inflicted with the state","If the state persists", and "If the state is removed".</p>
-		  <h3 class="main__title--h3"> Traits </h3>
-		  <p>Traits given to the target when given a state. For more information please refer to [<a href="01_08_15.html">How to Set Traits</a>].</p>
-		  <h3 class="main__title--h3"> Note </h3>
-		  <p>The [Note] section can be used to make notes while making your game.</p>
+		  <h3 class="main__title--h3"> Message（消息） </h3>
+		  <p>战斗中，状态被附加或移除时显示的消息。在下面 4 种情况下，消息会以“目标名称+消息内容”的方式出现：“主角被附加此项状态”，“敌人被附加此项状态”，“状态持续中”，和 “状态被解除”。</p>
+		  <h3 class="main__title--h3"> Traits（特性） </h3>
+		  <p>附加此状态是，给予目标的特性。详情请参考[<a href="01_08_15.html">如何设置特性</a>]。</p>
+		  <h3 class="main__title--h3"> Note（备注） </h3>
+		  <p>[Note（备注）]部分用于在游戏制作中为状态添加备注。</p>
 		</div><!-- /main__section -->
 
 	</div><!-- /main -->
