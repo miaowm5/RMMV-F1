@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>System Settings</title>
+	<title>系统设置</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,209 +10,209 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v03">System Settings</h1>
+	  <h1 class="main__title--h1 main__title--h1--v03">系统设置</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_08.html">Database</a></li>
+		  <li><a href="01_08.html">数据库</a></li>
 		  <li>&gt;</li>
-		  <li>System Settings</li>
+		  <li>系统设置</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Role of Data</h2>
+		  <h2 class="main__title--h2">数据的作用</h2>
 		  <p>
-				System data is the collection of things such as the initial settings for the game. You can specify things such as the formation and positions of party members at the start of the game, and the music that places in various situations during gameplay.
+				系统数据就是一些游戏初始设置的集合。在系统设置中，你可以指定游戏初期队伍成员的组成和位置，或者是游戏不同场景播放的音乐等。
 			</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <h2 class="main__title--h2">参数详细信息</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_12_img01.png" width="1019" height="650" alt="" />
 			</div>
-		  <h3 class="main__title--h3"> Starting Party </h3>
-		  <p>The members that form the party at the start of the game. <br />
+		  <h3 class="main__title--h3"> Starting Party（初期队伍） </h3>
+		  <p>游戏初期队伍的成员组成。 <br />
 		    <br />
-		    There is no limit to how many actors you can place into a party, however only the first 4 can participate in battle.<br />
+		    队伍中的初期队员人数没有显示，但是，只有前 4 名成员能够参加战斗。<br />
   <br />
-		    To change or add new actors, double-click items (a blank row when adding) in the list, and specify the new actors. To remove actors, right-click the one you wish to remove and select [Delete] in the menu that is displayed. </p>
-		  <h3 class="main__title--h3"> Game Title </h3>
-		  <p>The name of your game. This will be set when you enter the name into the [Game Title] field when creating a new project. This name will be displayed in the Game Screen title and the window's title bar.</p>
-		  <h3 class="main__title--h3"> Vehicle Images </h3>
-		  <p>Images for the vehicles (boats/ships/planes) displayed on the map. You can select an image in the [Select an Image] window that appears after double-clicking on each vehicle's section. Select [(None)] if you do not want to display an image.</p>
-		  <h3 class="main__title--h3"> Currency </h3>
-		  <p>The name for the unit of money used in the game. This is used for things such as displaying how much gold the player has in the Menu Screen.</p>
-		  <h3 class="main__title--h3"> Window Color </h3>
-		  <p>Background color of the windows used in the game. This is specified using the composition of the [Red], [Green] and [Blue] values (-255 to 255) in the window that appears when you double-click inside the field.</p>
-		  <h3 class="main__title--h3"> Options </h3>
-		  <p>Specify special processes and rules related to the game's behavior.</p>
+		    要更改或者添加新队员，双击列表中的项目（如果要添加就双击空行），然后指定你想要加入的队员。要删除队员，右键点击你想移除的队员，然后在菜单中选择[Delete（删除）]。</p>
+		  <h3 class="main__title--h3"> Game Title（游戏标题） </h3>
+		  <p>游戏的名字。在创建新工程时，你在[Game Title（游戏标题）]区域输入的名称就已经设置了此值。游戏的名称会出现在游戏画面标题和游戏窗口的标题栏上。</p>
+		  <h3 class="main__title--h3"> Vehicle Images（交通工具图像） </h3>
+		  <p>地图上交通工具的图像（小船/大船/飞机）。双击每个交通工具后，你可以在打开的[Select an Image（选择图片）]窗口中选择你想要的图片。如果你不想显示交通工具的图像，则可以选择[(无)]。</p>
+		  <h3 class="main__title--h3"> Currency（货币） </h3>
+		  <p>游戏中金钱单位的名称。它可以被用来在菜单画面中显示主角所持的金钱数。</p>
+		  <h3 class="main__title--h3"> Window Color（窗口颜色） </h3>
+		  <p>游戏中窗口的背景颜色。双击此区域后，在打开的窗口里调节[Red（红）]，[Green（绿）]，[Blue（蓝）]的数值组合（-255 ~ 255）来指定颜色。</p>
+		  <h3 class="main__title--h3"> Options（选项） </h3>
+		  <p>指定和游戏行为有关的特殊过程和规则。</p>
 		  <dl class="main__dl">
-			<dt>Use Side-view Battle </dt>
-				<dd>Displays the Battle Screen in a side point of view. Front-view Mode will be used if this is not checked.</dd>
-				<dt>Start Transparent </dt>
-				<dd>When enabled, the game will start with the character transparent (hidden). Use the [Change Transparency] event command to switch this off.</dd>
-				<dt>Show Player Followers </dt>
-				<dd>When enabled, the game will start with actors, starting from the 2nd, following the main actor while moving on the map. Only 4 actors starting from the first will be displayed even when there are 5 members in a party.</dd>
-				<dt>Knockout by Slip Damage </dt>
-				<dd>When enabled, this allows the HP to reach 0 by when damaged by states such as "Poison". HP will only go down to 1 when this is disabled.</dd>
-				<dt>Knockout by Floor Damage </dt>
-				<dd>When enabled, this allows the HP to reach 0 when damaged by tiles (Damage Floors) on the map. HP will only go down to 1 when this is disabled.</dd>
-				<dt>Display TP in Battle </dt>
-				<dd>When enabled, TP values will be displayed in the party members' Status Window in the Battle Screen.</dd>
-				<dt>EXP for Reserve Members </dt>
-				<dd>When enabled, actors who did not participate in battle will also receive EXP when a battle is won.</dd>
+			<dt>Use Side-view Battle（使用横版战斗） </dt>
+				<dd>战斗画面变为横版模式。如果不选中则启用纵版战斗模式。</dd>
+				<dt>Start Transparent（主角初期透明） </dt>
+				<dd>启用时，游戏初期角色在地图上时透明的（隐藏）。你需要使用[Change Transparency（更改透明状态）]事件指令来关掉这个效果。</dd>
+				<dt>Show Player Followers（显示跟随队员） </dt>
+				<dd>启用时，地图上会显示主要队员和跟随队员（从第二名队员起）。即使队伍中有 5 名队员，地图上也只会显示前四名队员的图像。</dd>
+				<dt>Knockout by Slip Damage（连续伤害允许死亡） </dt>
+				<dd>启用时，若角色持有连续伤害的状态（例如中毒），则角色的 HP 会达到 0。禁用时，HP 只会降低到 1 点（不会死亡）。</dd>
+				<dt>Knockout by Floor Damage（地形伤害允许死亡） </dt>
+				<dd>启用时，若角色处在地形伤害区域中，则角色的 HP 会达到 0。禁用时，HP 只会降低到 1 点（不会死亡）。</dd>
+				<dt>Display TP in Battle（战斗中显示 TP） </dt>
+				<dd>启用时，战斗画面的状态窗口会显示队伍成员的 TP 值。</dd>
+				<dt>EXP for Reserve Members（替补队员可获得 EXP） </dt>
+				<dd>启用时，没有参加的队员仍然可以在战斗获胜后得到 EXP。</dd>
 			</dl>
-		  <h3 class="main__title--h3"> Music </h3>
-		  <p>Music that plays while playing. Specify the BGM or ME that plays in the parameters for each scene. The parameters for each scene are as follows. Also, the music that plays when the player moves on the map will be set in the map data.</p>
+		  <h3 class="main__title--h3"> Music（音乐） </h3>
+		  <p>游戏进行时播放的音乐。你需要在参数中为每个场景指定播放的 BGM 和 ME。每个场景的参数如下。另外，角色进入地图时播放的音乐在地图数据中设置。</p>
 		  <table class="main__table--type01">
 				<tr>
-					<th>Title</th>
-					<td>The BGM that plays in the Title Screen.</td>
+					<th>Title（标题）</th>
+					<td>标题画面播放的 BGM。</td>
 				</tr>
 				<tr>
-					<th>Battle</th>
-					<td>The BGM that plays in the Battle Screen.</td>
+					<th>Battle（战斗）</th>
+					<td>战斗画面播放的 BGM。</td>
 				</tr>
 				<tr>
-					<th>Victory</th>
-					<td>The ME that plays after battle when a party wins.</td>
+					<th>Victory（胜利）</th>
+					<td>战斗胜利后播放的 ME。</td>
 				</tr>
 				<tr>
-					<th>Defeat</th>
-					<td>The ME that plays after battle when a party loses.</td>
+					<th>Defeat（击败）</th>
+					<td>战斗失败后播放的 ME。</td>
 				</tr>
 				<tr>
-					<th>Game Over</th>
-					<td>The ME that plays in the Game Over screen.</td>
+					<th>Game Over（游戏结束）</th>
+					<td>游戏结束画面播放的 ME。</td>
 				</tr>
 				<tr>
-					<th>Boat</th>
-					<td>The BGM that plays when on a boat.</td>
+					<th>Boat（小船）</th>
+					<td>在小船上播放的 BGM。</td>
 				</tr>
 				<tr>
-					<th>Ship</th>
-					<td>The BGM that plays when on a ship.</td>
+					<th>Ship（大船）</th>
+					<td>在大船上播放的 BGM。</td>
 				</tr>
 				<tr>
-					<th>Airship</th>
-					<td>The BGM that plays when on a airship.</td>
+					<th>Airship（飞空艇）</th>
+					<td>在飞空艇上播放的 BGM。</td>
 				</tr>
 			</table>
-		  <h3 class="main__title--h3"> Sounds </h3>
-		  <p>The sound effects (SE) that play in situations such as when the player moves or performs an action during battle. Set the SE file that will play for each situation. The parameters for each situation are as follows.</p>
+		  <h3 class="main__title--h3"> Sounds（声音） </h3>
+		  <p>游戏中的音效，例如玩家移动或者是战斗中采取行动时播放的声音。你需要为每个情形设置播放的 SE 文件。每个情形的参数如下。</p>
 		  <table class="main__table--type01">
 				<tr>
-					<th>Cursor</th>
-					<td>When moving the cursor.</td>
+					<th>Cursor（光标）</th>
+					<td>移动光标时。</td>
 				</tr>
 				<tr>
-					<th>OK</th>
-					<td>When confirming the command to use.</td>
+					<th>OK（确认）</th>
+					<td>确认命令时。</td>
 				</tr>
 				<tr>
-					<th>Cancel</th>
-					<td>When canceling a command in the Menu Screen, etc.</td>
+					<th>Cancel（取消）</th>
+					<td>取消命令时。</td>
 				</tr>
 				<tr>
-					<th>Buzzer</th>
-					<td>When selecting a command that cannot be used in the Menu Screen, etc.</td>
+					<th>Buzzer（冻结）</th>
+					<td>在菜单中选择了不可用的命令时。</td>
 				</tr>
 				<tr>
-					<th>Equip</th>
-					<td>When changing equipment in the Menu Screen.</td>
+					<th>Equip（装备）</th>
+					<td>在菜单画面中更改装备时。</td>
 				</tr>
 				<tr>
-					<th>Save</th>
-					<td>When saving the game.</td>
+					<th>Save（存档）</th>
+					<td>存储游戏进度时。</td>
 				</tr>
 				<tr>
-					<th>Load</th>
-					<td>When loading the game.</td>
+					<th>Load（读档）</th>
+					<td>读取游戏进度时。</td>
 				</tr>
 				<tr>
-					<th>Battle Start</th>
-					<td>When encountering an enemy.</td>
+					<th>Battle Start（战斗开始）</th>
+					<td>遭遇敌人时。</td>
 				</tr>
 				<tr>
-					<th>Escape</th>
-					<td>When a party or enemy escapes during battle.</td>
+					<th>Escape（逃跑）</th>
+					<td>主角队伍或敌人队伍在战斗中逃跑时。</td>
 				</tr>
 				<tr>
-					<th>Enemy Attack</th>
-					<td>When an enemy performs a normal attack during battle.</td>
+					<th>Enemy Attack（敌人攻击）</th>
+					<td>战斗中敌人进行普通攻击时。</td>
 				</tr>
 				<tr>
-					<th>Enemy Damage</th>
-					<td>When damaging an enemy during battle.</td>
+					<th>Enemy Damage（敌人受伤）</th>
+					<td>战斗中给敌人造成伤害时。</td>
 				</tr>
 				<tr>
-					<th>Enemy Collapse</th>
-					<td>When an enemy is knocked out during battle.</td>
+					<th>Enemy Collapse（敌人死亡）</th>
+					<td>战斗中敌人死亡时。</td>
 				</tr>
 				<tr>
-					<th>Boss Collapse 1</th>
+					<th>Boss Collapse 1（Boss 死亡 1）</th>
 					<td>When the [Collapse Effect] of a [Trait] knocks out an enemy [Boss].</td>
 				</tr>
 				<tr>
-					<th>Boss Collapse 2</th>
+					<th>Boss Collapse 2（Boss 死亡 2）</th>
 					<td>When the [Collapse Effect] of a [Trait] displays the vanishing effect of an enemy [Boss].</td>
 				</tr>
 				<tr>
-					<th>Actor Damage</th>
-					<td>When an actor is damaged.</td>
+					<th>Actor Damage（角色受伤）</th>
+					<td>角色受伤时。</td>
 				</tr>
 				<tr>
-					<th>Actor Collapse</th>
-					<td>When an actor becomes knocked out during battle.</td>
+					<th>Actor Collapse（角色死亡）</th>
+					<td>战斗中角色死亡时。</td>
 				</tr>
 				<tr>
-					<th>Recovery</th>
-					<td>When an actor or enemy recovers during battle.</td>
+					<th>Recovery（复活）</th>
+					<td>战斗中角色或敌人复活时。</td>
 				</tr>
 				<tr>
-					<th>Miss</th>
-					<td>When a character fails to land a physical attack.</td>
+					<th>Miss（未击中）</th>
+					<td>战斗者物理攻击落空时。</td>
 				</tr>
 				<tr>
-					<th>Evasion</th>
-					<td>When a character evades a physical attack.</td>
+					<th>Evasion（闪避）</th>
+					<td>战斗者回避物理攻击时。</td>
 				</tr>
 				<tr>
-					<th>Magic Evasion</th>
-					<td>When a character evades a magic attack.</td>
+					<th>Magic Evasion（魔法闪避）</th>
+					<td>战斗者回避魔法攻击时。</td>
 				</tr>
 				<tr>
-					<th>Magic Reflection</th>
-					<td>When a character reflects a magic attack.</td>
+					<th>Magic Reflection（魔法反射）</th>
+					<td>战斗者反射魔法攻击时。</td>
 				</tr>
 				<tr>
-					<th>Shop</th>
-					<td>When buying or selling an item in the Shop Screen.</td>
+					<th>Shop（商店）</th>
+					<td>在商店画面购买或出售物品时。</td>
 				</tr>
 				<tr>
-					<th>Use Item</th>
-					<td>When an item is used in the Menu Screen.</td>
+					<th>Use Item（使用物品）</th>
+					<td>菜单画面中使用物品时。</td>
 				</tr>
 				<tr>
-					<th>Use Skill</th>
-					<td>When a skill is used in the Menu Screen.</td>
+					<th>Use Skill（使用技能）</th>
+					<td>菜单画面中使用技能时。</td>
 				</tr>
 			</table>
-		  <h3 class="main__title--h3"> Menu Commands </h3>
-		  <p> Switch commands in the Menu Screen to ON or OFF. </p>
-		  <h3 class="main__title--h3"> [SV] Attack Motions </h3>
-		  <p> Select motions that are displayed for normal attacks in side-view mode. </p>
-		  <h3 class="main__title--h3"> [SV] Magic Skills </h3>
-		  <p> List of skill types which require chanting motions in side-view mode. </p>
-		  <h3 class="main__title--h3"> Starting Positions </h3>
-		  <p>The positions of the player and vehicles (boats/ships/planes) when the game starts. Open the Settings Window for each field by pressing its [...] button, and specify the location by clicking a point on the map on the right. <br />
+		  <h3 class="main__title--h3"> Menu Commands（菜单指令） </h3>
+		  <p> 打开或关闭菜单画面中的某些命令。</p>
+		  <h3 class="main__title--h3"> [SV] Attack Motions（[SV] 攻击动作） </h3>
+		  <p> 选择横版战斗模式下普通攻击所显示的动作。</p>
+		  <h3 class="main__title--h3"> [SV] Magic Skills（[SV] 魔法技能） </h3>
+		  <p> 选择横版战斗模式下需要吟唱动作的技能种类。</p>
+		  <h3 class="main__title--h3"> Starting Positions（起始位置） </h3>
+		  <p>主角和交通工具（小船/大船/飞机）在游戏开始时的位置。按下[...]按钮来打开每个区域的设置窗口。然后在右侧的地图中点击来指定开始的位置。<br />
 		    <br />
-		    The starting location specified will be shown using an icon in a blue frame on the map. This icon can be moved just like map events by dragging them, and you can delete them by pressing the [Delete] key. <br />
+		    所指定的开始位置会在地图上以一个蓝色图标方框显示。这个图标可以在地图上任意拖动，就像你操作其他地图事件一样，你也可以使用[Delete]键来删除它。<br />
   <br />
-		    However, if the starting position for the player is undecided (deleting the icon), you cannot start the game.</p>
-		  <h3 class="main__title--h3"> Title Screen </h3>
-		  <p>The image which is displayed first in the Play Screen after starting the game. You can select an image in the [Select an Image] window that appears by pressing the field's [...] button. When [Draw Game Title] is enabled, the game's name that was specified in [Game Title] will be displayed towards the top of the Title Screen (disable when including the title of the game in the image).</p>
+		    但是，如果主角的初始位置没有决定（图标被删除），你将不能启动游戏。</p>
+		  <h3 class="main__title--h3"> Title Screen（标题画面） </h3>
+		  <p>启动游戏后，首先被显示在游戏画面中的图片。点击此区域中的[...]按钮，在打开的[Select an Image（选择图片）]窗口中选择一张图片。当选择了[Draw Game Title（绘制游戏标题）]时。在[Game Title（游戏标题）]区域指定的游戏名字会显示在标题画面的上方。当你的标题图片已经包含了游戏标题时，你就需要关掉此选项。</p>
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_08_12_img02.png" width="830" height="491" alt="" />
 			</div>
