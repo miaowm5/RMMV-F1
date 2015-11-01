@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Common Event Settings</title>
+	<title>公共事件设置</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,51 +10,51 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v03">Common Event Settings</h1>
+	  <h1 class="main__title--h1 main__title--h1--v03">公共事件设置</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_08.html">Database</a></li>
+		  <li><a href="01_08.html">数据库</a></li>
 		  <li>&gt;</li>
-		  <li>Common Event Settings</li>
+		  <li>公共事件设置</li>
 	  </ul>
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Role of Data</h2>
-		  <p> Common events are those events that can be run when you want them to be during gameplay. You can define triggers that you run generally for the overall game such as regularly monitoring play conditions and run some kinds of processes when things such as items and skills are used. Common events created can be run by using event command or triggering it through defined switches. </p>
+		  <h2 class="main__title--h2">数据的作用</h2>
+		  <p> 公共事件就是在游戏中随时可以运行的事件。你可以定义一些游戏全局的触发事件，例如有规律地监测游戏的状态，或者是技能和物品使用后需要额外处理的过程。要运行所创建的公共事件，你可以直接在事件指令中调用它，或者是通过开关触发。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <h2 class="main__title--h2">参数详细信息</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_08_11_img01.png" width="769" height="631" alt="" />
 			</div>
-		  <h3 class="main__title--h3"> General Settings </h3>
-		  <h3 class="main__title--h3--sub"> Name </h3>
-		  <p>Name of the common event. This property is just used in the editor (does not affect the game).</p>
-		  <h3 class="main__title--h3--sub"> Trigger</h3>
-		  <p>Timing for when these events are run will be specified using the following. Moreover, [Autorun] and [Parallel] can only be enabled when the Map Screen is displayed.</p>
+		  <h3 class="main__title--h3"> 常规设置 </h3>
+		  <h3 class="main__title--h3--sub"> Name（名称） </h3>
+		  <p>公共事件的名称。此属性只用于编辑器中（不会影响游戏）。</p>
+		  <h3 class="main__title--h3--sub"> Trigger（触发条件）</h3>
+		  <p>可以利用下面的选项指定本公共事件的执行时机。此外，[Autorun（自动执行）] 和 [Parallel（并行处理）]仅在地图画面中有效。</p>
 		  <dl class="main__dl--sub">
-			<dt>None </dt>
-				<dd>Will only be triggered by skills, items, and other explicitly stated events.</dd>
-				<dt>Autorun </dt>
-				<dd>Will run when the specified [Switch] is switched to ON.</dd>
-				<dt>Parallel </dt>
-				<dd>Will run when the specified  [Switch] is set to ON, and will repeat periodically.</dd>
+			<dt>None（无） </dt>
+				<dd>只可以由技能，物品和其他事件调用。</dd>
+				<dt>Autorun（自动执行） </dt>
+				<dd>当[Switch（开关）]打开时自动执行。</dd>
+				<dt>Parallel（并行处理） </dt>
+				<dd>当[Switch（开关）]打开时反复执行。</dd>
 			</dl>
-		  <h3 class="main__title--h3--sub"> Switch </h3>
-		  <p>Specify what the switch is that triggers the event when setting the trigger to [Autorun] or [Parallel]. If there are multiple common events with the same switch, the event with the youngest ID (at the top of the list) will be run.</p>
-		  <h3 class="main__title--h3"> Contents </h3>
-		  <p>Events run using common events will be set based on event commands. Editing is done the same way as the [<a href="01_09_03.html#p03">Contents</a>] for map events.</p>
+		  <h3 class="main__title--h3--sub"> Switch（开关） </h3>
+		  <p>指定设置为[Autorun（自动执行）]和[Parallel（并行处理）]公共事件的条件开关。如果多个事件共用一个条件开关，那么 ID 最小的公共事件（位于公共事件列表的上方）将会被执行。</p>
+		  <h3 class="main__title--h3"> Contents（事件内容） </h3>
+		  <p>公共事件的执行内容也是由事件指令组成。编辑方式和地图事件的[<a href="01_09_03.html#p03">事件内容</a>]相同。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section">
-		  <h2 class="main__title--h2">Word of Caution When Using Autorun and Parallel Triggers</h2>
-		  <p>Events which are set to [Autorun] or [Parallel] will have their contents run repeatedly while the [Switch] is set to [ON].<br />
+		  <h2 class="main__title--h2">使用自动执行和并行处理的注意事项</h2>
+		  <p>设置为[Autorun（自动执行）] 或 [Parallel（并行处理）]的事件会在条件开关打开时反复执行。<br />
 		    <br />
-		    Measures need to be taken to have the [OFF] value which is used as the condition set in order to stop the event from repeating. If you do not control this, there is a possibility that players will no longer be able to control the game depending on the contents of the event.<br />
+		    通常，你需要采取一些措施来关闭条件开关，这样可以阻止公共事件反复执行。如果你对此不加控制，那么有可能玩家无法继续操控游戏（由于该事件反复执行的缘故）。<br />
   <br />
-		    If you are no longer able to play while in Playtest, you can forcibly close the game by pressing the [X] button or by hitting [Alt] + [F4].</p>
+		    如果你在游戏测试中无法控制游戏，你可以通过按下窗口上的 [X] 按钮或者是 [Alt] + [F4] 组合键来强行关闭游戏。</p>
 		</div><!-- /main__section -->
 
 
