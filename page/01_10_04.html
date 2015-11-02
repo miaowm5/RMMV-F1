@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Party</title>
+	<title>队伍</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,104 +10,104 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v05">Party</h1>
+	  <h1 class="main__title--h1 main__title--h1--v05">队伍</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令</a></li>
 		  <li>&gt;</li>
-		  <li>Party</li>
+		  <li>队伍</li>
 	  </ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Change Gold</h2>
+		  <h2 class="main__title--h2">Change Gold（增加金钱）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_04_img01.png" width="352" height="245" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Changes the amount of gold of the party.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>更改队伍的金钱数量。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-				<dt>Operation</dt>
-				<dd>Specify whether to increase or decrease gold.</dd>
-				<dt>Operand</dt>
-				<dd>Set the amount to increase or decrease gold. Choose [Constant] to change the gold using a fixed value, and enter the amount. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+				<dt>Operation（操作）</dt>
+				<dd>指定是增加金钱还是减少金钱。</dd>
+				<dt>Operand（操作数）</dt>
+				<dd>设置增减金钱的数量。若选择[Constant（常量）]，则操作的数值是固定的，接下来输入此值即可。如果选择[Variable（变量）]，则操作数需要使用变量指定，接下来你要指定所参考的变量。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Change Items</h2>
+		  <h2 class="main__title--h2">Change Items（增减物品）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_04_img02.png" width="352" height="300" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the quantity of items of the party. Upon changing the quantity, if that number is outside of the 0 to 99 range, the value will be adjusted to either 99 (max number a player can have) or 0 (none in inventory).</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改队伍中物品的数量。当改变数量时，如果它超出了 0 ~ 99 的范围，则数值会被调节为 99（玩家所持最大数） 或 0（主角背包中没有此项物品）。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-				<dt>Item</dt>
-				<dd>Specify the item to increase or decrease.</dd>
-				<dt>Operation</dt>
-				<dd>Specify whether to increase or decrease the quantity.</dd>
-				<dt>Operand</dt>
-				<dd>Set the amount by which to increase or decrease the quantity. Choose [Constant] to change the quantity using a fixed value, and enter the amount. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+				<dt>Item（物品）</dt>
+				<dd>指定要增减的物品。</dd>
+				<dt>Operation（操作）</dt>
+				<dd>指定是增加物品还是减少物品。</dd>
+				<dt>Operand（操作数）</dt>
+				<dd>设置增减物品的数量。若选择[Constant（常量）]，则操作的数值是固定的，接下来输入此值即可。如果选择[Variable（变量）]，则操作数需要使用变量指定，接下来你要指定所参考的变量。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">Change Weapons</h2>
+		  <h2 class="main__title--h2">Change Weapons（增减武器）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_04_img03.png" width="352" height="328" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the quantity of weapons of the party. Upon changing the quantity, if that number is outside of the 0 to 99 range, the value will be adjusted to either 99 (max number a player can have) or 0 (none in inventory).</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改队伍中武器的数量。当改变数量时，如果它超出了 0 ~ 99 的范围，则数值会被调节为 99（玩家所持最大数） 或 0（主角背包中没有此项武器）。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-				<dt>Weapon</dt>
-				<dd>Specify the weapon to increase or decrease.</dd>
-				<dt>Operation</dt>
-				<dd>Specify whether to increase or decrease the quantity.</dd>
-				<dt>Operand</dt>
-				<dd>Set the amount by which to increase or decrease the quantity. Choose [Constant] to change the quantity using a fixed value, and enter the amount. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
-				<dt>Include Equipment</dt>
-				<dd>When enabled, weapons that actors have equipped can also be decreased.</dd>
+				<dt>Weapon（武器）</dt>
+				<dd>指定要增减的武器。</dd>
+				<dt>Operation（操作）</dt>
+				<dd>指定是增加武器还是减少武器。</dd>
+				<dt>Operand（操作数）</dt>
+				<dd>设置增减物品的数量。若选择[Constant（常量）]，则操作的数值是固定的，接下来输入此值即可。如果选择[Variable（变量）]，则操作数需要使用变量指定，接下来你要指定所参考的变量。</dd>
+				<dt>Include Equipment（包含装备）</dt>
+				<dd>启用后，减少武器时，角色正装备的武器也可以被去除。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Change Armors</h2>
+		  <h2 class="main__title--h2">Change Armors（增减防具）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_04_img04.png" width="352" height="328" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the quantity of armors of the party. Upon changing the quantity, if that number is outside of the 0 to 99 range, the value will be adjusted to either 99 (max number a player can have) or 0 (none in inventory).</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改队伍中防具的数量。当改变数量时，如果它超出了 0 ~ 99 的范围，则数值会被调节为 99（玩家所持最大数） 或 0（主角背包中没有此项防具）。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-				<dt>Armor</dt>
-				<dd>Specifies the armor to increase or decrease.</dd>
-				<dt>Operation</dt>
-				<dd>Specifies whether to increase or decrease the quantity.</dd>
-				<dt>Operand</dt>
-				<dd>Set the amount by which to increase or decrease the quantity. Choose [Constant] to change the quantity using a fixed value, and enter the amount. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
-				<dt>Include Equipment</dt>
-				<dd>When enabled, armor that actors have equipped can also be decreased.</dd>
+				<dt>Armor（防具）</dt>
+				<dd>指定要增减的防具。</dd>
+				<dt>Operation（操作）</dt>
+				<dd>指定是增加防具还是减少防具。</dd>
+				<dt>Operand（操作数）</dt>
+				<dd>设置增减防具的数量。若选择[Constant（常量）]，则操作的数值是固定的，接下来输入此值即可。如果选择[Variable（变量）]，则操作数需要使用变量指定，接下来你要指定所参考的变量。</dd>
+				<dt>Include Equipment（包含装备）</dt>
+				<dd>启用后，减少防具时，角色正装备的防具也可以被去除。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Change Party Member</h2>
+		  <h2 class="main__title--h2">Change Party Member（更改队伍成员）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_04_img05.png" width="262" height="224" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Change the formation of the actors in the party. You can also change the number of actors in the party to 0 using this command. If so, players will not be displayed on the map.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改队伍的成员组成。你也可以使用此命令将队伍的成员数减少到 0。如果这样做了，地图上就不会显示主角的行走图。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-				<dt>Actor</dt>
-				<dd>Select the actor to change.</dd>
-				<dt>Operation</dt>
-				<dd>Select which operation to perform (Add/Remove).</dd>
-				<dt>Initialize</dt>
-				<dd>When enabled, the traits when adding an actor will be reset according to the parameters in the [Database].</dd>
+				<dt>Actor（角色）</dt>
+				<dd>选择需要更改的角色。</dd>
+				<dt>Operation（操作）</dt>
+				<dd>选择要进行的操作（加入/离开）。</dd>
+				<dt>Initialize（初始化）</dt>
+				<dd>启用后，角色的一切特性将重置，恢复到[Database（数据库）]中所指定的状态。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
