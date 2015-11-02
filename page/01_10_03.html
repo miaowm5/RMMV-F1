@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Flow Control</title>
+	<title>流程控制</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,144 +10,144 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v05">Flow Control</h1>
+	  <h1 class="main__title--h1 main__title--h1--v05">流程控制</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令</a></li>
 		  <li>&gt;</li>
-		  <li>Flow Control</li>
+		  <li>流程控制</li>
 	  </ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Conditional Branch</h2>
+		  <h2 class="main__title--h2">Conditional Branch（条件分歧）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_03_img01.png" width="492" height="417" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Specifies event commands which branch processes so that it is possible to run special processes only when specified conditions are met. When [Create Else Branch] is enabled, it is possible to branch conditions when the specified conditions are not met.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
-		  <p>Specifies the conditions from the below options along with the evaluation criteria.</p>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>指定各个条件分支处理的事件指令，因此一些特殊的过程只能在指定条件被满足时运行。当[Create Else Branch（这以外的场合）]被选中时，当指定条件不满足时，事件指令会落入另一个分支中。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
+		  <p>从下面的选项中选择一个条件，同时你要指定执行的标准。</p>
 		  <dl class="main__dl--sub">
-			<dt>Switch</dt>
-				<dd>Use the value of the specified switch as a criterion. Set the target switch and its value to (ON/OFF).</dd>
+			<dt>Switch（开关）</dt>
+				<dd>使用指定的开关值作为标准。你需要设置目标开关和它的状态（ON / OFF）。</dd>
 
-				<dt>Variable</dt>
-				<dd>Use the value of the specified variable as a criterion. Set the variable used to evaluate conditions, the value to compare, and the method for comparison. When using a variable for the value to compare, select [Variable], and specify the value to reference.</dd>
+				<dt>Variable（变量）</dt>
+				<dd>使用指定的变量值作为标准。你需要设置需要判断条件的变量，和它比较的值，比较的方法。当需要使用其他变量作为比较的值时，选择[Variable（变量）]，然后指定变量的引用。</dd>
 
-				<dt>Self Switch</dt>
-				<dd>Use the state of the specified self switch as a criterion. Set the target self switch and its value to (ON/OFF).</dd>
+				<dt>Self Switch（独立开关）</dt>
+				<dd>使用指定的独立开关的状态作为标准。你需要设置目标独立开关和它的状态（ON / OFF）。</dd>
 
-				<dt>Timer</dt>
-				<dd>Use the remaining time on the timer as a criterion. Specify the remaining time and criterion (greater than/less than).</dd>
+				<dt>Timer（计时器）</dt>
+				<dd>使用计时器的剩余时间作为标准。你需要指定剩余的时间和标准（多于/少于）。</dd>
 
-				<dt>Actor</dt>
-				<dd>Use the specified actor as a criterion. Select the target actor, the content to reference (in party/name/class/skill/weapon/armor/state) and the evaluation criteria (specific item).</dd>
+				<dt>Actor（角色）</dt>
+				<dd>使用指定的角色作为标准。选择目标角色和要参考的内容（in party/name/class/skill/weapon/armor/state[在队伍中/名称/职业/技能/武器/防具/状态]），有些内容还有额外的标准。</dd>
 
-				<dt>Enemy</dt>
-				<dd>Use the specified enemy during battle as a criterion. Select the target enemy and the evaluation criteria (appeared/state). This is only effective in battle events.</dd>
+				<dt>Enemy（敌人）</dt>
+				<dd>在战斗中，使用指定敌人作为标准。选择目标敌人和执行的标准（出现/状态）。这仅在战斗事件中有效。</dd>
 
-				<dt>Character</dt>
-				<dd>Uses the direction of the player or map event as a criterion. Specify the target character and direction. This is only effective in map events.</dd>
+				<dt>Character（地图上的角色）</dt>
+				<dd>使用地图上的主角或地图事件的方向作为标准。你需要指定目标角色和方向。这仅在地图事件中有效。</dd>
 
-				<dt>Vehicle</dt>
-				<dd>Use whether the player is riding the specified vehicle (boat/ship/plane) as a criterion.</dd>
+				<dt>Vehicle（交通工具）</dt>
+				<dd>使用主角正乘坐的交通工具（小型船/大型船/飞空艇）作为标准。</dd>
 
-				<dt>Gold</dt>
-				<dd>Use Gold possessed by the party as a criterion. Specify the amount and method for comparison (greater than/less than).</dd>
+				<dt>Gold（金钱）</dt>
+				<dd>使用队伍拥有的金钱作为标准。你需要指定数量和比较的方法（多于/少于）。</dd>
 
-				<dt>Item</dt>
-				<dd>Use whether the party possesses the specified item as a criterion.</dd>
+				<dt>Item（物品）</dt>
+				<dd>使用角色是否持有某特定物品作为标准。</dd>
 
-				<dt>Weapon</dt>
-				<dd>Use whether the party possesses the specified weapon as a criterion. When [Include Equipment] is enabled, the equipment that the actors are wearing will also be evaluated.</dd>
+				<dt>Weapon（武器）</dt>
+				<dd>使用队伍是否拥有某特定武器作为标准。当选项[Include Equipment（包含装备）]选中时，主角身穿的装备也会被考虑在内。</dd>
 
-				<dt>Armor</dt>
-				<dd>Use whether the party possesses the specified armor as a criterion. When [Include Equipment] is enabled, the equipment that the actors are wearing will also be evaluated.</dd>
+				<dt>Armor（防具）</dt>
+				<dd>使用队伍是否拥有某特定防具作为标准。当选项[Include Equipment（包含装备）]选中时，主角身穿的装备也会被考虑在内。</dd>
 
-				<dt>Button</dt>
-				<dd>Use whether the specified button is pressed as a criterion.</dd>
+				<dt>Button（按钮）</dt>
+				<dd>使用特定按钮是否被按下作为标准。</dd>
 
-				<dt>Script</dt>
-				<dd>For advanced users: use the evaluation result of the script as a criterion.</dd>
+				<dt>Script（脚本）</dt>
+				<dd>高级用户使用：使用脚本的执行结果作为标准。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Loop</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Adds the event commands [Loop] and [Repeat Above] which carry out repeated processes used for control. You can repeatedly run the event commands set in the rows found between these two commands. It is also possible to use a "multiloop" which runs additional loops inside other loops.</p>
-		  <h3 class="main__title--h3--sub">Remarks</h3>
+		  <h2 class="main__title--h2">Loop（循环）</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>在[Loop（循环）]和[Repeat Above（以上往复）]之间添加事件指令，这些指令会被反复执行。甚至你可以运行“多重循环”，也就是循环中间嵌套另一层循环。</p>
+		  <h3 class="main__title--h3--sub">注记</h3>
 		  <ul class="main__ul">
-		    <li>Event commands between [Loop] and [Repeat Above] will be repeated indefinitely. Use the event commands such as [Break Loop] to end repeated processes.</li>
+		    <li>在[Loop（循环）]和[Repeat Above（以上往复）]之间的事件指令会无限地重复执行。你可能需要其他事件指令（如[Break Loop（中断循环）]）来中断重复的过程。</li>
 	      </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">Break Loop</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Stops the process being repeated using the [Loop] event command. When this is run, the process will skip to the event command specified in the row after [Repeat Above]. There are no parameters to set.</p>
+		  <h2 class="main__title--h2">Break Loop（中断循环）</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>中断[Loop（循环）]指令指定的循环过程。此指令执行后，事件将会跳到[Repeat Above（以上往复）]命令后面的那一行继续执行。此处不需要设置参数。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Exit Event Processing</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Stops processing of the contents. Event commands after this will not be processed. There are no parameters to set.</p>
+		  <h2 class="main__title--h2">Exit Event Processing（中断事件处理）/h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>中断事件内容的处理。这命令后面的的指令将不会被执行。此处不需要设置参数。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Common Event</h2>
+		  <h2 class="main__title--h2">Common Event（公共事件）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_03_img02.png" width="222" height="134" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Invokes common events. After the common event that was invoked is finished processing, the game will move to the next event command.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>触发公共事件。公共事件执行完毕后，游戏会继续执行本事件余下的内容。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 		  <dl class="main__dl--sub">
-			<dt>Common Event</dt>
-				<dd>Specify the common event to run.</dd>
+			<dt>Common Event（公共事件）</dt>
+				<dd>指定要执行的公共事件。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p06">
-		  <h2 class="main__title--h2">Label</h2>
+		  <h2 class="main__title--h2">Label（标签）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_03_img03.png" width="222" height="134" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Creates a jump location for processes via the [Jump to Label] event command.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>为指定过程创建一个跳转的位置。可以通过使用[Jump to Label（标签跳转）]指令跳到这个位置处执行。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 		  <dl class="main__dl--sub">
-			<dt>Label Name</dt>
-				<dd>Specify the name of the label.</dd>
+			<dt>Label Name（标签名称）</dt>
+				<dd>指定标签的名称。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p07">
-		  <h2 class="main__title--h2">Jump to Label</h2>
+		  <h2 class="main__title--h2">Jump to Label（标签跳转）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_03_img04.png" width="222" height="134" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>The line to be processed moves to the location of the specified label. The event command of the row following the label that the process moved to will be processed.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>事件指令执行到此行时，会自动跳转到指定的标签位置继续向下执行。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 		  <dl class="main__dl--sub">
-			<dt>Label Name</dt>
-				<dd>Specify the label name of the jump location. Only labels belonging to the same event page can be specified. </dd>
+			<dt>Label Name（标签名称）</dt>
+				<dd>指定要跳转到的标签名。你只能指定本事件页中的标签。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p08">
-		  <h2 class="main__title--h2">Comment</h2>
+		  <h2 class="main__title--h2">Comment（注释）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_03_img05.png" width="432" height="225" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Sets comments displayed in the contents list. Has no effect on the game.</p>
-		  <h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>在事件内容中添加注释。这不会影响游戏。</p>
+		  <h3 class="main__title--h3--sub">设置</h3>
 		  <dl class="main__dl--sub">
-			  <dt>Comment</dt>
-				<dd>Set the text to be displayed as comments.</dd>
+			  <dt>Comment（注释）</dt>
+				<dd>注释的内容文字。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
