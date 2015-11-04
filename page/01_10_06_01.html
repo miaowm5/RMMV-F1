@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Set Movement Route</title>
+	<title>设置移动路线</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,104 +11,104 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v05">Set Movement Route</h1>
+		<h1 class="main__title--h1 main__title--h1--v05">设置移动路线</h1>
 		<ul class="breadcrumb">
 		  <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令</a></li>
 		  <li>&gt;</li>
-			<li><a href="01_10_06.html">Movement</a></li>
+			<li><a href="01_10_06.html">移动</a></li>
 			<li>&gt;</li>
-			<li>Set Movement Route</li>
+			<li>设置移动路线</li>
 		</ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">What is a Movement Route?</h2>
-		  <p>A movement route determines how a player or event will move. This is set if [Custom] is selected in the event's [Autonomous Movement] settings, as well as when using [Set Movement Route].<br />
+		  <h2 class="main__title--h2">什么是移动路线？</h2>
+		  <p>移动路线就是玩家或者事件的行走轨迹。如果在事件的[Autonomous Movement（自主移动）]选项选择了[Custom（自定义）]或者是使用[Set Movement Route（设置移动路线）]命令，你就需要设置移动路线了。<br />
 		    <br />
-		    Either setting will be carried out in the [Set Movement Route] window. Routes can be edited when used with [Movement Commands] that control the movement, direction, etc. of the player. For example, entering in the [Move Right], [Move Down], [Move Left] and [Move Up] movement commands will cause the player, etc. to move in a loop going clockwise from their current location. </p>
+		    以上两种设置都会使[Set Movement Route（设置移动路线）]窗口出现。你可以利用控制移动，方向等的[Movement Commands（移动指令）]来编辑玩家的移动路线。例如，当你依顺序输入[Move Right（向右移动）]，[Move Down（向下移动）]，[Move Left（向左移动）]，[Move Up（向上移动）]时，玩家或事件将会从当前位置出发做一个顺时针的移动。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Parameter Details</h2>
+		  <h2 class="main__title--h2">参数详细信息</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_06_01_img01.png" height="498" width="898" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Player</h3>
-		  <p>Specify the target actor/event for the movement route. This will be set only when configuring the [Set Movement Route] event command.</p>
-		  <h3 class="main__title--h3--sub">Command List</h3>
-		  <p>List of movement commands that have been entered. Movement commands are entered in the order of the route that will be set here. <br />
+		  <h3 class="main__title--h3--sub">Player（玩家）</h3>
+		  <p>指定移动路线的目标主角或事件。此选项只有在[Set Movement Route（设置移动路线）]指令中才会出现。</p>
+		  <h3 class="main__title--h3--sub">Command List（指令列表）</h3>
+		  <p>已经输入的移动指令列表。你需要按照路线的先后顺序输入移动指令。<br />
 		    <br />
-		    Movement commands clicked in the movement command list will be added at the position of the item clicked in the list. Additionally, you can perform actions such as reediting settings and copying them using the context menu that is displayed when you right-click an item.</p>
-		  <h3 class="main__title--h3--sub">Movement Commands</h3>
-		  <p>Group of commands to control the movement and direction of characters (players/events). A command will be added (inserted) at the location which is currently selected in the command list by clicking a command's button. The movement for each command is as follows. The movement distance for 1 step is equal to one tile.</p>
+		    当你点击移动指令列表中的指令时，它会被自动添加到列表所选项的下方。此外，你也可以使用右键菜单进行编辑和复制等操作。</p>
+		  <h3 class="main__title--h3--sub">Movement Commands（移动指令）</h3>
+		  <p>控制玩家或事件的移动和方向的指令集合。点击指令按钮时，对应的指令会被插入到指令列表当前选中项的下方。每项命令的移动方式如下。移动距离为 1 步等同于移动 1 格图块。</p>
 		  <dl class="main__dl--sub">
-			<dt>Move Down/Move Left/Move Right/Move Up/Move Lower Left/Move Lower Right/Move Upper Left/Move Upper Right</dt>
-					<dd>Move 1 step in the direction indicated in the command's name.</dd>
-					<dt>Move at Random</dt>
-					<dd>Move 1 step in a randomly selected direction between up, down, left and right.</dd>
-					<dt>Move toward Player</dt>
-					<dd>Move 1 step towards the direction of the player.</dd>
-					<dt>Move away from Player</dt>
-					<dd>Move 1 step in the direction away from the player.</dd>
-					<dt>1 Step Forward</dt>
-					<dd>Move 1 step in the direction currently faced.</dd>
-					<dt>1 Step Backward</dt>
-					<dd>Move 1 step away from the direction currently faced.</dd>
-					<dt>Jump</dt>
-					<dd>Move using a jump. Specify the distance to jump by setting the [X coordinate] and [Y coordinate] (each can be between -100 and 100, with a positive value being in the right/down direction). Players will move through obstacles during a jump. Moreover, members from the 2nd party member and on will remain in that location for parties which have [Show Player Followers] set to ON when jumping.</dd>
-					<dt>Wait</dt>
-					<dd>Specify the time to stop the process in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
-					<dt>Turn Down/Turn Left/Turn Right/Turn Up</dt>
-					<dd>Change the direction faced using the direction in the name.</dd>
-					<dt>Turn 90° Right/Turn 90° Left</dt>
-					<dd>Change the direction faced by 90° using the direction in the name.</dd>
-					<dt>Turn 180°</dt>
-					<dd>Face the opposite of the direction currently faced.</dd>
-					<dt>Turn 90° Right or Left</dt>
-					<dd>Change the direction randomly by 90°.</dd>
-					<dt>Turn at Random</dt>
-					<dd>Face up, down, left or right randomly.</dd>
-					<dt>Turn toward Player</dt>
-					<dd>Face toward where the player is.</dd>
-					<dt>Turn away from Player</dt>
-					<dd>Face the opposite direction of where the player is.</dd>
-					<dt>Switch ON/Switch OFF</dt>
-					<dd>Change the specified switch to the value in the name of the command.</dd>
-					<dt>Change Speed</dt>
-					<dd>Change the [Speed] setting under [Autonomous Movement] of the target map event. This change will continue even after movement has finished.</dd>
-					<dt>Change Frequency</dt>
-					<dd>Change the [Frequency] setting under [Autonomous Movement] of the target map event. This change will continue even after movement has finished.</dd>
-					<dt>Walking Animation ON/Walking Animation OFF</dt>
-					<dd>Change the value of the [Walking] setting under [Options] of the target map event. This change will continue even after movement has finished.</dd>
-					<dt>Stepping Animation ON/Stepping Animation OFF</dt>
-					<dd>Change the value of the [Stepping] setting under [Options] of the target map event.</dd>
-					<dt>Direction Fix ON/Direction Fix OFF</dt>
-					<dd>Change the value of the [Direction Fix] setting under [Options] of the target map event. This change will continue even after movement has finished.</dd>
-					<dt>Through ON/Through OFF</dt>
-					<dd>Change the value of the [Through] setting under [Options] of the target map event. This change will continue even after movement has finished.</dd>
-					<dt>Transparent ON/Transparent OFF</dt>
-					<dd>Change the image of the character to be displayed/hidden. The character will not be displayed when this is set to ON. This change will continue even after movement has finished.</dd>
-					<dt>Change Image</dt>
-					<dd>Change the character's image to the specified image. This change will continue even after movement has finished.</dd>
-					<dt>Change Opacity</dt>
-					<dd>Change the opacity (0 to 255) of the image of the character. The image will be invisible when this is set to 0. This change will continue even after movement has finished.</dd>
-					<dt>Change Blend Mode</dt>
-					<dd>Change the blending method of the colors displayed for the characters and map. Setting this to [Additive] will make it whitish. This change will continue even after movement has finished.</dd>
-					<dt>Play SE</dt>
-					<dd>Play the specified SE.</dd>
-					<dt>Script</dt>
-					<dd>Run the loaded script.</dd>
+			<dt>Move Down/Move Left/Move Right/Move Up/Move Lower Left/Move Lower Right/Move Upper Left/Move Upper Right（向 下/左/上/右/左下/右下/左上/右上 移动）</dt>
+					<dd>根据指令所显示的方向移动 1 步。</dd>
+					<dt>Move at Random（随机移动）</dt>
+					<dd>随机向上下左右四个方向移动 1 步。</dd>
+					<dt>Move toward Player（接近主角）</dt>
+					<dd>向主角的方向移动 1 步。</dd>
+					<dt>Move away from Player（远离主角）</dt>
+					<dd>向主角方向的反方向移动 1 步。</dd>
+					<dt>1 Step Forward（前进一步）</dt>
+					<dd>向当前的朝向移动 1 步。</dd>
+					<dt>1 Step Backward（后退一步）</dt>
+					<dd>从当前的方向后退 1 步。</dd>
+					<dt>Jump（跳跃）</dt>
+					<dd>跳跃到指定位置。你需要利用[X coordinate（X 坐标）] 和 [Y coordinate（坐标）]来指定跳跃距离（每一项可以设置为 -100 ~ 100，正数为向右/下）。角色在跳跃的时候会飞过障碍物。但是，如果[Show Player Followers（显示跟随队员）]选项打开时，从第二名队员起，他们的位置保持不动。</dd>
+					<dt>Wait（等待）</dt>
+					<dd>指定等待的帧数（1 ~ 999）。1 帧为 1/60 秒。</dd>
+					<dt>Turn Down/Turn Left/Turn Right/Turn Up（脸向 下/左/上/右）</dt>
+					<dd>更改对应的朝向。</dd>
+					<dt>Turn 90° Right/Turn 90° Left（向 右/左 旋转 90 度）</dt>
+					<dd>使角色的朝向向左/右旋转 90 度。</dd>
+					<dt>Turn 180°（旋转 180 度）</dt>
+					<dd>面向当前朝向相反的方向。</dd>
+					<dt>Turn 90° Right or Left（随机旋转 90 度）</dt>
+					<dd>随机向左/右旋转 90 度。</dd>
+					<dt>Turn at Random（随机转向）</dt>
+					<dd>随机改变朝向（上/下/左/右）。</dd>
+					<dt>Turn toward Player（面向主角）</dt>
+					<dd>面向主角的方向。</dd>
+					<dt>Turn away from Player（背向主角）</dt>
+					<dd>面向主角方向的反方向。</dd>
+					<dt>Switch ON/Switch OFF（开关 ON/OFF）</dt>
+					<dd>将指定开关的值变为 ON/OFF.</dd>
+					<dt>Change Speed（更改移动速度）</dt>
+					<dd>在[Autonomous Movement（自主移动）]下变更目标事件的移动速度。移动完成后，此效果不会消失。</dd>
+					<dt>Change Frequency（更改移动频率）</dt>
+					<dd>在[Autonomous Movement（自主移动）]下变更目标事件的移动频率。移动完成后，此效果不会消失。</dd>
+					<dt>Walking Animation ON/Walking Animation OFF（行走动画 ON/OFF）</dt>
+					<dd>更改地图事件[Options（选项）]中[Walking（行走动画）]的值。移动完成后，此效果不会消失。</dd>
+					<dt>Stepping Animation ON/Stepping Animation OFF（踏步动画 ON/OFF）</dt>
+					<dd>更改地图事件[Options（选项）]中[Stepping（踏步动画）]的值。移动完成后，此效果不会消失。</dd>
+					<dt>Direction Fix ON/Direction Fix OFF（面向固定 ON/OFF）</dt>
+					<dd>更改地图事件[Options（选项）]中[Direction Fix（面向固定）]的值。移动完成后，此效果不会消失。</dd>
+					<dt>Through ON/Through OFF（穿透 ON/OFF）</dt>
+					<dd>更改地图事件[Options（选项）]中[Through（穿透）]的值。移动完成后，此效果不会消失。</dd>
+					<dt>Transparent ON/Transparent OFF（透明 ON/OFF）</dt>
+					<dd>更改角色行走图的可见性。设置为 ON 时角色行走图不会显示。移动完成后，此效果不会消失。</dd>
+					<dt>Change Image（更改图片）</dt>
+					<dd>更改角色的行走图。移动完成后，此效果不会消失。</dd>
+					<dt>Change Opacity（更改不透明度）</dt>
+					<dd>更改角色行走图的不透明度（0 ~ 255）。设置为 0 时行走图将不可见。移动完成后，此效果不会消失。</dd>
+					<dt>Change Blend Mode（更改混合模式）</dt>
+					<dd>更改角色行走图和地图之间的颜色混合模式。设置为[Additive（加法）]则画面会变亮。移动完成后，此效果不会消失。</dd>
+					<dt>Play SE（播放 SE）</dt>
+					<dd>播放指定 SE。</dd>
+					<dt>Script（脚本）</dt>
+					<dd>运行脚本。</dd>
 				</dl>
-		  <h3 class="main__title--h3--sub">Options</h3>
-		  <p>This is a way to processes all movement commands entered into the command list. Enable the processes to apply as necessary.</p>
+		  <h3 class="main__title--h3--sub">Options（选项）</h3>
+		  <p>这些是处理指令列表中所有移动指令的方式。必要时，你需要开启其中的选项。</p>
 		  <dl class="main__dl--sub">
-			<dt>Repeat Movements</dt>
-					<dd>When enabled, the contents of the command list will be run repeatedly.</dd>
-					<dt>Skip If Cannot Move</dt>
-					<dd>When enabled, the processes will be skipped when it is not possible to move via movement commands due to things like obstacles.</dd>
-					<dt>Wait for Completion</dt>
-					<dd>When enabled, all other processes will be temporarily stopped until all vent commands are finished being processed. This will be set only when configuring the [Set movement Route] event command.</dd>
+			<dt>Repeat Movements（重复移动）</dt>
+					<dd>启用时，移动指令的内容会反复执行。</dd>
+					<dt>Skip If Cannot Move（忽略不能移动的场合）</dt>
+					<dd>启用时，当遇到不可通行的障碍物而无法按照规定路线移动时，该移动指令会被跳过。</dd>
+					<dt>Wait for Completion（等待移动结束）</dt>
+					<dd>启用时，其他的过程会被暂时中止，直到所有移动指令都处理完毕。此选项只有在[Set Movement Route（设置移动路线）]指令中才会出现。</dd>
 				</dl>
 
 			</div><!-- /main__section -->
