@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Movement</title>
+	<title>移动</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,117 +10,117 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v05">Movement</h1>
+	  <h1 class="main__title--h1 main__title--h1--v05">移动</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令</a></li>
 		  <li>&gt;</li>
-		  <li>Movement</li>
+		  <li>移动</li>
 	  </ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Transfer Player</h2>
+		  <h2 class="main__title--h2">Transfer Player（移动主角）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_06_img01.png" height="350" width="332" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the location of the party.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+			<p>改变主角队伍的位置。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Location</dt>
-				<dd>Specify the location after changing it. To move a party to a specific location, select [Direct designation], and click to specify the location to move the party in the window that is displayed when you click [...]. To specify the location using a map ID and coordinates, select [Designation with variables], and specify the variables to reference in [ID], [X], [Y].</dd>
-				<dt>Direction</dt>
-				<dd>Specify the direction of the player after being transferred.</dd>
-				<dt>Fade</dt>
-				<dd>Specify how the screen will transition during a transfer. The screen will be displayed in black when choosing [Black] and [White] when choosing white, followed by displaying the new map location.</dd>
+			  <dt>Location（位置）</dt>
+				<dd>指定移动后的位置。如果想要将队伍移动到指定位置，选择[Direct designation（直接指定）]，然后点击[...]按钮，在打开的窗口中指定移动的位置。如果想要使用地图 ID 和坐标指定位置，选择[Designation with variables（使用变量指定）]，然后选择要引用的变量的指定[ID]，[X 坐标]，[Y 坐标]。</dd>
+				<dt>Direction（方向）</dt>
+				<dd>指定角色移动后的朝向。</dd>
+				<dt>Fade（淡入淡出）</dt>
+				<dd>指定移动时画面的过渡方式。当选择了[Black（黑色）]或[White（白色）]时，画面会相应地显示为黑色和白色，然后主角就会出现在目标位置上。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Set Vehicle Location</h2>
+		  <h2 class="main__title--h2">Set Vehicle Location（设置交通工具的位置）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_06_img02.png" height="350" width="332" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the location of vehicles.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+			<p>改变交通工具的位置。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Vehicle</dt>
-				<dd>Specify the target vehicle (boat/ship/plane).</dd>
-				<dt>Location</dt>
-				<dd>Specify the location after changing the location. To move a vehicle to a specific location, select [Direct designation], and click to specify the location to move the vehicle in the window that is displayed when you click [...]. To specify the location using a map ID and coordinates, select [Designation with variables], and specify the variables to reference in [ID], [X], [Y].</dd>
+			  <dt>Vehicle（交通工具）</dt>
+				<dd>指定目标交通工具（小型船/大型船/飞空艇）。</dd>
+				<dt>Location（位置）</dt>
+				<dd>指定移动后的位置。如果想要将交通工具移动到指定位置，选择[Direct designation（直接指定）]，然后点击[...]按钮，在打开的窗口中指定移动的位置。如果想要使用地图 ID 和坐标指定位置，选择[Designation with variables（使用变量指定）]，然后选择要引用的变量的指定[ID]，[X 坐标]，[Y 坐标]。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">Set Event Location</h2>
+		  <h2 class="main__title--h2">Set Event Location（设置事件位置）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_06_img03.png" height="435" width="332" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the location of an event.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+			<p>改变某事件的位置。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Events</dt>
-				<dd>Specify the target event. By setting this to [This Event], the event itself will be the target for changing the location. Moving the event is limited to the same map.</dd>
-				<dt>Location</dt>
-				<dd>Specify the location after changing the location. To move an event to a specific location, select [Direct designation], and click to specify the location to move the event in the window that is displayed when you click [...]. To specify the location using a map ID and coordinates, select [Designation with variables], and specify the variables to reference in [ID], [X], [Y].</dd>
-				<dt>Direction</dt>
-				<dd>Specify the direction of the event after being moved.</dd>
+			  <dt>Events（事件）</dt>
+				<dd>指定目标事件。如果设置为[This Event（本事件）]，那么事件本身就是要移动的事件。事件的移动仅限制在同一张地图上（不能将本地图的事件移动到其他地图上）。</dd>
+				<dt>Location（位置）</dt>
+				<dd>指定移动后的位置。如果想要将事件移动到指定位置，选择[Direct designation（直接指定）]，然后点击[...]按钮，在打开的窗口中指定移动的位置。如果想要使用地图 ID 和坐标指定位置，选择[Designation with variables（使用变量指定）]，然后选择要引用的变量的指定[ID]，[X 坐标]，[Y 坐标]。</dd>
+				<dt>Direction（方向）</dt>
+				<dd>指定事件移动后的朝向。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks</h3>
+			<h3 class="main__title--h3--sub">注记</h3>
 			<ul class="main__ul">
-			  <li>This cannot be used in battle events.</li>
+			  <li>战斗事件中不能使用此指令。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Scroll Map</h2>
+		  <h2 class="main__title--h2">Scroll Map（画面卷动）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_06_img04.png" height="189" width="262" alt="" />
 			</div>
-		  <h3 class="main__title--h3--sub">Function</h3>
-			<p>Moves (scrolls) the range of the map displayed while playing without changing the location of the player.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+		  <h3 class="main__title--h3--sub">功能</h3>
+			<p>在不改变角色位置的条件下，移动（卷动）地图的显示范围。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Direction</dt>
-				<dd>Specify the direction to scroll.</dd>
-				<dt>Distance</dt>
-				<dd>Specify the distance (number of tiles) to move.</dd>
-				<dt>Speed</dt>
-				<dd>Specify the speed (6 levels) of the scrolling.</dd>
+			  <dt>Direction（方向）</dt>
+				<dd>画面卷动的方向。</dd>
+				<dt>Distance（距离）</dt>
+				<dd>指定移动的距离（图块的数量）。</dd>
+				<dt>Speed（速度）</dt>
+				<dd>指定卷动的速度（共 6 个等级）。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks</h3>
+			<h3 class="main__title--h3--sub">注记</h3>
 			<ul class="main__ul">
-			  <li>This cannot be used in battle events.</li>
+			  <li>战斗事件中不能使用此指令。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Set Movement Route</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Forces the player or map event to move along a specified route. <br />
-		    For more information please refer to [<a href="01_10_06_01.html">Set Movement Route</a>].</p>
+		  <h2 class="main__title--h2">Set Movement Route（设置移动路线）</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>强制主角或地图事件按照指定的路线移动。<br />
+		    详情请参考[<a href="01_10_06_01.html">设置移动路线</a>]。</p>
 		  <p>&nbsp;</p>
-		  <h3 class="main__title--h3--sub">Remarks</h3>
+		  <h3 class="main__title--h3--sub">注记</h3>
 		  <ul class="main__ul">
-		    <li>Characters set on a movement route will start to move immediately.</li>
-		    <li>Using this event command on characters which are already set on movement routes will cause those settings to be abandoned, and only the new settings will be active. Choose [Wait for Completion] when wanting to set the next route after the movement from a previous route is completed. </li>
-		    <li>When [Wait for Completion] is enabled, the player cannot perform any actions until the movement command has finished (excluding processes running in parallel). If the character on the specified movement route runs into any obstacles during this time and the movement command is no longer able to run, the event will stop at that point. Enable options such as [Skip If Cannot Move] to avoid these sort of situations.</li>
-		    <li>The player's total number of steps will not be added using this event command even if they move.</li>
-		    <li>This cannot be used in battle events.</li>
+		    <li>设置了移动路线的主角或事件会立即开始移动。</li>
+		    <li>如果角色已经被设置了移动路线，使用本事件指令再次设置移动路线时，之前的移动路线将失效（只有新移动指令会生效）。当你想要在角色完成上一移动路线之后才开始下一路线的移动，你需要选择[Wait for Completion（等待移动结束）]。 </li>
+		    <li>选择了[Wait for Completion（等待移动结束）]后，在移动期间玩家不能进行任何操作（并行处理的事件除外）。如果此时处于移动路线的角色撞到了障碍物上，移动指令将不会继续执行，事件就会在这个位置卡住。使用[Skip If Cannot Move（忽略不能移动的场合）]来避免这种情况出现。</li>
+		    <li>当使用事件指令移动主角时，所移动的步数不会算在角色的移动步数里面。</li>
+		    <li>战斗事件中不能使用此指令。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p06">
-		  <h2 class="main__title--h2">Get on/off Vehicle</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Controls getting on and off vehicles. The player will get off onto the ground when on the vehicle, and get on the vehicle when not on it. There are no parameters to set.</p>
-		  <h3 class="main__title--h3--sub">Remarks</h3>
+		  <h2 class="main__title--h2">Get on/off Vehicle（上/下交通工具）</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>控制玩家进出交通工具。当玩家在交通工具中时，使用此指令玩家会离开交通工具；当玩家在地面上时，使用此指令玩家会进入交通工具。不需要设置参数。</p>
+		  <h3 class="main__title--h3--sub">注记</h3>
 			<ul class="main__ul">
-			  <li>This event forces the player to get on or off the vehicle just as when they use the [Action] key. Nothing will happen if there are no vehicles available that can normally be ridden (when there are no vehicles that can be boarded and when there is no ground to move to).</li>
-			  <li>This cannot be used in battle events.</li>
+			  <li>本事件指令仅在玩家使用[决定键]的时候强制主角进出交通工具。如果没有可用交通工具（没有可进入的交通工具或者没有可以着陆的地面），那么此指令没有效果。</li>
+			  <li>战斗事件中不能使用此指令。</li>
 			</ul>
 		</div><!-- /main__section -->
 
