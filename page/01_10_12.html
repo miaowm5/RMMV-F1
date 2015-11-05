@@ -10,108 +10,108 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v05">Scene Control</h1>
+	  <h1 class="main__title--h1 main__title--h1--v05">场景控制</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令</a></li>
 		  <li>&gt;</li>
-		  <li>Scene Control</li>
+		  <li>场景控制</li>
 	  </ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Battle Processing</h2>
+		  <h2 class="main__title--h2">Battle Processing（战斗处理）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_12_img01.png" height="313" width="292" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Causes troops to appear and starts a battle.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>导致敌群出现，开始一场战斗。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Troop</dt>
-				<dd>Specify the troop that the player will fight against. Choose "Direct designation" and select the troop to have the player fight against a specific troop. To specify a troop by ID, choose "Designation with a variable" and enter in the value to reference. If you choose "Same as Random Encounter", the chosen troop will appear based on the [Encounter] settings of the map that the party is currently in.</dd>
-				<dt>Can Escape</dt>
-				<dd>When enabled, the [Escape] command will be enabled during battle, and you can make conditional branches based on "if player won" and "if player escaped".</dd>
-				<dt>Can Lose</dt>
-				<dd>When enabled, there will not be a game over even if the entire party is defeated, and you can make conditional branches based on "if player won" and "if player lost".</dd>
+			  <dt>Troop（敌群）</dt>
+				<dd>指定和玩家发生战斗的敌群。选择“直接指定”来选取固定敌群和角色发生战斗，如果想利用 ID 指定敌群，选择“使用变量指定”，然后输入要引用的变量。如果选择“和随机遇敌相同”，则主角遭遇的敌群会在当前地图的[Encounter（遭遇）]列表中随机选择一个。</dd>
+				<dt>Can Escape（允许逃跑）</dt>
+				<dd>启用时，[Escape（逃跑）]指令在战斗中可用，同时你也可以指定“胜利的场合”和“逃跑的场合”两种条件分歧。</dd>
+				<dt>Can Lose（允许失败）</dt>
+				<dd>启用时，主角队伍被击败后游戏不会结束，同时你也可以指定“胜利的场合”和“失败的场合两种条件分歧。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记</h3>
 			<ul class="main__ul">
-			  <li>This cannot be used in battle events.</li>
+			  <li>此指令不能用于战斗事件。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Shop Processing</h2>
+		  <h2 class="main__title--h2">Shop Processing（商店处理）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_12_img02.png" height="359" width="292" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Calls the shop screen where the player can buy weapons, armors and items.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>呼叫商店画面，玩家可以在里面购买武器，防具，物品。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Merchandise</dt>
-				<dd>Specify the items to sell. Set the [Merchandise] and [Price] in the window that is displayed when you double-click an empty row in the list. Choosing [Standard] will set the price to what was set in the data, and choosing [Specify] will set this price only to what is specified using this event command.</dd>
-				<dt>Purchase Only</dt>
-				<dd>When enabled, the player will be unable to sell items.</dd>
+			  <dt>Merchandise（商品）</dt>
+				<dd>指定商店中出售的物品。双击列表的空行后，你可以在打开的窗口中设置[Merchandise（商品）]和[Price（价格）]。选择[Standard（标准）]选项后，商品的价格和数据库中的价格相同，选择[Specify（指定）]选项后，商品的价格会临时变更成此事件指令中指定的值。</dd>
+				<dt>Purchase Only（仅可购买）</dt>
+				<dd>启用时，玩家不能在商店中出售已有物品。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记</h3>
 			<ul class="main__ul">
-			  <li>This cannot be used in battle events.</li>
+			  <li>此指令不能用于战斗事件。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">Name Input Processing</h2>
+		  <h2 class="main__title--h2">Name Input Processing（名称输入处理）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_12_img03.png" height="189" width="222" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Displays the name input screen for actors, and the actors name will be changed according to the input of the player.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>显示角色姓名输入画面，玩家可以在此进行输入，更改角色名字。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Actor</dt>
-				<dd>Specify which actor will have their name changed.</dd>
-				<dt>Max characters</dt>
-				<dd>Specify the max amount of characters (1 to 16) for the name.</dd>
+			  <dt>Actor（角色）</dt>
+				<dd>指定要改名的角色。</dd>
+				<dt>Max characters（最大字符数）</dt>
+				<dd>指定姓名的最大字符数（1 ~ 16）。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This cannot be used in battle events.</li>
-			  <li>When entering a name while playing, you can move the cursor using the D-pad, and enter characters using the confirm button and delete the last character using the delete button. </li>
+			  <li>此指令不能用于战斗事件。</li>
+			  <li>游戏中需要输入姓名时，你可以使用十字键移动光标，按下确定键输入字符，按下取消键删除字符。 </li>
 			</ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Open Menu Screen</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Calls the Menu Screen. There are no parameters to set.</p>
-		  <h3 class="main__title--h3--sub">Remarks</h3>
+		  <h2 class="main__title--h2">Open Menu Screen（呼叫菜单画面）</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>呼叫菜单画面。不需要设置参数。</p>
+		  <h3 class="main__title--h3--sub">注记</h3>
 			<ul class="main__ul">
-			  <li>This cannot be used in battle events.</li>
+			  <li>此指令不能用于战斗事件。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Open Save Screen</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Calls the Save Screen. There are no parameters to set.</p>
-		  <h3 class="main__title--h3--sub">Remarks </h3>
+		  <h2 class="main__title--h2">Open Save Screen（呼叫存档画面）</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>呼叫存档画面。不需要设置参数。</p>
+		  <h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This cannot be used in battle events.</li>
+			  <li>此指令不能用于战斗事件。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p06">
-		  <h2 class="main__title--h2">Game Over</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Forces the game to end and displays the Game Over Screen. There are no parameters to set.</p>
+		  <h2 class="main__title--h2">Game Over（游戏结束）</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>强制游戏结束，显示游戏结束画面。不需要设置参数。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p07">
-		  <h2 class="main__title--h2">Return to Title Screen</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Forces the game to end and returns to the Title Screen. There are no parameters to set.</p>
+		  <h2 class="main__title--h2">Return to Title Screen（返回标题画面）</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>强制游戏返回到标题画面。不需要设置参数。</p>
 		</div><!-- /main__section -->
 
 	</div><!-- /main -->
