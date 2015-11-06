@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Battle</title>
+	<title>战斗</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,208 +10,208 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v05">Battle</h1>
+	  <h1 class="main__title--h1 main__title--h1--v05">战斗</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令</a></li>
 		  <li>&gt;</li>
-	    <li>Battle</li>
+	    <li>战斗</li>
 	  </ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Change Enemy HP</h2>
+		  <h2 class="main__title--h2">Change Enemy HP（更改敌人 HP）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img01.png" height="328" width="352" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Changes the HP of enemies.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能 </h3>
+			<p>更改敌人的 HP。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Enemy</dt>
-				<dd>Specify the target enemy. Setting this to [Entire Troop] will target all enemies.</dd>
-				<dt>Operation</dt>
-				<dd>Select either [Increase] or [Decrease].</dd>
+			  <dt>Enemy（敌人）</dt>
+				<dd>指定目标敌人。如果设置为[Entire Troop（敌群全体）]，则此操作会影响所有敌人。</dd>
+				<dt>Operation（操作）</dt>
+				<dd>从[Increase（增加）] 或 [Decrease（减少）]中选择一个。</dd>
 				<dt>Operand</dt>
-				<dd>Specify the amount by which to raise or lower the HP. Select [Constant] to set this to a fixed value and enter the value. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
-				<dt>Allow Knockout</dt>
-				<dd>When enabled, the enemy will be knocked out when its HP reaches 0. HP will remain at 1 even if the enemy's HP falls below 0 when disabled.</dd>
+				<dd>指定增加或减少 HP 的数量。选择[Constant（常量）]来设定一个固定值。当使用变量设置增减数量时，选择[Variable（变量）]，然后指定要引用的变量。</dd>
+				<dt>Allow Knockout（允许死亡）</dt>
+				<dd>启用时，敌人的 HP 低于 0 后他们会死亡。禁用时，若敌人的 HP 在 0 以下，那么 HP 将会强制设置为 1。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Change Enemy MP</h2>
+		  <h2 class="main__title--h2">Change Enemy MP（更改敌人 MP）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img02.png" height="300" width="352" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Changes the MP of enemies.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改敌人的 MP。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Enemy</dt>
-				<dd>Specify the target enemy. Setting this to [Entire Troop] will target all enemies currently in battle.</dd>
-				<dt>Operation</dt>
-				<dd>Select either [Increase] or [Decrease].</dd>
+			  <dt>Enemy（敌人）</dt>
+				<dd>指定目标敌人。如果设置为[Entire Troop（敌群全体）]，则此操作会影响所有敌人。</dd>
+				<dt>Operation（操作）</dt>
+				<dd>从[Increase（增加）] 或 [Decrease（减少）]中选择一个。</dd>
 				<dt>Operand</dt>
-				<dd>Specify the amount by which to raise or lower the MP. Select [Constant] to set this to a fixed value and enter the value. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+				<dd>指定增加或减少 MP 的数量。选择[Constant（常量）]来设定一个固定值。当使用变量设置增减数量时，选择[Variable（变量）]，然后指定要引用的变量。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">Change Enemy TP</h2>
+		  <h2 class="main__title--h2">Change Enemy TP（更改敌人 TP）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img03.png" width="352" height="300" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Changes the TP of enemies.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能 </h3>
+			<p>更改敌人的 TP。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Enemy</dt>
-				<dd>Specify the target enemy. Setting this to [Entire Troop] will target all enemies currently in battle.</dd>
-				<dt>Operation</dt>
-				<dd>Select either [Increase] or [Decrease].</dd>
+			  <dt>Enemy（敌人）</dt>
+				<dd>指定目标敌人。如果设置为[Entire Troop（敌群全体）]，则此操作会影响所有敌人。</dd>
+				<dt>Operation（操作）</dt>
+				<dd>从[Increase（增加）] 或 [Decrease（减少）]中选择一个。</dd>
 				<dt>Operand</dt>
-				<dd>Specify the amount by which to raise or lower the TP. Select [Constant] to set this to a fixed value and enter the value. Choose [Variable] to set the amount using a variable, and specify the variable to reference.</dd>
+				<dd>指定增加或减少 TP 的数量。选择[Constant（常量）]来设定一个固定值。当使用变量设置增减数量时，选择[Variable（变量）]，然后指定要引用的变量。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Change Enemy State</h2>
+		  <h2 class="main__title--h2">Change Enemy State（更改敌人状态）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img04.png" height="251" width="262" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Changes the state of enemies.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能 </h3>
+			<p>更改敌人的状态。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Enemy</dt>
-				<dd>Specifies the target enemy. Setting this to [Entire Troop] will target all enemies currently in battle.</dd>
-				<dt>Operation</dt>
-				<dd>Select either [Add] or [Remove].</dd>
-				<dt>State</dt>
-				<dd>Specifies the type of state to add or remove.</dd>
+			  <dt>Enemy（敌人）</dt>
+				<dd>指定目标敌人。如果设置为[Entire Troop（敌群全体）]，则此操作会影响当前战斗中所有敌人。</dd>
+				<dt>Operation（操作）</dt>
+				<dd>从[Add（附加）] 或 [Remove（移除）]中选择一个。</dd>
+				<dt>State（状态）</dt>
+				<dd>指定附加或移除的状态。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Enemy Recover All</h2>
+		  <h2 class="main__title--h2">Enemy Recover All（敌人完全恢复）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img05.png" height="134" width="222" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Fully recovers the HP and MP of the enemy, and removes all states.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能 </h3>
+			<p>完全恢复敌人的 HP 和 MP，并移除所有状态。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Enemy</dt>
-				<dd>Specifies the target enemy. Setting this to [Entire Troop] will target all enemies currently in battle.</dd>
+			  <dt>Enemy（敌人）</dt>
+				<dd>指定目标敌人。如果设置为[Entire Troop（敌群全体）]，则此操作会影响当前战斗中所有敌人。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p06">
-		  <h2 class="main__title--h2">Enemy Appear</h2>
+		  <h2 class="main__title--h2">Enemy Appear（敌人出现）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img06.png" height="134" width="222" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Causes an enemy to appear which was had the [Appear Halfway] option set in the Troop section.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能 </h3>
+			<p>使得在敌群部分设置为[Appear Halfway（中途出现）]的敌人现身。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Enemy</dt>
-				<dd>Specifies the target enemy.</dd>
+			  <dt>Enemy（敌人）</dt>
+				<dd>指定目标敌人。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p07">
-		  <h2 class="main__title--h2">Enemy Transform</h2>
+		  <h2 class="main__title--h2">Enemy Transform（敌人变身）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img07.png" height="189" width="222" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Transforms an enemy currently in battle to a different enemy. The HP and MP from the enemy prior to transformation will be carried over to the new enemy.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能 </h3>
+			<p>将当前战斗中的敌人变成另一个敌人。变身前的 HP 和 MP 会延续到新敌人身上（不能超过最大值）。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Enemy</dt>
-				<dd>Specify the enemy to transform.</dd>
-				<dt>Transform to</dt>
-				<dd>Specify what the enemy will be after transforming.</dd>
+			  <dt>Enemy（敌人）</dt>
+				<dd>指定要变身的敌人。</dd>
+				<dt>Transform to（变身为）</dt>
+				<dd>指定变身后的敌人。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p08">
-		  <h2 class="main__title--h2">Show Battle Animation</h2>
+		  <h2 class="main__title--h2">Show Battle Animation（显示战斗动画）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img08.png" height="189" width="222" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Displays an animation using the enemy as the target.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能 </h3>
+			<p>在敌人身上显示动画。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Enemy</dt>
-				<dd>Specify the target enemy.</dd>
-				<dt>Animation</dt>
-				<dd>Specify the animation to display.</dd>
+			  <dt>Enemy（敌人）</dt>
+				<dd>指定目标敌人。</dd>
+				<dt>Animation（动画）</dt>
+				<dd>指定要显示的动画。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p09">
-		  <h2 class="main__title--h2">Force Action</h2>
+		  <h2 class="main__title--h2">Force Action（强制行动）</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_15_img09.png" height="285" width="352" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function </h3>
-			<p>Forces the enemy/actor to use the specified skill.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能 </h3>
+			<p>强制敌人/角色使用指定的技能。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Subject</dt>
-				<dd>Specify the target enemy/actor.</dd>
-				<dt>Action</dt>
-				<dd>The skill that they enemy or actor will be forced to use is specified in [Skill]. Targets of the skill will be selected from the [Last Target] (the same target of the performer immediately before), [Random] (selected at random), [Index X] (X can be 1 through 8/refer to remarks for more information).</dd>
+			  <dt>Subject（行动者）</dt>
+				<dd>指定目标敌人/角色。</dd>
+				<dt>Action（行动）</dt>
+				<dd>在[Skill（技能）]中指定强制敌人或角色使用的技能。选择目标时，可以选择[Last Target（最近一次目标）]（行动者最近一次的目标），[Random（随机）]（随机选择目标），[Index X（编号 X）]（X 可以为 1 ~ 8/具体信息请参考编号旁边的说明）。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p10">
-		  <h2 class="main__title--h2">Abort Battle</h2>
-		  <h3 class="main__title--h3--sub">Function </h3>
-		  <p>Forces the battle to end and the game to return to the map. There are no parameters to set.</p>
-		  <h3 class="main__title--h3--sub">Remarks </h3>
+		  <h2 class="main__title--h2">Abort Battle（战斗中断）</h2>
+		  <h3 class="main__title--h3--sub">功能 </h3>
+		  <p>强制战斗停止，返回地图画面。不需要设置参数。</p>
+		  <h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
-			  <li>This can be used only in battle events.</li>
+			  <li>此指令仅可在战斗事件中使用。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
