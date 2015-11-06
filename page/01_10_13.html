@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>System Settings</title>
+	<title>系统设置</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,201 +10,201 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v05">System Settings</h1>
+	  <h1 class="main__title--h1 main__title--h1--v05">系统设置</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令</a></li>
 		  <li>&gt;</li>
-		  <li>System Settings</li>
+		  <li>系统设置</li>
 	  </ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Change Battle BGM</h2>
+		  <h2 class="main__title--h2">更改战斗 BGM</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img01.png" height="491" width="362" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the settings of the BGM that plays during battle. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改战斗中播放的BGM。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>File List</dt>
-				<dd>Specify the BGM file that will be used. Select [(None)] if you do not want to play a file.</dd>
-				<dt>Play/Stop</dt>
-				<dd>By clicking [Play], BGM will start playing using the current settings. Click [Stop] to stop the BGM.</dd>
-				<dt>Volume</dt>
-				<dd>Specify the volume.</dd>
-				<dt>Pitch</dt>
-				<dd>Specify the pitch (50 to 150%). When this is set to over 100%, the playback speed becomes faster and the scale gets higher.</dd>
-				<dt>Pan</dt>
-				<dd>Set the pan (-100 to 100). The majority of the sound comes out of the left speaker when this is a negative value, and more on the right when set to a positive value.</dd>
+			  <dt>文件列表</dt>
+				<dd>指定要播放的BGM文件。不要播放则指定[（无）]。</dd>
+				<dt>播放/停止</dt>
+				<dd>点击[播放]后会根据当前设置播放BGM。要停止播放就点击[停止]。</dd>
+				<dt>音量</dt>
+				<dd>指定音量。</dd>
+				<dt>音调</dt>
+				<dd>指定音调（50%~150%）。比100%还高的时候，速度会加快，音阶也会变高。</dd>
+				<dt>声场定位</dt>
+				<dd>设置声场定位（-100 ~ 100）。如果为负数，则声音主要从左耳机传来，如果为正数，则声音主要从右耳机传来。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">备注</h3>
 			<ul class="main__ul">
-			  <li>If this is changed during battle, the settings will take effect from the next battle.</li>
-			  <li>When the map and battle BGM is identical, the music will not stop when switching between screens.</li>
+			  <li>在战斗中更改BGM时，设置会从下一次战斗开始。</li>
+			  <li>当地图 BGM 和战斗 BGM 相同时，音乐不会在切换场景时停止。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Change Victory ME</h2>
+		  <h2 class="main__title--h2">更改战斗胜利 ME</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img02.png" width="362" height="491" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the settings for the ME that plays when winning a battle. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改战斗胜利时播放的ME。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>File List</dt>
-				<dd>Specify the ME file that will be used. Select [(None)] if you do not want to play a file.</dd>
-				<dt>Play/Stop</dt>
-				<dd>By clicking [Play], ME will start playing using the current settings. Click [Stop] to stop the ME.</dd>
-				<dt>Volume</dt>
-				<dd>Specify the volume.</dd>
-				<dt>Pitch</dt>
-				<dd>Specify the pitch (50 to 150%). When this is set to over 100%, the playback speed becomes faster and the scale gets higher.</dd>
-				<dt>Pan</dt>
-				<dd>Sets the pan (-100 to 100). The majority of the sound comes out of the left speaker when this is a negative value, and more on the right when set to a positive value.</dd>
+			  <dt>文件列表</dt>
+				<dd>指定要播放的ME文件。不要播放则指定[（无）]。</dd>
+				<dt>播放/停止</dt>
+				<dd>点击[播放]后会根据当前设置播放BGM。要停止播放就点击[停止]。</dd>
+				<dt>音量</dt>
+				<dd>指定音量。</dd>
+				<dt>音调</dt>
+				<dd>指定音调（50%~150%）。比100%还高的时候，速度会加快，音阶也会变高。</dd>
+				<dt>声场定位</dt>
+				<dd>设置声场定位（-100 ~ 100）。如果为负数，则声音主要从左耳机传来，如果为正数，则声音主要从右耳机传来。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">Change Defeat ME</h2>
+		  <h2 class="main__title--h2">更改战斗失败 ME</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img03.png" width="362" height="491" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the settings for the ME that plays when losing a battle. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改战斗失败时播放的ME。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>File List</dt>
-				<dd>Specify the ME file that will be used. Select [(None)] if you do not want to play a file.</dd>
-				<dt>Play/Stop</dt>
-				<dd>By clicking [Play], ME will start playing using the current settings. Click [Stop] to stop the ME.</dd>
-				<dt>Volume</dt>
-				<dd>Specify the volume.</dd>
-				<dt>Pitch</dt>
-				<dd>Specify the pitch (50 to 150%). When this is set to over 100%, the playback speed becomes faster and the sound scale gets higher.</dd>
-				<dt>Pan</dt>
-				<dd>Set the pan (-100 to 100). The majority of the sound comes out of the left speaker when this is a negative value, and more on the right when set to a positive value.</dd>
+			  <dt>文件列表</dt>
+				<dd>指定要播放的ME文件。不要播放则指定[（无）]。</dd>
+				<dt>播放/停止</dt>
+				<dd>点击[播放]后会根据当前设置播放BGM。要停止播放就点击[停止]。</dd>
+				<dt>音量</dt>
+				<dd>指定音量。</dd>
+				<dt>音调</dt>
+				<dd>指定音调（50%~150%）。比100%还高的时候，速度会加快，音阶也会变高。</dd>
+				<dt>声场定位</dt>
+				<dd>设置声场定位（-100 ~ 100）。如果为负数，则声音主要从左耳机传来，如果为正数，则声音主要从右耳机传来。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Change Vehicle BGM</h2>
+		  <h2 class="main__title--h2">更换载具 BGM</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img04.png" height="189" width="222" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the settings for the BGM music that plays when riding a vehicle.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改搭乘载具时播放的BGM。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Vehicle</dt>
-				<dd>Specify the vehicle for the BGM.</dd>
+			  <dt>载具</dt>
+				<dd>指定要更改BGM的载具。</dd>
 				<dt>BGM</dt>
-				<dd>Specify the BGM that will be played.</dd>
+				<dd>指定要播放的BGM。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Change Save Access</h2>
+		  <h2 class="main__title--h2">启用/禁用存档</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img05.png" height="141" width="262" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes whether or not the game can be saved by the player. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>控制玩家可否进行整队操作。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Save</dt>
-				<dd>Set this to [Disable] to prevent the player from saving, and [Enable] to allow the player to save.</dd>
+			  <dt>存档</dt>
+				<dd>要禁止存档则指定[禁用]，要允许存档则指定[启用]。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p06">
-		  <h2 class="main__title--h2">Change Menu Access</h2>
+		  <h2 class="main__title--h2">启用/禁用菜单</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img06.png" height="141" width="262" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes whether or not the Menu Screen can be called by the player. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>控制玩家可否进行呼出菜单的操作。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Menu</dt>
-				<dd>Set this to [Disable] to prevent the player from opening the Menu Screen, and [Enable] to allow the player to open the Menu Screen.</dd>
+			  <dt>菜单</dt>
+				<dd>要禁止呼出菜单则指定[禁用]，要允许呼出菜单则指定[启用]。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p07">
-		  <h2 class="main__title--h2">Change Encounter</h2>
+		  <h2 class="main__title--h2">启用/禁用遇敌</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img07.png" height="141" width="262" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Controls whether or not encounters (process that randomly causes a battle against a troop) occur. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>控制队伍移动中是否会遇敌（随机遇到敌群发生战斗的处理）。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Encounter</dt>
-				<dd>Set this to [Disable] to stop encounters, and [Enable] to allow encounters.</dd>
+			  <dt>遇敌</dt>
+				<dd>要禁止遇敌则指定[禁用]，要允许遇敌则指定[启用]。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p08">
-		  <h2 class="main__title--h2">Change Formation Access</h2>
+		  <h2 class="main__title--h2">启用/禁用整队</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img08.png" height="141" width="262" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Controls whether or not a player can change the formation of his or her party members. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>控制玩家可否进行整队操作。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Formation</dt>
-				<dd>Set this to [Disable] to prevent the player from changing the party, and [Enable] to allow the player to change the party.</dd>
+			  <dt>操作</dt>
+				<dd>要禁止整队则指定[禁用]，要允许整队则指定[启用]。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p09">
-		  <h2 class="main__title--h2">Change Window Color</h2>
+		  <h2 class="main__title--h2">更改窗口色调</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img09.png" height="212" width="472" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the window color settings. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更改窗口的颜色设置。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Window Color</dt>
-				<dd>Specifies the color after it is changed based on each of the [Red], [Green] and [Blue] component values (-255 to 255). The specified color can be checked in the preview area on the right.</dd>
+			  <dt>窗口色调</dt>
+				<dd>以[红][绿][蓝]的成分比（0~255）指定更改后的颜色。当前指定的颜色可以在右侧的预览区域确认。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p10">
-		  <h2 class="main__title--h2">Change Actor Images</h2>
+		  <h2 class="main__title--h2">更改角色图像</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img10.png" height="300" width="384" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the image of an actor. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更换角色的图像。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Actor</dt>
-				<dd>Select the target actor.</dd>
-				<dt>Images</dt>
-				<dd>You can set images for the [Face], [Character], and [ [SV] Battler] in the window that opens when you double-click their images. Setting this to [(None)] will have an image not be displayed.</dd>
+			  <dt>角色</dt>
+				<dd>指定要更改图像的角色。</dd>
+				<dt>图像</dt>
+				<dd>双击两侧的方框会弹出窗口，在其中分别指定更改后的行走图（左侧）和脸图（右侧）。指定[（无）]的话结果是不显示图像。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p11">
-		  <h2 class="main__title--h2">Change Vehicle Image</h2>
+		  <h2 class="main__title--h2">更改载具图像</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_13_img11.png" height="250" width="222" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Changes the image for vehicles. These settings will be left unchanged until changed using this event command again.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>更换载具的图像。更改后的设置持续到再次用该事件指令更改为止。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Vehicle</dt>
-				<dd>Specify the target vehicle.</dd>
-				<dt>Image</dt>
-				<dd>Double-click the image to specify the image that will display after the change. Setting this to [(None)] will have an image not be displayed.</dd>
+			  <dt>载具</dt>
+				<dd>指定要更换图像的载具。</dd>
+				<dt>图像</dt>
+				<dd>双击方框会弹出窗口，在其中指定更改后的图像。指定[（无）]的话结果是不显示图像。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
