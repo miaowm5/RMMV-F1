@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Weather Class</title>
+	<title>Weather 类</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,13 +11,13 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v07">Weather Class</h1>
+		<h1 class="main__title--h1 main__title--h1--v07">Weather 类</h1>
 		<ul class="breadcrumb">
-			<li>JS Library</li>
+			<li>JS 库</li>
 			<li>&gt;</li>
-			<li>Weather Class</li>
+			<li>Weather 类</li>
 		</ul>
-		<p>显示雨、暴风雨或雪的天气效果。</p>
+		<p>用于显示雨、风或雪的天气效果。</p>
 		<div class="main__section">
 			<h2 class="main__title--h2">构造函数</h2>
 <pre class="main__pre--code">
@@ -27,7 +27,7 @@ Weather ()
 
 
 		<div class="main__section">
-			<h2 class="main__title--h2">项目</h2>
+			<h2 class="main__title--h2">索引</h2>
 			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">update</a></li>
@@ -49,7 +49,7 @@ Weather ()
 <pre class="main__pre--code">
 update ()
 </pre>
-				<p class="mb10px">更新天气效果。</p>
+				<p class="mb10px">在每一帧中刷新天气效果。</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
@@ -62,7 +62,7 @@ update ()
 <pre class="main__pre--code">
 origin <span class="pre__type">Point</span>
 </pre>
-				<p class="mb10px">天气卷动的起始点。</p>
+				<p class="mb10px">卷动效果中天气效果的原点。</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
@@ -76,7 +76,7 @@ power <span class="pre__type">Number</span>
 <pre class="main__pre--code">
 type <span class="pre__type">String</span>
 </pre>
-				<p class="mb10px">天气类型['none', 'rain', 'storm', 'snow']，对应：无、雨、暴风雨、雪。</p>
+				<p class="mb10px">天气类型（“none”、“rain”、“storm”、“snow”）。</p>
 			</div><!-- /div -->
 
 
