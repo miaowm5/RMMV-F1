@@ -11,43 +11,43 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v06">Converting to an iOS App<br /> &lt;Creating an ipa file&gt;</h1>
+		<h1 class="main__title--h1 main__title--h1--v06">将游戏打包成iOS程序<br /> &lt;创建ipa安装文件&gt;</h1>
 		<ul class="breadcrumb">
 			<li><a href="01.html">RPG Maker MV</a></li>
 			<li>&gt;</li>
-			<li>Documentation</li>
+			<li>资料集</li>
 			<li>&gt;</li>
-			<li>Converting to an iOS App &lt;Creating an ipa file&gt;</li>
+			<li>将游戏打包成iOS程序 &lt;创建ipa安装文件&gt;</li>
 		</ul>
 
 
 		<div class="main__section" id="p01">
-			<h2 class="main__title--h2">1 Overview</h2>
+			<h2 class="main__title--h2">1 概述</h2>
 			<p>
-				From this version, games created using RPG Maker MV will now be played using browsers which support HTML5 technology such as WebGL &amp; 2DCanvas, WebAudio and JavaScript. You can also play games made using RPG Maker on iPhone, and iPad with Safari installed that also has HTML5 support. <br /> <br /> Rather than explaining how to play using Safari, we will explain in this section how to play your game as an iOS application. Running an HTML5 game as an application using an iOS device is similar to running a game as an iOS application using a browser that supports HTML5. This method of development of running a web application as a native application is known by such names as &quot;Hybrid App,&quot; and is popular from the fact that it can be run on cross-platforms. <br /> <br /> Browsers which package games as apps are &quot;Browser Engines&quot; which handle the Web display and sounds, and have iOS built-in (called UIWebView). There are several frameworks that connect with browser engines as applications, but we will be using a framework called <a href="https://cordova.apache.org/" target="_blank">Apache Cordova</a> here.
+				从这个版本开始，使用RPG Maker MV做的游戏可以在那些支持HTML5（包括例如WebGL &amp; 2DCanvas, WebAudio and JavaScript）的浏览器上直接运行。同时也支持在iPhone和iPad的Safari上玩这些游戏（Safari支持HTML5）。<br /> <br />不过比起向大家解释如何在Safari上玩，我们更愿意在这一节说明如何把你的游戏打包成独立的iOS程序。在iOS设备上把一个HTML5游戏作为应用运行，和把它放在支持HTML5的浏览器里运行是很相似的。这种将一个web应用（HTML5游戏）以原生方式运行的程序被称作&quot;Hybrid App&quot;，并且由于它的跨平台特性而变得越来越热门。 <br /> <br />在浏览器内，可以处理显示与声音的内置&quot;浏览器引擎&quot;（UIWebView）会将游戏打包成应用。有数种作为应用与浏览器引擎连接的框架，但是我们今天将使用一个名为<a href="https://cordova.apache.org/" target="_blank">Apache Cordova</a>的框架。
 			</p>
-			<h3 class="main__title--h3--sub">Operating Systems</h3>
-			<p>It's possible to run a game on several different platforms as a hybrid app, but you will essentially need a Mac PC with OS X installed as your environment for creating iOS apps. Here we will be using OS X 10.10. Additionally, the computer used to do your work will be referred to as &quot;Mac&quot;.</p>
+			<h3 class="main__title--h3--sub">操作系统</h3>
+			<p>用RPG Maker MV制作的游戏的确可以在数种不同的平台上作为hybier app运行，但是你必须有一台装有OS X的Mac电脑才能创建iOS应用。我们将使用OS X 10.10作为示例。另外，用来执行这些工作的电脑以下将简称为&quot;Mac&quot;。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-			<h2 class="main__title--h2">2 Prepare the Packaging Environment</h2>
+			<h2 class="main__title--h2">2 准备开发环境</h2>
 			<p>
-				Installing games created using RPG Maker on iOS will require creating an ipa file. An ipa file is the installer for iOS apps and its extension is ipa. This is compressed in a ZIP format, and contains various necessary files for running the application. We will refer to creating the ipa file here as &quot;Packaging&quot;. <br /> Also, an Internet connection is required to download some of the necessary developer tools.
+				需要创建一个ipa文件才能把用RPG Maker MV制作的游戏安装到iOS上，ipa文件是iOS应用的安装包，其拓展名就是ipa。这个文件是以ZIP格式压缩的包，内含应用运行所需要的多种文件。在这里我们把创建ipa的过程称作&quot;打包&quot;。<br />同时，你需要连接上互联网，以确保能够下载安装一些必要的开发工具。
 			</p>
-			<h3 class="main__title--h3">2-1 Installing and Configuring Node.js and Apache Cordova</h3>
-			<p>Put simply, Node.js provides an environment where you can run JavaScript outside of a browser. Cordova is provided as a Node.js package so let's go ahead and install Node.js first.</p>
+			<h3 class="main__title--h3">2-1 Node.js和Apache Cordova的安装和配置</h3>
+			<p>简而言之，Node.js提供了一个在浏览器外运行JavaScript的环境。Cordova是Node.js的一个包，所以我们先安装Node.js。</p>
 
-			<h3 class="main__title--h3--sub">2-1-1 Installing and Checking Node.js</h3>
-			<p>Click [INSTALL] found on <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a> and download the installer.</p>
+			<h3 class="main__title--h3--sub">2-1-1 Node.js的安装和检查</h3>
+			<p>单击在<a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a>看到的[INSTALL]按钮以下载Node.js的安装包。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-1.png" height="622" width="1280" alt="" />
 			</div>
-			<p>Run the installer. When prompted for the administrator password, enter administrator password for your Mac and run the installer. The installation is complete when this finishes.</p>
+			<p>运行安装包，当提示输入管理员密码的时候，输入密码然后继续运行。程序结束后安装也就完成了。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-2.png" height="438" width="620" alt="" />
 			</div>
-			<p>Confirm the Node.js installation using the terminal. The terminal can be found in Applications → Utilities. After the terminal starts up, enter &quot;node -v&quot; and press the return key. If the version you installed is displayed, there is no problem.</p>
+			<p>在Terminal确认Node.js有没有成功安装。打开Terminal（应用 > 实用工具），输入&quot;node -v&quot;并回车。如果显示了你所安装的Node.js的版本，说明安装成功了。</p>
 <pre class="main__pre--code">
 $ node -v
 </pre>
@@ -55,15 +55,15 @@ $ node -v
 				<img src="../inc/img/01_11_06/2-1-3.png" height="366" width="585" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">2-1-2 Installing Cordova</h3>
-			<p>Cordova is provided as a Node.js package. The npm command which is a package management tool is provided in Node.js. <br /> Enter "sudo npm install cordova -g" into the terminal and install Cordova. &quot;sudo&quot; is used to run processes and applications as an administrator on Macs. Run the "npm" command here as an administrator. The "-g" option is an option which is used so that you can use Cordova in a global environment, and using this allows you to use the inside of any Mac folder. <br /> You will be asked for the administrator password so enter the password and run the installation.</p>
+			<h3 class="main__title--h3--sub">2-1-2 安装Cordova</h3>
+			<p>Cordova是Node.js的包。Node.js内置了npm包管理器。<br />在Terminal里输入"sudo npm install cordova -g"即可安装Cordova。&quot;sudo&quot;在Mac下会以管理员权限执行其后的语句，这里是以管理员权限执行&quot;npm&quot;命令，&quot;-g&quot;指定可以在全局范围内使用Cordova，也就是说，你就可以在任意文件夹内使用它。<br />执行该命令时，你需要输入管理员密码。</p>
 <pre class="main__pre--code">
 $ sudo npm install cordova -g
 </pre>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-4.png" height="366" width="585" alt="" />
 			</div>
-			<p>Confirm your version of Cordova. Enter &quot;cordova -v&quot; into the terminal and press the return key. If the version of Cordova is displayed, that means there is no problem.</p>
+			<p>确认Cordova是否成功安装。在Terminal里执行&quot;cordova -v&quot;。如果显示了Cordova的版本，说明安装成功了。</p>
 <pre class="main__pre--code">
 $ cordova -v
 </pre>
@@ -71,7 +71,7 @@ $ cordova -v
 				<img src="../inc/img/01_11_06/2-1-5.png" height="366" width="585" alt="" />
 			</div>
 
-			<h3 class="main__title--h3">2-2 Xcode Installation and Setup</h3>
+			<h3 class="main__title--h3">2-2 Xcode的安装和设置</h3>
 			<p>There are various required files included in the ipa file which are needed to run your application on an iOS device. In order to allocate all those files into one file, there is an application called Xcode for the Mac available. Tools which allow you to do true development are also included with Xcode.</p>
 
 			<h3 class="main__title--h3--sub">2-2-1 Xcode Installation, Setup</h3>
@@ -427,5 +427,3 @@ $ xcodebuild -exportArchive -archivePath ~/Library/Developer/Xcode/Archives/2015
 
 </body>
 </html>
-
-
