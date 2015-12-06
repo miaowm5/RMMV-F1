@@ -72,19 +72,19 @@ $ cordova -v
 			</div>
 
 			<h3 class="main__title--h3">2-2 Xcode的安装和设置</h3>
-			<p>There are various required files included in the ipa file which are needed to run your application on an iOS device. In order to allocate all those files into one file, there is an application called Xcode for the Mac available. Tools which allow you to do true development are also included with Xcode.</p>
+			<p>在你的ipa文件中有多种确保应用能在iOS设备上正常运行所必须的文件。Mac上的Xcode即可完成将这些文件打包成一个ipa的工作。Xcode中也包含了允许你进行真正的开发工作所需要的工具。</p>
 
-			<h3 class="main__title--h3--sub">2-2-1 Xcode Installation, Setup</h3>
-			<p>You can get Xcode for free from the App Store.</p>
+			<h3 class="main__title--h3--sub">2-2-1 安装、设置Xcode</h3>
+			<p>你可以在App Store中免费获取Xcode。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-6.png" height="531" width="958" alt="" />
 			</div>
-			<p>The newest version of Xcode is 6.4 as of August 2015.</p>
+			<p>截止2015年八月，Xcode最新的版本号是6.4。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-7.png" height="470" width="802" alt="" />
 			</div>
 			<p>
-				Xcode command line tools are a group of commands for development that you can use in the terminal. <br /> Check that command line tools are useable in the [Locations] tab under [Preferences] in [Xcode] found in the menu. If you do not currently have the command line tools you can download them from the [Downloads] tab on the left.
+				Xcode命令行工具是一系列可用在Terminal内协助开发的指令。<br />在[Xcode]菜单的[首选项]中，进入[位置]，确保命令行工具是可用的。如果你现在并没有命令行工具，可以在左侧的[下载]中获取。
 			</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-8.png" height="466" width="750" alt="" />
@@ -93,9 +93,9 @@ $ cordova -v
 				<img src="../inc/img/01_11_06/2-1-9.png" height="497" width="750" alt="" />
 			</div>
 
-			<h3 class="main__title--h3">2-3 Installing ios-sim</h3>
+			<h3 class="main__title--h3">2-3 安装ios-sim</h3>
 			<p>
-				Here we will install the ios-sim which allows you to easily use the iOS simulator from Cordova. This can be downloaded using Node.js. <br /> Enter &quot;sudo npm install ios-sim -g&quot; into the terminal and install the simulator. <br /> If the version of the simulator is displayed when you enter &quot;ios-sim --version&quot;, that means there is no problem.
+				我们即将安装ios-sim，它允许你在Cordova中便捷地使用iOS模拟器。可以用Node.js包管理器安装它。<br />在Terminal中运行&quot;sudo npm install ios-sim -g&quot;即可安装模拟器。<br />如果你运行&quot;ios-sim --version&quot;后显示了模拟器的版本，则说明安装没有问题。
 			</p>
 <pre class="main__pre--code">
 $ sudo npm install ios-sim -g
@@ -108,16 +108,16 @@ $ ios-sim --version
 
 
 		<div class="main__section" id="p03">
-			<h2 class="main__title--h2">3 Deploying Games Using RPG Maker</h2>
-			<p>Here we will export the necessary  game data, assets and game engine to a package from RPG Maker. Select [Deployment...] from the File Menu and the deployment dialog will appear. If you select [Android / iOS] and export, all the files needed for iOS packaging will be placed in the selected folder. <br /> In this example, we deployed to the desktop.</p>
+			<h2 class="main__title--h2">3 用RPG Maker部署游戏</h2>
+			<p>我们将从RPG Maker中导出必要的游戏数据、资源和游戏引擎。在文件菜单中选择[部署]即可呼出部署对话框。选择[Android / iOS]然后导出，所有必备的文件都会被导出到选择的文件夹里。<br />我们这里已导出到桌面为例。</p>
 		</div><!-- /main__section -->
 
 
 		<div class="main__section" id="p04">
-			<h2 class="main__title--h2">4 Packaging</h2>
-			<p>Packaging refers to creating the ipa file which you allows you to install applications to an iOS device.</p>
+			<h2 class="main__title--h2">4 打包</h2>
+			<p>打包指创建能安装应用到iOS设备的ipa文件的过程。</p>
 
-			<h3 class="main__title--h3">4-1 Creating an Xcode Project</h3>
+			<h3 class="main__title--h3">4-1 新建Xcode项目</h3>
 			<p>Let's create an Xcode project using Cordova. In the end, we will be exporting an ipa file using Xcode.</p>
 
 			<h3 class="main__title--h3--sub">4-1-1 Creating a Cordova Template</h3>
