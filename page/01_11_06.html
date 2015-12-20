@@ -47,7 +47,7 @@
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-2.png" height="438" width="620" alt="" />
 			</div>
-			<p>在Terminal确认Node.js有没有成功安装。打开Terminal（应用 > 实用工具），输入&quot;node -v&quot;并回车。如果显示了你所安装的Node.js的版本，说明安装成功了。</p>
+			<p>在终端确认Node.js有没有成功安装。打开终端（应用 > 实用工具），输入&quot;node -v&quot;并回车。如果显示了你所安装的Node.js的版本，说明安装成功了。</p>
 <pre class="main__pre--code">
 $ node -v
 </pre>
@@ -56,14 +56,14 @@ $ node -v
 			</div>
 
 			<h3 class="main__title--h3--sub">2-1-2 安装Cordova</h3>
-			<p>Cordova是Node.js的包。Node.js内置了npm包管理器。<br />在Terminal里输入"sudo npm install cordova -g"即可安装Cordova。&quot;sudo&quot;在Mac下会以管理员权限执行其后的语句，这里是以管理员权限执行&quot;npm&quot;命令，&quot;-g&quot;指定可以在全局范围内使用Cordova，也就是说，你就可以在任意文件夹内使用它。<br />执行该命令时，你需要输入管理员密码。</p>
+			<p>Cordova是Node.js的包。Node.js内置了npm包管理器。<br />在终端里输入"sudo npm install cordova -g"即可安装Cordova。&quot;sudo&quot;在Mac下会以管理员权限执行其后的语句，这里是以管理员权限执行&quot;npm&quot;命令，&quot;-g&quot;指定可以在全局范围内使用Cordova，也就是说，你就可以在任意文件夹内使用它。<br />执行该命令时，你需要输入管理员密码。</p>
 <pre class="main__pre--code">
 $ sudo npm install cordova -g
 </pre>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-4.png" height="366" width="585" alt="" />
 			</div>
-			<p>确认Cordova是否成功安装。在Terminal里执行&quot;cordova -v&quot;。如果显示了Cordova的版本，说明安装成功了。</p>
+			<p>确认Cordova是否成功安装。在终端里执行&quot;cordova -v&quot;。如果显示了Cordova的版本，说明安装成功了。</p>
 <pre class="main__pre--code">
 $ cordova -v
 </pre>
@@ -84,7 +84,7 @@ $ cordova -v
 				<img src="../inc/img/01_11_06/2-1-7.png" height="470" width="802" alt="" />
 			</div>
 			<p>
-				Xcode命令行工具是一系列可用在Terminal内协助开发的指令。<br />在[Xcode]菜单的[首选项]中，进入[位置]，确保命令行工具是可用的。如果你现在并没有命令行工具，可以在左侧的[下载]中获取。
+				Xcode命令行工具是一系列可用在终端内协助开发的指令。<br />在[Xcode]菜单的[首选项]中，进入[位置]，确保命令行工具是可用的。如果你现在并没有命令行工具，可以在左侧的[下载]中获取。
 			</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-8.png" height="466" width="750" alt="" />
@@ -95,7 +95,7 @@ $ cordova -v
 
 			<h3 class="main__title--h3">2-3 安装ios-sim</h3>
 			<p>
-				我们即将安装ios-sim，它允许你在Cordova中便捷地使用iOS模拟器。可以用Node.js包管理器安装它。<br />在Terminal中运行&quot;sudo npm install ios-sim -g&quot;即可安装模拟器。<br />如果你运行&quot;ios-sim --version&quot;后显示了模拟器的版本，则说明安装没有问题。
+				我们即将安装ios-sim，它允许你在Cordova中便捷地使用iOS模拟器。可以用Node.js包管理器安装它。<br />在终端中运行&quot;sudo npm install ios-sim -g&quot;即可安装模拟器。<br />如果你运行&quot;ios-sim --version&quot;后显示了模拟器的版本，则说明安装没有问题。
 			</p>
 <pre class="main__pre--code">
 $ sudo npm install ios-sim -g
@@ -121,7 +121,7 @@ $ ios-sim --version
 			<p>用Cordova创建一个Xcode项目。结束后，我们就可以用Xcode导出ipa文件。</p>
 
 			<h3 class="main__title--h3--sub">4-1-1 创建Cordova模板</h3>
-			<p>首先，我们使用Cordova命令中的&quot;create&quot;选项来创建一个模板。下面是你在Terminal中输入的命令的一个示例。</p>
+			<p>首先，我们使用Cordova命令中的&quot;create&quot;选项来创建一个模板。下面是你在终端中输入的命令的一个示例。</p>
 
 <pre class="main__pre--code">
 $ cordova create ~/Desktop/work com.example.sample Sample
@@ -134,7 +134,7 @@ $ cordova create ~/Desktop/work com.example.sample Sample
 
 			<h3 class="main__title--h3--sub">4-1-2 添加iOS平台</h3>
 			<p>
-				用Cordova向模板中添加iOS文件。在Terminal输入&quot;cd ~/Desktop/work&quot; 以便转移到之前创建的&quot;work&quot;文件夹下。然后输入&quot;cordova platform add ios&quot;并回车。这样就添加了让应用在iOS上运行所必备的文件。
+				用Cordova向模板中添加iOS文件。在终端输入&quot;cd ~/Desktop/work&quot; 以便转移到之前创建的&quot;work&quot;文件夹下。然后输入&quot;cordova platform add ios&quot;并回车。这样就添加了让应用在iOS上运行所必备的文件。
 			</p>
 <pre class="main__pre--code">
 $ cd ~/Desktop/work
@@ -145,7 +145,7 @@ $ cordova platform add ios
 				<img src="../inc/img/01_11_06/4-1-2.png" height="492" width="851" alt="" />
 			</div>
 			<p>
-				使用ios-sim给你提供的iOS模拟器来确认目前为止你所做的都没有问题。<br />在Terminal中运行&quot;cordova emulate ios&quot;，当build完成的时候，iOS模拟器会自动运行，并且展示模板界面。
+				使用ios-sim给你提供的iOS模拟器来确认目前为止你所做的都没有问题。<br />在终端中运行&quot;cordova emulate ios&quot;，当build完成的时候，iOS模拟器会自动运行，并且展示模板界面。
 			</p>
 <pre class="main__pre--code">
 $ cordova emulate ios
@@ -191,7 +191,7 @@ $ cordova emulate ios
 
 			<h3 class="main__title--h3--sub">4-1-6 Build</h3>
 			<p>
-				我们已经完成了配置，现在可以生成build了。<br />在Terminal里运行&quot;cordova build&quot;等待一段时间，build就完成了。<br />
+				我们已经完成了配置，现在可以生成build了。<br />在终端里运行&quot;cordova build&quot;等待一段时间，build就完成了。<br />
 			</p>
 <pre class="main__pre--code">
 $ cordova build
@@ -215,80 +215,80 @@ $ cordova emulate ios
 				想要创建一个真正能在iOS设备上安装应用的ipa文件，你需要一个&quot;provisioning profile&quot;，它是用来验证应用的。<br />想要获得provisioning profile，你需要在Apple的[Apple Developer Program]注册（收费）。<br /> <br />同时，我们把一系列比如把provisioning file应用于打包的过程称作&quot;signing&quot;（签名）。你需要一些密钥和验证密钥的证书之类的文件才能签名。<br /> <b>*Apple Developer Program 网站更新频繁，获取provisioning files的方法可能有改变。如果你在执行必须操作时遇到了困难或者想要了解相关的事情，请咨询<a href="https://developer.apple.com/jp/programs/" target="_blank">Apple Developer Program</a>。</b>
 			</p>
 
-			<h3 class="main__title--h3--sub">4-2-1 Creating a key file and Certificate Request &amp; Registration</h3>
-			<p><b>The certificate registration that you will be doing here is only required if you have not done this yet. </b><br /> First, we will create a key file and request a certificate for that key file. We will use &quot;Keychain Access&quot; for requesting a certificate. <br /> Keychain Access is located in [Applications] → [Utilities]. <br /> Run Keychain Access, and select [Request a Certificate From a Certificate Authority] in [Certification Assistant] found under [Keychain Access] in the menu.</p>
+			<h3 class="main__title--h3--sub">4-2-1 创建密钥及请求并注册证书</h3>
+			<p><b>如果你以前没有注册过证书，那么请看下去。</b><br />首先，我们要创建一个密钥，然后为这个密钥请求证书。我们将使用&quot;Keychain Access&quot;请求证书。<br />Keychain Access在[应用] → [实用工具]里。<br />运行Keychain Access，在[Keychain Access]菜单中的[证书助手]下选择[从证书机构请求一个证书]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-10.png" height="468" width="853" alt="" />
 			</div>
-			<p>For the user e-mail address, use the e-mail address that you used to register on Apple Developer Program, and choose a name for the common name that is easy to understand. Set the request process to [Saved to disk] and check [Let me specify key pair information]. </p>
+			<p>用你注册Apple Developer Program时使用的邮件地址填写信息，然后选择一个易于理解的名字。在之后选择[保存到硬盘]并选中[让我自己指定密钥对信息]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-11.png" height="554" width="876" alt="" />
 			</div>
-			<p>Save the request file.</p>
+			<p>保存请求文件。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-12.png" height="555" width="877" alt="" />
 			</div>
-			<p>Select [Certificates, Identifiers &amp; Profiles] from the Apple Developer Program member center.</p>
+			<p>在Apple Developer Program选择[Certificates, Identifiers &amp; Profiles]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-13.png" height="621" width="1280" alt="" />
 			</div>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-14.png" height="585" width="982" alt="" />
 			</div>
-			<p>You will move to the certificate management screen when you select [Certificates]. Select [All] in the left pane, and press the [+] button in the upper right.</p>
+			<p>当你选择[Certificates]后，你会跳转到证书管理界面。在左侧面板里选择[All]然后在右上角点击[+]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-15.png" height="585" width="982" alt="" />
 			</div>
-			<p>Select [App Store and Ad Hoc] for the certificate type.</p>
+			<p>选择[App Store and Ad Hoc]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-16.png" height="585" width="982" alt="" />
 			</div>
-			<p>Proceed to the next screen.</p>
+			<p>继续到下一个界面。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-17.png" height="585" width="982" alt="" />
 			</div>
-			<p>In the request certificate selection screen, select the request file which you made using Keychain Access.</p>
+			<p>在选择请求证书界面，选择之前用Keychain Access产生的请求文件。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-18.png" height="585" width="982" alt="" />
 			</div>
-			<p>The certificate has now been issued. Download the certificate.</p>
+			<p>现在证书已经发布了，将证书下载下来。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-19.png" height="585" width="982" alt="" />
 			</div>
-			<p>If you double-click the downloaded certificate, it will be loaded into Keychain Access.</p>
+			<p>双击下载下来的证书即可把它加载进Keychain Access。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-20.png" height="435" width="703" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-2-2 Creating an App ID</h3>
-			<p>Next, we will create an App ID which will be used to make the package. <br /> This will be carried out in the [Identifiers] section in the Apple Developer Program site which you used earlier. <br /> Select [App IDs] under [Identifiers] in the left pane, and press the [+] button in the upper right.</p>
+			<h3 class="main__title--h3--sub">4-2-2 创建App ID</h3>
+			<p>现在，我们要创建一个打包时会用到的App ID。<br />在Apple Developer Program中的[Identifiers]里面进行此项工作。<br />在左侧面板[Identifiers]下选择[App IDs]，然后点击右上角的[+]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-21.png" height="585" width="982" alt="" />
 			</div>
-			<p>Enter a name that is easy to remember in the [Name] section under [App ID Description]. <br /> Enter the [Bundle ID] in the [Explicit App ID] section under [App ID Suffix]. Just like the provided example, the domain name is used in reverse with the top level domain (&quot;com&quot; in the example) and is connected using a &quot;.&quot;. Following at the end is your game's name (&quot;sample&quot; in the example). <br /> <b>*Please keep in mind that you cannot actually use example.com. </b><br /> <br /> Example:<br /> When the domain that you own is [example.com] and your game's name is [sample], you would write:<br />com.example.sample.
+			<p>在[App ID Description]中的[Name]里选择一个易于记忆的名字。<br />在[App ID Suffix]下的[Explicit App ID]中输入[Bundle ID]。就如之前提供的范例一样，域名要反向输入，用顶级域起头（范例中是&quot;com&quot;）并用&quot;.&quot;连接，最后是你游戏的名字（范例中是&quot;sample&quot;）。<br /> <b>*注意，你不能真的用example.com这个域。</b><br /> <br /> 示例：<br />当你自己的域名是[example.com]而你的游戏是[sample]，你就写：<br />com.example.sample。
 			</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-22.png" height="585" width="982" alt="" />
 			</div>
-			<p>Select the appropriate option from the section below, and click [continue] to proceed to the end.</p>
+			<p>在下面的选项里面选择合适的项，然后点击[continue]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-23.png" height="585" width="982" alt="" />
 			</div>
-			<p>Your App ID has been created. There will be a prefix attached to the identifier (here it is W96~). You will need this for later so make a note of it somewhere.</p>
+			<p>现在你的App ID已经创建好了。在验证器前面会有一个前缀（这里是W96~）。你之后会用到它，所以现在先把它记下来。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-24.png" height="585" width="982" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-2-3 Registering a Device</h3>
-			<p>Let's register the UDID so that we can install to the device that you are using. You are able to register on the Apple Developer Program site. <br /> UDID is the unique serial number for each iOS device which can be checked using iTunes. Connect the device to your Mac and open up iTunes. In the device's overview, you can check the [Serial Number]. The UDID will be displayed by clicking this number. Copy the UDID by right-clicking.</p>
+			<h3 class="main__title--h3--sub">4-2-3 注册一个设备</h3>
+			<p>现在注册一个UDID，以便于能够把应用安装到你在使用的设备上。同样在Apple Developer Program注册。<br />UDID是每个iOS设备所独有的序列号，可以在iTunes上查到。把你的设备连接到Mac然后打开iTunes。在设备摘要里面可以查到[序列号]。点击这个序列号就可以看到UDID。右键这个UDID即可复制它。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-25.png" height="724" width="1246" alt="" />
 			</div>
-			<p>Select [All] under [Devices] in the left pane of Apple Developer Program, and click the [+] button at the top right.</p>
+			<p>在Apple Developer Program左侧面板中的[Devices]里选择[All]，然后单击右上角的[+]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-26.png" height="586" width="982" alt="" />
 			</div>
-			<p>Enter a name that is easy to remember in the [Name] section, paste the [UDID] that was copied earlier. After doing so, click [Continue] then [Register] to register the device.</p>
+			<p>在[Name]里输入一个便于记忆的名字，把[UDID]粘贴到对应的地方。之后点击[Continue]再[Register]即可注册设备。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-27.png" height="586" width="982" alt="" />
 			</div>
