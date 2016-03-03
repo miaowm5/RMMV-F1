@@ -33,12 +33,10 @@
 				<dt>Mac OS X</dt>
 				<dd> 请发布游戏的工程文件夹以及文件夹下的 Game.app 文件。<br />
 * 在 Windows 平台下 Game.app 会显示成了一个文件夹，请不用担心，它可以在 Mac OS X 下正常运行。</dd>
-				<dt>在 安卓/iOS 上运行游戏</dt>
+				<dt>安卓/iOS</dt>
 				<dd>请参考 [<a href="01_11_05.html">转换为安卓应用</a>] 和 [<a href="01_11_06.html">转换为 iOS 应用</a>] 部分。</dd>
-				<dt>发布到网络平台</dt>
-				<dd>将游戏文件夹上传到服务器上后您便能直接在线进行游戏。<br />
-* 游戏文件夹的位置在创建新工程或者保存工程时可以设置。<br />
-* 运行游戏并不需要 Game.rpgproject 文件和 save 文件夹，不过您上传了它们也不会有任何影响。<br />
+        <dt>网页浏览器<span class="red f12px normal">（2016 年 3 月 1 日更新）</span></dt>
+        <dd>将文件上传到网络服务器上后，您可以直接在网页浏览器上运行游戏。<br />
 <br />
 					<dl class="main__dl--sub">
 						<dt id="p01_01">运行游戏所需的系统要求</dt>
@@ -66,6 +64,19 @@
 					</dl>
 				</dd>
 			</dl>
+
+      <h3 class="main__title--h3">选项 [Exclude unused files（不包含未使用文件）] <span class="red f12px normal">（2016 年 3 月 1 日更新）</span></h3>
+      <p>
+        勾选改选项，则游戏发布时将不包含未使用的文件。使用这一功能，您可以缩减游戏发行包的体积。
+      </p>
+      <p>
+        以下文件将被排除。
+      </p>
+      <ul class="main__ul">
+        <li>工程目录/img/（该目录中的未使用文件）</li>
+        <li>工程目录/audio/（该目录中的未使用文件）</li>
+      </ul>
+      <p>请参考 [<a href="01_11_11.html">[不包含未使用文件] 插件配置</a>]部分来查看如何让本功能与插件相适应。</p>
 		</div><!-- /main__section -->
 
 
