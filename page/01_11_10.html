@@ -185,11 +185,210 @@ Left when set to 0, and in the center when set to 1.</dd>
 			  <li>If recovery magic is set to a skill, you can select an ally and cause them to recover when you select [Attack].</li>
 			  <li>It is possible to create weapons which are equal to the Guard command, etc.</li>
 			</ul>
-			<p> Set the [Skill Type] to "None" for skills selected using weapons. <br />
+			<p> Sets the [Skill Type] to "None" for skills selected using weapons. <br />
 			  In the case that a Skill Type whose use can be disabled, the player will not be able to select "Attack" if that skill is disabled. </p>
 		</div><!-- /main__section -->
 
 
+		<div class="main__section" id="m10">
+			<h2 class="main__title--h2">TouchUI <span class="red f12px">（March 1st, 2016 Update）</span></h2>
+			<p>
+				This will change the current UI to touch controls.<br />
+				*This plugin cannot be used simultaneously with other plugins that change the UI.<br />
+				(AltMenuScreen, AltSaveScreen, SimpleMsgSideView, TitleCommandPosition, etc.)
+			</p>
+			<h3 class="main__title--h3--sub">Parameters</h3>
+			<dl class="main__dl--sub">
+				<dt>Menu Command Text</dt>
+				<dd>This is the text on the Menu button that shows up in the map scene.</dd>
+				<dt>Previous Command Text</dt>
+				<dd>This is the text on the Previous button displayed in the menu.</dd>
+				<dt>Next Command Text</dt>
+				<dd>This is the text on the Next button displayed in the menu.</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+
+
+		<div class="main__section" id="m11">
+			<h2 class="main__title--h2">Gacha / GachaBook <span class="red f12px">（March 1st, 2016 Update）</span></h2>
+			<p>
+				This is a plugin that allows you to add a Gacha system.
+			</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img07.png" width="320" alt="" />
+				<img src="../inc/img/01_11_10_img08.png"  width="320" alt="" />
+			</div>
+
+			<h3 class="main__title--h3">Gacha</h3>
+			<p>A probability system that generates random chances to obtain items.</p>
+			<h3 class="main__title--h3--sub">Parameters</h3>
+			<dl class="main__dl--sub">
+				<dt>Help Message Text</dt>
+				<dd>A Help Message in the Gacha screen. <span class="param-name">Required Amount</span> is replaced by required G.</dd>
+				<dt>Button Text</dt>
+				<dd>Text displayed on the Gacha Button.</dd>
+				<dt>Get Message Text</dt>
+				<dd>Message displayed after a Gacha is done. <span class="param-name">Item Name</span> will be replaced by the obtained Item Name.</dd>
+				<dt>Show Item Description</dt>
+				<dd>Turns on/off to display the description when item is obtained.<br />Choose from the following; 0: do not show description, or 1: show description.</dd>
+				<dt>Effect</dt>
+				<dd>Sets the animation number for when items are obtained.</dd>
+				<dt>Rank1～5 Effect</dt>
+				<dd>Sets the animation number for Rank 1 to 5.</dd>
+				<dt>ME</dt>
+				<dd>Sets ME for when items are obtained.</dd>
+				<dt>Required Amount</dt>
+				<dd>Required G to do a Gacha.</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Plugin Command</h3>
+			<p>Sets as an event in [Plugin Command] in Advanced under Event Commands.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img09.png" height="300" width="600" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>Gacha open</th>
+					<td>Opens Gacha screen.</td>
+				</tr>
+				<tr>
+					<th>Gacha add item 1</th>
+					<td>Adds item no. 1 as obtainable item in Gacha.</td>
+				</tr>
+				<tr>
+					<th>Gacha remove item 1</th>
+					<td>Removes item no. 1 as obtainable item in Gacha.</td>
+				</tr>
+				<tr>
+					<th>Gacha clear</th>
+					<td>Clears all obtainable items in Gacha.</td>
+				</tr>
+			</table>
+
+			<h3 class="main__title--h3--sub">Items (Weapon/Armor) Note</h3>
+			<p>Writes to [Note] in [Items (Weapon/Armor)] under Database.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img10.png" height="631" width="769" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>&lt;gachaImage: image&gt;</th>
+					<td>Choose image for Gacha item. Add image file under img/gacha/(this folder).</td>
+				</tr>
+				<tr>
+					<th>&lt;gachaNumLot: 10&gt;</th>
+					<td>Sets number of Gacha.</td>
+				</tr>
+				<tr>
+					<th>&lt;gachaRank: 5&gt;</th>
+					<td>Sets rank (1 to 5) for Gacha item.</td>
+				</tr>
+			</table>
+
+
+			<h3 class="main__title--h3">GachaBook</h3>
+			<p>Displays list of Gacha Items.</p>
+			<h3 class="main__title--h3--sub">Parameters</h3>
+			<dl class="main__dl--sub">
+				<dt>Unknown Data</dt>
+				<dd>Name of an unknown Gacha item.</dd>
+				<dt>Price Text</dt>
+				<dd>This is the text for [Price].</dd>
+				<dt>Equip Text</dt>
+				<dd>This is the text for [Equipment].</dd>
+				<dt>Type Text</dt>
+				<dd>This is the text for [Type].</dd>
+				<dt>Rank Text</dt>
+				<dd>This is the text for [Rank].</dd>
+				<dt>Simple Display</dt>
+				<dd>Switches the display method for description display. Choose from the following; 0: Normal Display, 1: Simple Display (name and description only).</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">Plugin Command</h3>
+			<p>Set as an event in [Plugin Command] in Advanced under Event Commands.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img11.png" height="300" width="600" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>GachaBook open</th>
+					<td>Opens Gacha book.</td>
+				</tr>
+				<tr>
+					<th>GachaBook add weapon 3</th>
+					<td>Adds Weapon No. 3 to Gacha book.</td>
+				</tr>
+				<tr>
+					<th>GachaBook add armor 4</th>
+					<td>Adds Armor No. 4 to Gacha book.</td>
+				</tr>
+				<tr>
+					<th> GachaBook remove armor 5</th>
+					<td>Removes Armor No. 5 from Gacha book.</td>
+				</tr>
+				<tr>
+					<th>GachaBook remove item 6</th>
+					<td>Removes Item No. 6 from Gacha book.</td>
+				</tr>
+				<tr>
+					<th>GachaBook clear</th>
+					<td>Clear all content in Gacha book.</td>
+				</tr>
+			</table>
+
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="m12">
+			<h2 class="main__title--h2">SlotMachine <span class="red f12px">（March 1st, 2016 Update）</span></h2>
+			<p>This is a plugin to add a slot machine system.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img12.png" height="662" width="832" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">Parameters</h3>
+			<dl class="main__dl--sub">
+				<dt>Variable ID</dt>
+				<dd>This is this variable ID to manage the amount of coins owned.</dd>
+				<dt>Help Text</dt>
+				<dd>This is the message for help.</dd>
+				<dt>Won Text</dt>
+				<dd>This is the message shown when winning. <span class="param-name">Win Coin</span> will be replaced by the amount of obtained coins.</dd>
+				<dt>Lost Text</dt>
+				<dd>This is the message shown when losing. </dd>
+				<dt>Replay Text</dt>
+				<dd>This is the message shown when choosing to retry or not.</dd>
+				<dt>Coin Full Text</dt>
+				<dd>This is the message shown when coins reach maximum amount.</dd>
+				<dt>Bet Text</dt>
+				<dd>This is the text for the Bet Command.</dd>
+				<dt>Spin Text</dt>
+				<dd>This is the text for the Spin Command.</dd>
+				<dt>Yes Text</dt>
+				<dd>This is the text for the Yes Command.</dd>
+				<dt>No Text</dt>
+				<dd>This is the text for the No Command.</dd>
+			</dl>
+
+			<h3 class="main__title--h3--sub">Plugin Command</h3>
+			<p>Set as an event in [Plugin Command] in Advanced under Event Commands.</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img13.png" height="300" width="600" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>SlotMachine open</th>
+					<td>Opens slot machine.</td>
+				</tr>
+				<tr>
+					<th>SlotMachine expectation 0.5</th>
+					<td>Sets expected value to a number in between 0 to 1. The closer to the value 1, the better chance of winning, though there is never a 100% chance.</td>
+				</tr>
+				<tr>
+					<th>SlotMachine scale 0</th>
+					<td>Sets the multiplying factor. Value 0 is x1, 1 is x10, and 2 is x100.</td>
+				</tr>
+			</table>
+
+		</div><!-- /main__section -->
 
 	</div><!-- /main -->
 </body>

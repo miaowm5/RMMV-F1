@@ -36,8 +36,15 @@
 				<dd>Specify the display position of the picture. First, select the [Origin Point] of the picture which can be the [Upper Left] or [Center] of the screen. After doing so, specify the position using coordinates which will use (0, 0) as the origin. When using [Direct designation], enter in coordinates (-9999 to 9999) for [X] which will be the horizontal position, and [Y] which will be the vertical position. To specify the location using variables to specify coordinates, select [Designation with variables], and specify the variables for [X], and [Y].</dd>
 				<dt>Scale</dt>
 				<dd>Specify the percentage to scale the image (between 0 and 2000% with 100% being the original size) using the [Width] and [Height] fields.</dd>
-				<dt>Blend</dt>
-				<dd>Specify the opacity (0 to 255) of the picture under [Opacity]. The smaller the value, the more transparent the picture will be (will not be displayed if 0). Specify how to blend the image colors when changing the opacity of the image under [Blending Mode]. The image will be blended normally when [Normal] is selected, and will appear whiter when [Additive] is selected.</dd>
+				<dt id="renew01">Blend</dt>
+				<dd>Specify the opacity (0 to 255) of the picture under [Opacity]. The smaller the value, the more transparent the picture will be (will not be displayed if 0). Specify how to blend the image colors when changing the opacity of the image under [Blending Mode].
+					<ul class="main__ul">
+						<li>[Normal] ・・・ Displayed as normal.</li>
+						<li>[Additive] ・・・ Displayed in a whiter color.</li>
+						<li>[Multiply] ・・・ Displayed in a darker color.</li>
+						<li>[Screen] ・・・ Displayed in a brighter color.<br /><span class="red">（March 1st, 2016 Update）</span></li>
+					</ul>
+				</dd>
 			</dl>
 			<h3 class="main__title--h3--sub">Remarks </h3>
 			<ul class="main__ul">
@@ -62,7 +69,14 @@
 				<dt>Scale</dt>
 				<dd>Specify the percentage (0 to 2000%) by which to scale the [Width] and [Height] of the picture after it has been moved.</dd>
 				<dt>Blend</dt>
-				<dd>Specify the opacity (0 to 255) of the picture after it has been moved under [Opacity]. The smaller the value, the more transparent the picture will be (will not be displayed if 0). Specify how to blend the image colors when changing the opacity of the image under [Blending Mode]. The image will be blended normally when [Normal] is selected, and will appear whiter when [Additive] is selected.</dd>
+				<dd id="renew02">Specify the opacity (0 to 255) of the picture after it has been moved under [Opacity]. The smaller the value, the more transparent the picture will be (will not be displayed if 0). Specify how to blend the image colors when changing the opacity of the image under [Blending Mode].
+					<ul class="main__ul">
+						<li>[Normal] ・・・ Displayed as normal.</li>
+						<li>[Additive] ・・・ Displayed in a whiter color.</li>
+						<li>[Multiply] ・・・ Displayed in a darker color.</li>
+						<li>[Screen] ・・・ Displayed in a brighter color.<br /><span class="red">（March 1st, 2016 Update）</span></li>
+					</ul>
+				</dd>
 				<dt>Time</dt>
 				<dd>Specify the amount of time moving the picture will take in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
 				<dt>Wait for Completion</dt>
