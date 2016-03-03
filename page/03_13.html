@@ -18,7 +18,7 @@
 			<li>&gt;</li>
 			<li>TilingSprite 类</li>
 		</ul>
-		<p>以平铺方式显示图片的精灵对象。</p>
+		<p>以平铺方式显示图片的 sprite（精灵） 对象。</p>
 		<div class="main__section">
 			<h2 class="main__title--h2">构造函数</h2>
 <pre class="main__pre--code">
@@ -68,7 +68,7 @@ TilingSprite ( bitmap )
 <pre class="main__pre--code">
 move ( x , y , width , height )
 </pre>
-				<p class="mb10px">统一设置 x 坐标，y 坐标，宽度，高度。</p>
+				<p class="mb10px">直接设置 TilingSprite（平铺精灵） 的 X 坐标、Y 坐标、宽度和高度。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -76,28 +76,28 @@ move ( x , y , width , height )
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>平铺精灵的 x 坐标</p>
+								<p>TilingSprite（平铺精灵） 的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>平铺精灵的 y 坐标</p>
+								<p>TilingSprite（平铺精灵） 的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">width</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>平铺精灵的宽度</p>
+								<p>TilingSprite（平铺精灵） 的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">height</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>平铺精灵的高度</p>
+								<p>TilingSprite（平铺精灵） 的高度</p>
 							</div>
 						</li>
 					</ul>
@@ -108,7 +108,7 @@ move ( x , y , width , height )
 <pre class="main__pre--code">
 setFrame ( x , y , width , height )
 </pre>
-				<p class="mb10px">指定平铺精灵所显示位图的矩形区域。</p>
+				<p class="mb10px">设置 TilingSprite（平铺精灵） 所显示 bitmap（位图） 的矩形区域。</p>
 				<div class="params">
 					<h4>参数：</h4>
 					<ul class="params-list">
@@ -116,28 +116,28 @@ setFrame ( x , y , width , height )
 							<code class="param-name">x</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>矩形框架的 x 坐标</p>
+								<p>矩形区域的 X 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">y</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>矩形框架的 y 坐标</p>
+								<p>矩形区域的 Y 坐标</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">width</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>矩形框架的宽度</p>
+								<p>矩形区域的宽度</p>
 							</div>
 						</li>
 						<li class="param">
 							<code class="param-name">height</code>
 							<span class="type">Number</span>
 							<div class="param-description">
-								<p>矩形框架的高度</p>
+								<p>矩形区域的高度</p>
 							</div>
 						</li>
 					</ul>
@@ -148,7 +148,7 @@ setFrame ( x , y , width , height )
 <pre class="main__pre--code">
 update ()
 </pre>
-				<p class="mb10px">在每一帧刷新精灵。</p>
+				<p class="mb10px">在每一帧中刷新 TilingSprite（平铺精灵） 。</p>
 			</div><!-- /div -->
 
 		</div><!-- /main__section -->
@@ -161,42 +161,42 @@ update ()
 <pre class="main__pre--code">
 bitmap <span class="pre__type">Bitmap</span>
 </pre>
-				<p class="mb10px">用于平铺显示的图像。</p>
+				<p class="mb10px">TilingSprite（平铺精灵） 所显示的图片。</p>
 			</div><!-- /div -->
 
 			<div id="p02" class="main__subsection">
 <pre class="main__pre--code">
 opacity <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">平铺精灵的不透明度(0 ~ 255)。</p>
+				<p class="mb10px">TilingSprite（平铺精灵） 的不透明度（0 ~ 255）。</p>
 			</div><!-- /div -->
 
 			<div id="p03" class="main__subsection">
 <pre class="main__pre--code">
 origin <span class="pre__type">Point</span>
 </pre>
-				<p class="mb10px">平铺精灵的原点，用于制作滚动显示效果。</p>
+				<p class="mb10px">滚动显示效果中 TilingSprite（平铺精灵） 的原点。</p>
 			</div><!-- /div -->
 
 			<div id="p04" class="main__subsection">
 <pre class="main__pre--code">
 visible <span class="pre__type">Boolean</span>
 </pre>
-				<p class="mb10px">平铺精灵的可见性。</p>
+				<p class="mb10px">TilingSprite（平铺精灵） 的可见性。</p>
 			</div><!-- /div -->
 
 			<div id="p05" class="main__subsection">
 <pre class="main__pre--code">
 x <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">平铺精灵的 x 坐标。</p>
+				<p class="mb10px">TilingSprite（平铺精灵） 的 X 坐标。</p>
 			</div><!-- /div -->
 
 			<div id="p06" class="main__subsection">
 <pre class="main__pre--code">
 y <span class="pre__type">Number</span>
 </pre>
-				<p class="mb10px">平铺精灵的 y 坐标。</p>
+				<p class="mb10px">TilingSprite（平铺精灵） 的 Y 坐标。</p>
 			</div><!-- /div -->
 
 

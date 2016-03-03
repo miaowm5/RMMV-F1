@@ -8,138 +8,138 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v06">Converting to an Android App<br />&lt;Creating an apk file&gt;</h1>
+		<h1 class="main__title--h1 main__title--h1--v06">将游戏打包成Android程序<br />&lt;创建一个apk安装文件&gt;</h1>
 		<ul class="breadcrumb">
 			<li><a href="01.html">RPG Maker MV</a></li>
 			<li>&gt;</li>
-			<li>Documentation</li>
+			<li>资料集</li>
 			<li>&gt;</li>
-			<li>Converting to an Android App &lt;Creating an apk file&gt;</li>
+			<li>将游戏打包成Android程序 &lt;创建apk文件&gt;</li>
 		</ul>
 
 
 		<div class="main__section" id="p01">
-			<h2 class="main__title--h2">1 Overview</h2>
-			<p>From this version, games created using RPG Maker MV will now be played using browsers which support HTML5 technology such as WebGL &amp; 2DCanvas, WebAudio and JavaScript. There is also continued support for HTML5 in recent browsers for Android,  allowing users to enjoy playing games made using RPG Maker.<br />
-				<br />Rather than explaining how to play using a browser, we will explain in this section how to play your game as an Android application. Running an HTML5 game as an application using an Android device is similar to running a game as an Android application using a browser that supports HTML5. This method of development of running a web application as a native application is known by such names as &quot;Hybrid App&quot;, and is popular from the fact that it can be run on cross-platforms.<br />
-				<br />Browsers which package games as apps are &quot;Browser Engines&quot; which handle the Web display and sounds, and have Android built-in (called WebView). However, browser engines with Android built-in seem to be lagging behind a little when it comes to supporting HTML5. Because of this reason, we will be giving instructions which use a technology called &quot;Crosswalk Project&quot; that uses the Chrome browser which has a high level of support for HTML5.<br />A similar explanation to the explanation found on this page can be viewed on the Crosswalk Project website so please check it out. ([<a href="https://crosswalk-project.org/documentation/android.html" target="_blank">Crosswalk Project on Android</a>]).</p>
-			<h3 class="main__title--h3--sub">Operating Systems</h3>
-			<p>The work environments used for this explanation will be Windows 8.1 and OS X 10.10. Additionally, the computer used to do your work will be referred to as the &quot;Host PC&quot;.</p>
+			<h2 class="main__title--h2">1 概述</h2>
+			<p>从这个版本开始，使用RPG Maker MV做的游戏可以在那些支持HTML5（包括例如WebGL &amp; 2DCanvas, WebAudio and JavaScript）的浏览器上直接运行。 同时也可以进一步支持那些最近基于HTML5为Android平台开发的浏览器，大家可以在这些浏览器上直接运行由RPG Maker制作的游戏。<br />
+				<br />不过与其向大家解释如何在浏览器上玩RM游戏，不如直接让我们向大家说明一下如何将你的游戏制作成Android平台的App. 本质上来说，在Android本地运行一个利用HTML5开发的游戏，与在Android平台上用一个支持HTML5的浏览器上跑一个使用RM做的游戏性质是一样的. 我们称这种能够在手机网页上运行的程序为 &quot;Hybrid App&quot;，并且从事实上看，这种跨平台的技术确实已经越来越流行了.<br />
+				<br />在浏览器内，可以处理显示与声音的内置Android引擎（WebView）会将游戏打包成应用。然而，浏览器内置的网络视图引擎（Android WebView）加载HTML5的效率并不高。为此，我们将介绍一个名为Crosswalk Project的技术，这项技术使用在给予它使用在Chrome的浏览器上，并且对HTML5有着高效率的支持。如果想对Crosswalk Project这项技术有更进一步的了解，你可以尝试查看这个网站。 （[<a href="https://crosswalk-project.org/documentation/android.html" target="_blank">Crosswalk Project on Android</a>]）.</p>
+			<h3 class="main__title--h3--sub">操作系统 </h3>
+			<p>推荐在window8.1或者mac系统 OS X 10.10以上的操作环境下运行。此外，执行程序的计算机将充当主机的功能。</p>
 		</div><!-- /main__section --><div class="main__section" id="p02">
-			<h2 class="main__title--h2">2 Prepare the Packaging Environment</h2>
-			<p>Installing games created using RPG Maker on Android will require creating an apk file. An apk file is the installer for Android apps and its extension is apk. This is compressed in a ZIP format, and contains various necessary files for running the application. We will refer to creating the apk file here as &quot;Packaging&quot;.<br />Also, an Internet connection is required to download some of the necessary developer tools.</p>
+			<h2 class="main__title--h2">2 准备开发环境</h2>
+			<p>在安卓平台上安装RM制作的游戏需要用apk文件，apk文件是用在Android平台安装的程序的文件。安装程序被压缩在ZIP格式的包里，其中还包含了各种运行时所需要的文件，所以我们要是想把程序安装在安卓平台，就必须将这些文件封装为一个apk安装文件。不过在那之前，确保你能够连接上互联网，因为有些开发工具需要你先下载准备好。</p>
 
-			<h3 class="main__title--h3">2-1 Python Installation and Setup</h3>
-			<p>A packaging script is provided in Crosswalk Project so that you can easily package your game. This is made using a scripting language called &quot;Python&quot; so we will set up an environment where Python can be run. This section explains how to install Python on Windows but <b>Python is already installed with OS X so there is no need to install it. Please proceed to 2-2.</b></p>
+			<h3 class="main__title--h3">2-1 Python的安装和设置</h3>
+			<p>还记得那个叫Crosswalk Project的玩意吗？对，就是它，它是一个封装脚本，用它封装你的游戏会非常方便。不过先别着急，这里你需要一个名字叫做Python的脚本语言，所以我们得先搭个Python的运行环境。待会这个章节讲解的是如何在windows系统下安装Python环境，如果你是Mac的用户，请移步2-2章节。</b></p>
 
-			<h3 class="main__title--h3--sub">2-1-1 Downloading &amp; Installing Python</h3>
-			<p>Start downloading the installer which can be found on <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. It is not particularly necessary to change any of the items during installation if they are not necessary, but it is a good idea to check where you are installing Python.</p>
+			<h3 class="main__title--h3--sub">2-1-1 下载和安装 Python</h3>
+			<p>你可以在https://www.python.org/downloads/找到python的安装程序。在安装的过程中，没什么特别必要的话，设定不需要做什么改变，并且随便你想装在本地的哪里都可以。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-1.png" height="673" width="1024" alt="" /></div>
-			<p>Python has been installed to C:\Python34.</p>
+			<p>Python h安装到了C盘Python34文件夹.</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-6.png" height="602" width="876" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">2-1-2 Path Setup &amp; Check</h3>
-			<p>The path will be set to C:\Python34 where Python was installed so that Python commands will be easier to use.<br />Right-click &quot;This PC&quot; and open up [Advanced system settings] from [Properties].</p>
+			<h3 class="main__title--h3--sub">2-1-2 Path 的设定与检测</h3>
+			<p>将Python的安装路径添加到环境设置里的路径里，这样能使Python命令更容易被调用。<br />右键点击我的电脑，选择高级系统设置</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-8.png" height="613" width="874" alt="" /></div>
-			<p>Click [Environment Variables] in [System Properties]. Select [Path]  under [System Variables] and click the Edit button.</p>
+			<p>点击环境变量. 选择[Path]变量，对就是图中Variables下面那个（在你电脑下并不一定是Variables下面那个），然后点击编辑按钮。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-9.png" height="613" width="874" alt="" /></div>
-			<p>Edit the variables. Adding ";C:\Python34\" to the end of the original string will allow the path to be used (the semicolon is a break character).</p>
+			<p>修改变量，在最末尾的地方添加[;C:\Python34\]（不包括方括号），点确定。</p>
 <pre class="main__pre--code">
 ;C:\Python34\
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-10.png" height="613" width="874" alt="" /></div>
-			<p>Confirm using command prompt. When using Windows 8.1, open the C drive in the explorer, and select [Open command prompt].</p>
+			<p>确定你设置路径无误之后，你可以点击开始菜单，搜索cmd，运行，弹出控制台。（如果你用的win8系统，你可以打开c盘的浏览器，并且选择打开cmd）</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-11.png" height="627" width="832" alt="" /></div>
-			<p>Enter &quot;python --version&quot; command and press the Enter key. If the version of Python is displayed, that means there is no problem.</p>
+			<p>在控制台里输入python --version并回车。如果你看到你的控制台显示出来的画面和我们下面的图片是一样的话，就表示你python环境已经搭建完成啦。</p>
 <pre class="main__pre--code">
 &gt; python --version
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-12.png" height="493" width="997" alt="" /></div>
 
-			<h3 class="main__title--h3">2-2 Installing &amp; Setting Up Oracle JDK </h3>
-			<p>In order to run Android SDK tools and a tool known as &quot;Ant,&quot; you will need JDK (Java Development Kit). This is current provided by Oracle. Since JDK has stopped being included in OS X from 10.6 and on,  you will need to install it.</p>
+			<h3 class="main__title--h3">2-2 安装与设置 Oracle JDK </h3>
+			<p>为了使用由Oracle公司提供的Android SDK开发工具和ANT打包工具，你需要安装JDK。而且Mac的操作系统从OS X 10.6版本开始已经不再自带JDK了，如果你没有的话，请安装它 :)</p>
 
-			<h3 class="main__title--h3--sub">2-2-1 Downloading &amp; Installing JDK</h3>
-			<p>Download JDK from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>. The newest version of JDK is Java SE 8u51 as of August 2015.</p>
+			<h3 class="main__title--h3--sub">2-2-1 下载并安装 JDK</h3>
+			<p>你可以从这里下载JDK安装包 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>. 最新的版本是2015年9月发布的Java SE 8u51。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-13.png" height="673" width="1024" alt="" /></div>
-			<p>Download the version which is appropriate for your system. There are two versions for Windows, 32-bit (Windows x86) and 64-bit (Windows x64), so be sure to choose the correct one. <br />Select &quot;Accept License Agreement&quot; using the above radio button.</p>
+			<p>注意，JDK有64位和32位两个版本，分别对应你当前的操作系统[64-bit （Windows x64） and 32-bit （Windows x86）]，请务必确保你下载的JDK与你的操作系统相对应。 <br />在顶部选择"Accept License Agreement"（接受许可协议）按钮。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-14.png" height="673" width="1024" alt="" /></div>
-			<p>Run the downloaded installer to install Java SE Development Kit. You do not need to change any of the options.</p>
+			<p>直接运行下载下来的安装文件，不需要做任何选择。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-15.png" height="393" width="514" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">2-2-2 Configuring and Checking Environment Variables &amp; Path</h3>
-			<p>We will set up the JAVA_HOME Environment Variable. Just as you set up the path for Python in 2-1-2, open [System Properties] and click the [New] button in [Environment Variables].<br />Enter &quot;JAVA_HOME&quot; for the variable name and input the installation location for JDK for the variable value. The variable here was set to C:\Program Files\Java\jdk1.8.0_51.</p>
+			<h3 class="main__title--h3--sub">2-2-2 设置并检查JDK的环境变量</h3>
+			<p>现在，我们将要设置一个名为JAVA_HOME的环境变量. 就跟章节2-1-2里为Python设置path的步骤差不多，首先你右键我的电脑，打开高级设置，点击环境变量，然后选择[新建]按钮。<br />将变量名命名为JAVA_HOME，然后把你安装JDK的文件夹路径拷贝在下面一行。比如我们这里输入的路径就是C:\Program Files\Java\jdk1.8.0_51.</p>
 <pre class="main__pre--code">
 JAVA_HOME
 C:\Program Files\Java\jdk1.8.0_51
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-17.png" height="611" width="874" alt="" /></div>
-			<p>This creates the path. Select [Path]  under [System Variables] and click the Edit button. Enter ;%JAVA_HOME%\bin\ following the value already entered.</p>
+			<p>同样，点击确定之后继续选择PATH路径，在PATH的末尾加入[;%JAVA_HOME%\bin\]（不包括方括号） ，点击确定。</p>
 <pre class="main__pre--code">
 ;%JAVA_HOME%\bin\
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-18.png" height="611" width="873" alt="" /></div>
-			<p>Check the version using Command Prompt just as you did with Python.<br />Enter &quot;java --version&quot; command and press the Enter key. If the version is displayed, that means there is no problem.</p>
+			<p>检测环境是否搭建成功和之前检测Python的方法大致一样。<br />打开CMD，输入java --version，如果画面上显示出你JDK的版本，那么表示你的环境已经搭建成功啦。</p>
 <pre class="main__pre--code">
 &gt; java -version
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-2-16.png" height="493" width="997" alt="" /></div>
 
-			<h3 class="main__title--h3">2-3 Installing and Configuring Apache Ant </h3>
-			<p>Ant is known as a build tool that is run using Java. It is utilized internally using a packaging script. You need to install Ant on both Windows and OS X.</p>
+			<h3 class="main__title--h3">2-3 安装并设置 Apache Ant </h3>
+			<p>Apache Ant,是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境中的软件开发。 它采用的是内部封装脚本，无论你是Windows操作系统还是OS X系统，都需要安装它。</p>
 
-			<h3 class="main__title--h3--sub">2-3-1 Downloading &amp; Installing Ant</h3>
-			<p>Download the Ant binaries from <a href="http://ant.apache.org/bindownload.cgi" target="_blank">http://ant.apache.org/bindownload.cgi</a>.<br />Download the [.zip archive:] found under the [Current Release of Ant] section. The newest version of Ant is 1.9.6 as of August 2015.</p>
+			<h3 class="main__title--h3--sub">2-3-1 下载和安装 Ant</h3>
+			<p>你可以从这里下载ANT <a href="http://ant.apache.org/bindownload.cgi" target="_blank">http://ant.apache.org/bindownload.cgi</a>.<br />在[Current Release of Ant]板块下面下载[.zip archive:]文件。 最新的版本是2015年8月份发布的1.9.6版。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-1.png" height="673" width="1024" alt="" /></div>
-			<p>The file you downloaded is a compressed ZIP file so extract it in a location of your choosing. In this example, Ant was extracted directly to the C drive.</p>
+			<p>解压你下载的安装包，在这里我们直接把它解压在C盘。（你也可以选你喜欢的地方解压）</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-2.png" height="602" width="876" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">2-3-2 Configuring and Checking Environment Variables &amp; Path</h3>
-			<p>Here we will set up the path and environment variables for Ant. Just as when we set up the path to Python in 2-1-2, open the Environment Variables window.<br />First, we will configure the ANT_HOME environment variable. Click the New button under System Environment Variables, and enter [ANT_HOME] as the variable name and the path where Ant was extracted as the variable value.</p>
+			<h3 class="main__title--h3--sub">2-3-2 设置并检测环境变量</h3>
+			<p>和2-1-2章里设置Python环境变量的步骤差不多, 右键我的电脑，点击高级设置，点击环境变量。<br /> 新建一个名为ANT_HOME的变量，并在下面一行输入你解压ANT文件夹的路径，例如这里我们解压的路径就是C:\apache-ant-1.9.6</p>
 <pre class="main__pre--code">
 ANT_HOME
 C:\apache-ant-1.9.6
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-3.png" height="611" width="874" alt="" /></div>
-			<p>This creates the path. Select [Path]  under [System Variables] and click the Edit button. Enter ";%ANT_HOME%\bin\" following the value already entered.</p>
+			<p>同样，继续选择PATH变量，编辑，在路径最末尾输入[;%ANT_HOME%\bin\]（不包括方括号），点击确定。</p>
 <pre class="main__pre--code">
 ;%ANT_HOME%\bin\
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-4.png" height="611" width="874" alt="" /></div>
-			<p>To check to make sure that the path is set up, use Command Prompt to check the version just as you have up until now. Enter &quot;ant --version&quot; command and press the Enter key.</p>
+			<p>用同样的方法确认你是否搭建成功,打开CMD，输入ant -version，回车，出现版本信息则表示你搭建成功。</p>
 <pre class="main__pre--code">
 &gt; ant -version
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-3-5.png" height="493" width="997" alt="" /></div>
 
-			<h3 class="main__title--h3">2-4 Installing and Configuring Android SDK</h3>
-			<p>SDK is short for &quot;Software Development Kit&quot; and just as the name says, this contains a kit for developing software. Necessary files for packaging and convenient tools for testing are included in the kit.</p>
+			<h3 class="main__title--h3">2-4 安装与设置 Android SDK</h3>
+			<p>首先，SDK是什么？SDK是软件开发工具包（外语首字母缩写：SDK、外语全称：Software Development Kit），正如它的名字一样，一般都是一些软件工程师为特定的软件包、软件框架、硬件平台、操作系统等建立应用软件时的开发工具的集合。 我们所需要的封装工具和测试工具都在这个工具包里。</p>
 
 			<h3 class="main__title--h3--sub">2-4-1 Downloading &amp; Installing Android SDK</h3>
-			<p>Download the Android SDK  from <a href="http://developer.android.com/sdk/installing/index.html" target="_blank">http://developer.android.com/sdk/installing/index.html</a>. In the SDK, you can find [ANDROID STUDIO], software for developing Android apps. However, here we will be using the [STAND-ALONE SDK TOOLS].</p>
+			<p>从这里可以下载SDK安装包 <a href="http://developer.android.com/sdk/installing/index.html" target="_blank">http://developer.android.com/sdk/installing/index.html</a>. 在这个SDK里, 你可以找到[ANDROID STUDIO]，也就是开发Android程序的工具。 然而我们并不会使用到它，这里我们需要用的是一个叫[STAND-ALONE SDK TOOLS]的工具。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-1.png" height="673" width="1024" alt="" /></div>
-			<p>Select [STAND-ALONE SDK TOOLS] and click [Download the SDK now] in the page that is displayed next.  The newest version of the SDK is r24.3.3as of August 2015. Download the installer (exe file) from here.</p>
+			<p>选择[STAND-ALONE SDK TOOLS] 点击并下载[Download the SDK now]（下载SDK）。最新版本的SDK是2015年8月发布的r24.3.3版，你可以选择Windows或者OS X版本，点击下载exe安装文件。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-2.png" height="673" width="1024" alt="" /></div>
-			<p>Run the downloaded installer to install the SDK.</p>
+			<p>运行SDK安装文件。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-3.png" height="400" width="513" alt="" /></div>
-			<p>A screen where you will enter the location to install the SDK will eventually be displayed. Install directly to the C drive so that it is easy to find.</p>
+			<p>跳出安装窗口，点击下一步，选择安装的位置，直接装在C盘是一个不错的选择，方便你找到它（其实无所谓 :p）。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-4.png" height="400" width="513" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">2-4-2 Downloading Additional Components Using Android SDK Manager</h3>
-			<p>Only the bare essentials come with Android SDK right after installation. Here we will download some additional components such as platform-tools using Android SDK Manger. Android SDK Manger can be found in the start menu.<br />
-				<br />You can download necessary drivers for connecting devices to the host PC with USB through Android SDK Manager. If you&apos;re not sure which thing to download, you will get by with what is selected right after you run Android SDK Manager. However, be sure to select [Android SDK platform-tools], [Android SDK Build-tools] and the API (the newest version here is [Android 5.1.1 (API 22)]).<br />Also, it is probably a good idea to add [Google USB Driver] (mentioned later) in the [Extras] folder which makes it possible to install on to the device using USB.<br />
+			<h3 class="main__title--h3--sub">2-4-2 下载组件和使用Android SDK管理器</h3>
+			<p>只有在安装程序结束之后，你才能开始下载或安装Android SDK。这里我们安装的是Android SDK Manger，即Android SDK的管理工具，我们可以使用它安装一些其他的组件比如Android平台工具。你可以在开始菜单里找到Android SDK Manger。<br />
+				<br />你可以通过Android SDK Manager下载连接硬件与主机的USB驱动，如果你不确定你应该下载哪一个，那么在你打开Android SDK Manager之后它会下载那些已经被选中的工具。然而，别忘了一定要选中[Android SDK platform-tools]，[Android SDK Build-tools]还有API（最新版本的API是5.1.1（API22）版本）。<br />以及，同时在[Extras]（附加）文件夹选中添加 [Google USB Driver] （谷歌USB驱动，后面会解释）是个不错的选择，他可以让你直接使用USB进行安装。<br />
 			</p>
 			<ul class="main__ul">
-				<li>Android SDK platform-tools</li>
-				<li>Android SDK Build-tools</li>
-				<li>Android5.1.1 (API 22)</li>
-				<li>Google USB Driver</li>
+				<li>Android SDK platform-tools（android SDK 平台工具）</li>
+				<li>Android SDK Build-tools（android SDK 构建工具）</li>
+				<li>Android5.1.1 （API 22）</li>
+				<li>Google USB Driver（谷歌USB驱动）</li>
 			</ul>
-			<p>*It is possible that the above tools are already selected on start up.</p>
+			<p>*也有可能在你刚打开Android SDK Manager的时候，这些工具系统已经默认帮你选取了。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-5.png" height="500" width="700" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">2-4-3 Path Setup &amp; Check</h3>
-			<p>Edit the System Environment Variable Path and add the location of Android SDK and the 3 locations for each tool.</p>
+			<h3 class="main__title--h3--sub">2-4-3 路径的设置与检测</h3>
+			<p>编辑环境变量中的PATH，添加刚才安装的SDK工具的路径。</p>
 
 <pre class="main__pre--code">
 ;C:\android-sdk\
@@ -147,29 +147,29 @@ C:\apache-ant-1.9.6
 ;C:\android-sdk\platform-tools\
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-6.png" height="611" width="874" alt="" /></div>
-			<p>Check the Path. Let&apos;s try using the adb command here. Enter &quot;adb version&quot; into the command prompt and press the Enter key.</p>
+			<p>检测路径设置是否正确，在cmd控制台，输入adb version，并回车。</p>
 <pre class="main__pre--code">
 &gt; adb version
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-4-7.png" height="493" width="996" alt="" /></div>
 
-			<h3 class="main__title--h3">2-5 Downloading the Android App Template for Crosswalk Project</h3>
-			<p>You do not need to install Crosswalk Project. Extract the downloaded ZIP file wherever you like. Things such as the browser engine and packaging script are included inside the downloaded file.<br />Download the stable version of the Android app template from <a href="https://download.01.org/crosswalk/releases/crosswalk/android/stable/" target="_blank">https://download.01.org/crosswalk/releases/crosswalk/android/stable/</a>. Versions go all the way up to 14 but 10.39.235.16 is stable.<br />Click the folder and download [crosswalk-10.39.235.16.zip].</p>
+			<h3 class="main__title--h3">2-5 为Crosswalk Project下载android程序模板</h3>
+			<p>部署Crosswalk Project并不需要去安装，只需要把他的压缩包下载下来并解压在任意的地方，你需要的文件例如浏览器引擎和封装脚本都在压缩包里。<br />Android程序模板则建议下载较为稳定的版本，（下载地址：<a href="https://download.01.org/crosswalk/releases/crosswalk/android/stable/" target="_blank">https://download.01.org/crosswalk/releases/crosswalk/android/stable/</a>），虽然现在已经更新到了14.43，不过10.39.235.16 的版本比较稳定。<br />点击文件夹并开始下载 [crosswalk-10.39.235.16.zip]。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-5-1.png" height="673" width="1024" alt="" /></div>
-			<p>In this example, the file was extracted directly to the C drive.</p>
+			<p>在这个教程里，我们直接把压缩包解压倒c盘。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/2-5-2.png" height="602" width="876" alt="" /></div>
-			<p>With this, the packaging environment is now complete.</p>
+			<p>到这一步，封装环境已经部署完毕。</p>
 
 		</div><!-- /main__section --><div class="main__section" id="p03">
-			<h2 class="main__title--h2">3 Deploying Games Using RPG Maker</h2>
-			<p>Here we will export the necessary  game data, assets and game engine to a package from RPG Maker. Select [Deployment...] from the File Menu and the deployment dialog will appear. If you select [Android / iOS] and export, all the files needed for Android packaging will be placed in the selected folder. <br />In this example, we deployed to the desktop.</p>
+			<h2 class="main__title--h2">3 使用RPG Maker部署游戏</h2>
+			<p>从这儿开始我们必须使用RPG Maker将必要的游戏数据，资源以及游戏引擎导出到一个文件夹里。在RPG Maker的文件下拉框里，选择[Deployment]（部署），弹出部署的窗口，选择Android或者IOS并点击确定，所有你需要的游戏资源都将被部署到你指定的文件夹里。<br />在这个教程中，我们将其部署在桌面上。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/3-1-1.png" height="627" width="832" alt="" /></div>
 		</div><!-- /main__section --><div class="main__section" id="p04">
-			<h2 class="main__title--h2">4 Packaging</h2>
-			<p>Packaging refers to creating the apk file which you allow you to install applications to an Android device.</p>
+			<h2 class="main__title--h2">4 开始打包</h2>
+			<p>包装的目的是创建一个apk文件好让你把游戏安装到android平台上。</p>
 
-			<h3 class="main__title--h3">4-1 Creating manifest.json</h3>
-			<p>Let&apos;s create the manifest.json file using your preferred text editor which determines the actions in your game.<br />Below is an example of a manifest.json file.</p><b>manifest.json</b><pre class="main__pre--code">
+			<h3 class="main__title--h3">4-1 创建一个manifest.json文件</h3>
+			<p>让我们记事本来创建一个manifest.json文件（这是一个配置文件），它可以决定你游戏程序里的一些设置。<br />下面就是一个manifest.json文件的例子，你可以参照并进行修改。</p><b>manifest.json</b><pre class="main__pre--code">
 {
   &quot;name&quot;: &quot;Sample&quot;,
   &quot;xwalk_version&quot;: &quot;0.0.1&quot;,
@@ -216,147 +216,147 @@ C:\apache-ant-1.9.6
   ]
 }
 </pre>
-			<p>Aside from the name and version number, everything else can be left as is.<br />Save the manifest.json file in the "/www" folder which you deployed earlier.<br />The purpose of property names and values inside the file are as follows.</p>
+			<p>除了名称和版本号，其他一切可以保留原样。<br/>把manifest.json文件保存在你先前部署的“/ www”的文件夹中。<br/>文件里的属性名称和值的作用如下表所示。</p>
 			<table class="main__table--type01">
 				<tr>
-					<th>Property name</th>
-					<th>Value</th>
+					<th>属性名称</th>
+					<th>值</th>
 				</tr>
 				<tr>
 					<td>name</td>
-					<td>The game&apos;s name.</td>
+					<td>游戏的名字。</td>
 				</tr>
 				<tr>
 					<td>xwalk_version</td>
-					<td>Version number. Increase the number if there is an update. Be sure to follow the X.X.X version format.</td>
+					<td>版本号，当你更新的时候记着增加你的版本编号，记着要保持X.X.X version这个格式。</td>
 				</tr>
 				<tr>
 					<td>start_url</td>
-					<td>The game&apos;s URL. This will be set to index.html.</td>
+					<td>游戏的路径，一般设置它指向index.html这个文件。</td>
 				</tr>
 				<tr>
 					<td>display</td>
-					<td>Specifies the full screen setting. This will be set to fullscreen.</td>
+					<td>可以设置全屏或者窗口化。</td>
 				</tr>
 				<tr>
 					<td>orientation</td>
-					<td>The orientation of the screen. This will be set to landscape.</td>
+					<td>游戏在屏幕中显示的模式，这里设置是横屏显示的（即landscape模式，竖屏为portrait模式）。</td>
 				</tr>
 				<tr>
 					<td>icons</td>
-					<td>Icons</td>
+					<td>图标</td>
 				</tr>
 			</table>
-			<p>Reference URL: Manifest for a web application: <a href="http://w3c.github.io/manifest" target="_blank">http://w3c.github.io/manifest/</a></p>
+			<p>引用地址: Manifest网页应用设置: <a href="http://w3c.github.io/manifest" target="_blank">http://w3c.github.io/manifest/</a></p>
 
-			<h3 class="main__title--h3">4-2 Running the Packaging Script</h3>
-			<p>Inside the Android app template that you downloaded in 2-5 is a file called &quot;make_apk.py&quot; which is a script that runs the packaging process. This is used through the command prompt.<br />Open the command prompt and move to the inside of the "/Game Name/www" folder (the below game folder) found in the folder where you deployed the game. It is more convenient if you open the game folder using explorer and open the command prompt from the file menu.</p>
+			<h3 class="main__title--h3">4-2 运行封装脚本</h3>
+			<p>之前在2-5章节下载的android模板里有个make_apk.py的文件，这是一个运行包装处理的脚本，不过你需要在cmd控制台调用它。<br/>打开cmd，在cmd内移动到 "/游戏名称/ www" 的文件夹路径下（就是之前部署游戏的文件夹）。如果你使用浏览器打开游戏文件夹并从文件菜单中打开cmd会更方便。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-1.png" height="493" width="987" alt="" /></div>
-			<p>Below is an example of running the command on the environment we have just prepared.</p>
+			<p>你可以照着下面这例子使用命令调用封装脚本来打包你的游戏（com.example.sample是这个例子中游戏的项目名称），当然，前提是你的环境部署必须完全正确。</p>
 <pre class="main__pre--code">
 python C:\crosswalk-10.39.235.16\make_apk.py --package=com.example.sample --manifest=manifest.json
 </pre>
-			<p>The packaging script is written using Python. Using Python commands, we can specify the script.</p>
+			<p>封装脚本是用Python写的，所以我们用Python命令能够调用我们指定的脚本。</p>
 			<dl class="main__dl--sub">
-				<dt>--package</dt>
-				<dd>Specifies the package name. If you have a domain of your own, feel free to use it for your game. Just like the provided example, the domain name is used in reverse with the top level domain (&quot;com&quot; in the example) and is connected using a &quot;.&quot;. Following at the end is your game&apos;s name (&quot;sample&quot; in the example&quot;). You will use the package name used here forever for this game&apos;s package so please be careful.<br /><b>* example.com is a domain that can be used temporarily. This cannot be published in the Play Store which will be explained later.</b><br />
-				<br />Domain example:<br />If the domain that you own is [example.com] and your game&apos;s name is [sample], you would write:<br />com.example.sample</dd>
-				<dt>--manifest</dt>
-				<dd>This specifies this package&apos;s manifest file. It is possible to specify things such as the game&apos;s version, icon and behavior related to the running of the game with the manifest file.</dd>
+				<dt>--安装包</dt>
+				<dd>指定包名。如果你有自己的域名，你大可以使用它做为你游戏的名字，就像我们展示的示例一样，顶级域名（即com.example.sample中的com）被放在了最前面，并使用“.”作连接符号。而在末尾的是你游戏的名字（即com.example.sample中的sample）。如果名字一旦确定就很难再做更改，所以在设定前请务必思考清楚。<br/><b>* example.com只是做临时使用的域，并不能发布在正规的app Play商店，之后我们会解释为什么。</b><br />
+				<br />域名范例:<br />比如说，你的域名是 [example.com] 然后你的游戏名字叫[sample]，那你这里就应该署上:<br />com.example.sample</dd>
+				<dt>--配置文件</dt>
+				<dd>这个指定文件 </dd>
 			</dl>
-			<p>If you run the command and the packaging finishes without an issue, a [BUILD SUCCESSFUL] message will appear.</p>
+			<p>如果你运行过程中没有任何报错，那么就会显示[BUILD SUCCESSFUL]（构建成功）这个消息。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-2.png" height="673" width="917" alt="" /></div>
-			<p>You can check that the two files, &quot;Sample_0.0.1_arm.apk&quot; and &quot;Sample_0.0.1_x86.apk&quot; have been created in the game folder. The file that contains [arm] is a package meant for the ARM architecture CPU which is a CPU widely used for implementation. This is used in the majority of Android smart phones and tablets currently in the market. The file containing [x86] is the package meant for the x86 architecture which is mainly used in computers.</p>
+			<p>你可以查看文件夹里新生成的两个新文件,一个是Sample_0.0.1_arm.apk，另一个是Sample_0.0.1_x86.apk。这个文件名包含[arm]的安装包一般是面相ARM处理器用的，这类处理器广泛地用在各种接口上，现在绝大部分的android系统的手机和市面上品牌机中都在使用它。而另外一个文件名包含[x86]的安装包则是用于x86构架的系统，也就是一般用于PC端上。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-1-3.png" height="627" width="832" alt="" /></div>
-			<p>If you run the packaging script again, these two apk files will be included in the package so be sure to place the files outside of the folder.</p>
+			<p>如果你再次运行打包脚本，那这两个APK文件也将包含在包中，所以一定要提前把他们放置在游戏文件夹以外的地方。</p>
 
 
-			<h3 class="main__title--h3">4-3 Installing to the Device</h3>
+			<h3 class="main__title--h3">4-3 安装到手机</h3>
 
-			<h3 class="main__title--h3--sub">4-3-1 Preparing an Android Device</h3>
-			<p>In order to be able to install a package using an USB connection, you need to enable [Developer Options] on your device.<br />In order to enable [Developer Options] go to [Settings] → [About] → [Software Information] → [More], and tap the [Build Number] text 7 times.<br /><b>*The location of the [Build Number] may vary depending on the device you are using.<br />　Ex.) [Settings] → [About Device]</b></p>
+			<h3 class="main__title--h3--sub">4-3-1 准备安装到android平台</h3>
+			<p>为了使用USB连接安装程序，你需要先启用你手机上的[Developer Options]（开发人员选项）。<br />要打开[Developer Options]你需要先进入[设置] → [关于本机] → [系统信息] → [高级选项]，然后触按[Build Number]（系统版本号）7次，然后系统会提示你已经切入开发者模式（cherikens:我不知道写F1的工作人员是用的什么手机以及什么版本的android，不过我想这里指的应该是[设置]→[开发人员选项]→[USB调试模式]）。<br /><b>*[Build number]（版本号）所在的目录取决于你手机使用的android版本，所以指不准在哪里。<br />　比如.) [设置] → [关于版本]</b></p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-15-49-26.png" width="720" height="1280" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">4-3-2 Installing Using an USB Connection</h3>
-			<p>Here we will install the package using an USB connection. If you do not have the necessary USB drivers for your Android device on your computer, you can get them using the Android SDK Manager which was introduced in 2-4-3.<br />Connect the Android device to your PC using the USB cable. Be sure to use an USB cable that can be used for transferring data, not for recharging your device.<br />When successfully connect your device to your PC, a dialog will appear on your Android device asking you if you want to enable USB debugging so be sure to enable this.<br />
-				<br />Enter &quot;adb devices&quot; into the command prompt and press the Enter key. If you have managed to connect the device, the device&apos;s name will appear.</p>
+			<h3 class="main__title--h3--sub">4-3-2 使用USB连接安装</h3>
+			<p>在这里，我们将安装使用USB连接并安装程序。如果你电脑上没有必要的USB驱动程序，你可以使用Android SDK管理器来下载并安装它，之前我们在2-4-3章节里提到的那个。<br />用USB连接线连接你的手机和电脑，确保这根连接线能够在你手机和电脑之间传输数据，而不是拿来充电。<br />当你连接成功之后，手机上会跳出一个对话框，提示你是否确认进入USB连接模式。<br />
+				<br />打开cmd控制台输入adb devices，回车。 如果你正确连接到手机端，那cmd上就会显示硬件的名称。</p>
 <pre class="main__pre--code">
 &gt; adb devices
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/4-2-1.png" width="997" height="493" alt="" /></div>
-			<p>We will use the &quot;install&quot; option from the adb commands to install the package. Enter &quot;adb install -r Sample_0.0.1_arm.apk&quot; and press the Enter key. The &quot;-r&quot; option is an option used for reinstalling but if the name of the package is the same, you can update the game.<br />[Success] will be displayed once you&apos;ve successfully installed the package. You will be able to run the game located in the list of applications on your device.</p>
+			<p>我们将使用adb命令列表里的安装指令去运行安装包进行安装。输入[adb install -r Sample_0.0.1_arm.apk]（不包括方括号），回车。至于那个"-r"命令，它的作用是当你重复安装的时候，只要安装包名是一致的，就可以直接对你的游戏进行更新。<br />若安装结束之后显示[Success]（成功）的字样，则表示你的程序已经成功安装了，接下来你就可以在你的手机上看到游戏的图标，并且可以打开它尽情地玩耍啦。（cherikens:额……一般有手机助手之类的软件的话，你连接手机之后双击apk就行了）</p>
 <pre class="main__pre--code">
 &gt; adb install -r Sample_0.0.1_arm.apk
 </pre>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-16-31-26.png" width="1920" height="1080" alt="" /></div>
 
-			<h3 class="main__title--h3--sub">4-3-3 Installing via Internet</h3>
-			<p>To use a cloud service such as Google Drive and installing via an Internet connection, you will need to upload the apk file to a cloud service of your choice and download and install using an Android device.<br />In order to do so you will need to set permissions to allow installations from unknown sources on the Android device. Do this by navigating to [Settings] → [Security] → [Unknown sources] and set it this on.</p>
+			<h3 class="main__title--h3--sub">4-3-3 通过互联网安装</h3>
+			<p>若之前你有安装谷歌驱动，那么使用云服务通过互联网安装程序也是一种选择。你只需要把程序上传到服务器上，在用你的手机下载下来进行安装就行了。<br />不过要通过这种方式安装的话，你需要先在手机上设定未知资源的安装权限。选择[设置]→[安全]→[未知来源]，保持这个选项选中开启。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/Screenshot_2015-07-28-16-54-27.png" width="720" height="1280" alt="" /></div>
 
 		</div><!-- /main__section --><div class="main__section" id="p05">
-			<h2 class="main__title--h2">5 Publishing to Google Play</h2>
-			<p>If you want to publish your game on Google Play, you will need to register on <a href="https://play.google.com/apps/publish/signup/" target="_blank">Google Play Developer</a>.</p>
+			<h2 class="main__title--h2">5 发布到google play</h2>
+			<p>如果你想把游戏发布到google play去，那你得在这儿先注册一个账号。<a href="https://play.google.com/apps/publish/signup/" target="_blank">Google Play Developer</a>.</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-1.png" width="1024" height="673" alt="" /></div>
-			<p><b>We unfortunately cannot explain here all there is to know about app development for Google Play. It is our recommendation that you refer to reference books and other sources of information in the market.</b><br />Here we have written especially important information.</p>
+			<p><b>不过很不幸的是，关于google play的事儿我们在这里不好解释太多，但是我们强烈推荐你先去阅读一下google play的各项条款和资源规定，以便为你发布带来指导。</b><br />这里我们只说明几点非常重要的事项。（cherikens:那你这个章节还介绍个鬼啦！）</p>
 
-			<h3 class="main__title--h3">5-1 Signing an App</h3>
-			<p>&quot;Signing&quot; an app refers to including proof in a package that the [Source], or in other words, you are the one that developed the game. This is similar to adding your signature to a piece of art which you have painted. Unsigned apps cannot be published on Google Play.<br />There are several ways to sign an app, but on this page we will introduce a way to sign your app using the make_apk.py script.</p>
+			<h3 class="main__title--h3">5-1 App签名</h3>
+			<p>为一个app签名在这里指将一个证明放在游戏资源里一起封装到包里，或者说，这是一种证明你有参与制作这款游戏的一种手段。用简单一点的说法就好比在你的艺术品上署名一样。没有签名的app是不能发布到google play的。<br />签名的方式有很多，这儿我们介绍一种使用 make_apk.py脚本进行签名的方法。</p>
 
-			<h3 class="mian__title--h3--sub">5-1-1 Creating a Keystore File</h3>
-			<p>A keystore file is a type of file which contains your passworded information and prevents a third party from freely using your app. Through doing this, you can guarantee that you were the one that developed your game.<br />You can manage multiple keys on the [Store] but one is enough for an Android package.<br />Furthermore, you can use the keystore file created here on the signatures of your other apps as well.<br />We will use the keytool command included in the JDK which installed when setting up your environment to create the keystore file. Below is an example of a command.</p>
+			<h3 class="mian__title--h3--sub">5-1-1 创建密钥库</h3>
+			<p>密钥库会将你的信息加密以防止第三方未经付费就盗用你的程序。通过这种手段，你才能保证这款由你开发的软件是属于你一个人的。<br />你可以密钥库里管理多个密钥，不过打包到android安装包的时候只要放一个就好了。<br />此外，你还可以用同一个密钥库为你的其他app进行签名。<br />我们将会使用到已经安装在你环境中的JDK，使用其中包含的密钥命令来创建密钥库文件，下面是个例子。</p>
 <pre class="main__pre--code">
 keytool -genkey -v -keystore sample.keystore -storepass password -alias release -keypass password -keyalg RSA -validity 10000
 </pre>
 
 			<dl class="main__dl--sub">
 				<dt>-genkey -v</dt>
-				<dd>Specifies to create a new key file.</dd>
+				<dd>指定创建新密钥文件。</dd>
 				<dt>-keystore</dt>
-				<dd>Specifies the name of the keystore file.</dd>
+				<dd>指定密钥库文件的名称。</dd>
 				<dt>-storepass</dt>
-				<dd>Specifies the password for the store. In the example, we&apos;ve used [password] but when actually creating a password, please set it to something that would be hard for a third party to figure out.</dd>
+				<dd>指定库的密码。在例子里我们直接用的[password]作为密码，但是等你真的开发完软件进行签名的时候，千万不要用这么简单的密码，以免被他人破解盗用了。</dd>
 				<dt>-alias</dt>
-				<dd>Specifies the alias of the key.</dd>
+				<dd>指定密钥昵称。</dd>
 				<dt>-keypass</dt>
-				<dd>Specifies the password of the key. In the example, we&apos;ve used [password] but when actually creating a password, please set it to something that would be hard for a third party to figure out.</dd>
+				<dd>指定密钥的密码。在例子里我们直接用的[password]作为密码，但是等你真的开发完软件进行签名的时候，千万不要用这么简单的密码，以免被他人破解盗用了。</dd>
 				<dt>-keyalg</dt>
-				<dd>Specifies a passworded algorithm (here it is RSA).</dd>
+				<dd>指定密钥库的算法。（这里默认是RSA）</dd>
 				<dt>-validity</dt>
-				<dd>Specifies the duration (in days) that the key file can be used. Set this to a long enough duration since the key file will continue to be used for things like updates.</dd>
+				<dd>指定密钥的有效期限（天数），可以把期限设置的长一些，毕竟以后还需要进行更新。</dd>
 			</dl>
-			<p>After entering in a command and pressing the Enter key, you will be prompted to input the key information.</p>
+			<p>输入完命令之后回车，接下来会提示你输入密钥信息。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-2.png" width="917" height="709" alt="" /></div>
-			<p>Please enter your own information that you have decided such as the name and organization name. Country code 81 refers to Japan.<br />If you are working in a &lt;Japanese&gt; environment, please enter  &lt;Yes&gt; when asked &lt;Are you sure?&gt;.<br />A keystore file with the name &quot;sample.keystore&quot; will be created in the folder you opened using the command prompt.</p>
+			<p>输入你事先想好的信息，比如说名字，单位，国家。这里的国家代码81指的是日本。<br />如果你系统的设定是在日语的环境下，那当它提示你是否确定是，你就可以选择yes了。（BTW:中国代码是86）<br />之后一个文件名为“sample.keystore”的密钥库文件就会在你所在的文件夹里被创建出来。</p>
 
 
-			<h3 class="mian__title--h3--sub">5-1-2 Packaging Using a Keystore File</h3>
-			<p>We&apos;ll use an additional option when running the packaging script mentioned in 4-1 to specify a keystore file for signing the package. Below is an example of using that additional option.</p>
+			<h3 class="mian__title--h3--sub">5-1-2 使用密钥库进行封装</h3>
+			<p>4-1的时候我们曾提到过一个封装脚本，这里我们会使用一些附加选项来指定密钥库进行签名。下面是使用附加选项的例子。</p>
 <pre class="main__pre--code">
 python C:\crosswalk-10.39.235.16\make_apk.py --package=com.example.sample --manifest=manifest.json --keystore-path=C:\Users\IEUser\Desktop\sample.keystore --keystore-alias=release --keystore-passcode=password --keystore-alias-passcode=password
 </pre>
-			<p>The keystore-path, keystore-alias, keystore-passcode and keystore-alias-passcode options have increased.</p>
+			<p>在这条命令里分布增加了，keystore-path, keystore-alias, keystore-passcode 以及 keystore-alias-passcode这些个附加选项。</p>
 			<dl class="main__dl--sub">
 				<dt>--keystore-path</dt>
-				<dd>Using keystore-path specifies the location of the keystore file with a file name.</dd>
+				<dd>使用keystore-path可以指定密钥库文件的路径和文件名。</dd>
 				<dt>--keystore-alias</dt>
-				<dd>Specifies the alias of the keystore file when it was created.</dd>
+				<dd>生成密钥库的时候同时指定它的别名。</dd>
 				<dt>--keystore-passcode</dt>
-				<dd>Specifies the password of the keystore file when it was created.</dd>
+				<dd>生成密钥库的时候同时指定它的密码。</dd>
 				<dt>--keystore-alias-passcode</dt>
-				<dd>Specifies the key password of the keystore file when it was created.</dd>
+				<dd>生成密钥库的密钥，并指定它的密码。</dd>
 			</dl>
 
-			<p>Upload the apk file that you created to the Google Play Developer Console to apply. Please be sure to follow the instructions on the Google Play Developer Console for other necessary images, etc.</p>
+			<p>上传你的apk文件到Google Play Developer并进行申请。请确保你仔细阅读并遵守了相关的条款和申请规范。</p>
 			<div class="al-c mb20px"><img src="../inc/img/01_11_05/5-1-3.png" width="1024" height="673" alt="" /></div>
 
 		</div><!-- /main__section --><div class="main__section" id="p06">
-			<h2 class="main__title--h2">A Word of Caution</h2>
+			<h2 class="main__title--h2">总结与声明</h2>
 			<ul class="main__ul">
-				<li>We are not responsible for any issues that may occur on your PC using the environment settings and command controls.</li>
-				<li>We cannot guarantee that all Android game apps that you can develop using the methods we have introduced here will be published on Google Play.</li>
-				<li>This information is current as of August 2015. Some of the images displayed here may differ as all the software used here is constantly being updated.</li>
-				<li>If you have any questions regarding [App Submission to Google Play], please refer to <a href="https://support.google.com/googleplay/android-developer" target="_blank">Google Play Developer Help </a>.</li>
+				<li>对于在你打包的过程中使用的环境变量设置以及命令脚本而引发的任何错误或问题，我们概不负责。</li>
+				<li>即便你们完全按照我们介绍的方法制作并打包android游戏，我们也无法保证你们做的每一款游戏都能成功登陆Google Play。</li>
+				<li>这一章的介绍是写于2015年8月的，以后软件也许会进行更新，届时软件里的画面也许会和这里的图片稍有出入。</li>
+				<li>如果你对于如何将软件登陆Google Play 仍有疑问，你可以尝试查看这Google Play的官方指南<a href="https://support.google.com/googleplay/android-developer" target="_blank">Google Play Developer Help </a>。</li>
 			</ul>
 		</div><!-- /main__section --></div><!-- /main --></body>
 </html>

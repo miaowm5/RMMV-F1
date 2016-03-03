@@ -29,7 +29,7 @@ Stage ()
 
 		<div class="main__section">
 			<h2 class="main__title--h2">索引</h2>
-			<b>Methods</b>
+			<b>方法</b>
 			<ul class="main__ul--inline">
 				<li><a href="#m01">addChild</a></li>
 				<li><a href="#m02">addChildAt</a></li>
@@ -51,7 +51,7 @@ Stage ()
 <pre class="main__pre--code">
 addChild ( child ) <span class="pre__type">Object</span>
 </pre>
-				<p class="mb10px">向容器中添加子对象。</p>
+				<p class="mb10px">向容器中添加子元素。</p>
 				<div class="params">
 				<h4>参数：</h4>
 				<ul class="params-list">
@@ -59,13 +59,13 @@ addChild ( child ) <span class="pre__type">Object</span>
 						<code class="param-name">child</code>
 						<span class="type">Object</span>
 						<div class="param-description">
-							<p>要添加的子对象</p>
+							<p>待添加的子元素</p>
 						</div>
 					</li>
 				</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Object:</span><br />
-					已被添加的子对象</p>
+					被添加的子元素</p>
 				</div>
 			</div><!-- /div -->
 
@@ -73,7 +73,7 @@ addChild ( child ) <span class="pre__type">Object</span>
 <pre class="main__pre--code">
 addChildAt ( child  index ) <span class="pre__type">Object</span>
 </pre>
-				<p class="mb10px">在容器的指定索引处添加子对象。</p>
+				<p class="mb10px">在容器指定索引的位置添加子元素。</p>
 				<div class="params">
 				<h4>参数：</h4>
 				<ul class="params-list">
@@ -81,20 +81,20 @@ addChildAt ( child  index ) <span class="pre__type">Object</span>
 						<code class="param-name">child</code>
 						<span class="type">Object</span>
 						<div class="param-description">
-							<p>要添加的子对象</p>
+							<p>待添加的子元素</p>
 						</div>
 					</li>
 					<li class="param">
 						<code class="param-name">index</code>
 						<span class="type">Number</span>
 						<div class="param-description">
-							<p>指定添加的索引位置</p>
+							<p>指定的索引</p>
 						</div>
 					</li>
 				</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Object:</span><br />
-					已被添加的子对象</p>
+					被添加的子元素</p>
 				</div>
 			</div><!-- /div -->
 
@@ -102,7 +102,7 @@ addChildAt ( child  index ) <span class="pre__type">Object</span>
 <pre class="main__pre--code">
 removeChild ( child ) <span class="pre__type">Object</span>
 </pre>
-				<p class="mb10px">从容器中删除子对象。</p>
+				<p class="mb10px">从容器中移除子元素。</p>
 				<div class="params">
 				<h4>参数：</h4>
 				<ul class="params-list">
@@ -110,13 +110,13 @@ removeChild ( child ) <span class="pre__type">Object</span>
 						<code class="param-name">child</code>
 						<span class="type">Object</span>
 						<div class="param-description">
-							<p>要删除的子对象</p>
+							<p>待移除的子元素</p>
 						</div>
 					</li>
 				</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Object:</span><br />
-					已被删除的子对象</p>
+					被移除的子元素</p>
 				</div>
 			</div><!-- /div -->
 
@@ -124,7 +124,7 @@ removeChild ( child ) <span class="pre__type">Object</span>
 <pre class="main__pre--code">
 removeChildAt ( index ) <span class="pre__type">Object</span>
 </pre>
-				<p class="mb10px">删除容器中指定索引处的子对象。</p>
+				<p class="mb10px">移除容器指定索引位置的子元素。</p>
 				<div class="params">
 				<h4>参数：</h4>
 				<ul class="params-list">
@@ -132,13 +132,13 @@ removeChildAt ( index ) <span class="pre__type">Object</span>
 						<code class="param-name">index</code>
 						<span class="type">Number</span>
 						<div class="param-description">
-							<p>要删除子对象的索引位置</p>
+							<p>指定的索引</p>
 						</div>
 					</li>
 				</ul>
 					<h4>返回值：</h4>
 					<p><span class="pre__type">Object:</span><br />
-					已被删除的子对象</p>
+					被移除的子元素</p>
 				</div>
 			</div><!-- /div -->
 
@@ -152,7 +152,8 @@ removeChildAt ( index ) <span class="pre__type">Object</span>
 <pre class="main__pre--code">
 children <span class="pre__type">Array</span>
 </pre>
-				<p class="mb10px">[只读]子对象的精灵数组。</p>
+<!-- 				<p class="mb10px">[read-only] The array of children of the sprite.</p> -->
+				<p class="mb10px">[只读] Stage 的子元素数组。</p>
 			</div><!-- /div -->
 		</div><!-- /main__section -->
 

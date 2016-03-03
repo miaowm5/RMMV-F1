@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Screen</title>
+	<title>画面</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -10,112 +10,112 @@
 <body>
 
 	<div class="main">
-	  <h1 class="main__title--h1 main__title--h1--v05">Screen</h1>
+	  <h1 class="main__title--h1 main__title--h1--v05">画面</h1>
 	  <ul class="breadcrumb">
 	    <li><a href="01.html">RPG Maker MV</a></li>
 		  <li>&gt;</li>
-		  <li><a href="01_10.html">Event Commands</a></li>
+		  <li><a href="01_10.html">事件指令</a></li>
 		  <li>&gt;</li>
-		  <li>Screen</li>
+		  <li>画面</li>
 	  </ul>
 
 		<div class="main__section" id="p01">
-		  <h2 class="main__title--h2">Fadeout Screen</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Fades out the screen (slowly fades the screen into black). There are no parameters to set.</p>
+		  <h2 class="main__title--h2">淡出画面</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>淡出屏幕（慢慢淡出屏幕变成黑色）。没有需要设置的参数。</p>
 		  <h3 class="main__title--h3--sub">Remarks</h3>
 		  <ul class="main__ul">
-		    <li>The screen will remain faded out until the [Fadein Screen] event command is run.</li>
-		    <li>Elements such as the menu, message windows and battle command window will still be visible even while faded out.</li>
-		    <li>If run during a battle event, everything except the command window and messages will appear black, and enemies, etc. will not be visible.</li>
+		    <li>屏幕将保持淡出直到执行事件指令[淡入画面]为止。</li>
+		    <li>画面持淡后，菜单、消息窗口、战斗指令窗口依旧会显示。</li>
+		    <li>在战斗事件中执行该事件指令的话，除了指令窗口和消息窗口以外会完全变黑，敌人将会变得不可见。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-		  <h2 class="main__title--h2">Fadein Screen</h2>
-		  <h3 class="main__title--h3--sub">Function</h3>
-		  <p>Returns the screen back to normal after using [Fadeout Screen]. There are no parameters to set.</p>
+		  <h2 class="main__title--h2">淡入画面</h2>
+		  <h3 class="main__title--h3--sub">功能</h3>
+		  <p>恢复[淡出画面]中暗转的画面。没有需要设置的参数。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p03">
-		  <h2 class="main__title--h2">Tint Screen</h2>
+		  <h2 class="main__title--h2">更改画面色调</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_10_img03.png" height="353" width="472" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-		  <p>Changes the color tone of the entire screen. The color tone of pictures and message windows will not change.</p>
+			<h3 class="main__title--h3--sub">功能</h3>
+		  <p>改变整个屏幕的色调。图片和消息窗口的色调不会改变。</p>
 			<h3 class="main__title--h3--sub">Settings</h3>
 			<dl class="main__dl--sub">
-			  <dt>Color Tone</dt>
-				<dd>Specify the amount of each [Red], [Green] and [Blue] to add (-255 to 255). Set the strength of the gray scale filter (0 to 255) by changing the [Gray] value. The higher the value, the stronger the overall color tone will be. By clicking the [Normal], [Dark], [Sepia], [Sunset] and [Night] buttons below, values representing each color tone will be applied ([Normal] will return the color tone back to its original setting). Check the color tone using the preview area on the right.</dd>
-				<dt>Duration</dt>
-				<dd>Specify the amount of time changing the tint of the picture will take in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
-				<dt>Wait for Completion</dt>
-				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			  <dt>色调</dt>
+				<dd>指定[红][绿][蓝]三种颜色各自加入的成分（0~255）。[灰度]指定了灰度滤镜的强度（0~255）。值越大，整体添加的颜色就越强。点击下方并排的按钮[正常][黑暗][茶色][黄昏][夜晚]，可以应用表现各自色调的规定值（[正常]回到原来的色调）。色调的变化可以在右侧的预览区域中确认。</dd>
+				<dt>持续时间</dt>
+				<dd>指定处理所需要的时间（1~600，单位为帧）。一帧相当于1/60秒。</dd>
+				<dt>等待完成</dt>
+				<dd>启用后，事件处理会暂时停止，直到该事件指令处理完毕后再重新开始。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">备注</h3>
 			<ul class="main__ul">
-			  <li>This color tone will remain in effect, including during battle, until using this event command is used again to change the settings.</li>
+			  <li>更改的色调会持续到再次使用该事件指令更改色调时（包括战斗）。</li>
 		  </ul>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p04">
-		  <h2 class="main__title--h2">Flash Screen</h2>
+		  <h2 class="main__title--h2">闪烁画面</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_10_img04.png" height="314" width="472" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Causes the entire screen to change to the specified color for just an instant, and will slowly return back to normal. You can use this to express things like lightning.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>一瞬间将整个画面变为指定的颜色，再缓缓恢复原画面。可以体现出闪电的效果。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Flash Color</dt>
-				<dd>Specify the color to display based on each of the [Red], [Green] and [Blue] component values (0 to 255). The specified color can be checked in the preview area on the right. [Intensity] sets the opacity (0 to 255) of the color. Putting this to 0 will cause it to be completely transparent, and will not affect what appears on the screen.</dd>
-				<dt>Duration</dt>
-				<dd>Specify the amount of time the flash will last in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
-				<dt>Wait for Completion</dt>
-				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			  <dt>闪烁颜色</dt>
+				<dd>用[红][绿][蓝]各个颜色的成分比（0~255）指定显示的颜色。指定的颜色可以在右侧预览区域中确认。[强度]指定颜色的不透明度（0~255）。设为0的话，颜色就会完全透明，不会影响显示的画面。</dd>
+				<dt>持续时间</dt>
+				<dd>指定处理所需要的时间（1~600，单位为帧）。一帧相当于1/60秒。</dd>
+				<dt>等待完成</dt>
+				<dd>启用后，事件处理会暂时停止，直到该事件指令处理完毕后再重新开始。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p05">
-		  <h2 class="main__title--h2">Shake Screen</h2>
+		  <h2 class="main__title--h2">震动画面</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_10_img05.png" height="252" width="414" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Shakes the entire screen left to right.</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>左右摇晃整个画面。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Shake</dt>
-				<dd>Set the size (1 to 9) of the shaking range using the [Power] parameter, and the speed (1 to 9) of the shaking using the [Speed] parameter.</dd>
-				<dt>Duration</dt>
-				<dd>Specify the amount of time the shaking will last in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
-				<dt>Wait for Completion</dt>
-				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			  <dt>震动</dt>
+				<dd>[强度]指定振幅大小（1~9），[速度]指定摇晃的速度（1~9）</dd>
+				<dt>持续时间</dt>
+				<dd>指定处理震动画面所需要的时间（1~600，单位为帧）。一帧相当于1/60秒。</dd>
+				<dt>等待完成</dt>
+				<dd>启用后，事件处理会暂时停止，直到该事件指令处理完毕后再重新开始。</dd>
 			</dl>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p06">
-		  <h2 class="main__title--h2">Set Weather Effect</h2>
+		  <h2 class="main__title--h2">设置天气效果</h2>
 		  <div class="al-c mt20px mb20px">
 				<img src="../inc/img/01_10_10_img06.png" height="258" width="414" alt="" />
 			</div>
-			<h3 class="main__title--h3--sub">Function</h3>
-			<p>Controls the display of effects which represent weather (rain/storm/snow).</p>
-			<h3 class="main__title--h3--sub">Settings</h3>
+			<h3 class="main__title--h3--sub">功能</h3>
+			<p>控制表现天气（雨/风/雪）的效果显示。</p>
+			<h3 class="main__title--h3--sub">设置</h3>
 			<dl class="main__dl--sub">
-			  <dt>Type</dt>
-				<dd>Specify the type of image to display. Set to [None] to stop displaying an image.</dd>
-				<dt>Power</dt>
-				<dd>Specify the amount of images to display (1 to 9).</dd>
-				<dt>Duration</dt>
-				<dd>Specify the amount of time changing the weather will take in number of frames (1 to 999). 1 frame is equal to 1/60th of a second.</dd>
-				<dt>Wait for Completion</dt>
-				<dd>When enabled, processing will wait for this event command to finish.</dd>
+			  <dt>类型</dt>
+				<dd>指定要显示的图像类型。要停止图像的显示则指定[无]。</dd>
+				<dt>强度</dt>
+				<dd>指定图像显示的量（1~9）。</dd>
+				<dt>持续时间</dt>
+				<dd>指定处理天气变化所需要的时间（1~600，单位为帧）。一帧相当于1/60秒。</dd>
+				<dt>等待完成</dt>
+				<dd>启用后，事件处理会暂时停止，直到该事件指令处理完毕后再重新开始。</dd>
 			</dl>
-			<h3 class="main__title--h3--sub">Remarks </h3>
+			<h3 class="main__title--h3--sub">说明</h3>
 			<ul class="main__ul">
-			  <li>This cannot be used in battle events.</li>
+			  <li>不能用于战斗事件。</li>
 		  </ul>
 		</div><!-- /main__section -->
 	</div><!-- /main -->
