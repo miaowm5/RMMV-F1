@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>未使用ファイル削除ツール プラグインへの対応</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v06">[Exclude unused files]<br />Plugin Configuration<span class="red f12px">（March 1st, 2016 Update）</span></h1>
+		<ul class="breadcrumb">
+			<li><a href="01.html">RPG Maker MV</a></li>
+			<li>&gt;</li>
+			<li>Documentation</li>
+			<li>&gt;</li>
+			<li>[Exclude unused files] Plugin Configuration</li>
+		</ul>
+
+		<div class="main__section" id="p01">
+			<h2 class="main__title--h2">Plugin Configuration</h2>
+			<p>By checking off the box when deploying, necessary image files for the plugin will be excluded.<br />
+			<br />
+			Below are examples of plugins that include codes to be excluded.</p>
+
+<div class="main__pre--code--wrap">
+<pre class="line-pre">
+<span class="pl-k">var</span> b1 <span class="pl-k">=</span> <span class="pl-smi">ImageManager</span>.<span class="pl-en">loadBitmap</span>(<span class="pl-s"><span class="pl-pds">"</span>img/example/<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>image_1<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> b2 <span class="pl-k">=</span> <span class="pl-smi">ImageManager</span>.<span class="pl-en">loadBitmap</span>(<span class="pl-s"><span class="pl-pds">"</span>img/example/<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>image_2<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> b3 <span class="pl-k">=</span> <span class="pl-smi">ImageManager</span>.<span class="pl-en">loadBitmap</span>(<span class="pl-s"><span class="pl-pds">"</span>img/example/<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>image_3<span class="pl-pds">"</span></span>);
+</pre>
+</div>
+
+<p><br />To avoid this, you must edit the comment in the plugin as shown below.</p>
+
+<div class="main__pre--code--wrap">
+<pre class="line-pre">
+ * @requiredAssets img/example/image_1
+ * @requiredAssets img/example/image_2
+ * @requiredAssets img/example/image_3
+</pre>
+</div>
+
+<p>
+Type the name of the necessary file after <span class="param-name">@requiredAssets</span>.<br />
+*Do the same for image files used in HTML.
+</p>
+		</div>
+
+
+		<div class="main__section" id="p02">
+			<h2 class="main__title--h2">Plugin Parameters</h2>
+			<p>If the user has an audio or image file with plugin parameter settings available, you must edit the comment in the plugin to set the plugin parameter.</p>
+
+
+<div class="main__pre--code--wrap">
+<pre class="line-pre">
+ * @param ME
+ * @desc The ME name for sample music effect.
+ * @default Organ
+ * @require 1
+ * @dir audio/me/
+ * @type file
+</pre>
+</div>
+
+			<table class="main__table--type01">
+				<tr>
+					<th>@require 1</th>
+					<td>This indicates that there is a required asset for this parameter.</td>
+				</tr>
+				<tr>
+					<th>@dir</th>
+					<td>Sets the folder which contains the file. This is not required for animations.</td>
+				</tr>
+				<tr>
+					<th>@type</th>
+					<td>If the type of value is a file, set as <span class="param-name">file</span>, for animation set as <span class="param-name">animation</span>.</td>
+				</tr>
+			</table>
+		</div>
+
+
+		<div class="main__section" id="p03">
+			<h2 class="main__title--h2">メモ</h2>
+			<p>If you want to use the [Note] contained in actors, items, etc., you must edit the comment in the plugin as shown below.</p>
+
+<div class="main__pre--code--wrap">
+<pre class="line-pre">
+ * @noteParam sampleImage
+ * @noteRequire 1
+ * @noteDir img/sample/
+ * @noteType file
+ * @noteData items
+</pre>
+</div>
+
+			<table class="main__table--type01">
+				<tr>
+					<th>@noteParam</th>
+					<td>Sets the name of parameter.</td>
+				</tr>
+				<tr>
+					<th>@noteRequire 1</th>
+					<td>Indicates that there is a required asset in this parameter.</td>
+				</tr>
+				<tr>
+					<th>@noteDir</th>
+					<td>Sets the folder which contains the image file. This is not required for animations.</td>
+				</tr>
+				<tr>
+					<th>@noteType</th>
+					<td>If the type of value is a file set as <span class="param-name">file</span>, for animation set as <span class="param-name">animation</span>.</td>
+				</tr>
+				<tr>
+					<th>@noteData</th>
+					<td>
+						Sets the type of game data.<br />
+						Here is the list of available values to be set.
+						<ul class="main__ul">
+							<li>maps</li>
+							<li>events</li>
+							<li>actors</li>
+							<li>classes</li>
+							<li>skills</li>
+							<li>items</li>
+							<li>weapons</li>
+							<li>armors</li>
+							<li>enemies</li>
+							<li>states</li>
+							<li>tilesets</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</div><!-- /main -->
+
+
+
+
+</body>
+</html>
+
+
