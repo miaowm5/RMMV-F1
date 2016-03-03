@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -42,7 +42,7 @@
 		  <h3 class="main__title--h3--sub">怪物敌人图鉴</h3>
 		  <p>你可以制作一本《怪物敌人图鉴》，其中列出玩家击败的敌人。 </p>
 		  <h3 class="main__title--h3--sub">插件指令</h3>
-			<p>建立一个事件，使用“插件指令”高级事件指令。</p>
+			<p>在事件指令的[插件指令]中可以输入并执行以下内容。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_10_img03.png" height="300" width="600" alt="" />
 			</div>
@@ -92,9 +92,9 @@
 		<div class="main__section" id="m06">
 			<h2 class="main__title--h2">ItemBook</h2>
 		  <h3 class="main__title--h3--sub">道具图鉴</h3>
-		  <p>你可以制作一本《道具图鉴》，其中列出玩家收集的所有装备和道具。</p>
-		  <h3 class="main__title--h3--sub">Plugin Command</h3>
-			<p>建立一个事件，使用“插件指令”高级事件指令。</p>
+		  <p>你可以制作一本《道具图鉴》，其中列出玩家收集的所有装备和物品。</p>
+		  <h3 class="main__title--h3--sub">插件指令</h3>
+			<p>在事件指令的[插件指令]中可以输入并执行以下内容。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_10_img05.png" height="300" width="600" alt="" />
 			</div>
@@ -109,15 +109,15 @@
 				</tr>
 				<tr>
 					<th>ItemBook add armor 4</th>
-					<td>在道具图鉴中增加4号护甲</td>
+					<td>在道具图鉴中增加 4 号防具</td>
 				</tr>
 				<tr>
 					<th>ItemBook remove armor 5</th>
-					<td>在道具图鉴中移除5号护甲</td>
+					<td>在道具图鉴中移除 5 号防具</td>
 				</tr>
 				<tr>
 					<th>ItemBook remove item 6</th>
-					<td>在道具图鉴中移除6号道具</td>
+					<td>在道具图鉴中移除 6 号物品</td>
 				</tr>
 				<tr>
 					<th>ItemBook complete</th>
@@ -128,8 +128,8 @@
 					<td>清除道具图鉴</td>
 				</tr>
 			</table>
-		  <h3 class="main__title--h3--sub">道具（武器、护甲）注释</h3>
-			<p>在数据库的“道具（武器、护甲）”标签页中，修改“注释”区域。</p>
+		  <h3 class="main__title--h3--sub">物品（武器、防具）注释</h3>
+			<p>在数据库的“物品（武器、防具）”标签页中，修改“注释”区域。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_10_img06.png" height="631" width="769" alt="" />
 			</div>
@@ -190,6 +190,205 @@
 		</div><!-- /main__section -->
 
 
+		<div class="main__section" id="m10">
+			<h2 class="main__title--h2">触屏UI <span class="red f12px">（2016 年 3 月 1 日更新）</span></h2>
+			<p>
+				该插件可以将当前 UI（游戏界面） 转换为触屏操作。<br />
+				* 本插件不能和其他修改了 UI 的插件共同使用。<br />
+				（例如 AltMenuScreen、AltSaveScreen、SimpleMsgSideView、TitleCommandPosition 等）
+			</p>
+			<h3 class="main__title--h3--sub">参数</h3>
+			<dl class="main__dl--sub">
+				<dt>Menu Command Text</dt>
+				<dd>在地图上，显示在打开菜单按钮上的文字。</dd>
+				<dt>Previous Command Text</dt>
+				<dd>在菜单中，显示在上一个按钮上的文字。</dd>
+				<dt>Next Command Text</dt>
+				<dd>在菜单中，显示在下一个按钮上的文字。</dd>
+			</dl>
+		</div><!-- /main__section -->
+
+
+
+		<div class="main__section" id="m11">
+			<h2 class="main__title--h2">扭蛋 / 扭蛋图鉴 <span class="red f12px">（2016 年 3 月 1 日更新）</span></h2>
+			<p>
+				使用本插件可以添加扭蛋系统。
+			</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img07.png" width="320" alt="" />
+				<img src="../inc/img/01_11_10_img08.png"  width="320" alt="" />
+			</div>
+
+			<h3 class="main__title--h3">扭蛋</h3>
+			<p>一个可以随机获得物品的系统。</p>
+			<h3 class="main__title--h3--sub">参数</h3>
+			<dl class="main__dl--sub">
+				<dt>Help Message Text</dt>
+				<dd>显示在扭蛋界面的帮助文字。<span class="param-name">Required Amount</span> is replaced by required G.</dd>
+				<dt>Button Text</dt>
+				<dd>扭蛋按钮上的文字。</dd>
+				<dt>Get Message Text</dt>
+				<dd>扭蛋结束后显示的文字。<span class="param-name">Item Name</span> will be replaced by the obtained Item Name.</dd>
+				<dt>Show Item Description</dt>
+				<dd>打开/关闭 获得扭蛋后显示扭蛋说明的功能。<br />设置成 0 则不显示说明，设置成 1 则显示说明。</dd>
+				<dt>Effect</dt>
+				<dd>设置获得扭蛋时播放的动画编号。</dd>
+				<dt>Rank1～5 Effect</dt>
+				<dd>设置获得 星级1 到 星级5 品质的扭蛋时各自所播放的动画编号。</dd>
+				<dt>ME</dt>
+				<dd>设置获得扭蛋时播放的 ME 。</dd>
+				<dt>Required Amount</dt>
+				<dd>设置每次扭蛋所需消耗的金钱。</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">插件指令</h3>
+			<p>在事件指令的[插件指令]中可以输入并执行以下内容。</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img09.png" height="300" width="600" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>Gacha open</th>
+					<td>打开扭蛋界面。</td>
+				</tr>
+				<tr>
+					<th>Gacha add item 1</th>
+					<td>向扭蛋池中添加 1 号物品。</td>
+				</tr>
+				<tr>
+					<th>Gacha remove item 1</th>
+					<td>从扭蛋池中移除 1 号物品。</td>
+				</tr>
+				<tr>
+					<th>Gacha clear</th>
+					<td>清空扭蛋池。</td>
+				</tr>
+			</table>
+
+			<h3 class="main__title--h3--sub">物品（武器、防具）注释</h3>
+			<p>在数据库的“物品（武器、防具）”标签页中，修改“注释”区域。</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img10.png" height="631" width="769" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>&lt;gachaImage: image&gt;</th>
+					<td>设置扭蛋的图片。图片文件放在 img/gacha/ 目录下。</td>
+				</tr>
+				<tr>
+					<th>&lt;gachaNumLot: 10&gt;</th>
+					<td>Sets number of Gacha.</td>
+				</tr>
+				<tr>
+					<th>&lt;gachaRank: 5&gt;</th>
+					<td>设置扭蛋的星级（1 到 5）。</td>
+				</tr>
+			</table>
+
+
+			<h3 class="main__title--h3">扭蛋图鉴。</h3>
+			<p>显示获得的扭蛋列表。</p>
+			<h3 class="main__title--h3--sub">参数</h3>
+			<dl class="main__dl--sub">
+				<dt>Unknown Data</dt>
+				<dd>未收集扭蛋的名字。</dd>
+				<dt>Price Text</dt>
+				<dd>This is the text for [Price].</dd>
+				<dt>Equip Text</dt>
+				<dd>This is the text for [Equipment].</dd>
+				<dt>Type Text</dt>
+				<dd>This is the text for [Type].</dd>
+				<dt>Rank Text</dt>
+				<dd>This is the text for [Rank].</dd>
+				<dt>Simple Display</dt>
+				<dd>切换扭蛋说明的显示方式。设置成 0 则以普通方式显示，设置成 1 则仅显示简单信息（名称和说明）。</dd>
+			</dl>
+			<h3 class="main__title--h3--sub">插件指令</h3>
+			<p>在事件指令的[插件指令]中可以输入并执行以下内容。</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img11.png" height="300" width="600" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>GachaBook open</th>
+					<td>打开扭蛋图鉴。</td>
+				</tr>
+				<tr>
+					<th>GachaBook add weapon 3</th>
+					<td>将 3 号武器添加到扭蛋图鉴中。</td>
+				</tr>
+				<tr>
+					<th>GachaBook add armor 4</th>
+					<td>将 4 号防具添加到扭蛋图鉴中。</td>
+				</tr>
+				<tr>
+					<th> GachaBook remove armor 5</th>
+					<td>将 5 号防具移除出扭蛋图鉴。</td>
+				</tr>
+				<tr>
+					<th>GachaBook remove item 6</th>
+					<td>将 6 号物品移除出扭蛋图鉴。</td>
+				</tr>
+				<tr>
+					<th>GachaBook clear</th>
+					<td>清空扭蛋图鉴。</td>
+				</tr>
+			</table>
+
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="m12">
+			<h2 class="main__title--h2">老虎机 <span class="red f12px">（2016 年 3 月 1 日更新）</span></h2>
+			<p>使用本插件可以添加老虎机系统。</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img12.png" height="662" width="832" alt="" />
+			</div>
+			<h3 class="main__title--h3--sub">参数</h3>
+			<dl class="main__dl--sub">
+				<dt>Variable ID</dt>
+				<dd>This is this variable ID to manage the amount of coins owned.</dd>
+				<dt>Help Text</dt>
+				<dd>帮助文字。</dd>
+				<dt>Won Text</dt>
+				<dd>This is the message shown when winning. <span class="param-name">Win Coin</span> will be replaced by the amount of obtained coins.</dd>
+				<dt>Lost Text</dt>
+				<dd>失败时显示的文字。</dd>
+				<dt>Replay Text</dt>
+				<dd>This is the message shown when choosing to retry or not.</dd>
+				<dt>Coin Full Text</dt>
+				<dd>This is the message shown when coins reach maximum amount.</dd>
+				<dt>Bet Text</dt>
+				<dd>加注指令的文字。</dd>
+				<dt>Spin Text</dt>
+				<dd>拉下拉杆指令的文字。</dd>
+				<dt>Yes Text</dt>
+				<dd>确定指令的文字。</dd>
+				<dt>No Text</dt>
+				<dd>取消指令的文字</dd>
+			</dl>
+
+			<h3 class="main__title--h3--sub">插件指令</h3>
+			<p>在事件指令的[插件指令]中可以输入并执行以下内容。</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_11_10_img13.png" height="300" width="600" alt="" />
+			</div>
+			<table class="main__table--type01">
+				<tr>
+					<th>SlotMachine open</th>
+					<td>打开老虎机。</td>
+				</tr>
+				<tr>
+					<th>SlotMachine expectation 0.5</th>
+					<td>Sets expected value to a number in between 0 to 1. The closer to the value 1, the better chance of winning, though there is never a 100% chance.</td>
+				</tr>
+				<tr>
+					<th>SlotMachine scale 0</th>
+					<td>设置倍率。值为 0 则是 x1，值为 1 则是 x10，值为 2 则是 x100 。</td>
+				</tr>
+			</table>
+
+		</div><!-- /main__section -->
 
 	</div><!-- /main -->
 </body>
