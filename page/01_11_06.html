@@ -6,48 +6,49 @@
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<!--    type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></scri-->
 	<!--    type="text/javascript" src="../inc/js/common.js"></scri-->
+	<style>pre{font-family: verdana;}</style>
 </head>
 <body>
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v06">Converting to an iOS App<br /> &lt;Creating an ipa file&gt;</h1>
+		<h1 class="main__title--h1 main__title--h1--v06">将游戏打包成 iOS 程序<br /> &lt;创建 ipa 安装文件&gt;</h1>
 		<ul class="breadcrumb">
 			<li><a href="01.html">RPG Maker MV</a></li>
 			<li>&gt;</li>
-			<li>Documentation</li>
+			<li>资料集</li>
 			<li>&gt;</li>
-			<li>Converting to an iOS App &lt;Creating an ipa file&gt;</li>
+			<li>将游戏打包成 iOS 程序 &lt;创建 ipa 安装文件&gt;</li>
 		</ul>
 
 
 		<div class="main__section" id="p01">
-			<h2 class="main__title--h2">1 Overview</h2>
+			<h2 class="main__title--h2">1 概述</h2>
 			<p>
-				From this version, games created using RPG Maker MV will now be played using browsers which support HTML5 technology such as WebGL &amp; 2DCanvas, WebAudio and JavaScript. You can also play games made using RPG Maker on iPhone, and iPad with Safari installed that also has HTML5 support. <br /> <br /> Rather than explaining how to play using Safari, we will explain in this section how to play your game as an iOS application. Running an HTML5 game as an application using an iOS device is similar to running a game as an iOS application using a browser that supports HTML5. This method of development of running a web application as a native application is known by such names as &quot;Hybrid App,&quot; and is popular from the fact that it can be run on cross-platforms. <br /> <br /> Browsers which package games as apps are &quot;Browser Engines&quot; which handle the Web display and sounds, and have iOS built-in (called UIWebView). There are several frameworks that connect with browser engines as applications, but we will be using a framework called <a href="https://cordova.apache.org/" target="_blank">Apache Cordova</a> here.
+				从这个版本开始，使用RPG Maker MV做的游戏可以在那些支持HTML5（包括例如WebGL &amp; 2DCanvas , WebAudio and JavaScript）的浏览器上直接运行。同时也支持在 iPhone和 iPad的 Safari 上玩这些游戏（Safari 支持HTML5）。<br /> <br />不过比起向大家解释如何在 Safari 上玩，我们更愿意在这一节说明如何把你的游戏打包成独立的 iOS 程序。在 iOS 设备上把一个HTML5游戏作为应用运行，和把它放在支持HTML5的浏览器里运行是很相似的。这种将一个web应用（HTML5游戏）以原生方式运行的程序被称作&quot;Hybrid App&quot;，并且由于它的跨平台特性而变得越来越热门。 <br /> <br />在浏览器内，可以处理显示与声音的内置&quot;浏览器引擎&quot;（UIWebView）会将游戏打包成应用。有数种作为应用与浏览器引擎连接的框架，但是我们今天将使用一个名为<a href="https://cordova.apache.org/" target="_blank">Apache Cordova</a>的框架。
 			</p>
-			<h3 class="main__title--h3--sub">Operating Systems</h3>
-			<p>It's possible to run a game on several different platforms as a hybrid app, but you will essentially need a Mac PC with OS X installed as your environment for creating iOS apps. Here we will be using OS X 10.10. Additionally, the computer used to do your work will be referred to as &quot;Mac&quot;.</p>
+			<h3 class="main__title--h3--sub">操作系统</h3>
+			<p>用RPG Maker MV制作的游戏的确可以在数种不同的平台上作为hybier app运行，但是你必须有一台装有OS X的Mac 电脑才能创建 iOS 应用。我们将使用OS X 10.10作为示例。另外，用来执行这些工作的电脑以下将简称为&quot;Mac&quot;。</p>
 		</div><!-- /main__section -->
 
 		<div class="main__section" id="p02">
-			<h2 class="main__title--h2">2 Prepare the Packaging Environment</h2>
+			<h2 class="main__title--h2">2 准备开发环境</h2>
 			<p>
-				Installing games created using RPG Maker on iOS will require creating an ipa file. An ipa file is the installer for iOS apps and its extension is ipa. This is compressed in a ZIP format, and contains various necessary files for running the application. We will refer to creating the ipa file here as &quot;Packaging&quot;. <br /> Also, an Internet connection is required to download some of the necessary developer tools.
+				需要创建一个 ipa 文件才能把用RPG Maker MV制作的游戏安装到 iOS 上，ipa 文件是 iOS 应用的安装包，其拓展名就是 ipa。这个文件是以ZIP格式压缩的包，内含应用运行所需要的多种文件。在这里我们把创建 ipa 的过程称作&quot;打包&quot;。<br />同时，你需要连接上互联网，以确保能够下载安装一些必要的开发工具。
 			</p>
-			<h3 class="main__title--h3">2-1 Installing and Configuring Node.js and Apache Cordova</h3>
-			<p>Put simply, Node.js provides an environment where you can run JavaScript outside of a browser. Cordova is provided as a Node.js package so let's go ahead and install Node.js first.</p>
+			<h3 class="main__title--h3">2-1 Node.js 和 Apache Cordova 的安装和配置</h3>
+			<p>简而言之，Node.js 提供了一个在浏览器外运行JavaScript的环境。Cordova 是Node.js 的一个包，所以我们先安装Node.js。</p>
 
-			<h3 class="main__title--h3--sub">2-1-1 Installing and Checking Node.js</h3>
-			<p>Click [INSTALL] found on <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a> and download the installer.</p>
+			<h3 class="main__title--h3--sub">2-1-1 Node.js 的安装和检查</h3>
+			<p>单击在<a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a>看到的[INSTALL]按钮以下载Node.js 的安装包。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-1.png" height="622" width="1280" alt="" />
 			</div>
-			<p>Run the installer. When prompted for the administrator password, enter administrator password for your Mac and run the installer. The installation is complete when this finishes.</p>
+			<p>运行安装包，当提示输入管理员密码的时候，输入密码然后继续运行。程序结束后安装也就完成了。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-2.png" height="438" width="620" alt="" />
 			</div>
-			<p>Confirm the Node.js installation using the terminal. The terminal can be found in Applications → Utilities. After the terminal starts up, enter &quot;node -v&quot; and press the return key. If the version you installed is displayed, there is no problem.</p>
+			<p>在终端确认Node.js 有没有成功安装。打开终端（应用 > 实用工具），输入&quot;node -v&quot;并回车。如果显示了你所安装的Node.js 的版本，说明安装成功了。</p>
 <pre class="main__pre--code">
 $ node -v
 </pre>
@@ -55,15 +56,15 @@ $ node -v
 				<img src="../inc/img/01_11_06/2-1-3.png" height="366" width="585" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">2-1-2 Installing Cordova</h3>
-			<p>Cordova is provided as a Node.js package. The npm command which is a package management tool is provided in Node.js. <br /> Enter "sudo npm install cordova -g" into the terminal and install Cordova. &quot;sudo&quot; is used to run processes and applications as an administrator on Macs. Run the "npm" command here as an administrator. The "-g" option is an option which is used so that you can use Cordova in a global environment, and using this allows you to use the inside of any Mac folder. <br /> You will be asked for the administrator password so enter the password and run the installation.</p>
+			<h3 class="main__title--h3--sub">2-1-2 安装 Cordova</h3>
+			<p>Cordova 是Node.js 的包。Node.js 内置了npm包管理器。<br />在终端里输入"sudo npm install cordova -g"即可安装 Cordova。&quot;sudo&quot;在Mac 下会以管理员权限执行其后的语句，这里是以管理员权限执行&quot;npm&quot;命令，&quot;-g&quot;指定可以在全局范围内使用 Cordova，也就是说，你就可以在任意文件夹内使用它。<br />执行该命令时，你需要输入管理员密码。</p>
 <pre class="main__pre--code">
 $ sudo npm install cordova -g
 </pre>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-4.png" height="366" width="585" alt="" />
 			</div>
-			<p>Confirm your version of Cordova. Enter &quot;cordova -v&quot; into the terminal and press the return key. If the version of Cordova is displayed, that means there is no problem.</p>
+			<p>确认 Cordova 是否成功安装。在终端里执行&quot;cordova -v&quot;。如果显示了 Cordova 的版本，说明安装成功了。</p>
 <pre class="main__pre--code">
 $ cordova -v
 </pre>
@@ -71,20 +72,20 @@ $ cordova -v
 				<img src="../inc/img/01_11_06/2-1-5.png" height="366" width="585" alt="" />
 			</div>
 
-			<h3 class="main__title--h3">2-2 Xcode Installation and Setup</h3>
-			<p>There are various required files included in the ipa file which are needed to run your application on an iOS device. In order to allocate all those files into one file, there is an application called Xcode for the Mac available. Tools which allow you to do true development are also included with Xcode.</p>
+			<h3 class="main__title--h3">2-2 Xcode的安装和设置</h3>
+			<p>在你的 ipa 文件中有多种确保应用能在 iOS 设备上正常运行所必须的文件。Mac 上的Xcode即可完成将这些文件打包成一个 ipa 的工作。Xcode中也包含了允许你进行真正的开发工作所需要的工具。</p>
 
-			<h3 class="main__title--h3--sub">2-2-1 Xcode Installation, Setup</h3>
-			<p>You can get Xcode for free from the App Store.</p>
+			<h3 class="main__title--h3--sub">2-2-1 安装、设置Xcode</h3>
+			<p>你可以在 App Store中免费获取Xcode。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-6.png" height="531" width="958" alt="" />
 			</div>
-			<p>The newest version of Xcode is 6.4 as of August 2015.</p>
+			<p>截止2015年八月，Xcode最新的版本号是6.4。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-7.png" height="470" width="802" alt="" />
 			</div>
 			<p>
-				Xcode command line tools are a group of commands for development that you can use in the terminal. <br /> Check that command line tools are useable in the [Locations] tab under [Preferences] in [Xcode] found in the menu. If you do not currently have the command line tools you can download them from the [Downloads] tab on the left.
+				Xcode命令行工具是一系列可用在终端内协助开发的指令。<br />在[Xcode]菜单的[首选项]中，进入[位置]，确保命令行工具是可用的。如果你现在并没有命令行工具，可以在左侧的[下载]中获取。
 			</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/2-1-8.png" height="466" width="750" alt="" />
@@ -93,9 +94,9 @@ $ cordova -v
 				<img src="../inc/img/01_11_06/2-1-9.png" height="497" width="750" alt="" />
 			</div>
 
-			<h3 class="main__title--h3">2-3 Installing ios-sim</h3>
+			<h3 class="main__title--h3">2-3 安装 ios-sim</h3>
 			<p>
-				Here we will install the ios-sim which allows you to easily use the iOS simulator from Cordova. This can be downloaded using Node.js. <br /> Enter &quot;sudo npm install ios-sim -g&quot; into the terminal and install the simulator. <br /> If the version of the simulator is displayed when you enter &quot;ios-sim --version&quot;, that means there is no problem.
+				我们即将安装 ios-sim，它允许你在 Cordova 中便捷地使用 iOS 模拟器。可以用Node.js 包管理器安装它。<br />在终端中运行&quot;sudo npm install ios-sim -g&quot;即可安装模拟器。<br />如果你运行&quot;ios-sim --version&quot;后显示了模拟器的版本，则说明安装没有问题。
 			</p>
 <pre class="main__pre--code">
 $ sudo npm install ios-sim -g
@@ -108,33 +109,33 @@ $ ios-sim --version
 
 
 		<div class="main__section" id="p03">
-			<h2 class="main__title--h2">3 Deploying Games Using RPG Maker</h2>
-			<p>Here we will export the necessary  game data, assets and game engine to a package from RPG Maker. Select [Deployment...] from the File Menu and the deployment dialog will appear. If you select [Android / iOS] and export, all the files needed for iOS packaging will be placed in the selected folder. <br /> In this example, we deployed to the desktop.</p>
+			<h2 class="main__title--h2">3 用RPG Maker部署游戏</h2>
+			<p>我们将从RPG Maker中导出必要的游戏数据、资源和游戏引擎。在文件菜单中选择[部署]即可呼出部署对话框。选择[Android / iOS]然后导出，所有必备的文件都会被导出到选择的文件夹里。<br />我们这里已导出到桌面为例。</p>
 		</div><!-- /main__section -->
 
 
 		<div class="main__section" id="p04">
-			<h2 class="main__title--h2">4 Packaging</h2>
-			<p>Packaging refers to creating the ipa file which you allows you to install applications to an iOS device.</p>
+			<h2 class="main__title--h2">4 打包</h2>
+			<p>打包指创建能安装应用到 iOS 设备的 ipa 文件的过程。</p>
 
-			<h3 class="main__title--h3">4-1 Creating an Xcode Project</h3>
-			<p>Let's create an Xcode project using Cordova. In the end, we will be exporting an ipa file using Xcode.</p>
+			<h3 class="main__title--h3">4-1 新建Xcode项目</h3>
+			<p>用 Cordova 创建一个Xcode项目。结束后，我们就可以用Xcode导出 ipa 文件。</p>
 
-			<h3 class="main__title--h3--sub">4-1-1 Creating a Cordova Template</h3>
-			<p>First, we will create a template using the &quot;create&quot; option which is a Cordova command. Below is an example of a command that you would use in the terminal.</p>
+			<h3 class="main__title--h3--sub">4-1-1 创建 Cordova 模板</h3>
+			<p>首先，我们使用 Cordova 命令中的&quot;create&quot;选项来创建一个模板。下面是你在终端中输入的命令的一个示例。</p>
 
 <pre class="main__pre--code">
 $ cordova create ~/Desktop/work com.example.sample Sample
 </pre>
 
-			<p>In the example above, we are creating a folder where you will work from called &quot;work&quot; on the desktop. The folder will be the template, the package name will be set to &quot;com.example.sample&quot; and the app name will be set as &quot;Sample&quot;. <br /> <b>*When actually setting the package name, you cannot use &quot;com.example&quot;.</b></p>
+			<p>在上面的示例中，我们在桌面上创建了一个待会将要用来工作的文件夹&quot;work&quot;。这个文件夹将会是模板，包的名字会被设置为&quot;com.example.sample&quot;而应用名将为&quot;Sample&quot;。<br /> <b>*当真正设置包名的时候，你不能用&quot;com.example&quot;。</b></p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-1.png" height="492" width="851" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-1-2 Adding iOS Platforms</h3>
+			<h3 class="main__title--h3--sub">4-1-2 添加 iOS 平台</h3>
 			<p>
-				We will add iOS files that you will use to a template using Cordova. Enter &quot;cd ~/Desktop/work&quot; into the terminal to move to the &quot;work&quot; folder that was created earlier.  After moving to the folder, type &quot;cordova platform add ios&quot; into the terminal and press the return key. Doing this will create the necessary files for running on iOS.
+				用 Cordova 向模板中添加 iOS 文件。在终端输入&quot;cd ~/Desktop/work&quot; 以便转移到之前创建的&quot;work&quot;文件夹下。然后输入&quot;cordova platform add ios&quot;并回车。这样就添加了让应用在 iOS 上运行所必备的文件。
 			</p>
 <pre class="main__pre--code">
 $ cd ~/Desktop/work
@@ -145,7 +146,7 @@ $ cordova platform add ios
 				<img src="../inc/img/01_11_06/4-1-2.png" height="492" width="851" alt="" />
 			</div>
 			<p>
-				Use ios-sim to confirm everything you have done up until now using an iOS simulator. <br /> Enter &quot;cordova emulate ios&quot; into the terminal and press the return key. When the build finishes, the iOS simulator will automatically start up and the template screen will be displayed.
+				使用 ios-sim给你提供的 iOS 模拟器来确认目前为止你所做的都没有问题。<br />在终端中运行&quot;cordova emulate ios&quot;，当build完成的时候，iOS 模拟器会自动运行，并且展示模板界面。
 			</p>
 <pre class="main__pre--code">
 $ cordova emulate ios
@@ -155,18 +156,18 @@ $ cordova emulate ios
 				<img src="../inc/img/01_11_06/4-1-3.png" height="620" width="851" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-1-3 Copying a Deployed Game</h3>
-			<p>Here we will copy the deployed game data and other files to the &quot;www&quot; folder found inside the &quot;work&quot; folder. Delete the entire contents of the already existing "work/www" folder, leaving it empty.</p>
+			<h3 class="main__title--h3--sub">4-1-3 复制已部署的游戏文件</h3>
+			<p>我们要把之前部署的游戏资源复制到&quot;work&quot;文件夹下的&quot;www&quot;中。首先把&quot;wrok/www&quot;中原有的一切文件都删掉，留空。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-4.png" height="632" width="1186" alt="" />
 			</div>
-			<p>Copy all the files inside the &quot;www&quot; folder found inside the deployed folder to the &quot;work/www&quot; folder.</p>
+			<p>把之前部署游戏时导出的文件夹下的&quot;www&quot;文件夹中的所有内容复制到&quot;work/www&quot;中。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-5.png" height="632" width="1186" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-1-4 Editing the index.html File</h3>
-			<p>Let's make adjustments to the game's HTML for Cordova. <br /> Open the &quot;work/www/index.html&quot; file using your favorite text editor. <br /> You will be adding one row, which is the below tag that will be added below &lt;body style=&quot;background-color: black&quot;&gt; tag.</p>
+			<h3 class="main__title--h3--sub">4-1-4 编辑 index.html</h3>
+			<p>调整一下游戏的HTML以适配 Cordova。<br />用任意文本编辑器打开&quot;work/www/index.html&quot;<br />你只需要把下面这行加到&lt;body style=&quot;background-color: black&quot;&gt;下面就行了。</p>
 <pre class="main__pre--code">
 &lt;script type=&quot;text/javascript&quot; src=&quot;cordova.js&quot;&gt;&lt;/script&gt;
 </pre>
@@ -174,9 +175,9 @@ $ cordova emulate ios
 				<img src="../inc/img/01_11_06/4-1-6.png" height="638" width="1327" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-1-5 Editing the config.xml File</h3>
+			<h3 class="main__title--h3--sub">4-1-5 编辑 config.xml</h3>
 			<p>
-				We will make some adjustments to the config.xml file that configures the behavior of your game app. RPG Maker is optimized for holding the device sideways, so we will set the screen's orientation to landscape. <br /> Open the &quot;work/config.xml&quot; file using your favorite text editor. <br /> Add the below tag inside the &lt;platform name =&quot;ios&quot;&gt; tag.
+				调整一下 config.xml，这个文件配置了游戏应用的行为。RPG Maker的最优化设计是将设备横向使用，所以我们把屏幕朝向改为横向。<br />编辑&quot;work/config.xml&quot;。<br />在&lt;platform name =&quot;ios&quot;&gt;里面加入下述内容。
 			</p>
 <pre class="main__pre--code">
 &lt;preference name=&quot;orientation&quot; value=&quot;landscape&quot; /&gt;
@@ -184,20 +185,20 @@ $ cordova emulate ios
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-7.png" height="617" width="1338" alt="" />
 			</div>
-			<p>Additionally, there is also a row which has the tag &lt;access origin=&quot;*&quot;&gt;, which sets the application allow access to external HTML from the game's HTML. <br /> This is not needed so go ahead and delete this line.</p>
+			<p>另外，有这样的一行：&lt;access origin=&quot;*&quot;&gt;，它允许从游戏的HTML中访问外部的HTML。<br />我们不需要这样，所以把这行删掉。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-8.png" height="617" width="1338" alt="" />
 			</div>
 
 			<h3 class="main__title--h3--sub">4-1-6 Build</h3>
 			<p>
-				We've finished up the configuration so let's make a build. <br /> Enter &quot;cordova build&quot; into the terminal and press the return key. After a while, your build will be complete.<br />
+				我们已经完成了配置，现在可以生成build了。<br />在终端里运行&quot;cordova build&quot;等待一段时间，build就完成了。<br />
 			</p>
 <pre class="main__pre--code">
 $ cordova build
 </pre>
 			<p>
-				At this point, all of the settings necessary for running your game are now complete. Let's see if the app works using an emulator. <br /> Enter &quot;cordova emulate ios&quot; in the terminal just as you did before.
+				现在，让你的游戏能正常运行所需要的所有设置都完成了。用模拟器检验 app能否正常工作。<br />运行&quot;cordova emulate ios&quot;。
 			</p>
 <pre class="main__pre--code">
 $ cordova emulate ios
@@ -205,133 +206,133 @@ $ cordova emulate ios
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-9.png" height="537" width="1001" alt="" />
 			</div>
-			<p>The game has started up.</p>
+			<p>游戏启动了。</p>
 
-			<h3 class="main__title--h3--sub">4-1-7 Changing Icons</h3>
-			<p>The app icon can be found in "work/platforms/ios/&lt;App Name&gt;/Resources/icons". <br /> If you are using your own original files, overwrite the same files using files of the same size and with the same name.</p>
+			<h3 class="main__title--h3--sub">4-1-7 更改图标</h3>
+			<p>游戏图标在"work/platforms/ios/&lt;App Name&gt;/Resources/icons"里。 <br />如果你想自定义图标，用和原来文件同样大小同样名字的文件去覆盖它。</p>
 
-			<h3 class="main__title--h3">4-2 Creating a Provisioning Profile</h3>
+			<h3 class="main__title--h3">4-2 创建配置文件（Provisioning Profile）</h3>
 			<p>
-				To create an ipa file which can be installed on the actual iOS device, you will need a &quot;provisioning profile&quot; which is a file used for identifying applications. <br /> To get a provisioning profile, you will need to register on Apple's [Apple Developer Program] (paid service). <br /> <br /> Also, we will be calling the series of actions such as the implementation of the provisioning file into a package as &quot;signing&quot;. For signing, you will need files such as a key file and certificate files that certify the key file. <br /> <b>*The Apple Developer Program site is frequently updated so the method of acquiring provisioning files may change. If for some reason you have trouble completing the necessary actions or if there is anything you would like to know, please send an inquiry on <a href="https://developer.apple.com/jp/programs/" target="_blank">Apple Developer Program</a>.</b>
+				想要创建一个真正能在 iOS 设备上安装应用的 ipa 文件，你需要一个&quot;provisioning profile&quot;，它是用来验证应用的。<br />想要获得provisioning profile，你需要在 Apple的[Apple Developer Program]注册（收费）。<br /> <br />同时，我们把一系列比如把provisioning file应用于打包的过程称作&quot;signing&quot;（签名）。你需要一些密钥和验证密钥的证书之类的文件才能签名。<br /> <b>* Apple Developer Program 网站更新频繁，获取provisioning files 的方法可能有改变。如果你在执行必须操作时遇到了困难或者想要了解相关的事情，请咨询<a href="https://developer.apple.com/jp/programs/" target="_blank">Apple Developer Program</a>。</b>
 			</p>
 
-			<h3 class="main__title--h3--sub">4-2-1 Creating a key file and Certificate Request &amp; Registration</h3>
-			<p><b>The certificate registration that you will be doing here is only required if you have not done this yet. </b><br /> First, we will create a key file and request a certificate for that key file. We will use &quot;Keychain Access&quot; for requesting a certificate. <br /> Keychain Access is located in [Applications] → [Utilities]. <br /> Run Keychain Access, and select [Request a Certificate From a Certificate Authority] in [Certification Assistant] found under [Keychain Access] in the menu.</p>
+			<h3 class="main__title--h3--sub">4-2-1 创建密钥及请求并注册证书</h3>
+			<p><b>如果你以前没有注册过证书，那么请看下去。</b><br />首先，我们要创建一个密钥，然后为这个密钥请求证书。我们将使用&quot;Keychain Access&quot;请求证书。<br />Keychain Access 在[应用] → [实用工具]里。<br />运行Keychain Access，在[Keychain Access]菜单中的[证书助手]下选择[从证书机构请求一个证书]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-10.png" height="468" width="853" alt="" />
 			</div>
-			<p>For the user e-mail address, use the e-mail address that you used to register on Apple Developer Program, and choose a name for the common name that is easy to understand. Set the request process to [Saved to disk] and check [Let me specify key pair information]. </p>
+			<p>用你注册 Apple Developer Program时使用的邮件地址填写信息，然后选择一个易于理解的名字。在之后选择[保存到硬盘]并选中[让我自己指定密钥对信息]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-11.png" height="554" width="876" alt="" />
 			</div>
-			<p>Save the request file.</p>
+			<p>保存请求文件。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-12.png" height="555" width="877" alt="" />
 			</div>
-			<p>Select [Certificates, Identifiers &amp; Profiles] from the Apple Developer Program member center.</p>
+			<p>在 Apple Developer Program选择[Certificates , Identifiers &amp; Profiles]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-13.png" height="621" width="1280" alt="" />
 			</div>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-14.png" height="585" width="982" alt="" />
 			</div>
-			<p>You will move to the certificate management screen when you select [Certificates]. Select [All] in the left pane, and press the [+] button in the upper right.</p>
+			<p>当你选择[Certificates]后，你会跳转到证书管理界面。在左侧面板里选择[All]然后在右上角点击[+]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-15.png" height="585" width="982" alt="" />
 			</div>
-			<p>Select [App Store and Ad Hoc] for the certificate type.</p>
+			<p>选择[App Store and Ad Hoc]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-16.png" height="585" width="982" alt="" />
 			</div>
-			<p>Proceed to the next screen.</p>
+			<p>继续到下一个界面。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-17.png" height="585" width="982" alt="" />
 			</div>
-			<p>In the request certificate selection screen, select the request file which you made using Keychain Access.</p>
+			<p>在选择请求证书界面，选择之前用Keychain Access 产生的请求文件。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-18.png" height="585" width="982" alt="" />
 			</div>
-			<p>The certificate has now been issued. Download the certificate.</p>
+			<p>现在证书已经发布了，将证书下载下来。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-19.png" height="585" width="982" alt="" />
 			</div>
-			<p>If you double-click the downloaded certificate, it will be loaded into Keychain Access.</p>
+			<p>双击下载下来的证书即可把它加载进Keychain Access。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-20.png" height="435" width="703" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-2-2 Creating an App ID</h3>
-			<p>Next, we will create an App ID which will be used to make the package. <br /> This will be carried out in the [Identifiers] section in the Apple Developer Program site which you used earlier. <br /> Select [App IDs] under [Identifiers] in the left pane, and press the [+] button in the upper right.</p>
+			<h3 class="main__title--h3--sub">4-2-2 创建 App ID</h3>
+			<p>现在，我们要创建一个打包时会用到的 App ID。<br />在 Apple Developer Program中的[Identifiers]里面进行此项工作。<br />在左侧面板[Identifiers]下选择[App IDs]，然后点击右上角的[+]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-21.png" height="585" width="982" alt="" />
 			</div>
-			<p>Enter a name that is easy to remember in the [Name] section under [App ID Description]. <br /> Enter the [Bundle ID] in the [Explicit App ID] section under [App ID Suffix]. Just like the provided example, the domain name is used in reverse with the top level domain (&quot;com&quot; in the example) and is connected using a &quot;.&quot;. Following at the end is your game's name (&quot;sample&quot; in the example). <br /> <b>*Please keep in mind that you cannot actually use example.com. </b><br /> <br /> Example:<br /> When the domain that you own is [example.com] and your game's name is [sample], you would write:<br />com.example.sample.
+			<p>在[App ID Description]中的[Name]里选择一个易于记忆的名字。<br />在[App ID Suffix]下的[Explicit App ID]中输入[Bundle ID]。就如之前提供的范例一样，域名要反向输入，用顶级域起头（范例中是&quot;com&quot;）并用&quot;.&quot;连接，最后是你游戏的名字（范例中是&quot;sample&quot;）。<br /> <b>*注意，你不能真的用example.com这个域。</b><br /> <br /> 示例：<br />当你自己的域名是[example.com]而你的游戏是[sample]，你就写：<br />com.example.sample。
 			</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-22.png" height="585" width="982" alt="" />
 			</div>
-			<p>Select the appropriate option from the section below, and click [continue] to proceed to the end.</p>
+			<p>在下面的选项里面选择合适的项，然后点击[continue]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-23.png" height="585" width="982" alt="" />
 			</div>
-			<p>Your App ID has been created. There will be a prefix attached to the identifier (here it is W96~). You will need this for later so make a note of it somewhere.</p>
+			<p>现在你的 App ID已经创建好了。在验证器前面会有一个前缀（这里是W96~）。你之后会用到它，所以现在先把它记下来。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-24.png" height="585" width="982" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-2-3 Registering a Device</h3>
-			<p>Let's register the UDID so that we can install to the device that you are using. You are able to register on the Apple Developer Program site. <br /> UDID is the unique serial number for each iOS device which can be checked using iTunes. Connect the device to your Mac and open up iTunes. In the device's overview, you can check the [Serial Number]. The UDID will be displayed by clicking this number. Copy the UDID by right-clicking.</p>
+			<h3 class="main__title--h3--sub">4-2-3 注册一个设备</h3>
+			<p>现在注册一个UDID，以便于能够把应用安装到你在使用的设备上。同样在 Apple Developer Program注册。<br />UDID是每个 iOS 设备所独有的序列号，可以在 iTunes 上查到。把你的设备连接到Mac 然后打开 iTunes。在设备摘要里面可以查到[序列号]。点击这个序列号就可以看到UDID。右键这个UDID即可复制它。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-25.png" height="724" width="1246" alt="" />
 			</div>
-			<p>Select [All] under [Devices] in the left pane of Apple Developer Program, and click the [+] button at the top right.</p>
+			<p>在 Apple Developer Program左侧面板中的[Devices]里选择[All]，然后单击右上角的[+]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-26.png" height="586" width="982" alt="" />
 			</div>
-			<p>Enter a name that is easy to remember in the [Name] section, paste the [UDID] that was copied earlier. After doing so, click [Continue] then [Register] to register the device.</p>
+			<p>在[Name]里输入一个便于记忆的名字，把[UDID]粘贴到对应的地方。之后点击[Continue]再[Register]即可注册设备。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-27.png" height="586" width="982" alt="" />
 			</div>
 
-			<h3 class="main__title--h3--sub">4-2-4 Creating and Registering a Provisioning Profile</h3>
-			<p>Next, we will take care of some things on the Apple Developer Program site. <br /> Select [All] under [Provisioning Profiles] in the left pane, and click the [+] button in the upper right.</p>
+			<h3 class="main__title--h3--sub">4-2-4 创建和注册供应配置文件</h3>
+			<p>接着，我们再处理 Apple Developer Program上的一些事情。<br />选择左侧列表[Provisioning Profiles]下的[All]，然后点击右上角的[+]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-28.png" height="586" width="982" alt="" />
 			</div>
-			<p>Select [Ad Hoc] under [Distribution] as the type.</p>
+			<p>选择[Distribution]下的[Ad Hoc]作为类型。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-29.png" height="586" width="982" alt="" />
 			</div>
-			<p>Here we will use the [App ID] that we created earlier.</p>
+			<p>这里我们会用到之前创建的[App ID]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-30.png" height="586" width="982" alt="" />
 			</div>
-			<p>Select the certificate that we made back in 4-2-1.</p>
+			<p>选择我们在4-2-1里创建好的证书。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-31.png" height="586" width="982" alt="" />
 			</div>
-			<p>Similarly, we will set [Device] to the device which we added earlier.</p>
+			<p>类似的，把[Device]设置成之前添加的设备。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-32.png" height="586" width="982" alt="" />
 			</div>
-			<p>Enter a name that is easy to remember in the [Profile Name] section.</p>
+			<p>在[Profile Name]为配置文件取一个好记的名字。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-33.png" height="586" width="982" alt="" />
 			</div>
-			<p>With this, you are good to go. Download the provisioning profile.</p>
+			<p>下载刚才创建的配置文件。有了这个，你就可以安心地继续了。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-34.png" height="586" width="982" alt="" />
 			</div>
-			<p>Double-clicking the provisioning file that you have downloaded will start the [iPhone Configuration Utility], and the provisioning file will be loaded.</p>
+			<p>双击刚才下载的配置文件会启动[iPhone Configuration Utility]并加载这个文件。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-35.png" height="662" width="1008" alt="" />
 			</div>
 
-			<h3 class="main__title--h3">4-3 Packaging to an ipa File</h3>
-			<p>Let's create the ipa file which can be installed on to your device. Here we will create an ipa File which you can install on your iOS device.</p>
+			<h3 class="main__title--h3">4-3 打包到 ipa 文件</h3>
+			<p>现在来创建可以安装到设备上的 ipa 文件。这里以适用于 iOS 设备的 ipa 文件为例。</p>
 
-			<h3 class="main__title--h3--sub">4-3-1 Archive and Signing</h3>
-			<p>Open your work folder using the terminal. Enter &quot;cd ~/Desktop/work" into the terminal and press the return key. <br /> Open the xcodeproj file which was generated using Cordova in Xcode. Enter &quot;open platforms/ios/Sample.xcodeproj&quot; in the terminal and press the return key.</p>
+			<h3 class="main__title--h3--sub">4-3-1 归档和签名</h3>
+			<p>在终端中打开你的文件夹：输入 &quot;cd ~/Desktop/work&quot; 并回车。<br />打开Xcode中创建的xcodeproj文件：输入 &quot;open platforms/ios/Sample.xcodeproj&quot; 并回车。</p>
 <pre class="main__pre--code">
 $ cd ~/Desktop/work
 $ open platforms/ios/Sample.xcodeproj
@@ -339,87 +340,88 @@ $ open platforms/ios/Sample.xcodeproj
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-36.png" height="478" width="830" alt="" />
 			</div>
-			<p>Xcode will start up. Select [Sample] in the left pane, and open the project settings. Set the target to &quot;iOS Device&quot; setting it up so that a build can be made for the device.</p>
+			<p>Xcode会启动。在左侧面板中选择[Sample]，然后打开工程设置。把目标设置为 &quot;iOS Device&quot; 以便适配 iOS 设备。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-37.png" height="652" width="1280" alt="" />
 			</div>
-			<p>Use the same identifier set for the [App ID identifier] configured in 4-2-2 for the [Bundle Identifier].</p>
+			<p>使用之前在 4-2-2 里为了[Bundle Identifier]而配置的那个[App ID identifier]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-38.png" height="652" width="1280" alt="" />
 			</div>
-			<p>Just in case, let's make sure the project is clean. Select [Product] → [Clean] from the file menu.</p>
+			<p>以防万一，确保工程文件夹是干净的：选择菜单里的[Product] → [Clean]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-39.png" height="652" width="1280" alt="" />
 			</div>
-			<p>Now let's create an archive to and gather all the files into one. Select [Product] → [Archive].</p>
+			<p>现在来创建归档，把所有文件打包到一个文件里。选择[Product] → [Archive]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-40.png" height="652" width="1280" alt="" />
 			</div>
-			<p>The Organizer window will open once the archive is successfully made, and the archive for this project will be displayed.</p>
+			<p>等待归档完成，会出现Organizer窗口并显示归档文件。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-41.png" height="652" width="1280" alt="" />
 			</div>
-			<p>Right-click the archive and when you select [Show in Finder] you can open the location of the archive file in the Finder.</p>
+			<p>右键归档文件，选择[Show in Finder]以便在Finder里面打开它的位置。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-42.png" height="652" width="1280" alt="" />
 			</div>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-43.png" height="652" width="1280" alt="" />
 			</div>
-			<p>The archive will be located relatively deeply nested in folders at /Users/&lt;User Name&gt;/Library/Developer/Xcode/Archives/Date/ <br /> It's possible to also export the package as is using [Export...] in the right pane of the Organizer, but since we want to explicitly specify the provisioning profile, we will export from the terminal. We will use the &quot;xcodebuild&quot; command to export using the terminal. <br /> Below is an example of a command.</p>
+			<p>归档文件位于 /Users/&lt;User Name&gt;/Library/Developer/Xcode/Archives/Date/ 。<br />可以在Organizer窗口中选择右侧的[Export...]来导出包，但是既然我们希望显式地指定其使用的配置文件，我们会通过终端来导出。我们需要使用 &quot;xcodebuild&quot; 命令。<br />下面是一个示例。</p>
 <pre class="main__pre--code">
 $ xcodebuild -exportArchive -archivePath ~/Library/Developer/Xcode/Archives/2015-07-29/Sample\ 2015-07-29\ 18.32.xcarchive/ -exportProvisioningProfile &quot;sample&quot; -exportPath ~/Desktop/sample.ipa
 </pre>
-			<p>We are having the archive be exported to the ipa file using the &quot;exportArchive&quot; option. <br /> The archivePath option specifies the archive file which we made earlier. <br /> The exportProvisioningProfile option specifies the provisioning profile. This is what was registered in the iPhone Configuration Utility in 4-2-4. Be sure to enclose these in double quotes. <br /> The exportPath option specifies the path of the ipa file. Here we are exporting sample.ipa to the desktop.</p>
+			<p>我们通过&quot;exportArchive&quot;选项来把归档文件导出到 ipa 文件。<br />&quot;archivePath&quot;选项指定之前创建的归档文件。<br />&quot;exportProvisioningProfile&quot;选项指定了配置文件。这个配置文件就是之前在 4-2-4 中通过 iPhone Configuration Utility注册的。注意把具体的文件名和路径用双引号括起来。<br />&quot;exportPath&quot;指定了 ipa 文件的导出路径。这个例子中我们把 sample.ipa 导出到桌面。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-44.png" height="464" width="956" alt="" />
 			</div>
-			<p>The export is successful when you see &quot;EXPORT SUCCEEDED&quot;. The signed ipa file will be exported.</p>
+			<p>当&quot;EXPORT SUCCEEDED&quot;出现时，导出已经成功完成，经过签名的 ipa 文件已经被导出了。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-45.png" height="464" width="956" alt="" />
 			</div>
 
-			<h3 class="main__title--h3">4-4 Installing to the Device</h3>
-			<p>We will use iTunes to install the app to the device. <br /> Connect your iOS device to your Mac and start up iTunes. Drag and drop the ipa file created earlier into the [My Apps] list.</p>
+			<h3 class="main__title--h3">4-4 安装到设备</h3>
+			<p>我们通过 iTunes 把应用安装到设备上。<br />用数据线连接 iOS 设备和Mac 并启动 iTunes。把 ipa 文件拖拽至[My Apps]列表中。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-46.png" height="741" width="1287" alt="" />
 			</div>
-			<p>Open the App settings of your device. Your game will be installed when you drag and drop the app into the top screen on the right and click the [Apply] button.</p>
+			<p>打开设备的应用设置。当你把你的应用拖拽到右侧的主屏幕上，并按下[Apply]按钮时，它会自动进行安装。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-47.png" height="566" width="1100" alt="" />
 			</div>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-48.png" height="566" width="1100" alt="" />
 			</div>
-			<p><b>*You cannot install on any other devices other than the ones that were added to the provisioning profile in 4-2-4.</b></p>
+			<p><b>*你无法把这个应用安装到你在 4-2-4 中添加的设备以外的设备上。</b></p>
 		</div><!-- /main__section -->
 
 
 		<div class="main__section" id="p05">
-			<h2 class="main__title--h2">5 Publishing to the App Store</h2>
-			<p>You will need a provisioning profile for the App Store in order to publish to the App Store. <br /> Select [App Store] as the kind of provisioning profile.</p>
+			<h2 class="main__title--h2">5 发布到 App Store</h2>
+			<p>你需要一个用于 App Store的配置文件才能把游戏发布到 App Store。<br />选择[App Store]作为配置文件的类型。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/5-1-1.png" height="586" width="982" alt="" />
 			</div>
-			<p>It is convenient to use Xcode for the app review on the App Store. Before you start archiving, let's configure some points such as the provisioning profile for the App Store. There is the [Code Signing] specification in [Build Setting] under the project settings.</p>
+			<p>用Xcode来审查 App Store上的应用相当方便。在归档前，进一步设置一下配置文件。在工程设置下的[Build Setting]中找到[Code Signing]。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/5-1-2.png" height="652" width="1280" alt="" />
 			</div>
-			<p>You can find the [Submit to App Store] button in the right pane of the Organizer so it is possible to submit the package file from here.</p>
+			<p>可以在Organizer窗口中右侧的[Submit to App Store]来提交工程文件。</p>
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_11_06/4-1-41.png" height="652" width="1280" alt="" />
 			</div>
-			<p><b>*You will need your own original content for the icons, splash screen, preview images, etc. For more information, please refer to specialized books.</b></p>
+			<p><b>*你需要自己的原创图标、启动画面、预览图等等。更详细的信息请查阅相关的资料。</b></p>
 		</div><!-- /main__section -->
 
 
 		<div class="main__section" id="p06">
-			<h2 class="main__title--h2">A Word of Caution</h2>
+			<h2 class="main__title--h2">请注意</h2>
 			<ul class="main__ul">
-				<li>We are not responsible for any issues that may occur on your Mac using the environment settings and command controls.</li>
-				<li>We cannot guarantee that all iOS game apps that you can develop using the methods we have introduced here will be published on App Store.</li>
-				<li>This information is current as of August 2015. Some of the images displayed here may differ as all the software used here is constantly being updated.</li>
-				<li>If you have anything you would like to know regarding [Publishing to the App Store], please check out [<a href="https://developer.apple.com/jp/support/appstore/app-review/" target="_blank">App Review</a>] on Apple Developer Support.</li>
+				<li>我们不对由于更改环境设置和使用终端命令而在您的Mac 上引起的任何问题负责。</li>
+				<li>我们不保证您通过这里介绍的方法开发的所有游戏应用都能在 App Store上架。</li>
+				<li>该信息创作于2015年八月。由于该过程使用的软件持续更新，此处展示的某些图片可能和实际有区别。</li>
+				<li>有关[发布到 App Store]，如果您希望了解更多，请查看 Apple Developer Support上的[<a href="https://developer.apple.com/jp/support/appstore/app-review/" target="_blank">App Review</a>]。</li>
+ 				<li>此处提及的第三方工具不在我们提供的支持服务范围内。</li>
 			</ul>
 		</div><!-- /main__section -->
 
@@ -427,5 +429,3 @@ $ xcodebuild -exportArchive -archivePath ~/Library/Developer/Xcode/Archives/2015
 
 </body>
 </html>
-
-
