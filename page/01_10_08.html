@@ -36,8 +36,15 @@
 				<dd>指定图片的显示位置。首先，你要规定图片的[Origin Point（原点）]，它可以为屏幕的[Upper Left（左上角）]或者[Center（中心）]。然后，指定你要显示的坐标，(0, 0)为原点的坐标。当使用[Direct designation（直接指定）]时，你需要输入表示水平位置的 X 坐标和表示垂直位置的 Y 坐标（范围为 -9999 ~ 9999）。如果想使用变量指定坐标，请选择[Designation with variables（使用变量指定）]，然后指定用于表示 X 坐标和 Y 坐标的变量。</dd>
 				<dt>Scale（尺度）</dt>
 				<dd>使用[Width（宽度）]和[Height（高度）]设置区域来指定图片的缩放百分比（0 ~ 2000%，100% 为原始大小）。</dd>
-				<dt>Blend（混合模式）</dt>
-				<dd>在[Opacity（不透明度）]区域指定图片的不透明度（0 ~ 255）。数值越小图片越透明（设置为 0 则不可见）。在[Blending Mode（混合模式）]区域指定更改图片不透明度时颜色的混合模式。选择[Normal（普通）]则图片会正常混合，选择[Additive（加法）]则图片混合的时候会变得更亮。</dd>
+				<dt id="renew01">Blend（混合模式）</dt>
+				<dd>在[Opacity（不透明度）]区域指定图片的不透明度（0 ~ 255）。数值越小图片越透明（设置为 0 则不可见）。在[Blending Mode（混合模式）]区域指定更改图片不透明度时颜色的混合模式。
+					<ul class="main__ul">
+						<li>[Normal（普通）] ・・・ 正常显示。</li>
+						<li>[Additive（加法）] ・・・ 以更白的颜色显示。</li>
+						<li>[Multiply（正片叠底）] ・・・ 以更暗的颜色显示。</li>
+						<li>[Screen（滤色）] ・・・ 以更亮的颜色显示。<br /><span class="red">（2016.03.01 更新）</span></li>
+					</ul>
+				</dd>
 			</dl>
 			<h3 class="main__title--h3--sub">注记 </h3>
 			<ul class="main__ul">
@@ -62,7 +69,14 @@
 				<dt>Scale（尺度）</dt>
 				<dd>指定移动后图片的[Width（宽度）]和[Height（高度）]的缩放尺度（0 ~ 2000%）。</dd>
 				<dt>Blend</dt>
-				<dd>在[Opacity（不透明度）]区域指定图片移动后的不透明度（0 ~ 255）。数值越小图片越透明（设置为 0 则不可见）。在[Blending Mode（混合模式）]区域指定更改图片不透明度时颜色的混合模式。选择[Normal（普通）]则图片会正常混合，选择[Additive（加法）]则图片混合的时候会变得更亮。</dd>
+				<dd id="renew02">在[Opacity（不透明度）]区域指定图片移动后的不透明度（0 ~ 255）。数值越小图片越透明（设置为 0 则不可见）。在[Blending Mode（混合模式）]区域指定更改图片不透明度时颜色的混合模式。
+					<ul class="main__ul">
+						<li>[Normal（普通）] ・・・ 正常显示。</li>
+						<li>[Additive（加法）] ・・・ 以更白的颜色显示。</li>
+						<li>[Multiply（正片叠底）] ・・・ 以更暗的颜色显示。</li>
+						<li>[Screen（滤色）] ・・・ 以更亮的颜色显示。<br /><span class="red">（2016.03.01 更新）</span></li>
+					</ul>
+				</dd>
 				<dt>Time（时间）</dt>
 				<dd>指定移动图片所用的时间，以帧为单位（1 ~ 999）。1 帧等于 1/60 秒。</dd>
 				<dt>Wait for Completion（等待移动结束）</dt>
