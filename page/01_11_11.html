@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>未使用ファイル削除ツール プラグインへの対応</title>
+	<title>排除未使用的文件工具插件</title>
 	<link rel="stylesheet" href="../inc/css/style.min.css" />
 	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../inc/js/common.js"></script>
@@ -11,20 +11,20 @@
 
 	<div class="main">
 
-		<h1 class="main__title--h1 main__title--h1--v06">[Exclude unused files]<br />Plugin Configuration<span class="red f12px">（March 1st, 2016 Update）</span></h1>
+		<h1 class="main__title--h1 main__title--h1--v06">[排除未使用的文件]<br />插件配置<span class="red f12px">（March 1st, 2016 Update）</span></h1>
 		<ul class="breadcrumb">
 			<li><a href="01.html">RPG Maker MV</a></li>
 			<li>&gt;</li>
-			<li>Documentation</li>
+			<li>资料集</li>
 			<li>&gt;</li>
-			<li>[Exclude unused files] Plugin Configuration</li>
+			<li>[排除未使用的文件] 插件配置</li>
 		</ul>
 
 		<div class="main__section" id="p01">
-			<h2 class="main__title--h2">Plugin Configuration</h2>
-			<p>By checking off the box when deploying, necessary image files for the plugin will be excluded.<br />
+			<h2 class="main__title--h2">插件配置</h2>
+			<p>通过检查部署时的对话框以排除插件所必要的文件<br />
 			<br />
-			Below are examples of plugins that include codes to be excluded.</p>
+			下面是一个例子，用在插件中的代码来排除文件。</p>
 
 <div class="main__pre--code--wrap">
 <pre class="line-pre">
@@ -34,7 +34,7 @@
 </pre>
 </div>
 
-<p><br />To avoid this, you must edit the comment in the plugin as shown below.</p>
+<p><br />为了避免这种情况，您必须编辑插件中的注释，如下所示。</p>
 
 <div class="main__pre--code--wrap">
 <pre class="line-pre">
@@ -45,15 +45,15 @@
 </div>
 
 <p>
-Type the name of the necessary file after <span class="param-name">@requiredAssets</span>.<br />
-*Do the same for image files used in HTML.
+将必需的文件写在 <span class="param-name">@requiredAssets</span>后面。<br />
+*在HTML中使用的图像文件做同样的处理。
 </p>
 		</div>
 
 
 		<div class="main__section" id="p02">
-			<h2 class="main__title--h2">Plugin Parameters</h2>
-			<p>If the user has an audio or image file with plugin parameter settings available, you must edit the comment in the plugin to set the plugin parameter.</p>
+			<h2 class="main__title--h2">插件参数</h2>
+			<p>如果用户有可用插件参数设置的音频或图像文件，则必须编辑插件中的注释以设置插件参数。</p>
 
 
 <div class="main__pre--code--wrap">
@@ -70,23 +70,23 @@ Type the name of the necessary file after <span class="param-name">@requiredAsse
 			<table class="main__table--type01">
 				<tr>
 					<th>@require 1</th>
-					<td>This indicates that there is a required asset for this parameter.</td>
+					<td>这表明此参数是一个必需的资源。</td>
 				</tr>
 				<tr>
 					<th>@dir</th>
-					<td>Sets the folder which contains the file. This is not required for animations.</td>
+					<td>设置包含文件的文件夹。这不是动画所需的。</td>
 				</tr>
 				<tr>
 					<th>@type</th>
-					<td>If the type of value is a file, set as <span class="param-name">file</span>, for animation set as <span class="param-name">animation</span>.</td>
+					<td>如果值类型是文件，设置为 <span class="param-name">file</span>，如果是动画，设置为<span class="param-name">animation</span>。</td>
 				</tr>
 			</table>
 		</div>
 
 
 		<div class="main__section" id="p03">
-			<h2 class="main__title--h2">メモ</h2>
-			<p>If you want to use the [Note] contained in actors, items, etc., you must edit the comment in the plugin as shown below.</p>
+			<h2 class="main__title--h2">笔记</h2>
+			<p>如果你想将[note]包含在角色、物品等之中使用，你必须在插件里编辑注释，如下所示。</p>
 
 <div class="main__pre--code--wrap">
 <pre class="line-pre">
@@ -101,25 +101,25 @@ Type the name of the necessary file after <span class="param-name">@requiredAsse
 			<table class="main__table--type01">
 				<tr>
 					<th>@noteParam</th>
-					<td>Sets the name of parameter.</td>
+					<td>设置参数的名字</td>
 				</tr>
 				<tr>
 					<th>@noteRequire 1</th>
-					<td>Indicates that there is a required asset in this parameter.</td>
+					<td>指定此参数是必需的资源</td>
 				</tr>
 				<tr>
 					<th>@noteDir</th>
-					<td>Sets the folder which contains the image file. This is not required for animations.</td>
+					<td>设置包含图像文件的文件夹。这不是动画所需的。</td>
 				</tr>
 				<tr>
 					<th>@noteType</th>
-					<td>If the type of value is a file set as <span class="param-name">file</span>, for animation set as <span class="param-name">animation</span>.</td>
+					<td>如果值类型是文件，设置为 <span class="param-name">file</span>，如果是动画，设置为<span class="param-name">animation</span>。</td>
 				</tr>
 				<tr>
 					<th>@noteData</th>
 					<td>
-						Sets the type of game data.<br />
-						Here is the list of available values to be set.
+						设置游戏数据的类型。<br />
+						以下是可用值的列表。
 						<ul class="main__ul">
 							<li>maps</li>
 							<li>events</li>
