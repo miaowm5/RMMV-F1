@@ -25,7 +25,7 @@
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_11_04_img01.png" height="190" width="502" alt="" />
 			</div>
-		  <p>您可以为游戏构建包括 Windows、Mac OS X、安卓和 iOS 在内全部平台的发行包。</p>
+		  <p>您可以为游戏构建包括 Windows、Mac OS X、Linux、安卓和 iOS 在内全部平台的发行包。</p>
 		  <dl class="main__dl">
 		    <dt>Windows平台</dt>
 				<dd> 选择打包后将导出游戏的工程文件夹。<br />
@@ -33,6 +33,11 @@
 				<dt>Mac OS X</dt>
 				<dd> 请发布游戏的工程文件夹以及文件夹下的 Game.app 文件。<br />
 * 在 Windows 平台下 Game.app 会显示成了一个文件夹，请不用担心，它可以在 Mac OS X 下正常运行。</dd>
+				<dt id="renew2017_031701">Linux　<span class="red f12px normal">(2017 年 3 月 21 日更新)</span></dt>
+				<dd>
+					请发布导出后的游戏文件夹。<br />
+					更多在 Linux 上进行游戏的说明请参考 [在 Linux 上安装 RPG Maker MV]→[<a href="01_11_14.html#p05">运行游戏</a>] 部分。
+				</dd>
 				<dt>安卓/iOS</dt>
 				<dd>请参考 [<a href="01_11_05.html">转换为安卓应用</a>] 和 [<a href="01_11_06.html">转换为 iOS 应用</a>] 部分。</dd>
         <dt>网页浏览器<span class="red f12px normal">（2016 年 3 月 1 日更新）</span></dt>
@@ -44,10 +49,7 @@
 							<table class="main__table--type01">
 								<tr>
 								<th>系统要求</th>
-								<td>
-									需要支持 HTML5 Canvas 以及 Web Audio API
-									<br />iOS 8 或更高版本
-									<br />Android 4.4 或更高版本</td>
+								<td>需要支持 HTML5 Canvas 以及 Web Audio API<br />iOS 8 或更高版本<br />Android 4.4 或更高版本</td>
 								</tr>
 								<tr>
 								<th>推荐运行环境</th>
@@ -74,9 +76,31 @@
       </p>
       <ul class="main__ul">
         <li>工程目录/img/（该目录中的未使用文件）</li>
-        <li>工程目录/audio/（该目录中的未使用文件）</li>
+				<li>工程目录/audio/（该目录中的未使用文件）</li>
       </ul>
-      <p>请参考 [<a href="01_11_11.html">[不包含未使用文件] 插件配置</a>]部分来查看如何让本功能与插件相适应。</p>
+			<p>请参考 [<a href="01_11_11.html">[不包含未使用文件] 插件配置</a>]部分来查看如何让本功能与插件相适应。</p>
+
+			<h3 class="main__title--h3" id="renew2016_062301">加密<span class="red f12px normal">(2016 年 8 月 4 日更新)</span></h3>
+			<p>Encrypt image or sound files that you use in the game.</p>
+			<dl class="main__dl--sub">
+				<dt>Image Files</dt>
+				<dd>Check the box to encrypt any image files included in the package.</dd>
+				<dt>Sound Files</dt>
+				<dd>Check the box to encrypt any sound files included in the package.</dd>
+				<dt>Encryption Key</dt>
+				<dd>Optionally, you may enter a character string. This character string will be used in the file when encrypting.</dd>
+			</dl>
+
+			<p>
+				If you wish to encrypt previously made games, you must save over the core script (the JavaScript file in the “js” folder) of the file stored in the project folder with the newest version of the game.
+			</p>
+
+			<p class="f11px red">
+				*You cannot use encrypted files within the project folder.<br />
+				*Due to circumstances beyond our control regarding browser games, we cannot guarantee that these measures will prevent your game from being unlawfully copied. <br />
+				*Encrypted voice files may lag or otherwise not play immediately when using Chrome for Android (including Chromium).<br />
+				*Encrypted voice files will not play when using Mobile Safari (confirmed as of Ver9.0) due to the software being unable to handle file decryption.
+			</p>
 		</div><!-- /main__section -->
 
 

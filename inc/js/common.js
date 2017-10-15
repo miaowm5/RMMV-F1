@@ -2,6 +2,8 @@
 
 	$(function(){
 		var $side_btn_arrow = $('.side__btn--arrow');
+		var $renew_title = $('.main__title--h2--renew');
+		var $renew_contents = $('.main__dl--renew');
 
 		$side_btn_arrow.on('click', function(e) {
 			e.preventDefault();
@@ -15,6 +17,13 @@
 				$self.html('▶');
 				$self_ul.hide();
 			}
+		});
+
+		$renew_contents.first().show();
+
+		$renew_title.on('click', function(event){
+			event.preventDefault();
+			$(this).next().toggle();
 		});
 
 
