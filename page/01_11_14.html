@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" id="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Installing RPG Maker MV on Linux Platforms</title>
+	<link rel="stylesheet" href="../inc/css/style.min.css" />
+	<script type="text/javascript" src="../inc/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../inc/js/common.js"></script>
+	<style>pre{font-family: verdana;}</style>
+</head>
+<body>
+
+	<div class="main">
+
+		<h1 class="main__title--h1 main__title--h1--v06">Installing RPG Maker MV on Linux Platforms<span class="f14px red">(March 1st, 2016 Update)</span></h1>
+		<ul class="breadcrumb">
+			<li><a href="01.html">RPG Maker MV</a></li>
+			<li>&gt;</li>
+			<li>Documentation</li>
+			<li>&gt;</li>
+			<li>Installing RPG Maker MV on Linux Platforms</li>
+		</ul>
+
+
+		<div class="main__section" id="p01">
+			<h2 class="main__title--h2">Overview</h2>
+			<p>
+				In order to install RPG Maker MV on Linux platforms, users must use sudo with the apt-get command. Use the method below to install RPG Maker MV via SteamOS.
+			</p>
+		</div><!-- /main__section -->
+
+		<div class="main__section" id="p02">
+			<h2 class="main__title--h2">Steps to Install</h2>
+			<h3 class="main__title--h3">1. Access the Linux Desktop </h3>
+			<ol class="main__ol">
+				<li>The desktop can be accessed via [Settings]→[Interface].</li>
+				<li>Click [Exit] to switch to the Desktop view.</li>
+			</ol>
+
+			<h3 class="main__title--h3">2. Enter a password</h3>
+			<p>In order to use sudo, a password must be set for the user “desktop” by running the following command.</p>
+<pre class="main__pre--code">
+passwd
+</pre>
+
+			<h3 class="main__title--h3">3. Edit the source list file</h3>
+			<h4 class="main__title--h3--sub">It is necessary to edit the official Debian source list file.</h4>
+			<ol class="main__ol">
+				<li>
+					Open the source list file.
+<pre class="main__pre--code">
+sudo nano /etc/apt/sources.list
+</pre>
+				</li>
+				<li>
+					Add the following two lines to the bottom of the file.
+<pre class="main__pre--code">
+deb ftp://mirror.nl.leaseweb.net/debian/ jessie main contrib non-free
+deb-src ftp://mirror.nl.leaseweb.net/debian/ jessie main contrib non-free
+</pre>
+				</li>
+				<li>
+					Save and close the file.
+				</li>
+			</ol>
+
+			<h4 class="main__title--h3--sub">Next, ensure that SteamOS packages don’t get updated and replaced by creating a new preferences file.</h4>
+			<ol class="main__ol">
+				<li>
+					Create a new preferences file.
+<pre class="main__pre--code">
+sudo nano /etc/apt/preferences
+</pre>
+				</li>
+				<li>
+					Paste the following text to the bottom of the file.
+<pre class="main__pre--code">
+Package: *
+Pin: release o=Valve Software LLC
+Pin-Priority: 900
+
+Package: *
+Pin: release l=Debian
+Pin-Priority: 110
+</pre>
+				</li>
+				<li>
+					Save and close the file.
+				</li>
+			</ol>
+
+			<h3 class="main__title--h3">4. Import a package list</h3>
+			<p>Run the following command to import a package list from the server.</p>
+<pre class="main__pre--code">
+sudo apt-get update
+</pre>
+			<p>After completing the steps above, the apt-get install command can now be used to install applications.</p>
+
+<pre class="main__pre--code">
+sudo apt-get install [package]
+</pre>
+
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p03">
+			<h2 class="main__title--h2">Installing xdg-utils</h2>
+			<p>
+				By default, SteamOS is set so that that users are not able to access and manage folders. In order to open folders such as “Open Project,” etc., it is necessary to install xdg-utils.
+			</p>
+<pre class="main__pre--code">
+sudo apt-get install xdg-utils
+</pre>
+			<p>*This step is not necessary for users using Debian8 or newer.</p>
+		</div>
+
+
+		<div class="main__section" id="p04">
+			<h2 class="main__title--h2">Installing a Graphics Driver <span class="f12px">(Example: NVIDIA)</span></h2>
+			<h3 class="main__title--h3">1. Download the necessary driver</h3>
+			<p>
+				Using the link below, search for and download the necessary drivers.<br />
+				<a href="http://www.nvidia.com/Download/index.aspx" target="_blank">http://www.nvidia.com/Download/index.aspx</a><br />
+				*Files will have a .run extension.
+			</p>
+
+
+			<h3 class="main__title--h3">2. Delete the existing driver file</h3>
+			<p>Run the following command to delete the existing driver file.</p>
+<pre class="main__pre--code">
+sudo apt-get purge nvidia*
+</pre>
+
+			<h3 class="main__title--h3">3. Suspend GUI mode</h3>
+			<p>Run the following commands to suspend GUI mode.</p>
+<pre class="main__pre--code">
+sudo service lightdm stop
+sudo service gdm stop
+</pre>
+
+			<h3 class="main__title--h3">4. Start console mode</h3>
+			<p>Press Ctrl + Alt + F1 to start console mode.</p>
+
+
+			<h3 class="main__title--h3">5. Change the execute permissions for the installation file</h3>
+			<p>Run the following command to change the execute permissions for the file installer.</p>
+<pre class="main__pre--code">
+sudo chmod 755 ~/Downloads/[file_name]
+</pre>
+
+			<h3 class="main__title--h3">6. Install the file</h3>
+			<p>Run the following command to execute the file installer and install the file.</p>
+<pre class="main__pre--code">
+sudo ~/Downloads/[file_name]
+</pre>
+			<p>Follow the on-screen prompts the complete the installation.</p>
+
+			<h3 class="main__title--h3">7. Reboot</h3>
+			<p>Run the following command to reboot the OS.</p>
+<pre class="main__pre--code">
+sudo reboot
+</pre>
+
+		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p05">
+			<h2 class="main__title--h2">Running Games</h2>
+			<p>To start playing used a deployed game, follow the steps below to change the permissions of the “Game” file.</p>
+
+			<h3 class="main__title--h3">1. Switch users</h3>
+			<p>Run the following command to switch to the root user.</p>
+<pre class="main__pre--code">
+su
+</pre>
+
+			<h3 class="main__title--h3">2. Open the game folder</h3>
+			<p>Run the following command to open the game folder.</p>
+<pre class="main__pre--code">
+cd (game folder path)
+</pre>
+
+			<h3 class="main__title--h3">3. Change the permissions for the “Game” file</h3>
+			<p>Run the following command to change the permissions of the “Game” file in the game folder.</p>
+<pre class="main__pre--code">
+chmod +x Game
+</pre>
+
+			<h3 class="main__title--h3">4. Start the game</h3>
+			<p>Run the following command to start the game.</p>
+<pre class="main__pre--code">
+./Game
+</pre>
+
+<p>The steps above are only required the first time. From then on, double click the “Game” file to start the game.</p>
+
+		</div><!-- /main__section -->
+
+
+	</div><!-- /main -->
+
+</body>
+</html>
+
+

@@ -25,7 +25,7 @@
 		  <div class="al-c mb20px">
 				<img src="../inc/img/01_11_04_img01.png" height="190" width="502" alt="" />
 			</div>
-		  <p>Exports the deployment package for each platform. It is possible to output to Windows, Mac OS X, Android and iOS.</p>
+		  <p>Exports the deployment package for each platform. It is possible to output to Windows, Mac OS X, Linux, Android and iOS.</p>
 		  <dl class="main__dl">
 		    <dt>Windows</dt>
 				<dd> The exported game folder will be deployed. <br />
@@ -33,6 +33,11 @@ Please read [<a href="01_11_07.html">Using Enigma Virtual Box</a>] when wanting 
 				<dt>Mac OS X</dt>
 				<dd> Distributes the exported game folder or the Game.app file inside the game folder. <br />
 * Game.app will be displayed as a folder in a Windows environment, but you can run this as an application in a Mac OS X environment. </dd>
+				<dt id="renew2017_031701">Linux　<span class="red f12px normal">(March 21st, 2017 Update)</span></dt>
+				<dd>
+					The exported game folder will be deployed.<br />
+					For more information about how to play using Linux, please see [Installing RPG Maker MV on Linux]→[<a href="01_11_14.html#p05">Running Games</a>].
+				</dd>
 				<dt>Android/iOS</dt>
 				<dd>Please view [<a href="01_11_05.html">Converting to an Android App</a>] and [<a href="01_11_06.html">Converting to an iOS App</a>].</dd>
 				<dt>Web Browsers<span class="red f12px normal">（March 1st, 2016 Update）</span></dt>
@@ -74,6 +79,28 @@ Please read [<a href="01_11_07.html">Using Enigma Virtual Box</a>] when wanting 
 				<li>Project Folder/audio/(unnecessary files in this folder)</li>
 			</ul>
 			<p>Please go to [<a href="01_11_11.html">[Exclude unused files] Plugin Configuration</a>]to see how to make adjustments to the plugin.</p>
+
+			<h3 class="main__title--h3" id="renew2016_062301">Encryption <span class="red f12px normal">(August 4th, 2016 Update)</span></h3>
+			<p>Encrypt image or sound files that you use in the game.</p>
+			<dl class="main__dl--sub">
+				<dt>Image Files</dt>
+				<dd>Check the box to encrypt any image files included in the package.</dd>
+				<dt>Sound Files</dt>
+				<dd>Check the box to encrypt any sound files included in the package.</dd>
+				<dt>Encryption Key</dt>
+				<dd>Optionally, you may enter a character string. This character string will be used in the file when encrypting.</dd>
+			</dl>
+
+			<p>
+				If you wish to encrypt previously made games, you must save over the core script (the JavaScript file in the “js” folder) of the file stored in the project folder with the newest version of the game.
+			</p>
+
+			<p class="f11px red">
+				*You cannot use encrypted files within the project folder.<br />
+				*Due to circumstances beyond our control regarding browser games, we cannot guarantee that these measures will prevent your game from being unlawfully copied. <br />
+				*Encrypted voice files may lag or otherwise not play immediately when using Chrome for Android (including Chromium).<br />
+				*Encrypted voice files will not play when using Mobile Safari (confirmed as of Ver9.0) due to the software being unable to handle file decryption.
+			</p>
 		</div><!-- /main__section -->
 
 

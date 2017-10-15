@@ -22,13 +22,29 @@
 		  <h2 class="main__title--h2">Plugin Manager</h2>
 		  <p>With the [Plugin Manager] tool that you can open by going to [Tools] → [Plugin Manager], you can manage official plugins and ones that you have created.</p>
 		  <p> When you click on a plugin displayed in the list, a dialog window will appear where you can change their ON/OFF switches and parameter values. </p>
-		  <div class="al-c mb20px">
-				<img src="../inc/img/01_05_img01.png" width="362" alt="" />
-				<img src="../inc/img/01_05_img02.png" width="250" alt="" />
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img01.png" width="692" height="491" alt="" />
+			</div>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img02.png" width="1122" height="665" alt="" />
 			</div>
 
-			<p>When typing parameter values, right-click to show the menu and choose [IconSet Viewer...] to display the IconSet Viewer.<br />
-			<span class="red">（March 1st, 2016 Update）</span></p>
+
+			<p><span class="red">(March 1st, 2016 Update)</span><br />When typing parameter values, right-click to show the menu and choose [IconSet Viewer...] to display the IconSet Viewer.</p>
+
+			<span class="red">(June 8th, 2017 Update)</span><br />
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img02_01.png" width="500" height="302" alt="" />
+			</div>
+
+			<p>Click one of the plugin parameters to open the menu.</p>
+
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img02_02.png" width="472" height="239" alt="" />
+			</div>
+
+			<p>You can make edits to plugin parameters on the [File] and the [Text] tabs.</p>
+
 		</div><!-- /main__section -->
 
 
@@ -55,14 +71,14 @@
 
 
 		<div class="main__section" id="p05">
-			<h2 class="main__title--h2">Character Generator</h2>
+			<h2 class="main__title--h2">Character Generator <span class="red f12px">(November 24th, 2016 Update)</span></h2>
 			<p>Open this tool by clicking on [Tools] → [Character Generator]. Here you can make character images allocated for actors and events.</p>
 
 			<div class="al-c mb20px">
 				<img src="../inc/img/01_05_img05.png" height="747" alt="" width="1060" />
 			</div>
 			<p>
-				Click on the [Male] or [Female] tabs to change the screen, and choose the variation and color for each feature. Your selection will be displayed in the [Preview] area.
+				Click on the [Male], [Female], or [Kid] tabs to change the screen, and choose the variation and color for each feature. Your selection will be displayed in the [Preview] area.
 			</p>
 			<dl class="main__dl">
 				<dt>Randomize</dt>
@@ -174,7 +190,7 @@ To change the value of variables, select the target switch/variable (S at the to
 
 
 		<div class="main__section" id="p07">
-			<h2 class="main__title--h2">Resource Manager <span class="red f12px">（March 1st, 2016 Update）</span></h2>
+			<h2 class="main__title--h2">Resource Manager <span class="red f12px">(March 1st, 2016 Update)</span></h2>
 			<p>In [Resource Manager], under [Tools] → [Resource Manager], you are able to manage resources included in your project. Each function for the buttons and parts displayed in the window is explained below. To use your original files (including images/audio/etc.) in creating a game, you are required to follow the predetermined standard. Please refer to [<a href="01_11_01.html">Asset Standards</a>] for more information.
 			</p>
 
@@ -195,9 +211,10 @@ To change the value of variables, select the target switch/variable (S at the to
 				<dd>
 					Displays the preview of the image file chosen under the [File List]. To check a sound file, use the tool [Sound Test].
 				</dd>
-				<dt>Import</dt>
+				<dt id="renew01">Import</dt>
 				<dd>
-					Imports project resource files. Click [Import] after choosing the folder location in [Folder List] and then choose the resource file to import.
+					Imports project resource files. Click [Import] after choosing the folder location in [Folder List] and then choose the resource file to import.<br />
+					You can import multiple files at once by selecting multiple files. <span class="red f12px">(April 21th, 2016 Update)</span>
 				</dd>
 				<dt>Export</dt>
 				<dd>
@@ -205,10 +222,103 @@ To change the value of variables, select the target switch/variable (S at the to
 				</dd>
 				<dt>Delete</dt>
 				<dd>
-					Deletes resource file chosen in [File List]. Be careful as deleted data cannot be recovered.
+					Deletes resource file chosen in [File List]. Be careful as deleted data cannot be recovered.<br />
+					You can delete multiple files at once by using the Shift key to select multiple files. <span class="red f12px">(April 21th, 2016 Update)</span>
+				</dd>
+				<dt>DLC (For Steam versions only) <span class="red f12px normal">(April 21th, 2016 Update)</span></dt>
+				<dd>
+					You can download resources from the internet and use them in your game.
 				</dd>
 			</dl>
 		</div><!-- /main__section -->
+
+
+		<div class="main__section" id="p08">
+			<h2 class="main__title--h2">Options <span class="red f12px">(April 21th, 2016 Update)</span></h2>
+			<p>You can open the [Options] window by going to [Tools] → [Options]. Here, you can change the Transparent Color settings as well as the Map Grid settings.</p>
+
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img10.png" width="472" height="302" alt="" />
+			</div>
+
+			<dl class="main__dl">
+				<dt>Transparent Color</dt>
+				<dd>Sets the color to use as the transparency background in the editor.</dd>
+				<dt>Map Grid</dt>
+				<dd>By checking off the [Show] box, the Map Editor grid will be activated.</dd>
+				<dt>UI</dt>
+				<dd>
+					<dl class="main__dl--sub">
+						<dt>Theme</dt>
+						<dd>Changes the appearance of the editor.</dd>
+						<dt>Object Selector <span class="red f12px normal">(August 4th, 2016 Update)</span></dt>
+						<dd>
+							Choose an object selector for selecting in-game objects in the editor like Items, Weapons, Armors, and so on.<br />
+							［Dropdown］・・・Optimized for less than 100 objects.<br />
+							［Extended］・・・Optimized for hundreds of objects.<br />
+							［Smart］・・・Chooses one based on the amount of objects automatically.
+						</dd>
+					</dl>
+				</dd>
+			</dl>
+		</div>
+
+
+		<div class="main__section" id="p09">
+			<h2 class="main__title--h2">Tutorials (Beta) <span class="red f12px">(March 21st, 2017 Update)</span></h2>
+			<p>You can see a list of available tutorials by opening [Tools]→[Tutorials (Beta)]→[Select Tutorial (Beta)]. Choose the topic that you would like to learn more about, then start the tutorial (beta).</p>
+
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img11.png" width="577" height="414" alt="" />
+			</div>
+
+			<p>Follow the on-screen instructions to proceed through the tutorial (beta).</p>
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img12.png" width="474" height="230" alt="" />
+			</div>
+		</div>
+
+
+		<div class="main__section" id="p10">
+			<h2 class="main__title--h2">RPG Maker MV Tools <span class="red f12px">(March 21st, 2017 Update)</span></h2>
+			<p>
+				You can manage tools via [Tools]→[RPG Maker MV Tools].<br />
+				*Requires RPG Maker MV Tools (sold separately.)
+			</p>
+
+			<div class="al-c mb20px">
+				<img src="../inc/img/01_05_img13.png" width="652" height="479" alt="" />
+			</div>
+
+			<dl class="main__dl">
+				<dt>Additional Tools</dt>
+				<dd>
+					View a list of tools that have been added.
+					<dl class="main__dl--sub">
+						<dt>Delete</dt>
+						<dd>You can delete tools by selecting them from the list.</dd>
+					</dl>
+
+					Additional tools can be used via the [Tools] option in the menu.
+					<div class="al-c mb20px">
+						<img src="../inc/img/01_05_img14.png" width="280" height="280" alt="" />
+					</div>
+				</dd>
+				<dt>Found Tools</dt>
+				<dd>
+					Searches for and displays tools found in RPG Maker MV Tools.
+					<dl class="main__dl--sub">
+						<dt>Add</dt>
+						<dd>Adds the selected tool to the list of Additional Tools.</dd>
+						<dt>Select Path</dt>
+						<dd>
+							If a tool does not automatically appear in the list of Additional Tools, it is possible to manually add it by clicking [Select Path] and navigating to the folder where the tool was installed.
+						</dd>
+					</dl>
+				</dd>
+			</dl>
+		</div>
+
 
 	</div><!-- /main -->
 
